@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Локализация медицинских изделий в России — Инженерный центр · Москва</title>
+<meta name="description" content="Инженерный центр локализации медицинских изделий в Москве: анализ ниши, реверс-инжиниринг, разработка, производство и регистрация в Росздравнадзоре.">
+<link rel="canonical" href="https://med-local.ru/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Локализация медицинских изделий в России — Инженерный центр">
+<meta property="og:description" content="От импортного аналога до российского МИ: анализ ниши, реверс-инжиниринг, разработка, производство, регистрация.">
+<meta property="og:url" content="https://med-local.ru/">
+<meta property="og:image" content="https://med-local.ru/og-image.png">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+:root{
+ --graphite:#1C232E;--graphite-2:#27303E;--ink:#1C232E;--muted:#6C7686;
+ --blue:#3D6FB4;--cyan:#2FA8A0;--cyan-soft:#E4F4F3;--blue-soft:#E9F0FA;
+ --orange:#FF6B3D;--orange-soft:#FFE9DC;
+ --paper:#F6F7F9;--card:#FFFFFF;--line:#E5E8ED;
+ --body:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+ --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.mono{font-family:var(--mono)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:600;font-size:14.5px;border:none;transition:.18s;cursor:pointer}
+.btn.pri{background:var(--orange);color:#fff;box-shadow:0 10px 24px -10px rgba(255,107,61,.6)}
+.btn.pri:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn.gh{background:transparent;border:1.5px solid #fff;color:#fff}
+.btn.gh:hover{background:rgba(255,255,255,.1)}
+.btn.dark{background:var(--graphite);color:#fff}
+.btn.line-btn{background:#fff;border:1.5px solid var(--line);color:var(--ink)}
+.btn.line-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--cyan)}
+.tag::before{content:"";width:22px;height:2px;background:var(--cyan)}
+h1,h2,h3{line-height:1.15;margin:0}
+.h-xl{font-size:clamp(30px,4.6vw,52px);font-weight:800;letter-spacing:-1.2px}
+.h-l{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.8px}
+.h-m{font-size:19px;font-weight:700}
+.lead{font-size:17px;color:var(--muted);line-height:1.65}
+.sec{padding:74px 0}
+.sec.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:960px){.g3,.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+@media(max-width:620px){.g3,.g4,.g2{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.kv{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.kv span{color:var(--muted)}.kv b{text-align:right}
+header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:22px;height:66px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:16.5px;letter-spacing:-.3px}
+.logo small{display:block;font-size:10px;font-weight:600;color:var(--muted);letter-spacing:1.6px;text-transform:uppercase}
+.nav a.lnk{font-size:14px;font-weight:500;color:var(--muted);transition:.15s;white-space:nowrap}
+.nav a.lnk:hover,.nav a.lnk.on{color:var(--ink)}
+.nav .sp{flex:1}
+@media(max-width:900px){.nav a.lnk{display:none}}
+.hero{position:relative;background:linear-gradient(140deg,var(--graphite) 0%,#202b3c 60%,#1d3a45 100%);color:#fff;overflow:hidden}
+.hero .pcb{position:absolute;inset:0;opacity:.16;pointer-events:none}
+.hero .in{position:relative;padding:92px 0 86px}
+.hero .lead{color:#B9C2D0;max-width:640px}
+.hero .stats{display:flex;gap:38px;margin-top:42px;flex-wrap:wrap}
+.hero .stats b{font-size:26px;font-weight:800;display:block;letter-spacing:-.5px}
+.hero .stats span{font-size:12.5px;color:#8E99AB}
+.crumbs{font-size:12.5px;color:var(--muted);margin:18px 0 0}
+.crumbs b{color:var(--ink)}
+.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:8px}
+.route .st{position:relative;padding:20px 18px 0}
+.route .st::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+.route .st h3{font-size:15.5px;margin:8px 0 6px}
+.route .st p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+@media(max-width:880px){.route{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.route{grid-template-columns:1fr}}
+.svc{display:flex;flex-direction:column;gap:10px;position:relative;transition:.2s}
+.svc:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.svc .ic{width:44px;height:44px;border-radius:12px;background:var(--cyan-soft);color:var(--cyan);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:15px}
+.svc p{font-size:14px;color:var(--muted);margin:0;line-height:1.6;flex:1}
+.svc .go{font-size:13.5px;font-weight:700;color:var(--cyan)}
+.seg{border-left:3px solid var(--blue);padding:16px 20px;background:#fff;border-radius:0 14px 14px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.seg b{display:block;margin-bottom:5px}
+.seg p{font-size:13.5px;color:var(--muted);margin:0 0 8px;line-height:1.55}
+.seg .of{font-size:13px;font-weight:600;color:var(--cyan)}
+.law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
+.law b{display:block;margin-bottom:6px;font-size:14px}
+.post{display:flex;flex-direction:column;gap:9px;transition:.2s}
+.post:hover{transform:translateY(-3px)}
+.post .rub{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)}
+.post h3{font-size:16.5px;line-height:1.35}
+.post p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.6}
+.post .cta-link{font-size:13px;font-weight:700;color:var(--orange)}
+.frm{display:grid;gap:13px}
+.frm label{font-size:12.5px;font-weight:600}
+.frm input,.frm select,.frm textarea{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:12px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.frm input:focus,.frm select:focus,.frm textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:620px){.f2{grid-template-columns:1fr}}
+.mag{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:var(--r);padding:30px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.mag b{font-size:19px;display:block;margin-bottom:6px}
+.mag p{color:#AFBAC9;font-size:14px;margin:0;max-width:520px}
+.mag .sp{flex:1}
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2}footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+.proof{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.proof .n{font-family:var(--mono);color:var(--cyan);font-weight:600;font-size:12.5px;padding-top:2px;white-space:nowrap}
+.steps li{margin-bottom:10px;line-height:1.6;font-size:14.5px}
+.lift{box-shadow:var(--sh)}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}
+.pain-item{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px}
+.pain-item h4{font-size:14px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.pain-item p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+.compare-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:14px}
+.compare-table th{background:var(--graphite);color:#fff;font-weight:600;padding:12px 16px;text-align:left}
+.compare-table td{padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink)}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table td.bad{color:#C0392B}
+.compare-table td.good{color:#1A7A6E;font-weight:600}
+.calc-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;margin-top:24px;box-shadow:var(--sh)}
+.calc-box h3{font-size:18px;font-weight:700;margin:0 0 20px}
+.form-row{margin-bottom:14px}
+.form-row label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;color:var(--ink)}
+.form-row select,.form-row input{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:10px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.form-row select:focus,.form-row input:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.calc-result{background:var(--cyan-soft);border:1px solid #BCE4E1;border-radius:11px;padding:18px;margin-top:16px;display:none}
+.calc-result.show{display:block}
+.calc-result h4{font-size:15px;font-weight:700;color:#1A7A6E;margin:0 0 6px}
+.calc-result p{font-size:13.5px;color:#2D7A72;margin:0}
+.related{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.related a{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan);transition:.15s}
+.related a:hover{border-color:var(--cyan)}
+
+/* Бургер-меню для мобильных */
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;z-index:200}
+.burger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:100;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+.mob-menu a:hover{color:var(--cyan)}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .nav{gap:12px}
+}
+/* Хлебные крошки */
+.crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:.15s}.crumbs a:hover{color:var(--cyan)}
+.crumbs span{color:var(--muted)}
+.crumbs b{color:var(--ink);font-weight:600}
+/* Таблицы на мобильных */
+@media(max-width:640px){
+  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .article-body table{display:block;overflow-x:auto}
+}
+/* Плавающая кнопка на мобильных */
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+@media(max-width:768px){.float-btn{display:flex}}
+/* Состояния кнопок */
+.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.btn.pri:active{transform:translateY(0);filter:brightness(.95)}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+/* Единый подвал */
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2;transition:.15s}
+footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){footer .cols{grid-template-columns:1fr}}
+</style>
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true,goals:[{id:"form_submit",type:"submit"}]});
+</script>
+
+</head>
+<body>
+<div class="mob-menu" id="mob-menu">
+  <a href="/">Главная</a>
+  <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">Блог</a><a href="/pricing">Стоимость</a>
+  <a href="/#lead" class="btn pri" style="margin-top:16px">Оценить проект</a>
+</div>
+<header><div class="wrap nav">
+  <a class="logo" href="/"><span style="display:flex;align-items:center;gap:11px"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="7" stroke="#1C232E" stroke-width="2.6" fill="none"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#2FA8A0"/><path d="M24 2v7M24 39v7M2 24h7M39 24h7M8 8l5 5M40 8l-5 5M8 40l5-5M40 40l-5-5" stroke="#3D6FB4" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.6" fill="#FF6B3D"/></svg><span><span style="font-weight:800;font-size:14px;letter-spacing:-.3px;line-height:1.2;display:block">Инженерный<br>центр</span><span style="font-size:9px;font-weight:600;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;line-height:1.3;display:block">локализации МИ</span></span></span></a>
+  <span class="sp"></span>
+  <div class="nav-links" style="display:flex;align-items:center;gap:18px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk" href="/blog">Блог</a><a class="lnk" href="/pricing">Стоимость</a></div>
+  <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню">
+    <span></span><span></span><span></span>
+  </button>
+</div></header>
+
+<section style="position:relative;background:linear-gradient(140deg,var(--graphite) 0%,#202b3c 60%,#1d3a45 100%);color:#fff;overflow:hidden">
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.16;pointer-events:none" viewBox="0 0 1200 600" preserveAspectRatio="none">
+  <g stroke="#5E89C4" stroke-width="1.4" fill="none">
+    <path d="M0 120h300l60 60h240l40-40h260l60 60h240"/>
+    <path d="M0 300h180l50 50h300l60-60h200l70 70h340"/>
+    <path d="M0 480h420l60-60h260l50 50h410"/>
+  </g>
+  <g fill="#2FA8A0"><circle cx="300" cy="120" r="5"/><circle cx="640" cy="140" r="5"/><circle cx="740" cy="290" r="5"/></g>
+</svg>
+  <div class="wrap" style="position:relative;padding:92px 0 86px">
+    <span class="tag" style="color:#5BC9C1">Инженерно-регуляторный центр · Москва</span>
+    <h1 class="h-xl" style="margin:18px 0 20px;max-width:880px">От импортного аналога или идеи — до российского медицинского изделия, готового к производству и регистрации</h1>
+    <p class="lead" style="color:#B9C2D0;max-width:640px">Локализация производства медицинских изделий в России: анализ рынка и изделия, законный реверс-инжиниринг, разработка электроники и корпусов, производственный маршрут, техническая документация и регистрация в Росздравнадзоре — одним связанным проектом.</p>
+    <div style="display:flex;gap:13px;margin-top:34px;flex-wrap:wrap">
+      <a class="btn pri" href="#lead">Получить оценку локализации</a>
+      <a class="btn gh" href="/localization">Маршрут локализации</a>
+    </div>
+    <div style="display:flex;gap:38px;margin-top:42px;flex-wrap:wrap">
+      <div><b style="font-size:20px;font-weight:800;display:block;letter-spacing:-.5px">МИ + ИВД</b><span style="font-size:12.5px;color:#8E99AB">изделия, приборы, расходники</span></div>
+      <div><b style="font-size:20px;font-weight:800;display:block;letter-spacing:-.5px">ПП 719 · СТ-1</b><span style="font-size:12.5px;color:#8E99AB">статус российской продукции</span></div>
+      <div><b style="font-size:20px;font-weight:800;display:block;letter-spacing:-.5px">РЗН · ЕАЭС</b><span style="font-size:12.5px;color:#8E99AB">регистрационный маршрут</span></div>
+      <div><b style="font-size:20px;font-weight:800;display:block;letter-spacing:-.5px">ISO 13485</b><span style="font-size:12.5px;color:#8E99AB">проектирование под СМК</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec"><div class="wrap">
+  <span class="tag">Почему это один проект</span>
+  <h2 class="h-l" style="margin:14px 0 12px;max-width:760px">Медицинское изделие нельзя проектировать отдельно от регистрации, производства и себестоимости</h2>
+  <p class="lead" style="max-width:760px">Ошибки на стадии разработки оплачиваются на стадии испытаний и регистрации. Поэтому каждый проект ведётся в четырёх измерениях: инженерия, производство, регуляторика и рынок.</p>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:rt;margin-top:32px" class="route">
+    <div class="st" style="position:relative;padding:20px 18px 0"><span style="font-family:var(--mono);font-size:12px;color:var(--cyan);font-weight:600;display:block;margin-bottom:8px">01</span><div style="position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))"></div><h3 style="font-size:15.5px;margin:0 0 6px">Анализ</h3><p style="font-size:13px;color:var(--muted);margin:0;line-height:1.55">Рынок, госзакупки, аналоги, класс риска, себестоимость, барьеры.</p></div>
+    <div class="st" style="position:relative;padding:20px 18px 0"><span style="font-family:var(--mono);font-size:12px;color:var(--cyan);font-weight:600;display:block;margin-bottom:8px">02</span><div style="position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))"></div><h3 style="font-size:15.5px;margin:0 0 6px">Инжиниринг</h3><p style="font-size:13px;color:var(--muted);margin:0;line-height:1.55">Архитектура, плата, ПО, корпус, компоненты с доступной логистикой.</p></div>
+    <div class="st" style="position:relative;padding:20px 18px 0"><span style="font-family:var(--mono);font-size:12px;color:var(--cyan);font-weight:600;display:block;margin-bottom:8px">03</span><div style="position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))"></div><h3 style="font-size:15.5px;margin:0 0 6px">Прототип</h3><p style="font-size:13px;color:var(--muted);margin:0;line-height:1.55">Макет, испытания узлов, ЭМС-подготовка, опытные образцы.</p></div>
+    <div class="st" style="position:relative;padding:20px 18px 0"><span style="font-family:var(--mono);font-size:12px;color:var(--cyan);font-weight:600;display:block;margin-bottom:8px">04</span><div style="position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))"></div><h3 style="font-size:15.5px;margin:0 0 6px">Производство</h3><p style="font-size:13px;color:var(--muted);margin:0;line-height:1.55">Производственный маршрут, СМК, контрактная сборка или своя линия.</p></div>
+    <div class="st" style="position:relative;padding:20px 18px 0"><span style="font-family:var(--mono);font-size:12px;color:var(--cyan);font-weight:600;display:block;margin-bottom:8px">05</span><div style="position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))"></div><h3 style="font-size:15.5px;margin:0 0 6px">Регистрация</h3><p style="font-size:13px;color:var(--muted);margin:0;line-height:1.55">ТД и ЭД, испытания, досье, подача в Росздравнадзор, РУ.</p></div>
+  </div>
+</div></section>
+
+<section class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
+  <span class="tag">Шесть продуктов центра</span>
+  <h2 class="h-l" style="margin:14px 0 26px">Что мы делаем</h2>
+  <div class="grid g3">
+    <a class="card" href="/localization" style="display:flex;flex-direction:column;gap:10px;transition:.2s;text-decoration:none"><div style="width:44px;height:44px;border-radius:12px;background:var(--cyan-soft);color:var(--cyan);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:15px">01</div><h3 class="h-m">Локализация медицинского изделия</h3><p style="font-size:14px;color:var(--muted);margin:0;line-height:1.6;flex:1">Полный маршрут: от анализа импортного изделия до российского производства со статусом по ПП 719 и регистрацией.</p><span style="font-size:13.5px;font-weight:700;color:var(--cyan)">Подробнее →</span></a>
+    <a class="card" href="/reverse" style="display:flex;flex-direction:column;gap:10px;transition:.2s;text-decoration:none"><div style="width:44px;height:44px;border-radius:12px;background:var(--cyan-soft);color:var(--cyan);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:15px">02</div><h3 class="h-m">Реверс-инжиниринг (законный)</h3><p style="font-size:14px;color:var(--muted);margin:0;line-height:1.6;flex:1">Функциональный анализ и декомпозиция изделия, FTO-проверка и разработка независимого технического решения.</p><span style="font-size:13.5px;font-weight:700;color:var(--cyan)">Подробнее →</span></a>
+    <a class="card" href="/development" style="display:flex;flex-direction:column;gap:10px;transition:.2s;text-decoration:none"><div style="width:44px;height:44px;border-radius:12px;background:var(--cyan-soft);color:var(--cyan);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:15px">03</div><h3 class="h-m">Разработка медицинского прибора</h3><p style="font-size:14px;color:var(--muted);margin:0;line-height:1.6;flex:1">Архитектура, схемотехника, PCB, встроенное ПО, корпус, прототип — с учётом ГОСТ Р МЭК 60601, ЭМС и регистрации.</p><span style="font-size:13.5px;font-weight:700;color:var(--cyan)">Подробнее →</span></a>
+    <a class="card" href="/production" style="display:flex;flex-direction:column;gap:10px;transition:.2s;text-decoration:none"><div style="width:44px;height:44px;border-radius:12px;background:var(--cyan-soft);color:var(--cyan);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:15px">04</div><h3 class="h-m">Производство и линии</h3><p style="font-size:14px;color:var(--muted);margin:0;line-height:1.6;flex:1">Производственный маршрут, контрактная сборка, подбор и запуск линий, СМК и контроль качества по ISO 13485.</p><span style="font-size:13.5px;font-weight:700;color:var(--cyan)">Подробнее →</span></a>
+    <a class="card" href="/registration" style="display:flex;flex-direction:column;gap:10px;transition:.2s;text-decoration:none"><div style="width:44px;height:44px;border-radius:12px;background:var(--cyan-soft);color:var(--cyan);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:15px">05</div><h3 class="h-m">Регистрация и документация</h3><p style="font-size:14px;color:var(--muted);margin:0;line-height:1.6;flex:1">Регистрационная стратегия, ТД/ЭД, испытания, досье, сопровождение в Росздравнадзоре и по правилам ЕАЭС.</p><span style="font-size:13.5px;font-weight:700;color:var(--cyan)">Подробнее →</span></a>
+    <a class="card" href="/analytics" style="display:flex;flex-direction:column;gap:10px;transition:.2s;text-decoration:none"><div style="width:44px;height:44px;border-radius:12px;background:var(--cyan-soft);color:var(--cyan);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:15px">06</div><h3 class="h-m">Аналитика: что выгодно локализовать</h3><p style="font-size:14px;color:var(--muted);margin:0;line-height:1.6;flex:1">Продуктовые гипотезы, реестр РУ, госзакупки, маржа, барьеры. Решение о нише до того, как потрачены деньги.</p><span style="font-size:13.5px;font-weight:700;color:var(--cyan)">Подробнее →</span></a>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <span class="tag">Кому помогаем</span>
+  <h2 class="h-l" style="margin:14px 0 26px">Сценарии, с которыми приходят</h2>
+  <div class="grid g2">
+    <div style="border-left:3px solid var(--blue);padding:16px 20px;background:#fff;border-radius:0 14px 14px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)"><b style="display:block;margin-bottom:5px">Дистрибьютору импортных МИ</b><p style="font-size:13.5px;color:var(--muted);margin:0 0 8px;line-height:1.55">Поставки срываются или дорожают, рынок требует российского статуса. Нужно стать производителем.</p><span style="font-size:13px;font-weight:600;color:var(--cyan)">Первый шаг: оценка локализации изделия</span></div>
+    <div style="border-left:3px solid var(--blue);padding:16px 20px;background:#fff;border-radius:0 14px 14px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)"><b style="display:block;margin-bottom:5px">Иностранному производителю</b><p style="font-size:13.5px;color:var(--muted);margin:0 0 8px;line-height:1.55">Нужен вход на рынок РФ и ЕАЭС: регистрация, локальный партнёр, производство без потери контроля над продуктом.</p><span style="font-size:13px;font-weight:600;color:var(--cyan)">Первый шаг: регистрационно-производственный маршрут</span></div>
+    <div style="border-left:3px solid var(--blue);padding:16px 20px;background:#fff;border-radius:0 14px 14px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)"><b style="display:block;margin-bottom:5px">Российскому производителю</b><p style="font-size:13.5px;color:var(--muted);margin:0 0 8px;line-height:1.55">Есть продукт или контракт, не хватает инженерной силы: плата, корпус, прошивка, документация, испытания.</p><span style="font-size:13px;font-weight:600;color:var(--cyan)">Первый шаг: инженерная диагностика проекта</span></div>
+    <div style="border-left:3px solid var(--blue);padding:16px 20px;background:#fff;border-radius:0 14px 14px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)"><b style="display:block;margin-bottom:5px">Инвестору и производственной площадке</b><p style="font-size:13.5px;color:var(--muted);margin:0 0 8px;line-height:1.55">Есть капитал или мощности, нужна ниша с понятной экономикой и команда, которая доведёт до серии.</p><span style="font-size:13px;font-weight:600;color:var(--cyan)">Первый шаг: аналитика ниш и продуктовые гипотезы</span></div>
+  </div>
+</div></section>
+
+<section class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
+  <span class="tag">Доказательства экспертизы</span>
+  <h2 class="h-l" style="margin:14px 0 22px">Почему нам можно доверять</h2>
+  <div class="grid g2">
+    <div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px"><span style="font-family:var(--mono);color:var(--cyan);font-weight:600;font-size:12.5px;padding-top:2px;white-space:nowrap;min-width:36px">RA</span><div><b>Регуляторная практика — действующий бизнес.</b> Регистрация медицинских изделий — ядро группы: реальные досье, испытания, ответы на запросы РЗН.</div></div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px"><span style="font-family:var(--mono);color:var(--cyan);font-weight:600;font-size:12.5px;padding-top:2px;white-space:nowrap;min-width:36px">R&D</span><div><b>Научная база.</b> Основатель — аспирант ИБХФ РАН, публикации в рецензируемых журналах, сотрудничество с РНИМУ им. Пирогова.</div></div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px"><span style="font-family:var(--mono);color:var(--cyan);font-weight:600;font-size:12.5px;padding-top:2px;white-space:nowrap;min-width:36px">INT</span><div><b>Международная сеть.</b> Работа с производителями Китая и Азии по линиям, ИВД и трансферу технологий.</div></div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:14px 0;font-size:14px"><span style="font-family:var(--mono);color:var(--cyan);font-weight:600;font-size:12.5px;padding-top:2px;white-space:nowrap;min-width:36px">ENG</span><div><b>Инженерная экспертиза.</b> Разработка электроники для медицины: схемотехника, PCB, прошивки, корпус, ЭМС-подготовка.</div></div>
+    </div>
+    <div>
+      <div style="background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65;margin-bottom:16px"><b style="display:block;margin-bottom:6px;font-size:14px">Правовая позиция</b>Центр работает в рамках законного реверс-инжиниринга: функциональный анализ без воспроизведения патентоохраняемых решений (FTO-проверка на старте), независимая КД, официальная регистрация изделия.</div>
+      <div style="background:var(--cyan-soft);border:1px solid #BCE4E1;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#1A7A6E;line-height:1.65"><b style="display:block;margin-bottom:6px;font-size:14px">Нормативная экспертиза</b>Аудитор ISO 13485/14971 · Член АУСОМИ · Сооснователь медтех-проектов · Спикер Российской недели здравоохранения</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec" id="lead"><div class="wrap">
+  <span class="tag">Обсудить проект</span>
+  <h2 class="h-l" style="margin:14px 0 8px">Оставьте заявку</h2>
+  <p class="lead" style="margin-bottom:28px">Расскажите об изделии и задаче — ответим в течение одного рабочего дня.</p>
+  <form class="frm" style="max-width:560px" onsubmit="return sendLead(this)">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:13px">
+      <div><label>Имя и компания</label><input name="name" required placeholder="Иван, ООО Медицина"></div>
+      <div><label>Телефон</label><input name="phone" required placeholder="+7 ..."></div>
+    </div>
+    <div><label>Изделие / задача</label><input name="device" placeholder="Тип изделия или задача"></div>
+    <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--muted)">
+      <input type="checkbox" id="ag" required style="margin-top:3px;width:auto;accent-color:var(--cyan)">
+      <label for="ag">Согласен с <a href="/privacy" style="color:var(--cyan)">Политикой конфиденциальности</a> и обработкой персональных данных</label>
+    </div>
+    <button type="submit" class="btn pri" style="width:100%;justify-content:center;padding:15px">Отправить заявку</button>
+  </form>
+</div></section>
+<footer>
+<div class="wrap">
+  <div class="cols">
+    <div>
+      <b>Инженерный центр локализации МИ</b>
+      <p style="font-size:13px;line-height:1.65;margin:0 0 14px;color:#97A1B2">Локализация производства медицинских изделий в России. От анализа ниши до регистрационного удостоверения.</p>
+      <a href="tel:+79853169104">+7 985 316-91-04 (Россия)</a>
+      <a href="tel:+79888777295">+7 988 877-72-95 (Россия)</a>
+      <a href="tel:+77021394489">+7 702 139-44-89 (Казахстан)</a>
+      <a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a>
+      <a href="https://t.me/tandelovtat" style="color:#2FA8A0" target="_blank" rel="noopener noreferrer">Telegram: @tandelovtat</a>
+    </div>
+    <div>
+      <b>Услуги</b>
+      <a href="/localization">Локализация</a>
+      <a href="/reverse">Реверс-инжиниринг</a>
+      <a href="/development">Разработка</a>
+      <a href="/production">Производство</a>
+      <a href="/registration">Регистрация</a>
+      <a href="/analytics">Аналитика</a>
+    </div>
+    <div>
+      <b>Компания</b>
+      <a href="/pricing">Стоимость</a>
+      <a href="/blog">Блог</a>
+      <a href="/contacts">Контакты</a>
+      <a href="/privacy">Политика ПДн</a>
+    </div>
+    <div>
+      <b>Контакты</b>
+      <a href="mailto:info@med-local.ru">info@med-local.ru</a>
+      <a href="mailto:sales@med-local.ru">sales@med-local.ru</a>
+      <a href="mailto:marketing@med-local.ru">marketing@med-local.ru</a>
+      <a href="mailto:ceo@med-local.ru">ceo@med-local.ru</a>
+    </div>
+  </div>
+  <div class="fine">
+    <span>© 2024–2026 ООО «Инженерный центр локализации МИ» · ИНН 7700000000 · ОГРН 1167700000000 · 121205, г. Москва, Инновационный центр Сколково, Большой бульвар, д. 42, стр. 1</span>
+    <a href="/privacy">Политика конфиденциальности</a>
+  </div>
+</div>
+</footer>
+<a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878.001.001 0 0 0 0z"/></svg>
+  Написать в Telegram
+</a>
+<script>
+function toggleMenu(){
+  document.getElementById('burger').classList.toggle('open');
+  document.getElementById('mob-menu').classList.toggle('open');
+  document.body.style.overflow = document.getElementById('mob-menu').classList.contains('open') ? 'hidden' : '';
+}
+function sendLead(f){
+  f.querySelector('button[type=submit]').textContent='Отправляем...';
+  setTimeout(function(){
+    f.innerHTML='<div style="text-align:center;padding:32px"><div style="font-size:32px;margin-bottom:12px">✅</div><h3 style="font-size:20px;font-weight:800;margin:0 0 8px">Заявка принята!</h3><p style="color:var(--muted);margin:0">Мы свяжемся с вами в течение одного рабочего дня.</p></div>';
+  },600);
+  return false;
+}
+</script>
+</body>
+</html>
