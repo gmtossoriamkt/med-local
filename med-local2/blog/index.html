@@ -73,7 +73,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdro
 .crumbs b{color:var(--ink)}
 .route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:8px}
 .route .st{position:relative;padding:20px 18px 0}
-
 .route .st::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
 .route .st h3{font-size:15.5px;margin:8px 0 6px}
 .route .st p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
@@ -142,8 +141,6 @@ footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-
 .related{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
 .related a{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan);transition:.15s}
 .related a:hover{border-color:var(--cyan)}
-
-/* Бургер-меню для мобильных */
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;z-index:200}
 .burger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
 .burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
@@ -153,29 +150,17 @@ footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-
 .mob-menu.open{display:flex}
 .mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
 .mob-menu a:hover{color:var(--cyan)}
-@media(max-width:900px){
-  .nav-links{display:none}
-  .burger{display:flex}
-  .nav{gap:12px}
-}
-/* Хлебные крошки */
+@media(max-width:900px){.nav-links{display:none}.burger{display:flex}.nav{gap:12px}}
 .crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 .crumbs a{color:var(--muted);transition:.15s}.crumbs a:hover{color:var(--cyan)}
 .crumbs span{color:var(--muted)}
 .crumbs b{color:var(--ink);font-weight:600}
-/* Таблицы на мобильных */
-@media(max-width:640px){
-  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .article-body table{display:block;overflow-x:auto}
-}
-/* Плавающая кнопка на мобильных */
+@media(max-width:640px){.compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}.article-body table{display:block;overflow-x:auto}}
 .float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
 @media(max-width:768px){.float-btn{display:flex}}
-/* Состояния кнопок */
 .btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
 .btn.pri:active{transform:translateY(0);filter:brightness(.95)}
 a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
-/* Единый подвал */
 footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
 footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
 footer b{color:#fff;display:block;margin-bottom:10px}
@@ -215,6 +200,7 @@ ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webv
     <a class="card" href="/blog/advalornaya-dolya" style="display:flex;flex-direction:column;gap:9px;transition:.2s;text-decoration:none"><span style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)">Локализация · ПП 719</span><h3 style="font-size:16.5px;line-height:1.35">Адвалорный тупик: как рассчитать долю импортного сырья и не потерять статус</h3><p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.6;flex:1">Формула, три ловушки, расчётный пример для гемоконтейнеров.</p><span style="font-size:13px;font-weight:700;color:var(--orange)">Читать →</span></a>
     <a class="card" href="/blog/pp719-vs-pp1875" style="display:flex;flex-direction:column;gap:9px;transition:.2s;text-decoration:none"><span style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)">Госзакупки · Нацрежим</span><h3 style="font-size:16.5px;line-height:1.35">ПП 719 против ПП 1875: критические отличия для защиты позиций в госзакупках</h3><p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.6;flex:1">Запрет на допуск, преференция 15%, правило «второй лишний». Четыре точки отказа.</p><span style="font-size:13px;font-weight:700;color:var(--orange)">Читать →</span></a>
     <a class="card" href="/blog/pp1875-zayavki" style="display:flex;flex-direction:column;gap:9px;transition:.2s;text-decoration:none"><span style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)">Госзакупки · Нацрежим</span><h3 style="font-size:16.5px;line-height:1.35">Новые правила нацрежима по ПП 1875: как интегрировать реестровые записи в заявки</h3><p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.6;flex:1">Структурированная форма ЕИС, обязательные атрибуты, пошаговый алгоритм.</p><span style="font-size:13px;font-weight:700;color:var(--orange)">Читать →</span></a>
+    <a class="card" href="/blog/vtoroy-lishniy" style="display:flex;flex-direction:column;gap:9px;transition:.2s;text-decoration:none"><span style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)">Госзакупки · Нацрежим</span><h3 style="font-size:16.5px;line-height:1.35">Правило «второй лишний» по ПП 1875: как защитить заявку от неправомерного отклонения</h3><p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.6;flex:1">Механика правила, схемы злоупотреблений заказчиков и алгоритм защиты — до жалобы в ФАС.</p><span style="font-size:13px;font-weight:700;color:var(--orange)">Читать →</span></a>
   </div>
   <div style="background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65;margin-top:30px"><b style="display:block;margin-bottom:6px;font-size:14px">Редакционная политика</b>Экспертно и честно: без юридически опасных обещаний по срокам регистрации. Каждая статья основана на реальной практике. Подписывайтесь на Telegram <a href="https://t.me/tandelovtat" style="color:var(--cyan)" target="_blank" rel="noopener noreferrer">@tandelovtat</a></div>
 </div></section>
