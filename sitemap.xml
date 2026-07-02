@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://med-local.ru/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://med-local.ru/about</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://med-local.ru/localization</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://med-local.ru/reverse</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://med-local.ru/development</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://med-local.ru/production</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://med-local.ru/registration</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://med-local.ru/analytics</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://med-local.ru/pricing</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://med-local.ru/blog</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://med-local.ru/contacts</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://med-local.ru/blog/gisp-otchet</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://med-local.ru/blog/gisp-annulirovanie</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://med-local.ru/blog/pp719-checklist</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://med-local.ru/blog/advalornaya-dolya</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://med-local.ru/blog/pp719-vs-pp1875</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://med-local.ru/blog/pp1875-zayavki</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+</urlset>
