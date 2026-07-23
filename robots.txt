@@ -1,0 +1,55 @@
+# Разрешаем всем поисковым роботам
+User-agent: *
+Allow: /
+Disallow: /private/
+
+# Яндекс
+User-agent: YandexBot
+Allow: /
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# ChatGPT / OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Claude / Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Bing / Microsoft Copilot
+User-agent: BingBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Другие ИИ
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+Sitemap: https://med-local.ru/sitemap.xml

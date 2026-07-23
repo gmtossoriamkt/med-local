@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Глоссарий терминов: МИ, ИВД, ПП 719, ГИСП, адвалорная доля, ISO 13485</title>
+<meta name="description" content="Глоссарий терминов локализации МИ: определения МИ, ИВД, РУ, ПП 719, СТ-1, ГИСП, ЕРУ, FTO, ЭМС, ISO 13485, ISO 14971.">
+<link rel="canonical" href="https://med-local.ru/glossary">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Глоссарий терминов: МИ, ИВД, ПП 719, ГИСП, адвалорная доля, ISO 13485">
+<meta property="og:description" content="Глоссарий терминов локализации МИ: определения МИ, ИВД, РУ, ПП 719, СТ-1, ГИСП, ЕРУ, FTO, ЭМС, ISO 13485, ISO 14971.">
+<meta property="og:url" content="https://med-local.ru/glossary">
+<meta property="og:image" content="https://med-local.ru/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@700;800&family=JetBrains+Mono:wght@600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"></noscript>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+:root{
+ --graphite:#1C232E;--graphite-2:#27303E;--ink:#1C232E;--muted:#4A5568;
+ --blue:#3D6FB4;--cyan:#2FA8A0;--cyan-soft:#E4F4F3;--blue-soft:#E9F0FA;
+ --orange:#FF6B3D;--orange-soft:#FFE9DC;
+ --paper:#F6F7F9;--card:#FFFFFF;--line:#E5E8ED;
+ --body:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+ --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{overflow-x:hidden;max-width:100vw}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.mono{font-family:var(--mono)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:12px;font-weight:600;font-size:13.5px;border:none;transition:.18s;cursor:pointer}
+.btn.pri{background:var(--orange);color:#fff;box-shadow:0 10px 24px -10px rgba(255,107,61,.6)}
+.btn.pri:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn.gh{background:transparent;border:1.5px solid #fff;color:#fff}
+.btn.gh:hover{background:rgba(255,255,255,.1)}
+.btn.dark{background:var(--graphite);color:#fff}
+.btn.line-btn{background:#fff;border:1.5px solid var(--line);color:var(--ink)}
+.btn.line-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--cyan)}
+.tag::before{content:"";width:22px;height:2px;background:var(--cyan)}
+h1,h2,h3{line-height:1.15;margin:0}
+.h-xl{font-size:clamp(30px,4.6vw,52px);font-weight:800;letter-spacing:-1.2px}
+.h-l{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.8px}
+.h-m{font-size:19px;font-weight:700}
+.lead{font-size:17px;color:var(--muted);line-height:1.65}
+.sec{padding:74px 0}
+.sec.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:960px){.g3,.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+@media(max-width:620px){.g3,.g4,.g2{grid-template-columns:1fr}}
+@media(max-width:880px){.route{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:560px){.route{grid-template-columns:1fr!important}.route .st{padding:16px 0 0!important;border-bottom:1px solid var(--line);padding-bottom:16px!important;margin-bottom:8px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.kv{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.kv span{color:var(--muted)}.kv b{text-align:right}
+header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:22px;height:66px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:16.5px;letter-spacing:-.3px}
+.logo small{display:block;font-size:10px;font-weight:600;color:var(--muted);letter-spacing:1.6px;text-transform:uppercase}
+.nav a.lnk{font-size:12.5px;font-weight:500;color:var(--muted);transition:.15s;white-space:nowrap}
+.nav a.lnk:hover,.nav a.lnk.on{color:var(--ink)}
+.nav .sp{flex:1}
+@media(max-width:900px){.nav a.lnk{display:none}}
+.hero{position:relative;background:linear-gradient(140deg,var(--graphite) 0%,#202b3c 60%,#1d3a45 100%);color:#fff;overflow:hidden}
+.hero .pcb{position:absolute;inset:0;opacity:.16;pointer-events:none}
+.hero .in{position:relative;padding:92px 0 86px}
+.hero .lead{color:#B9C2D0;max-width:640px}
+.hero .stats{display:flex;gap:38px;margin-top:42px;flex-wrap:wrap}
+.hero .stats b{font-size:26px;font-weight:800;display:block;letter-spacing:-.5px}
+.hero .stats span{font-size:12.5px;color:#8E99AB}
+.crumbs{font-size:12.5px;color:var(--muted);margin:18px 0 0}
+.crumbs b{color:var(--ink)}
+.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:8px}
+.route .st{position:relative;padding:20px 18px 0}
+.route .st::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+.route .st h3{font-size:15.5px;margin:8px 0 6px}
+.route .st p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+@media(max-width:880px){.route{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.route{grid-template-columns:1fr}}
+.svc{display:flex;flex-direction:column;gap:10px;position:relative;transition:.2s}
+.svc:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.svc .ic{width:44px;height:44px;border-radius:12px;background:var(--cyan-soft);color:var(--cyan);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:15px}
+.svc p{font-size:14px;color:var(--muted);margin:0;line-height:1.6;flex:1}
+.svc .go{font-size:13.5px;font-weight:700;color:var(--cyan)}
+.seg{border-left:3px solid var(--blue);padding:16px 20px;background:#fff;border-radius:0 14px 14px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.seg b{display:block;margin-bottom:5px}
+.seg p{font-size:13.5px;color:var(--muted);margin:0 0 8px;line-height:1.55}
+.seg .of{font-size:13px;font-weight:600;color:var(--cyan)}
+.law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
+.law b{display:block;margin-bottom:6px;font-size:14px}
+.post{display:flex;flex-direction:column;gap:9px;transition:.2s}
+.post:hover{transform:translateY(-3px)}
+.post .rub{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)}
+.post h3{font-size:16.5px;line-height:1.35}
+.post p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.6}
+.post .cta-link{font-size:13px;font-weight:700;color:var(--orange)}
+.frm{display:grid;gap:13px}
+.frm label{font-size:12.5px;font-weight:600}
+.frm input,.frm select,.frm textarea{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:12px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.frm input:focus,.frm select:focus,.frm textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:620px){.f2{grid-template-columns:1fr}}
+.mag{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:var(--r);padding:30px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.mag b{font-size:19px;display:block;margin-bottom:6px}
+.mag p{color:#AFBAC9;font-size:14px;margin:0;max-width:520px}
+.mag .sp{flex:1}
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2}footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+.proof{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.proof .n{font-family:var(--mono);color:var(--cyan);font-weight:600;font-size:12.5px;padding-top:2px;white-space:nowrap}
+.steps li{margin-bottom:10px;line-height:1.6;font-size:14.5px}
+.lift{box-shadow:var(--sh)}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}
+.pain-item{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px}
+.pain-item h4{font-size:14px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.pain-item p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+.compare-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:14px}
+.compare-table th{background:var(--graphite);color:#fff;font-weight:600;padding:12px 16px;text-align:left}
+.compare-table td{padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink)}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table td.bad{color:#C0392B}
+.compare-table td.good{color:#1A7A6E;font-weight:600}
+.calc-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;margin-top:24px;box-shadow:var(--sh)}
+.calc-box h3{font-size:18px;font-weight:700;margin:0 0 20px}
+.form-row{margin-bottom:14px}
+.form-row label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;color:var(--ink)}
+.form-row select,.form-row input{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:10px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.form-row select:focus,.form-row input:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.calc-result{background:var(--cyan-soft);border:1px solid #BCE4E1;border-radius:11px;padding:18px;margin-top:16px;display:none}
+.calc-result.show{display:block}
+.calc-result h4{font-size:15px;font-weight:700;color:#1A7A6E;margin:0 0 6px}
+.calc-result p{font-size:13.5px;color:#2D7A72;margin:0}
+.related{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.related a{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan);transition:.15s}
+.related a:hover{border-color:var(--cyan)}
+
+/* Бургер-меню для мобильных */
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;z-index:200}
+.burger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:100;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+.mob-menu a:hover{color:var(--cyan)}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .nav{gap:12px}
+}
+/* Хлебные крошки */
+.crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:.15s}.crumbs a:hover{color:var(--cyan)}
+.crumbs span{color:var(--muted)}
+.crumbs b{color:var(--ink);font-weight:600}
+/* Таблицы на мобильных */
+@media(max-width:640px){
+  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .article-body table{display:block;overflow-x:auto}
+}
+/* Плавающая кнопка на мобильных */
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+.float-btn.max-btn{bottom:74px;background:#fff;box-shadow:0 8px 24px rgba(107,63,231,.25);color:var(--ink)}
+@media(max-width:768px){.float-btn{display:flex}}
+/* Состояния кнопок */
+.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.btn.pri:active{transform:translateY(0);filter:brightness(.95)}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+/* Единый подвал */
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2;transition:.15s}
+footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){footer .cols{grid-template-columns:1fr}}
+
+.header-icons{display:flex;align-items:center;gap:8px;margin-right:4px}
+.header-icons a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s}
+.header-icons a.tg-icon{background:#2FA8A0}
+.header-icons a.max-icon{background:transparent;padding:0}
+.header-icons a:hover{filter:brightness(1.1);transform:translateY(-1px)}
+@media(max-width:900px){.header-icons{display:none}}
+</style>
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "name": "Глоссарий терминов локализации медицинских изделий",
+  "url": "https://med-local.ru/glossary",
+  "hasDefinedTerm": [{"@type":"DefinedTerm","name":"МИ","description":"Медицинское изделие — любой инструмент, аппарат, прибор, устройство, программное обеспечение, имплан...","url":"https://med-local.ru/glossary#ми"},
+{"@type":"DefinedTerm","name":"ИВД","description":"Изделие для in vitro диагностики (ИВД) — медицинское изделие, предназначенное для исследования образ...","url":"https://med-local.ru/glossary#ивд"},
+{"@type":"DefinedTerm","name":"РУ","description":"Регистрационное удостоверение (РУ) — документ, выдаваемый Росздравнадзором после прохождения государ...","url":"https://med-local.ru/glossary#ру"},
+{"@type":"DefinedTerm","name":"ПП 719","description":"Постановление Правительства РФ №719 от 17.07.2015 — нормативный акт, определяющий критерии признания...","url":"https://med-local.ru/glossary#пп-719"},
+{"@type":"DefinedTerm","name":"СТ-1","description":"СТ-1 — сертификат о происхождении товара, подтверждающий, что медицинское изделие является российско...","url":"https://med-local.ru/glossary#ст-1"},
+{"@type":"DefinedTerm","name":"ГИСП","description":"ГИСП (gisp.gov.ru) — государственная информационная система промышленности, через которую производит...","url":"https://med-local.ru/glossary#гисп"},
+{"@type":"DefinedTerm","name":"ЕРУ","description":"Единое регистрационное удостоверение (ЕРУ) — документ, дающий право на обращение медицинского издели...","url":"https://med-local.ru/glossary#еру"},
+{"@type":"DefinedTerm","name":"FTO","description":"Freedom To Operate (FTO) — анализ патентной свободы действий: проверка патентного ландшафта перед на...","url":"https://med-local.ru/glossary#fto"},
+{"@type":"DefinedTerm","name":"ЭМС","description":"Электромагнитная совместимость (ЭМС) — способность медицинского прибора функционировать в условиях э...","url":"https://med-local.ru/glossary#эмс"},
+{"@type":"DefinedTerm","name":"СМК","description":"Система менеджмента качества (СМК) — совокупность организационной структуры, процессов, ресурсов и д...","url":"https://med-local.ru/glossary#смк"},
+{"@type":"DefinedTerm","name":"ЕАЭС","description":"Евразийский экономический союз (ЕАЭС) — международная организация региональной экономической интегра...","url":"https://med-local.ru/glossary#еаэс"},
+{"@type":"DefinedTerm","name":"РЗН","description":"Росздравнадзор (Федеральная служба по надзору в сфере здравоохранения) — федеральный орган исполните...","url":"https://med-local.ru/glossary#рзн"},
+{"@type":"DefinedTerm","name":"Адвалорная доля","description":"Адвалорная доля — отношение стоимости иностранных комплектующих к производственной себестоимости гот...","url":"https://med-local.ru/glossary#адвалорная-доля"},
+{"@type":"DefinedTerm","name":"ISO 13485","description":"ISO 13485 — международный стандарт, устанавливающий требования к системе менеджмента качества органи...","url":"https://med-local.ru/glossary#iso-13485"},
+{"@type":"DefinedTerm","name":"ISO 14971","description":"ISO 14971 — международный стандарт применения риск-менеджмента к медицинским изделиям. Требует докум...","url":"https://med-local.ru/glossary#iso-14971"},
+{"@type":"DefinedTerm","name":"ГОСТ Р МЭК 60601","description":"ГОСТ Р МЭК 60601 — российский аналог международного стандарта IEC 60601, устанавливающего требования...","url":"https://med-local.ru/glossary#гост-р-мэк-60601"},
+{"@type":"DefinedTerm","name":"ПП 1875","description":"Постановление Правительства РФ №1875 от 23.12.2024 — нормативный акт, регулирующий национальный режи...","url":"https://med-local.ru/glossary#пп-1875"},
+{"@type":"DefinedTerm","name":"КД","description":"Конструкторская документация (КД) — комплект технических документов, описывающих конструкцию изделия...","url":"https://med-local.ru/glossary#кд"},
+{"@type":"DefinedTerm","name":"PCB","description":"PCB (Printed Circuit Board) — печатная плата, на которой монтируются электронные компоненты медицинс...","url":"https://med-local.ru/glossary#pcb"}]
+}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Инженерный центр локализации МИ","url":"https://med-local.ru"}</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://med-local.ru/"},{"@type":"ListItem","position":2,"name":"Глоссарий","item":"https://med-local.ru/glossary"}]}
+</script>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DZXMBECL0"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-9DZXMBECL0");
+</script>
+</head>
+<body>
+<div class="mob-menu" id="mob-menu"><button onclick="toggleMenu()" style="position:absolute;top:18px;right:18px;background:none;border:none;cursor:pointer;padding:8px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+<a href="/">Главная</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">Блог</a><a href="/pricing">Стоимость</a><a href="/about">О центре</a>
+<a href="/#lead" class="btn pri" style="margin-top:16px">Оценить проект</a></div>
+<header><div class="wrap nav">
+  <a class="logo" href="/"><span style="display:flex;align-items:center;gap:11px"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="7" stroke="#1C232E" stroke-width="2.6" fill="none"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#2FA8A0"/><path d="M24 2v7M24 39v7M2 24h7M39 24h7M8 8l5 5M40 8l-5 5M8 40l5-5M40 40l-5-5" stroke="#3D6FB4" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.6" fill="#FF6B3D"/></svg><span><span style="font-weight:800;font-size:14px;letter-spacing:-.3px;line-height:1.2;display:block">Инженерный<br>центр</span><span style="font-size:9px;font-weight:600;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;line-height:1.3;display:block">локализации МИ</span></span></span></a>
+  <span class="sp"></span>
+  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk" href="/blog">Блог</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a></div>
+  <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span></span><span></span><span></span></button>
+</div></header>
+<main>
+<div class="wrap"><nav class="crumbs"><a href="/">Главная</a><span>›</span><b>Глоссарий</b></nav></div>
+<section style="background:#fff;border-bottom:1px solid var(--line)"><div class="wrap" style="padding:48px 0 36px">
+  <span class="tag" style="display:inline-flex">Справочник терминов</span>
+  <h1 class="h-xl" style="margin:14px 0 16px">Глоссарий терминов локализации МИ</h1>
+  <p class="lead" style="max-width:680px">Определения ключевых понятий в сфере локализации, регистрации и разработки медицинских изделий в России и ЕАЭС.</p>
+</div></section>
+<section class="sec"><div class="wrap" style="max-width:820px">
+<div id="ми" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">МИ <span style="font-size:14px;font-weight:500;color:var(--muted)">— медицинское изделие</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">Медицинское изделие — любой инструмент, аппарат, прибор, устройство, программное обеспечение, имплантат, реагент или другой продукт, предназначенный для диагностики, лечения, мониторинга или облегчения заболеваний человека, не достигающий своего основного действия фармакологическим, иммунологическим или метаболическим путём.</p>
+</div><div id="ивд" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">ИВД <span style="font-size:14px;font-weight:500;color:var(--muted)">— изделие для in vitro диагностики</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">Изделие для in vitro диагностики (ИВД) — медицинское изделие, предназначенное для исследования образцов биологического происхождения вне организма человека (кровь, моча, биоптаты) с целью диагностики заболеваний.</p>
+</div><div id="ру" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">РУ <span style="font-size:14px;font-weight:500;color:var(--muted)">— регистрационное удостоверение</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">Регистрационное удостоверение (РУ) — документ, выдаваемый Росздравнадзором после прохождения государственной регистрации медицинского изделия. Без РУ медицинское изделие нельзя законно продавать и применять на территории РФ.</p>
+</div><div id="пп-719" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">ПП 719 <span style="font-size:14px;font-weight:500;color:var(--muted)">— Постановление Правительства РФ №719</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">Постановление Правительства РФ №719 от 17.07.2015 — нормативный акт, определяющий критерии признания промышленной продукции (в том числе медицинских изделий) российской. Устанавливает балльную систему и порог адвалорной доли для подтверждения российского происхождения.</p>
+</div><div id="ст-1" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">СТ-1 <span style="font-size:14px;font-weight:500;color:var(--muted)">— сертификат происхождения товара</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">СТ-1 — сертификат о происхождении товара, подтверждающий, что медицинское изделие является российской продукцией в соответствии с критериями ПП 719. Выдаётся Торгово-промышленной палатой (ТПП) РФ.</p>
+</div><div id="гисп" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">ГИСП <span style="font-size:14px;font-weight:500;color:var(--muted)">— государственная информационная система промышленности</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">ГИСП (gisp.gov.ru) — государственная информационная система промышленности, через которую производители подают заявки на включение в реестр российской промышленной продукции и ежегодные отчёты об объёмах производства (до 1 апреля каждого года).</p>
+</div><div id="еру" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">ЕРУ <span style="font-size:14px;font-weight:500;color:var(--muted)">— единое регистрационное удостоверение ЕАЭС</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">Единое регистрационное удостоверение (ЕРУ) — документ, дающий право на обращение медицинского изделия на территории всех государств — членов Евразийского экономического союза (РФ, Казахстан, Беларусь, Армения, Кыргызстан).</p>
+</div><div id="fto" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">FTO <span style="font-size:14px;font-weight:500;color:var(--muted)">— Freedom To Operate</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">Freedom To Operate (FTO) — анализ патентной свободы действий: проверка патентного ландшафта перед началом разработки или реверс-инжиниринга для выявления действующих патентов, которые могут быть нарушены. Обязательный первый шаг при законном реверс-инжиниринге.</p>
+</div><div id="эмс" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">ЭМС <span style="font-size:14px;font-weight:500;color:var(--muted)">— электромагнитная совместимость</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">Электромагнитная совместимость (ЭМС) — способность медицинского прибора функционировать в условиях электромагнитных помех и не создавать помех другому оборудованию. Соответствие требованиям ЭМС обязательно для регистрации по ГОСТ Р МЭК 60601.</p>
+</div><div id="смк" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">СМК <span style="font-size:14px;font-weight:500;color:var(--muted)">— система менеджмента качества</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">Система менеджмента качества (СМК) — совокупность организационной структуры, процессов, ресурсов и документации, обеспечивающая стабильное качество медицинских изделий. Для производства МИ требуется СМК, соответствующая ISO 13485.</p>
+</div><div id="еаэс" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">ЕАЭС <span style="font-size:14px;font-weight:500;color:var(--muted)">— Евразийский экономический союз</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">Евразийский экономический союз (ЕАЭС) — международная организация региональной экономической интеграции, включающая Россию, Казахстан, Беларусь, Армению и Кыргызстан. Регистрация МИ по правилам ЕАЭС даёт доступ на рынки всех государств-членов.</p>
+</div><div id="рзн" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">РЗН <span style="font-size:14px;font-weight:500;color:var(--muted)">— Росздравнадзор</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">Росздравнадзор (Федеральная служба по надзору в сфере здравоохранения) — федеральный орган исполнительной власти России, осуществляющий государственный контроль и надзор в сфере здравоохранения, в том числе государственную регистрацию медицинских изделий.</p>
+</div><div id="адвалорная-доля" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">Адвалорная доля <span style="font-size:14px;font-weight:500;color:var(--muted)">— доля иностранных комплектующих</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">Адвалорная доля — отношение стоимости иностранных комплектующих к производственной себестоимости готового медицинского изделия, выраженное в процентах. Для получения статуса российской продукции по ПП 719 адвалорная доля должна не превышать установленный порог (50% для большинства МИ в 2026 году).</p>
+</div><div id="iso-13485" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">ISO 13485 <span style="font-size:14px;font-weight:500;color:var(--muted)">— стандарт СМК для медицинских изделий</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">ISO 13485 — международный стандарт, устанавливающий требования к системе менеджмента качества организаций, занимающихся разработкой, производством и поставкой медицинских изделий. Соответствие ISO 13485 является обязательным требованием для регистрации МИ в большинстве стран.</p>
+</div><div id="iso-14971" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">ISO 14971 <span style="font-size:14px;font-weight:500;color:var(--muted)">— управление рисками медицинских изделий</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">ISO 14971 — международный стандарт применения риск-менеджмента к медицинским изделиям. Требует документировать каждый риск и способ его снижения на всех этапах жизненного цикла изделия: от разработки до постмаркетингового мониторинга.</p>
+</div><div id="гост-р-мэк-60601" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">ГОСТ Р МЭК 60601 <span style="font-size:14px;font-weight:500;color:var(--muted)">— безопасность медицинского электрооборудования</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">ГОСТ Р МЭК 60601 — российский аналог международного стандарта IEC 60601, устанавливающего требования безопасности для медицинского электрического оборудования. Определяет требования к электрической безопасности, ЭМС, механической прочности и биосовместимости.</p>
+</div><div id="пп-1875" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">ПП 1875 <span style="font-size:14px;font-weight:500;color:var(--muted)">— нацрежим в госзакупках МИ</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">Постановление Правительства РФ №1875 от 23.12.2024 — нормативный акт, регулирующий национальный режим при госзакупках медицинских изделий. Устанавливает запрет на допуск иностранных МИ при наличии российских аналогов, преференцию 15% для российских производителей и правило «второй лишний».</p>
+</div><div id="кд" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">КД <span style="font-size:14px;font-weight:500;color:var(--muted)">— конструкторская документация</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">Конструкторская документация (КД) — комплект технических документов, описывающих конструкцию изделия, необходимый для его изготовления, контроля, эксплуатации и ремонта. КД является обязательной частью регистрационного досье медицинского изделия.</p>
+</div><div id="pcb" style="border-bottom:1px solid var(--line);padding:20px 0">
+  <h2 style="font-size:20px;font-weight:800;margin:0 0 4px;color:var(--ink)">PCB <span style="font-size:14px;font-weight:500;color:var(--muted)">— печатная плата</span></h2>
+  <p style="font-size:15px;color:#3a4455;margin:0;line-height:1.75">PCB (Printed Circuit Board) — печатная плата, на которой монтируются электронные компоненты медицинского прибора. PCB-дизайн для медицинского оборудования требует учёта требований ЭМС, гальванической развязки и других специфических требований ГОСТ Р МЭК 60601.</p>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div><b>Инженерный центр локализации МИ</b><p style="font-size:13px;color:#97A1B2;margin:0 0 14px">Локализация МИ в России.</p><a href="tel:+79853169104">+7 985 316-91-04</a><a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a></div>
+    <div><b>Услуги</b><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a></div>
+    <div><b>Компания</b><a href="/about">О центре</a><a href="/blog">Блог</a><a href="/contacts">Контакты</a><a href="/glossary">Глоссарий</a></div>
+    <div><b>Контакты</b><a href="mailto:info@med-local.ru">info@med-local.ru</a><a href="mailto:sales@med-local.ru">sales@med-local.ru</a></div>
+  </div>
+  <div class="fine"><span>© 2024–2026 ООО «ГМТ» (Глобальные Медицинские Технологии) · 125047, г. Москва, 1-й Тверской-Ямской пер., д. 16, помещ. 1/п</span><a href="/privacy">Политика конфиденциальности</a></div>
+</div></footer>
+<script>function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';}
+</script>
+</body>
+</html>
