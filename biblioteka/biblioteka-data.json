@@ -1,0 +1,2526 @@
+{
+ "categories": [
+  {
+   "name": "ГОСТы МИ общего назначения",
+   "slug": "gosty-mi-obschego-naznacheniya",
+   "count": 141
+  },
+  {
+   "name": "ГОСТы МИ ИВД",
+   "slug": "gosty-mi-ivd",
+   "count": 50
+  },
+  {
+   "name": "НПА ЕАЭС",
+   "slug": "npa-eaes",
+   "count": 22
+  },
+  {
+   "name": "ПО с ИИ",
+   "slug": "po-s-ii",
+   "count": 19
+  },
+  {
+   "name": "Инспекция производства",
+   "slug": "inspekciya-proizvodstva",
+   "count": 7
+  },
+  {
+   "name": "НПА РФ",
+   "slug": "npa-rf",
+   "count": 6
+  },
+  {
+   "name": "Пострегистрационный мониторинг",
+   "slug": "postregistracionnyy-monitoring",
+   "count": 2
+  },
+  {
+   "name": "Испытания",
+   "slug": "ispytaniya",
+   "count": 1
+  }
+ ],
+ "documents": [
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ EN 556-1-2011 Стерилизация медицинских изделий. Требования к медицинским изделиям категории...",
+   "year": "2011",
+   "urlSlug": "gost-en-556-1-2011-sterilizaciya-medicinskih-izdeliy-trebovaniya-k-medicinskim-izdeliyam-k",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-en-556-1-2011-sterilizaciya-medicinskih-izdeliy-trebovaniya-k-medicinskim-izdeliyam-k.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-en-556-1-2011-sterilizaciya-medicinskih-izdeliy-trebovaniya-k-medicinskim-izdeliyam-k/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ IEC 61010-1-2014 Безопасность электрических контрольно-измерительных приборов и лабораторного...",
+   "year": "2014",
+   "urlSlug": "gost-iec-61010-1-2014-bezopasnost-elektricheskih-kontrolno-izmeritelnyh-priborov-i-laborat",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-iec-61010-1-2014-bezopasnost-elektricheskih-kontrolno-izmeritelnyh-priborov-i-laborat.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-iec-61010-1-2014-bezopasnost-elektricheskih-kontrolno-izmeritelnyh-priborov-i-laborat/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ IEC 61010-2-101-2013 Безопасность электрических контрольно-измерительных приборов и...",
+   "year": "2013",
+   "urlSlug": "gost-iec-61010-2-101-2013-bezopasnost-elektricheskih-kontrolno-izmeritelnyh-priborov-i",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-iec-61010-2-101-2013-bezopasnost-elektricheskih-kontrolno-izmeritelnyh-priborov-i.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-iec-61010-2-101-2013-bezopasnost-elektricheskih-kontrolno-izmeritelnyh-priborov-i/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ IEC 62304-2022 Изделия медицинские. Программное обеспечение. Процессы жизненного цикла",
+   "year": "2022",
+   "urlSlug": "gost-iec-62304-2022-izdeliya-medicinskie-programmnoe-obespechenie-processy-zhiznennogo-cik",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-iec-62304-2022-izdeliya-medicinskie-programmnoe-obespechenie-processy-zhiznennogo-cik.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-iec-62304-2022-izdeliya-medicinskie-programmnoe-obespechenie-processy-zhiznennogo-cik/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 11135-2017 Стерилизация медицинской продукции. Этиленоксид. Требования к разработке,...",
+   "year": "2017",
+   "urlSlug": "gost-iso-11135-2017-sterilizaciya-medicinskoy-produkcii-etilenoksid-trebovaniya-k-razrabot",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-iso-11135-2017-sterilizaciya-medicinskoy-produkcii-etilenoksid-trebovaniya-k-razrabot.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-iso-11135-2017-sterilizaciya-medicinskoy-produkcii-etilenoksid-trebovaniya-k-razrabot/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 11137-1-2011 Стерилизация медицинской продукции. Радиационная стерилизация. Часть 1....",
+   "year": "2011",
+   "urlSlug": "gost-iso-11137-1-2011-sterilizaciya-medicinskoy-produkcii-radiacionnaya-sterilizaciya-chas",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-iso-11137-1-2011-sterilizaciya-medicinskoy-produkcii-radiacionnaya-sterilizaciya-chas.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-iso-11137-1-2011-sterilizaciya-medicinskoy-produkcii-radiacionnaya-sterilizaciya-chas/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 11137-2-2011 Стерилизация медицинской продукции. Радиационная стерилизация. Часть 2....",
+   "year": "2011",
+   "urlSlug": "gost-iso-11137-2-2011-sterilizaciya-medicinskoy-produkcii-radiacionnaya-sterilizaciya-chas",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-iso-11137-2-2011-sterilizaciya-medicinskoy-produkcii-radiacionnaya-sterilizaciya-chas.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-iso-11137-2-2011-sterilizaciya-medicinskoy-produkcii-radiacionnaya-sterilizaciya-chas/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 11737-2-2011 Стерилизация медицинских изделий. Микробиологические методы. Часть 2....",
+   "year": "2011",
+   "urlSlug": "gost-iso-11737-2-2011-sterilizaciya-medicinskih-izdeliy-mikrobiologicheskie-metody-chast-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-iso-11737-2-2011-sterilizaciya-medicinskih-izdeliy-mikrobiologicheskie-metody-chast-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-iso-11737-2-2011-sterilizaciya-medicinskih-izdeliy-mikrobiologicheskie-metody-chast-2/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 13485-2017 Изделия медицинские. Системы менеджмента качества. Требования для целей...",
+   "year": "2017",
+   "urlSlug": "gost-iso-13485-2017-izdeliya-medicinskie-sistemy-menedzhmenta-kachestva-trebovaniya-dlya-c",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-iso-13485-2017-izdeliya-medicinskie-sistemy-menedzhmenta-kachestva-trebovaniya-dlya-c.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-iso-13485-2017-izdeliya-medicinskie-sistemy-menedzhmenta-kachestva-trebovaniya-dlya-c/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 14971-2021 Изделия медицинские. Применение менеджмента риска к медицинским изделиям (с...",
+   "year": "2021",
+   "urlSlug": "gost-iso-14971-2021-izdeliya-medicinskie-primenenie-menedzhmenta-riska-k-medicinskim-izdel",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-iso-14971-2021-izdeliya-medicinskie-primenenie-menedzhmenta-riska-k-medicinskim-izdel.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-iso-14971-2021-izdeliya-medicinskie-primenenie-menedzhmenta-riska-k-medicinskim-izdel/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 18153-2011 Изделия медицинские для диагностики in vitro. Измерение величин в биологических...",
+   "year": "2011",
+   "urlSlug": "gost-iso-18153-2011-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-izmerenie-velichin-v-bi",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-iso-18153-2011-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-izmerenie-velichin-v-bi.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-iso-18153-2011-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-izmerenie-velichin-v-bi/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 6710-2011 Контейнеры для сбора образцов венозной крови одноразовые. Технические требования...",
+   "year": "2011",
+   "urlSlug": "gost-iso-6710-2011-konteynery-dlya-sbora-obrazcov-venoznoy-krovi-odnorazovye-tehnicheskie",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-iso-6710-2011-konteynery-dlya-sbora-obrazcov-venoznoy-krovi-odnorazovye-tehnicheskie.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-iso-6710-2011-konteynery-dlya-sbora-obrazcov-venoznoy-krovi-odnorazovye-tehnicheskie/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ИСО 14698-1-2005 Чистые помещения и связанные с ними контролируемые среды. Контроль...",
+   "year": "2005",
+   "urlSlug": "gost-iso-14698-1-2005-chistye-pomescheniya-i-svyazannye-s-nimi-kontroliruemye-sredy-kontro",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-iso-14698-1-2005-chistye-pomescheniya-i-svyazannye-s-nimi-kontroliruemye-sredy-kontro.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-iso-14698-1-2005-chistye-pomescheniya-i-svyazannye-s-nimi-kontroliruemye-sredy-kontro/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ИСО 14698-2-2005 Чистые помещения и связанные с ними контролируемые среды. Контроль...",
+   "year": "2005",
+   "urlSlug": "gost-iso-14698-2-2005-chistye-pomescheniya-i-svyazannye-s-nimi-kontroliruemye-sredy-kontro",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-iso-14698-2-2005-chistye-pomescheniya-i-svyazannye-s-nimi-kontroliruemye-sredy-kontro.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-iso-14698-2-2005-chistye-pomescheniya-i-svyazannye-s-nimi-kontroliruemye-sredy-kontro/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 51088-2013 Медицинские изделия для диагностики ин витро. Реагенты, наборы реагентов,...",
+   "year": "2013",
+   "urlSlug": "gost-r-51088-2013-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-reagenty-nabory-reagentov",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-51088-2013-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-reagenty-nabory-reagentov.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-51088-2013-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-reagenty-nabory-reagentov/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 51352-2013 МИ ин витро Методы испытаний",
+   "year": "2013",
+   "urlSlug": "gost-r-51352-2013-mi-in-vitro-metody-ispytaniy",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-51352-2013-mi-in-vitro-metody-ispytaniy.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-51352-2013-mi-in-vitro-metody-ispytaniy/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ЕН 12322-2010 Изделия медицинские для диагностики in vitro. Питательные среды для...",
+   "year": "2010",
+   "urlSlug": "gost-r-en-12322-2010-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-pitatelnye-sredy-dlya",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-en-12322-2010-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-pitatelnye-sredy-dlya.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-en-12322-2010-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-pitatelnye-sredy-dlya/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ЕН 13532-2010 Общие требования к медицинским изделиям для диагностики in vitro для...",
+   "year": "2010",
+   "urlSlug": "gost-r-en-13532-2010-obschie-trebovaniya-k-medicinskim-izdeliyam-dlya-diagnostiki-in-vitro",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-en-13532-2010-obschie-trebovaniya-k-medicinskim-izdeliyam-dlya-diagnostiki-in-vitro.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-en-13532-2010-obschie-trebovaniya-k-medicinskim-izdeliyam-dlya-diagnostiki-in-vitro/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ЕН 13612-2010 Оценка функциональных характеристик медицинских изделий для диагностики in...",
+   "year": "2010",
+   "urlSlug": "gost-r-en-13612-2010-ocenka-funkcionalnyh-harakteristik-medicinskih-izdeliy-dlya-diagnosti",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-en-13612-2010-ocenka-funkcionalnyh-harakteristik-medicinskih-izdeliy-dlya-diagnosti.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-en-13612-2010-ocenka-funkcionalnyh-harakteristik-medicinskih-izdeliy-dlya-diagnosti/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ЕН 13641-2010 Устранение или снижение риска инфицирования, связанного с реагентами для...",
+   "year": "2010",
+   "urlSlug": "gost-r-en-13641-2010-ustranenie-ili-snizhenie-riska-inficirovaniya-svyazannogo-s-reagentam",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-en-13641-2010-ustranenie-ili-snizhenie-riska-inficirovaniya-svyazannogo-s-reagentam.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-en-13641-2010-ustranenie-ili-snizhenie-riska-inficirovaniya-svyazannogo-s-reagentam/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ЕН 14254-2010 Изделия медицинские для диагностики in vitro. Одноразовые емкости для сбора...",
+   "year": "2010",
+   "urlSlug": "gost-r-en-14254-2010-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-odnorazovye-emkosti-dl",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-en-14254-2010-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-odnorazovye-emkosti-dl.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-en-14254-2010-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-odnorazovye-emkosti-dl/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 13408-1-2000 Асептическое производство медицинской продукции. Часть 1. Общие требования",
+   "year": "2000",
+   "urlSlug": "gost-r-iso-13408-1-2000-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-1-obschie-t",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-13408-1-2000-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-1-obschie-t.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-13408-1-2000-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-1-obschie-t/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 13408-3-2011 Асептическое производство медицинской продукции. Часть 3. Лиофилизация",
+   "year": "2011",
+   "urlSlug": "gost-r-iso-13408-3-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-3-liofiliza",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-13408-3-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-3-liofiliza.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-13408-3-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-3-liofiliza/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 13408-4-2011 Асептическое производство медицинской продукции. Часть 4. Очистка на месте",
+   "year": "2011",
+   "urlSlug": "gost-r-iso-13408-4-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-4-ochistka",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-13408-4-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-4-ochistka.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-13408-4-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-4-ochistka/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 13408-5-2011 Асептическое производство медицинской продукции. Часть 5. Стерилизация на...",
+   "year": "2011",
+   "urlSlug": "gost-r-iso-13408-5-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-5-steriliza",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-13408-5-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-5-steriliza.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-13408-5-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-5-steriliza/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 13408-6-2009 Асептическое производство медицинской продукции. Часть 6. Изолирующие...",
+   "year": "2009",
+   "urlSlug": "gost-r-iso-13408-6-2009-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-6-izoliruyu",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-13408-6-2009-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-6-izoliruyu.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-13408-6-2009-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-6-izoliruyu/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 14644-1-2017 Чистые помещения и связанные с ними контролируемые среды. Часть 1....",
+   "year": "2017",
+   "urlSlug": "gost-r-iso-14644-1-2017-chistye-pomescheniya-i-svyazannye-s-nimi-kontroliruemye-sredy-chas",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-14644-1-2017-chistye-pomescheniya-i-svyazannye-s-nimi-kontroliruemye-sredy-chas.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-14644-1-2017-chistye-pomescheniya-i-svyazannye-s-nimi-kontroliruemye-sredy-chas/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 14937-2012 Стерилизация медицинской продукции. Общие требования к определению...",
+   "year": "2012",
+   "urlSlug": "gost-r-iso-14937-2012-sterilizaciya-medicinskoy-produkcii-obschie-trebovaniya-k-opredeleni",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-14937-2012-sterilizaciya-medicinskoy-produkcii-obschie-trebovaniya-k-opredeleni.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-14937-2012-sterilizaciya-medicinskoy-produkcii-obschie-trebovaniya-k-opredeleni/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 15193-2015 Изделия медицинские для диагностики in vitro. Измерение величин в пробах...",
+   "year": "2015",
+   "urlSlug": "gost-r-iso-15193-2015-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-izmerenie-velichin-v",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-15193-2015-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-izmerenie-velichin-v.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-15193-2015-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-izmerenie-velichin-v/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 15194-2013 Изделия медицинские для диагностики in vitro. Измерение величин в пробах...",
+   "year": "2013",
+   "urlSlug": "gost-r-iso-15194-2013-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-izmerenie-velichin-v",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-15194-2013-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-izmerenie-velichin-v.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-15194-2013-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-izmerenie-velichin-v/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 15197-2015 Тест-системы для диагностики in vitro. Требования к системам мониторинга...",
+   "year": "2015",
+   "urlSlug": "gost-r-iso-15197-2015-test-sistemy-dlya-diagnostiki-in-vitro-trebovaniya-k-sistemam-monito",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-15197-2015-test-sistemy-dlya-diagnostiki-in-vitro-trebovaniya-k-sistemam-monito.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-15197-2015-test-sistemy-dlya-diagnostiki-in-vitro-trebovaniya-k-sistemam-monito/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 15223-1-2023 Изделия медицинские. Символы, применяемые для передачи информации,... (2)",
+   "year": "2023",
+   "urlSlug": "gost-r-iso-15223-1-2023-izdeliya-medicinskie-simvoly-primenyaemye-dlya-peredachi-informaci",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-15223-1-2023-izdeliya-medicinskie-simvoly-primenyaemye-dlya-peredachi-informaci.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-15223-1-2023-izdeliya-medicinskie-simvoly-primenyaemye-dlya-peredachi-informaci/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 15882-2012 Стерилизация медицинской продукции. Химические индикаторы. Руководство по...",
+   "year": "2012",
+   "urlSlug": "gost-r-iso-15882-2012-sterilizaciya-medicinskoy-produkcii-himicheskie-indikatory-rukovodst",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-15882-2012-sterilizaciya-medicinskoy-produkcii-himicheskie-indikatory-rukovodst.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-15882-2012-sterilizaciya-medicinskoy-produkcii-himicheskie-indikatory-rukovodst/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 17511-2022 Изделия медицинские для диагностики in vitro. Требования к установлению...",
+   "year": "2022",
+   "urlSlug": "gost-r-iso-17511-2022-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-trebovaniya-k-ustanov",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-17511-2022-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-trebovaniya-k-ustanov.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-17511-2022-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-trebovaniya-k-ustanov/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 17665-1-2016 Стерилизация медицинской продукции. Влажное тепло. Часть 1. Требования к...",
+   "year": "2016",
+   "urlSlug": "gost-r-iso-17665-1-2016-sterilizaciya-medicinskoy-produkcii-vlazhnoe-teplo-chast-1-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-17665-1-2016-sterilizaciya-medicinskoy-produkcii-vlazhnoe-teplo-chast-1-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-17665-1-2016-sterilizaciya-medicinskoy-produkcii-vlazhnoe-teplo-chast-1-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 18113-1-2015 Медицинские изделия для диагностики in vitro. Информация, предоставляемая...",
+   "year": "2015",
+   "urlSlug": "gost-r-iso-18113-1-2015-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-informaciya-predost",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-18113-1-2015-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-informaciya-predost.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-18113-1-2015-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-informaciya-predost/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 18113-2-2015 Медицинские изделия для диагностики in vitro. Информация, предоставляемая...",
+   "year": "2015",
+   "urlSlug": "gost-r-iso-18113-2-2015-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-informaciya-predost",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-18113-2-2015-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-informaciya-predost.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-18113-2-2015-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-informaciya-predost/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 18113-3-2015 Медицинские изделия для диагностики in vitro. Информация, предоставляемая...",
+   "year": "2015",
+   "urlSlug": "gost-r-iso-18113-3-2015-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-informaciya-predost",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-18113-3-2015-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-informaciya-predost.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-18113-3-2015-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-informaciya-predost/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 18113-4-2015 Медицинские изделия для диагностики in vitro. Информация, предоставляемая...",
+   "year": "2015",
+   "urlSlug": "gost-r-iso-18113-4-2015-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-informaciya-predost",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-18113-4-2015-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-informaciya-predost.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-18113-4-2015-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-informaciya-predost/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 18113-5-2015 Медицинские изделия для диагностики in vitro. Информация, предоставляемая...",
+   "year": "2015",
+   "urlSlug": "gost-r-iso-18113-5-2015-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-informaciya-predost",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-18113-5-2015-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-informaciya-predost.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-18113-5-2015-medicinskie-izdeliya-dlya-diagnostiki-in-vitro-informaciya-predost/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 20776-1-2022 Исследование чувствительности инфекционных агентов и оценка функциональных...",
+   "year": "2077",
+   "urlSlug": "gost-r-iso-20776-1-2022-issledovanie-chuvstvitelnosti-infekcionnyh-agentov-i-ocenka-funkci",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-20776-1-2022-issledovanie-chuvstvitelnosti-infekcionnyh-agentov-i-ocenka-funkci.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-20776-1-2022-issledovanie-chuvstvitelnosti-infekcionnyh-agentov-i-ocenka-funkci/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 20857-2016 Стерилизация медицинской продукции. Горячий воздух. Требования к разработке,...",
+   "year": "2085",
+   "urlSlug": "gost-r-iso-20857-2016-sterilizaciya-medicinskoy-produkcii-goryachiy-vozduh-trebovaniya-k-r",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-20857-2016-sterilizaciya-medicinskoy-produkcii-goryachiy-vozduh-trebovaniya-k-r.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-20857-2016-sterilizaciya-medicinskoy-produkcii-goryachiy-vozduh-trebovaniya-k-r/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 23640-2015 Изделия медицинские для диагностики in vitro. Оценка стабильности реагентов...",
+   "year": "2015",
+   "urlSlug": "gost-r-iso-23640-2015-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-ocenka-stabilnosti-re",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-23640-2015-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-ocenka-stabilnosti-re.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-23640-2015-izdeliya-medicinskie-dlya-diagnostiki-in-vitro-ocenka-stabilnosti-re/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 25424-2013 Стерилизация медицинских изделий. Стерилизация низкотемпературная...",
+   "year": "2013",
+   "urlSlug": "gost-r-iso-25424-2013-sterilizaciya-medicinskih-izdeliy-sterilizaciya-nizkotemperaturnaya",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-25424-2013-sterilizaciya-medicinskih-izdeliy-sterilizaciya-nizkotemperaturnaya.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-25424-2013-sterilizaciya-medicinskih-izdeliy-sterilizaciya-nizkotemperaturnaya/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 6710-2021 Контейнеры для взятия проб венозной крови одноразовые. Технические требования...",
+   "year": "2021",
+   "urlSlug": "gost-r-iso-6710-2021-konteynery-dlya-vzyatiya-prob-venoznoy-krovi-odnorazovye-tehnicheskie",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-6710-2021-konteynery-dlya-vzyatiya-prob-venoznoy-krovi-odnorazovye-tehnicheskie.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-6710-2021-konteynery-dlya-vzyatiya-prob-venoznoy-krovi-odnorazovye-tehnicheskie/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 61326-1-2014 Оборудование электрическое для измерения, управления и лабораторного...",
+   "year": "2014",
+   "urlSlug": "gost-r-mek-61326-1-2014-oborudovanie-elektricheskoe-dlya-izmereniya-upravleniya-i-laborato",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-mek-61326-1-2014-oborudovanie-elektricheskoe-dlya-izmereniya-upravleniya-i-laborato.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-mek-61326-1-2014-oborudovanie-elektricheskoe-dlya-izmereniya-upravleniya-i-laborato/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 61326-2-6-2014 Оборудование электрическое для измерения, управления и лабораторного...",
+   "year": "2014",
+   "urlSlug": "gost-r-mek-61326-2-6-2014-oborudovanie-elektricheskoe-dlya-izmereniya-upravleniya-i-labora",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-mek-61326-2-6-2014-oborudovanie-elektricheskoe-dlya-izmereniya-upravleniya-i-labora.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-mek-61326-2-6-2014-oborudovanie-elektricheskoe-dlya-izmereniya-upravleniya-i-labora/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 62366-1-2023 Изделия медицинские. Часть 1. Проектирование медицинских изделий с учетом...",
+   "year": "2023",
+   "urlSlug": "gost-r-mek-62366-1-2023-izdeliya-medicinskie-chast-1-proektirovanie-medicinskih-izdeliy-s",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-mek-62366-1-2023-izdeliya-medicinskie-chast-1-proektirovanie-medicinskih-izdeliy-s.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-mek-62366-1-2023-izdeliya-medicinskie-chast-1-proektirovanie-medicinskih-izdeliy-s/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ_IEC_60825-1-2023_cd13d4c7-3b6e-4765-b426-9d9945ae6e84",
+   "year": "2023",
+   "urlSlug": "gost-iec-60825-1-2023-cd13d4c7-3b6e-4765-b426-9d9945ae6e84",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-iec-60825-1-2023-cd13d4c7-3b6e-4765-b426-9d9945ae6e84.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-iec-60825-1-2023-cd13d4c7-3b6e-4765-b426-9d9945ae6e84/"
+  },
+  {
+   "category": "ГОСТы МИ ИВД",
+   "categorySlug": "gosty-mi-ivd",
+   "docType": "ГОСТ",
+   "title": "ГОСТ_Р_ИСО_13408-2-2025_4d02e07e-915b-406a-8b46-aa2d472cfd73",
+   "year": "2025",
+   "urlSlug": "gost-r-iso-13408-2-2025-4d02e07e-915b-406a-8b46-aa2d472cfd73",
+   "fileUrl": "/biblioteka/files/gosty-mi-ivd/gost-r-iso-13408-2-2025-4d02e07e-915b-406a-8b46-aa2d472cfd73.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-ivd/gost-r-iso-13408-2-2025-4d02e07e-915b-406a-8b46-aa2d472cfd73/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ 21643-2022 Сшиватели медицинские. Общие технические условия",
+   "year": "2022",
+   "urlSlug": "gost-21643-2022-sshivateli-medicinskie-obschie-tehnicheskie-usloviya",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-21643-2022-sshivateli-medicinskie-obschie-tehnicheskie-usloviya.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-21643-2022-sshivateli-medicinskie-obschie-tehnicheskie-usloviya/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ 28271-89 (СТ СЭВ 6425-88) Приборы радиометрические и дозиметрические носимые. Общие...",
+   "year": "",
+   "urlSlug": "gost-28271-89-st-sev-6425-88-pribory-radiometricheskie-i-dozimetricheskie-nosimye-obschie",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-28271-89-st-sev-6425-88-pribory-radiometricheskie-i-dozimetricheskie-nosimye-obschie.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-28271-89-st-sev-6425-88-pribory-radiometricheskie-i-dozimetricheskie-nosimye-obschie/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ 28498-90 Термометры жидкостные стеклянные. Общие технические требования. Методы испытаний...",
+   "year": "",
+   "urlSlug": "gost-28498-90-termometry-zhidkostnye-steklyannye-obschie-tehnicheskie-trebovaniya-metody-i",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-28498-90-termometry-zhidkostnye-steklyannye-obschie-tehnicheskie-trebovaniya-metody-i.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-28498-90-termometry-zhidkostnye-steklyannye-obschie-tehnicheskie-trebovaniya-metody-i/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ 31214-2016 Изделия медицинские. Требования к образцам и документации, представляемым на...",
+   "year": "2016",
+   "urlSlug": "gost-31214-2016-izdeliya-medicinskie-trebovaniya-k-obrazcam-i-dokumentacii-predstavlyaemym",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-31214-2016-izdeliya-medicinskie-trebovaniya-k-obrazcam-i-dokumentacii-predstavlyaemym.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-31214-2016-izdeliya-medicinskie-trebovaniya-k-obrazcam-i-dokumentacii-predstavlyaemym/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ 31515.3-2012 (EN 1060-31997) Сфигмоманометры (измерители артериального давления)... (скан)",
+   "year": "2012",
+   "urlSlug": "gost-315153-2012-en-1060-31997-sfigmomanometry-izmeriteli-arterialnogo-davleniya-skan",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-315153-2012-en-1060-31997-sfigmomanometry-izmeriteli-arterialnogo-davleniya-skan.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-315153-2012-en-1060-31997-sfigmomanometry-izmeriteli-arterialnogo-davleniya-skan/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ 31516-2012 Термометры медицинские максимальные стеклянные. Общие технические условия",
+   "year": "2012",
+   "urlSlug": "gost-31516-2012-termometry-medicinskie-maksimalnye-steklyannye-obschie-tehnicheskie-uslovi",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-31516-2012-termometry-medicinskie-maksimalnye-steklyannye-obschie-tehnicheskie-uslovi.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-31516-2012-termometry-medicinskie-maksimalnye-steklyannye-obschie-tehnicheskie-uslovi/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ 31576-2012 Оценка биологического действия медицинских стоматологических материалов и изделий....",
+   "year": "2012",
+   "urlSlug": "gost-31576-2012-ocenka-biologicheskogo-deystviya-medicinskih-stomatologicheskih-materialov",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-31576-2012-ocenka-biologicheskogo-deystviya-medicinskih-stomatologicheskih-materialov.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-31576-2012-ocenka-biologicheskogo-deystviya-medicinskih-stomatologicheskih-materialov/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ 31589-2012 Оптика офтальмологическая. Оправы корригирующих очков. Общие технические требования...",
+   "year": "2012",
+   "urlSlug": "gost-31589-2012-optika-oftalmologicheskaya-opravy-korrigiruyuschih-ochkov-obschie-tehniche",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-31589-2012-optika-oftalmologicheskaya-opravy-korrigiruyuschih-ochkov-obschie-tehniche.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-31589-2012-optika-oftalmologicheskaya-opravy-korrigiruyuschih-ochkov-obschie-tehniche/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ 31620-2012 Материалы хирургические шовные. Общие технические требования. Методы испытаний",
+   "year": "2012",
+   "urlSlug": "gost-31620-2012-materialy-hirurgicheskie-shovnye-obschie-tehnicheskie-trebovaniya-metody-i",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-31620-2012-materialy-hirurgicheskie-shovnye-obschie-tehnicheskie-trebovaniya-metody-i.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-31620-2012-materialy-hirurgicheskie-shovnye-obschie-tehnicheskie-trebovaniya-metody-i/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ EN 556-1-2011 Стерилизация медицинских изделий. Требования к медицинским изделиям категории...",
+   "year": "2011",
+   "urlSlug": "gost-en-556-1-2011-sterilizaciya-medicinskih-izdeliy-trebovaniya-k-medicinskim-izdeliyam-k-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-en-556-1-2011-sterilizaciya-medicinskih-izdeliy-trebovaniya-k-medicinskim-izdeliyam-k-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-en-556-1-2011-sterilizaciya-medicinskih-izdeliy-trebovaniya-k-medicinskim-izdeliyam-k-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ IEC 60522-2011 Излучатели рентгеновские. Методы определения постоянной фильтрации (с Поправкой)",
+   "year": "2011",
+   "urlSlug": "gost-iec-60522-2011-izluchateli-rentgenovskie-metody-opredeleniya-postoyannoy-filtracii-s",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iec-60522-2011-izluchateli-rentgenovskie-metody-opredeleniya-postoyannoy-filtracii-s.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iec-60522-2011-izluchateli-rentgenovskie-metody-opredeleniya-postoyannoy-filtracii-s/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ IEC 60580-2011 Изделия медицинские электрические. Измерители произведения дозы на площадь (с...",
+   "year": "2011",
+   "urlSlug": "gost-iec-60580-2011-izdeliya-medicinskie-elektricheskie-izmeriteli-proizvedeniya-dozy-na-p",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iec-60580-2011-izdeliya-medicinskie-elektricheskie-izmeriteli-proizvedeniya-dozy-na-p.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iec-60580-2011-izdeliya-medicinskie-elektricheskie-izmeriteli-proizvedeniya-dozy-na-p/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ IEC 60601-2-22-2022 Изделия медицинские электрические. Часть 2-22. Частные требования...",
+   "year": "2022",
+   "urlSlug": "gost-iec-60601-2-22-2022-izdeliya-medicinskie-elektricheskie-chast-2-22-chastnye-trebovani",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iec-60601-2-22-2022-izdeliya-medicinskie-elektricheskie-chast-2-22-chastnye-trebovani.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iec-60601-2-22-2022-izdeliya-medicinskie-elektricheskie-chast-2-22-chastnye-trebovani/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ IEC 60825-1-2013 Безопасность лазерной аппаратуры. Часть 1. Классификация оборудования,...",
+   "year": "2013",
+   "urlSlug": "gost-iec-60825-1-2013-bezopasnost-lazernoy-apparatury-chast-1-klassifikaciya-oborudovaniya",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iec-60825-1-2013-bezopasnost-lazernoy-apparatury-chast-1-klassifikaciya-oborudovaniya.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iec-60825-1-2013-bezopasnost-lazernoy-apparatury-chast-1-klassifikaciya-oborudovaniya/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ IEC 62304-2022 Изделия медицинские. Программное обеспечение. Процессы жизненного цикла (1)",
+   "year": "2022",
+   "urlSlug": "gost-iec-62304-2022-izdeliya-medicinskie-programmnoe-obespechenie-processy-zhiznennogo-cik-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iec-62304-2022-izdeliya-medicinskie-programmnoe-obespechenie-processy-zhiznennogo-cik-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iec-62304-2022-izdeliya-medicinskie-programmnoe-obespechenie-processy-zhiznennogo-cik-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ IEC 62304-2022 Изделия медицинские. Программное обеспечение. Процессы жизненного цикла (2)",
+   "year": "2022",
+   "urlSlug": "gost-iec-62304-2022-izdeliya-medicinskie-programmnoe-obespechenie-processy-zhiznennogo-cik-3",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iec-62304-2022-izdeliya-medicinskie-programmnoe-obespechenie-processy-zhiznennogo-cik-3.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iec-62304-2022-izdeliya-medicinskie-programmnoe-obespechenie-processy-zhiznennogo-cik-3/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ IEC 62304-2022 Изделия медицинские. Программное обеспечение. Процессы жизненного цикла",
+   "year": "2022",
+   "urlSlug": "gost-iec-62304-2022-izdeliya-medicinskie-programmnoe-obespechenie-processy-zhiznennogo-cik-4",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iec-62304-2022-izdeliya-medicinskie-programmnoe-obespechenie-processy-zhiznennogo-cik-4.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iec-62304-2022-izdeliya-medicinskie-programmnoe-obespechenie-processy-zhiznennogo-cik-4/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 10555-1-2021 Катетеры внутрисосудистые однократного применения стерильные. Часть 1. Общие...",
+   "year": "2021",
+   "urlSlug": "gost-iso-10555-1-2021-katetery-vnutrisosudistye-odnokratnogo-primeneniya-sterilnye-chast-1",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-10555-1-2021-katetery-vnutrisosudistye-odnokratnogo-primeneniya-sterilnye-chast-1.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-10555-1-2021-katetery-vnutrisosudistye-odnokratnogo-primeneniya-sterilnye-chast-1/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 10555-5-2021 Катетеры внутрисосудистые однократного применения стерильные. Часть 5.... (1)",
+   "year": "2021",
+   "urlSlug": "gost-iso-10555-5-2021-katetery-vnutrisosudistye-odnokratnogo-primeneniya-sterilnye-chast-5",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-10555-5-2021-katetery-vnutrisosudistye-odnokratnogo-primeneniya-sterilnye-chast-5.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-10555-5-2021-katetery-vnutrisosudistye-odnokratnogo-primeneniya-sterilnye-chast-5/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 10993-1-2021 Изделия медицинские. Оценка биологического действия медицинских изделий....",
+   "year": "2021",
+   "urlSlug": "gost-iso-10993-1-2021-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-10993-1-2021-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-10993-1-2021-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 10993-11-2021 Изделия медицинские. Оценка биологического действия медицинских изделий....",
+   "year": "2021",
+   "urlSlug": "gost-iso-10993-11-2021-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-10993-11-2021-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-10993-11-2021-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 10993-12-2015 Изделия медицинские. Оценка биологического действия медицинских изделий....",
+   "year": "2015",
+   "urlSlug": "gost-iso-10993-12-2015-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-10993-12-2015-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-10993-12-2015-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 10993-13-2016 Изделия медицинские. Оценка биологического действия медицинских изделий....",
+   "year": "2016",
+   "urlSlug": "gost-iso-10993-13-2016-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-10993-13-2016-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-10993-13-2016-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 10993-14-2011 Изделия медицинские. Оценка биологического действия медицинских изделий....",
+   "year": "2011",
+   "urlSlug": "gost-iso-10993-14-2011-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-10993-14-2011-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-10993-14-2011-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 10993-16-2021 Изделия медицинские. Оценка биологического действия медицинских изделий....",
+   "year": "2021",
+   "urlSlug": "gost-iso-10993-16-2021-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-10993-16-2021-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-10993-16-2021-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 10993-17-2011 Изделия медицинские. Оценка биологического действия медицинских изделий....",
+   "year": "2011",
+   "urlSlug": "gost-iso-10993-17-2011-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-10993-17-2011-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-10993-17-2011-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 10993-18-2022 Изделия медицинские. Оценка биологического действия медицинских изделий....",
+   "year": "2022",
+   "urlSlug": "gost-iso-10993-18-2022-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-10993-18-2022-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-10993-18-2022-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-i/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 10993-3-2018 Изделия медицинские. Оценка биологического действия медицинских изделий....",
+   "year": "2018",
+   "urlSlug": "gost-iso-10993-3-2018-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-10993-3-2018-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-10993-3-2018-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 10993-4-2020 Изделия медицинские. Оценка биологического действия медицинских изделий....",
+   "year": "2020",
+   "urlSlug": "gost-iso-10993-4-2020-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-10993-4-2020-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-10993-4-2020-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 10993-6-2021 Изделия медицинские. Оценка биологического действия медицинских изделий....",
+   "year": "2021",
+   "urlSlug": "gost-iso-10993-6-2021-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-10993-6-2021-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-10993-6-2021-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 10993-7-2016 Изделия медицинские. Оценка биологического действия медицинских изделий....",
+   "year": "2016",
+   "urlSlug": "gost-iso-10993-7-2016-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-10993-7-2016-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-10993-7-2016-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 10993-9-2022 Изделия медицинские. Оценка биологического действия медицинских изделий....",
+   "year": "2022",
+   "urlSlug": "gost-iso-10993-9-2022-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-10993-9-2022-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-10993-9-2022-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-iz/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 11135-2017 Стерилизация медицинской продукции. Этиленоксид. Требования к разработке,...",
+   "year": "2017",
+   "urlSlug": "gost-iso-11135-2017-sterilizaciya-medicinskoy-produkcii-etilenoksid-trebovaniya-k-razrabot-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-11135-2017-sterilizaciya-medicinskoy-produkcii-etilenoksid-trebovaniya-k-razrabot-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-11135-2017-sterilizaciya-medicinskoy-produkcii-etilenoksid-trebovaniya-k-razrabot-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 11137-1-2011 Стерилизация медицинской продукции. Радиационная стерилизация. Часть 1....",
+   "year": "2011",
+   "urlSlug": "gost-iso-11137-1-2011-sterilizaciya-medicinskoy-produkcii-radiacionnaya-sterilizaciya-chas-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-11137-1-2011-sterilizaciya-medicinskoy-produkcii-radiacionnaya-sterilizaciya-chas-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-11137-1-2011-sterilizaciya-medicinskoy-produkcii-radiacionnaya-sterilizaciya-chas-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 11137-2-2011 Стерилизация медицинской продукции. Радиационная стерилизация. Часть 2....",
+   "year": "2011",
+   "urlSlug": "gost-iso-11137-2-2011-sterilizaciya-medicinskoy-produkcii-radiacionnaya-sterilizaciya-chas-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-11137-2-2011-sterilizaciya-medicinskoy-produkcii-radiacionnaya-sterilizaciya-chas-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-11137-2-2011-sterilizaciya-medicinskoy-produkcii-radiacionnaya-sterilizaciya-chas-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 11138-1-2012 Стерилизация медицинской продукции. Биологические индикаторы. Часть 1.... (скан)",
+   "year": "2012",
+   "urlSlug": "gost-iso-11138-1-2012-sterilizaciya-medicinskoy-produkcii-biologicheskie-indikatory-chast",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-11138-1-2012-sterilizaciya-medicinskoy-produkcii-biologicheskie-indikatory-chast.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-11138-1-2012-sterilizaciya-medicinskoy-produkcii-biologicheskie-indikatory-chast/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 11138-2-2012 Стерилизация медицинской продукции. Биологические индикаторы. Часть 2.... (скан)",
+   "year": "2012",
+   "urlSlug": "gost-iso-11138-2-2012-sterilizaciya-medicinskoy-produkcii-biologicheskie-indikatory-chast",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-11138-2-2012-sterilizaciya-medicinskoy-produkcii-biologicheskie-indikatory-chast.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-11138-2-2012-sterilizaciya-medicinskoy-produkcii-biologicheskie-indikatory-chast/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 11138-3-2012 Стерилизация медицинской продукции. Биологические индикаторы. Часть 3.... (скан)",
+   "year": "2012",
+   "urlSlug": "gost-iso-11138-3-2012-sterilizaciya-medicinskoy-produkcii-biologicheskie-indikatory-chast",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-11138-3-2012-sterilizaciya-medicinskoy-produkcii-biologicheskie-indikatory-chast.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-11138-3-2012-sterilizaciya-medicinskoy-produkcii-biologicheskie-indikatory-chast/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 11140-1-2011 Стерилизация медицинской продукции. Химические индикаторы. Часть 1. Общие...",
+   "year": "2011",
+   "urlSlug": "gost-iso-11140-1-2011-sterilizaciya-medicinskoy-produkcii-himicheskie-indikatory-chast-1-o",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-11140-1-2011-sterilizaciya-medicinskoy-produkcii-himicheskie-indikatory-chast-1-o.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-11140-1-2011-sterilizaciya-medicinskoy-produkcii-himicheskie-indikatory-chast-1-o/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 11140-3-2011 Стерилизация медицинской продукции. Химические индикаторы. Часть 3....",
+   "year": "2011",
+   "urlSlug": "gost-iso-11140-3-2011-sterilizaciya-medicinskoy-produkcii-himicheskie-indikatory-chast-3",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-11140-3-2011-sterilizaciya-medicinskoy-produkcii-himicheskie-indikatory-chast-3.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-11140-3-2011-sterilizaciya-medicinskoy-produkcii-himicheskie-indikatory-chast-3/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 11737-1-2012 Стерилизация медицинских изделий. Микробиологические методы. Часть 1. Оценка...",
+   "year": "2012",
+   "urlSlug": "gost-iso-11737-1-2012-sterilizaciya-medicinskih-izdeliy-mikrobiologicheskie-metody-chast-1",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-11737-1-2012-sterilizaciya-medicinskih-izdeliy-mikrobiologicheskie-metody-chast-1.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-11737-1-2012-sterilizaciya-medicinskih-izdeliy-mikrobiologicheskie-metody-chast-1/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 11737-2-2011 Стерилизация медицинских изделий. Микробиологические методы. Часть 2....",
+   "year": "2011",
+   "urlSlug": "gost-iso-11737-2-2011-sterilizaciya-medicinskih-izdeliy-mikrobiologicheskie-metody-chast-2-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-11737-2-2011-sterilizaciya-medicinskih-izdeliy-mikrobiologicheskie-metody-chast-2-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-11737-2-2011-sterilizaciya-medicinskih-izdeliy-mikrobiologicheskie-metody-chast-2-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 13485-2017 Изделия медицинские. Системы менеджмента качества. Требования для целей...",
+   "year": "2017",
+   "urlSlug": "gost-iso-13485-2017-izdeliya-medicinskie-sistemy-menedzhmenta-kachestva-trebovaniya-dlya-c-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-13485-2017-izdeliya-medicinskie-sistemy-menedzhmenta-kachestva-trebovaniya-dlya-c-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-13485-2017-izdeliya-medicinskie-sistemy-menedzhmenta-kachestva-trebovaniya-dlya-c-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 14160-2011 Стерилизация одноразовых медицинских изделий, содержащих материалы животного...",
+   "year": "2011",
+   "urlSlug": "gost-iso-14160-2011-sterilizaciya-odnorazovyh-medicinskih-izdeliy-soderzhaschih-materialy",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-14160-2011-sterilizaciya-odnorazovyh-medicinskih-izdeliy-soderzhaschih-materialy.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-14160-2011-sterilizaciya-odnorazovyh-medicinskih-izdeliy-soderzhaschih-materialy/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 14971-2021 Изделия медицинские. Применение менеджмента риска к медицинским изделиям (с...",
+   "year": "2021",
+   "urlSlug": "gost-iso-14971-2021-izdeliya-medicinskie-primenenie-menedzhmenta-riska-k-medicinskim-izdel-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-14971-2021-izdeliya-medicinskie-primenenie-menedzhmenta-riska-k-medicinskim-izdel-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-14971-2021-izdeliya-medicinskie-primenenie-menedzhmenta-riska-k-medicinskim-izdel-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 7864-2011 Иглы инъекционные однократного применения стерильные",
+   "year": "2011",
+   "urlSlug": "gost-iso-7864-2011-igly-inekcionnye-odnokratnogo-primeneniya-sterilnye",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-7864-2011-igly-inekcionnye-odnokratnogo-primeneniya-sterilnye.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-7864-2011-igly-inekcionnye-odnokratnogo-primeneniya-sterilnye/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 7886-1-2011 Шприцы инъекционные однократного применения стерильные. Часть 1. Шприцы для...",
+   "year": "2011",
+   "urlSlug": "gost-iso-7886-1-2011-shpricy-inekcionnye-odnokratnogo-primeneniya-sterilnye-chast-1-shpric",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-7886-1-2011-shpricy-inekcionnye-odnokratnogo-primeneniya-sterilnye-chast-1-shpric.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-7886-1-2011-shpricy-inekcionnye-odnokratnogo-primeneniya-sterilnye-chast-1-shpric/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 7886-3-2011 Шприцы инъекционные однократного применения стерильные. Часть 3. Шприцы для...",
+   "year": "2011",
+   "urlSlug": "gost-iso-7886-3-2011-shpricy-inekcionnye-odnokratnogo-primeneniya-sterilnye-chast-3-shpric",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-7886-3-2011-shpricy-inekcionnye-odnokratnogo-primeneniya-sterilnye-chast-3-shpric.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-7886-3-2011-shpricy-inekcionnye-odnokratnogo-primeneniya-sterilnye-chast-3-shpric/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 7886-4-2011 Шприцы инъекционные однократного применения стерильные. Часть 4. Шприцы с...",
+   "year": "2011",
+   "urlSlug": "gost-iso-7886-4-2011-shpricy-inekcionnye-odnokratnogo-primeneniya-sterilnye-chast-4-shpric",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-7886-4-2011-shpricy-inekcionnye-odnokratnogo-primeneniya-sterilnye-chast-4-shpric.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-7886-4-2011-shpricy-inekcionnye-odnokratnogo-primeneniya-sterilnye-chast-4-shpric/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 8537-2011 Шприцы инъекционные однократного применения стерильные с иглой или без иглы для...",
+   "year": "2011",
+   "urlSlug": "gost-iso-8537-2011-shpricy-inekcionnye-odnokratnogo-primeneniya-sterilnye-s-igloy-ili-bez",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-8537-2011-shpricy-inekcionnye-odnokratnogo-primeneniya-sterilnye-s-igloy-ili-bez.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-8537-2011-shpricy-inekcionnye-odnokratnogo-primeneniya-sterilnye-s-igloy-ili-bez/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 9801-2011 Наборы пробных очковых линз. Технические требования и методы испытаний",
+   "year": "2011",
+   "urlSlug": "gost-iso-9801-2011-nabory-probnyh-ochkovyh-linz-tehnicheskie-trebovaniya-i-metody-ispytani",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-9801-2011-nabory-probnyh-ochkovyh-linz-tehnicheskie-trebovaniya-i-metody-ispytani.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-9801-2011-nabory-probnyh-ochkovyh-linz-tehnicheskie-trebovaniya-i-metody-ispytani/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISOTS 10993-19-2011 Изделия медицинские. Оценка биологического действия медицинских изделий....",
+   "year": "2011",
+   "urlSlug": "gost-isots-10993-19-2011-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-isots-10993-19-2011-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-isots-10993-19-2011-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISOTS 10993-20-2011 Изделия медицинские. Оценка биологического действия медицинских изделий....",
+   "year": "2011",
+   "urlSlug": "gost-isots-10993-20-2011-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-isots-10993-20-2011-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-isots-10993-20-2011-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ OIML R 76-1-2011 Государственная система обеспечения единства измерений (ГСИ). Весы...",
+   "year": "2011",
+   "urlSlug": "gost-oiml-r-76-1-2011-gosudarstvennaya-sistema-obespecheniya-edinstva-izmereniy-gsi-vesy",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-oiml-r-76-1-2011-gosudarstvennaya-sistema-obespecheniya-edinstva-izmereniy-gsi-vesy.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-oiml-r-76-1-2011-gosudarstvennaya-sistema-obespecheniya-edinstva-izmereniy-gsi-vesy/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ИСО 14644-1-2002 Чистые помещения и связанные с ними контролируемые среды. Часть 1....",
+   "year": "2002",
+   "urlSlug": "gost-iso-14644-1-2002-chistye-pomescheniya-i-svyazannye-s-nimi-kontroliruemye-sredy-chast",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-14644-1-2002-chistye-pomescheniya-i-svyazannye-s-nimi-kontroliruemye-sredy-chast.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-14644-1-2002-chistye-pomescheniya-i-svyazannye-s-nimi-kontroliruemye-sredy-chast/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ИСО 14698-1-2005 Чистые помещения и связанные с ними контролируемые среды. Контроль...",
+   "year": "2005",
+   "urlSlug": "gost-iso-14698-1-2005-chistye-pomescheniya-i-svyazannye-s-nimi-kontroliruemye-sredy-kontro-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-iso-14698-1-2005-chistye-pomescheniya-i-svyazannye-s-nimi-kontroliruemye-sredy-kontro-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-iso-14698-1-2005-chistye-pomescheniya-i-svyazannye-s-nimi-kontroliruemye-sredy-kontro-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 50267.2.54-2013 (МЭК 60601-2-542009) Изделия медицинские электрические. Часть 2-54. Частные...",
+   "year": "2013",
+   "urlSlug": "gost-r-50267254-2013-mek-60601-2-542009-izdeliya-medicinskie-elektricheskie-chast-2-54-cha",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-50267254-2013-mek-60601-2-542009-izdeliya-medicinskie-elektricheskie-chast-2-54-cha.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-50267254-2013-mek-60601-2-542009-izdeliya-medicinskie-elektricheskie-chast-2-54-cha/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 52459.27-2009 (ЕН 301 489-27-2004) Совместимость технических средств электромагнитная....",
+   "year": "2009",
+   "urlSlug": "gost-r-5245927-2009-en-301-489-27-2004-sovmestimost-tehnicheskih-sredstv-elektromagnitnaya",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-5245927-2009-en-301-489-27-2004-sovmestimost-tehnicheskih-sredstv-elektromagnitnaya.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-5245927-2009-en-301-489-27-2004-sovmestimost-tehnicheskih-sredstv-elektromagnitnaya/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 52459.31-2009 (ЕН 301 489-31-2005) Совместимость технических средств электромагнитная....",
+   "year": "2009",
+   "urlSlug": "gost-r-5245931-2009-en-301-489-31-2005-sovmestimost-tehnicheskih-sredstv-elektromagnitnaya",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-5245931-2009-en-301-489-31-2005-sovmestimost-tehnicheskih-sredstv-elektromagnitnaya.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-5245931-2009-en-301-489-31-2005-sovmestimost-tehnicheskih-sredstv-elektromagnitnaya/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 52770-2016 Изделия медицинские. Требования безопасности. Методы санитарно-химических и...",
+   "year": "2016",
+   "urlSlug": "gost-r-52770-2016-izdeliya-medicinskie-trebovaniya-bezopasnosti-metody-sanitarno-himichesk",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-52770-2016-izdeliya-medicinskie-trebovaniya-bezopasnosti-metody-sanitarno-himichesk.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-52770-2016-izdeliya-medicinskie-trebovaniya-bezopasnosti-metody-sanitarno-himichesk/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 53469-2009 (ИСО 8600-12005) Оптика и оптические приборы. Эндоскопы и приборы...",
+   "year": "2009",
+   "urlSlug": "gost-r-53469-2009-iso-8600-12005-optika-i-opticheskie-pribory-endoskopy-i-pribory",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-53469-2009-iso-8600-12005-optika-i-opticheskie-pribory-endoskopy-i-pribory.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-53469-2009-iso-8600-12005-optika-i-opticheskie-pribory-endoskopy-i-pribory/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 54794-2011 Анализаторы паров этанола. Общие технические условия",
+   "year": "2011",
+   "urlSlug": "gost-r-54794-2011-analizatory-parov-etanola-obschie-tehnicheskie-usloviya",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-54794-2011-analizatory-parov-etanola-obschie-tehnicheskie-usloviya.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-54794-2011-analizatory-parov-etanola-obschie-tehnicheskie-usloviya/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 58236-2020 Изделия медицинские эластичные компрессионные. Общие технические требования....",
+   "year": "2020",
+   "urlSlug": "gost-r-58236-2020-izdeliya-medicinskie-elastichnye-kompressionnye-obschie-tehnicheskie-tre",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-58236-2020-izdeliya-medicinskie-elastichnye-kompressionnye-obschie-tehnicheskie-tre.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-58236-2020-izdeliya-medicinskie-elastichnye-kompressionnye-obschie-tehnicheskie-tre/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 58852-2020 Изделия медицинские эластичные фиксирующие. Общие технические требования. Методы...",
+   "year": "2020",
+   "urlSlug": "gost-r-58852-2020-izdeliya-medicinskie-elastichnye-fiksiruyuschie-obschie-tehnicheskie-tre",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-58852-2020-izdeliya-medicinskie-elastichnye-fiksiruyuschie-obschie-tehnicheskie-tre.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-58852-2020-izdeliya-medicinskie-elastichnye-fiksiruyuschie-obschie-tehnicheskie-tre/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 70097-2022 (ИСО 11334-12007) Средства вспомогательные для ходьбы, управляемые одной рукой....",
+   "year": "2022",
+   "urlSlug": "gost-r-70097-2022-iso-11334-12007-sredstva-vspomogatelnye-dlya-hodby-upravlyaemye-odnoy-ru",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-70097-2022-iso-11334-12007-sredstva-vspomogatelnye-dlya-hodby-upravlyaemye-odnoy-ru.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-70097-2022-iso-11334-12007-sredstva-vspomogatelnye-dlya-hodby-upravlyaemye-odnoy-ru/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 8.605-2004 Государственная система обеспечения единства измерений (ГСИ). Приборы медицинские...",
+   "year": "2004",
+   "urlSlug": "gost-r-8605-2004-gosudarstvennaya-sistema-obespecheniya-edinstva-izmereniy-gsi-pribory-med",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-8605-2004-gosudarstvennaya-sistema-obespecheniya-edinstva-izmereniy-gsi-pribory-med.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-8605-2004-gosudarstvennaya-sistema-obespecheniya-edinstva-izmereniy-gsi-pribory-med/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 10328-2021 Протезы. Испытания конструкции протезов нижних конечностей. Требования и...",
+   "year": "2021",
+   "urlSlug": "gost-r-iso-10328-2021-protezy-ispytaniya-konstrukcii-protezov-nizhnih-konechnostey-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-10328-2021-protezy-ispytaniya-konstrukcii-protezov-nizhnih-konechnostey-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-10328-2021-protezy-ispytaniya-konstrukcii-protezov-nizhnih-konechnostey-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 10651-4-2015 Аппараты искусственной вентиляции легких медицинские. Часть 4. Частные...",
+   "year": "2015",
+   "urlSlug": "gost-r-iso-10651-4-2015-apparaty-iskusstvennoy-ventilyacii-legkih-medicinskie-chast-4-chas",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-10651-4-2015-apparaty-iskusstvennoy-ventilyacii-legkih-medicinskie-chast-4-chas.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-10651-4-2015-apparaty-iskusstvennoy-ventilyacii-legkih-medicinskie-chast-4-chas/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 10993-2-2009 Изделия медицинские. Оценка биологического действия медицинских изделий....",
+   "year": "2009",
+   "urlSlug": "gost-r-iso-10993-2-2009-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-10993-2-2009-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-10993-2-2009-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 12866-2011 ГСИ. Периметры офтальмологические. Технические требования и методы испытаний",
+   "year": "2011",
+   "urlSlug": "gost-r-iso-12866-2011-gsi-perimetry-oftalmologicheskie-tehnicheskie-trebovaniya-i-metody-i",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-12866-2011-gsi-perimetry-oftalmologicheskie-tehnicheskie-trebovaniya-i-metody-i.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-12866-2011-gsi-perimetry-oftalmologicheskie-tehnicheskie-trebovaniya-i-metody-i/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 13408-1-2000 Асептическое производство медицинской продукции. Часть 1. Общие требования",
+   "year": "2000",
+   "urlSlug": "gost-r-iso-13408-1-2000-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-1-obschie-t-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-13408-1-2000-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-1-obschie-t-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-13408-1-2000-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-1-obschie-t-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 13408-2-2007 Асептическое производство медицинской продукции. Часть 2. Фильтрация",
+   "year": "2007",
+   "urlSlug": "gost-r-iso-13408-2-2007-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-2-filtraciy",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-13408-2-2007-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-2-filtraciy.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-13408-2-2007-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-2-filtraciy/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 13408-3-2011 Асептическое производство медицинской продукции. Часть 3. Лиофилизация",
+   "year": "2011",
+   "urlSlug": "gost-r-iso-13408-3-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-3-liofiliza-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-13408-3-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-3-liofiliza-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-13408-3-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-3-liofiliza-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 13408-4-2011 Асептическое производство медицинской продукции. Часть 4. Очистка на месте",
+   "year": "2011",
+   "urlSlug": "gost-r-iso-13408-4-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-4-ochistka-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-13408-4-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-4-ochistka-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-13408-4-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-4-ochistka-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 13408-5-2011 Асептическое производство медицинской продукции. Часть 5. Стерилизация на...",
+   "year": "2011",
+   "urlSlug": "gost-r-iso-13408-5-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-5-steriliza-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-13408-5-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-5-steriliza-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-13408-5-2011-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-5-steriliza-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 13408-6-2009 Асептическое производство медицинской продукции. Часть 6. Изолирующие...",
+   "year": "2009",
+   "urlSlug": "gost-r-iso-13408-6-2009-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-6-izoliruyu-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-13408-6-2009-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-6-izoliruyu-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-13408-6-2009-asepticheskoe-proizvodstvo-medicinskoy-produkcii-chast-6-izoliruyu-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 14155-2022 Клинические исследования медицинских изделий, проводимые с участием человека...",
+   "year": "2022",
+   "urlSlug": "gost-r-iso-14155-2022-klinicheskie-issledovaniya-medicinskih-izdeliy-provodimye-s-uchastie",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-14155-2022-klinicheskie-issledovaniya-medicinskih-izdeliy-provodimye-s-uchastie.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-14155-2022-klinicheskie-issledovaniya-medicinskih-izdeliy-provodimye-s-uchastie/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 14630-2017 Имплантаты хирургические неактивные. Общие требования",
+   "year": "2017",
+   "urlSlug": "gost-r-iso-14630-2017-implantaty-hirurgicheskie-neaktivnye-obschie-trebovaniya",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-14630-2017-implantaty-hirurgicheskie-neaktivnye-obschie-trebovaniya.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-14630-2017-implantaty-hirurgicheskie-neaktivnye-obschie-trebovaniya/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 14937-2012 Стерилизация медицинской продукции. Общие требования к определению...",
+   "year": "2012",
+   "urlSlug": "gost-r-iso-14937-2012-sterilizaciya-medicinskoy-produkcii-obschie-trebovaniya-k-opredeleni-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-14937-2012-sterilizaciya-medicinskoy-produkcii-obschie-trebovaniya-k-opredeleni-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-14937-2012-sterilizaciya-medicinskoy-produkcii-obschie-trebovaniya-k-opredeleni-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 15032-2001 Протезы. Испытания конструкции тазобедренных узлов",
+   "year": "2001",
+   "urlSlug": "gost-r-iso-15032-2001-protezy-ispytaniya-konstrukcii-tazobedrennyh-uzlov",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-15032-2001-protezy-ispytaniya-konstrukcii-tazobedrennyh-uzlov.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-15032-2001-protezy-ispytaniya-konstrukcii-tazobedrennyh-uzlov/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 15223-1-2023 Изделия медицинские. Символы, применяемые для передачи информации,... (2)",
+   "year": "2023",
+   "urlSlug": "gost-r-iso-15223-1-2023-izdeliya-medicinskie-simvoly-primenyaemye-dlya-peredachi-informaci-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-15223-1-2023-izdeliya-medicinskie-simvoly-primenyaemye-dlya-peredachi-informaci-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-15223-1-2023-izdeliya-medicinskie-simvoly-primenyaemye-dlya-peredachi-informaci-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 15882-2012 Стерилизация медицинской продукции. Химические индикаторы. Руководство по...",
+   "year": "2012",
+   "urlSlug": "gost-r-iso-15882-2012-sterilizaciya-medicinskoy-produkcii-himicheskie-indikatory-rukovodst-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-15882-2012-sterilizaciya-medicinskoy-produkcii-himicheskie-indikatory-rukovodst-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-15882-2012-sterilizaciya-medicinskoy-produkcii-himicheskie-indikatory-rukovodst-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 16061-2011 Инструменты, используемые совместно с неактивными хирургическими...",
+   "year": "2011",
+   "urlSlug": "gost-r-iso-16061-2011-instrumenty-ispolzuemye-sovmestno-s-neaktivnymi-hirurgicheskimi",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-16061-2011-instrumenty-ispolzuemye-sovmestno-s-neaktivnymi-hirurgicheskimi.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-16061-2011-instrumenty-ispolzuemye-sovmestno-s-neaktivnymi-hirurgicheskimi/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 16201-2010 Технические средства реабилитации людей с ограничениями жизнедеятельности....",
+   "year": "2010",
+   "urlSlug": "gost-r-iso-16201-2010-tehnicheskie-sredstva-reabilitacii-lyudey-s-ogranicheniyami-zhiznede",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-16201-2010-tehnicheskie-sredstva-reabilitacii-lyudey-s-ogranicheniyami-zhiznede.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-16201-2010-tehnicheskie-sredstva-reabilitacii-lyudey-s-ogranicheniyami-zhiznede/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 17664-2012 Стерилизация медицинских изделий. Информация, предоставляемая изготовителем...",
+   "year": "2012",
+   "urlSlug": "gost-r-iso-17664-2012-sterilizaciya-medicinskih-izdeliy-informaciya-predostavlyaemaya-izgo",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-17664-2012-sterilizaciya-medicinskih-izdeliy-informaciya-predostavlyaemaya-izgo.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-17664-2012-sterilizaciya-medicinskih-izdeliy-informaciya-predostavlyaemaya-izgo/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 17665-1-2016 Стерилизация медицинской продукции. Влажное тепло. Часть 1. Требования к...",
+   "year": "2016",
+   "urlSlug": "gost-r-iso-17665-1-2016-sterilizaciya-medicinskoy-produkcii-vlazhnoe-teplo-chast-1-trebova-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-17665-1-2016-sterilizaciya-medicinskoy-produkcii-vlazhnoe-teplo-chast-1-trebova-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-17665-1-2016-sterilizaciya-medicinskoy-produkcii-vlazhnoe-teplo-chast-1-trebova-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 20857-2016 Стерилизация медицинской продукции. Горячий воздух. Требования к разработке,...",
+   "year": "2085",
+   "urlSlug": "gost-r-iso-20857-2016-sterilizaciya-medicinskoy-produkcii-goryachiy-vozduh-trebovaniya-k-r-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-20857-2016-sterilizaciya-medicinskoy-produkcii-goryachiy-vozduh-trebovaniya-k-r-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-20857-2016-sterilizaciya-medicinskoy-produkcii-goryachiy-vozduh-trebovaniya-k-r-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 21534-2013 Имплантаты хирургические неактивные. Имплантаты для замены суставов. Частные...",
+   "year": "2013",
+   "urlSlug": "gost-r-iso-21534-2013-implantaty-hirurgicheskie-neaktivnye-implantaty-dlya-zameny-sustavov",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-21534-2013-implantaty-hirurgicheskie-neaktivnye-implantaty-dlya-zameny-sustavov.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-21534-2013-implantaty-hirurgicheskie-neaktivnye-implantaty-dlya-zameny-sustavov/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 21535-2020 Имплантаты хирургические неактивные. Имплантаты для замены суставов....",
+   "year": "2020",
+   "urlSlug": "gost-r-iso-21535-2020-implantaty-hirurgicheskie-neaktivnye-implantaty-dlya-zameny-sustavov",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-21535-2020-implantaty-hirurgicheskie-neaktivnye-implantaty-dlya-zameny-sustavov.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-21535-2020-implantaty-hirurgicheskie-neaktivnye-implantaty-dlya-zameny-sustavov/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 21536-2022 Имплантаты хирургические неактивные. Имплантаты для замены суставов....",
+   "year": "2022",
+   "urlSlug": "gost-r-iso-21536-2022-implantaty-hirurgicheskie-neaktivnye-implantaty-dlya-zameny-sustavov",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-21536-2022-implantaty-hirurgicheskie-neaktivnye-implantaty-dlya-zameny-sustavov.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-21536-2022-implantaty-hirurgicheskie-neaktivnye-implantaty-dlya-zameny-sustavov/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 22442-1-2011 Изделия медицинские, использующие ткани и их производные животного...",
+   "year": "2011",
+   "urlSlug": "gost-r-iso-22442-1-2011-izdeliya-medicinskie-ispolzuyuschie-tkani-i-ih-proizvodnye-zhivotn",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-22442-1-2011-izdeliya-medicinskie-ispolzuyuschie-tkani-i-ih-proizvodnye-zhivotn.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-22442-1-2011-izdeliya-medicinskie-ispolzuyuschie-tkani-i-ih-proizvodnye-zhivotn/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 22442-2-2011 Изделия медицинские, использующие ткани и их производные животного...",
+   "year": "2011",
+   "urlSlug": "gost-r-iso-22442-2-2011-izdeliya-medicinskie-ispolzuyuschie-tkani-i-ih-proizvodnye-zhivotn",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-22442-2-2011-izdeliya-medicinskie-ispolzuyuschie-tkani-i-ih-proizvodnye-zhivotn.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-22442-2-2011-izdeliya-medicinskie-ispolzuyuschie-tkani-i-ih-proizvodnye-zhivotn/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 22442-3-2011 Изделия медицинские, использующие ткани и их производные животного...",
+   "year": "2011",
+   "urlSlug": "gost-r-iso-22442-3-2011-izdeliya-medicinskie-ispolzuyuschie-tkani-i-ih-proizvodnye-zhivotn",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-22442-3-2011-izdeliya-medicinskie-ispolzuyuschie-tkani-i-ih-proizvodnye-zhivotn.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-22442-3-2011-izdeliya-medicinskie-ispolzuyuschie-tkani-i-ih-proizvodnye-zhivotn/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 22523-2007 Протезы конечностей и ортезы наружные. Требования и методы испытаний",
+   "year": "2007",
+   "urlSlug": "gost-r-iso-22523-2007-protezy-konechnostey-i-ortezy-naruzhnye-trebovaniya-i-metody-ispytan",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-22523-2007-protezy-konechnostey-i-ortezy-naruzhnye-trebovaniya-i-metody-ispytan.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-22523-2007-protezy-konechnostey-i-ortezy-naruzhnye-trebovaniya-i-metody-ispytan/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 22675-2019 Протезирование. Испытание голеностопных узлов и узлов стоп протезов нижних...",
+   "year": "2019",
+   "urlSlug": "gost-r-iso-22675-2019-protezirovanie-ispytanie-golenostopnyh-uzlov-i-uzlov-stop-protezov-n",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-22675-2019-protezirovanie-ispytanie-golenostopnyh-uzlov-i-uzlov-stop-protezov-n.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-22675-2019-protezirovanie-ispytanie-golenostopnyh-uzlov-i-uzlov-stop-protezov-n/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 25424-2013 Стерилизация медицинских изделий. Стерилизация низкотемпературная...",
+   "year": "2013",
+   "urlSlug": "gost-r-iso-25424-2013-sterilizaciya-medicinskih-izdeliy-sterilizaciya-nizkotemperaturnaya-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-25424-2013-sterilizaciya-medicinskih-izdeliy-sterilizaciya-nizkotemperaturnaya-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-25424-2013-sterilizaciya-medicinskih-izdeliy-sterilizaciya-nizkotemperaturnaya-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 25539-1-2012 Имплантаты сердечно-сосудистые. Внутрисосудистые имплантаты. Часть 1....",
+   "year": "2012",
+   "urlSlug": "gost-r-iso-25539-1-2012-implantaty-serdechno-sosudistye-vnutrisosudistye-implantaty-chast",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-25539-1-2012-implantaty-serdechno-sosudistye-vnutrisosudistye-implantaty-chast.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-25539-1-2012-implantaty-serdechno-sosudistye-vnutrisosudistye-implantaty-chast/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 25539-2-2012 Имплантаты сердечно-сосудистые. Внутрисосудистые имплантаты. Часть 2....",
+   "year": "2012",
+   "urlSlug": "gost-r-iso-25539-2-2012-implantaty-serdechno-sosudistye-vnutrisosudistye-implantaty-chast",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-25539-2-2012-implantaty-serdechno-sosudistye-vnutrisosudistye-implantaty-chast.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-25539-2-2012-implantaty-serdechno-sosudistye-vnutrisosudistye-implantaty-chast/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 3826-2-2021 Контейнеры пластиковые гибкие для человеческой крови и ее компонентов. Часть...",
+   "year": "2021",
+   "urlSlug": "gost-r-iso-3826-2-2021-konteynery-plastikovye-gibkie-dlya-chelovecheskoy-krovi-i-ee-kompon",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-3826-2-2021-konteynery-plastikovye-gibkie-dlya-chelovecheskoy-krovi-i-ee-kompon.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-3826-2-2021-konteynery-plastikovye-gibkie-dlya-chelovecheskoy-krovi-i-ee-kompon/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 3826-3-2021 Контейнеры пластиковые гибкие для человеческой крови и ее компонентов. Часть...",
+   "year": "2021",
+   "urlSlug": "gost-r-iso-3826-3-2021-konteynery-plastikovye-gibkie-dlya-chelovecheskoy-krovi-i-ee-kompon",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-3826-3-2021-konteynery-plastikovye-gibkie-dlya-chelovecheskoy-krovi-i-ee-kompon.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-3826-3-2021-konteynery-plastikovye-gibkie-dlya-chelovecheskoy-krovi-i-ee-kompon/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 7396-1-2011 Системы трубопроводные медицинских газов. Часть 1. Системы трубопроводные...",
+   "year": "2011",
+   "urlSlug": "gost-r-iso-7396-1-2011-sistemy-truboprovodnye-medicinskih-gazov-chast-1-sistemy-truboprovo",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-7396-1-2011-sistemy-truboprovodnye-medicinskih-gazov-chast-1-sistemy-truboprovo.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-7396-1-2011-sistemy-truboprovodnye-medicinskih-gazov-chast-1-sistemy-truboprovo/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 80601-2-12-2013 Изделия медицинские электрические. Часть 2-12. Частные требования...",
+   "year": "2013",
+   "urlSlug": "gost-r-iso-80601-2-12-2013-izdeliya-medicinskie-elektricheskie-chast-2-12-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-80601-2-12-2013-izdeliya-medicinskie-elektricheskie-chast-2-12-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-80601-2-12-2013-izdeliya-medicinskie-elektricheskie-chast-2-12-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 80601-2-13-2013 Изделия медицинские электрические. Часть 2-13. Частные требования...",
+   "year": "2013",
+   "urlSlug": "gost-r-iso-80601-2-13-2013-izdeliya-medicinskie-elektricheskie-chast-2-13-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-80601-2-13-2013-izdeliya-medicinskie-elektricheskie-chast-2-13-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-80601-2-13-2013-izdeliya-medicinskie-elektricheskie-chast-2-13-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 80601-2-55-2015 Изделия медицинские электрические. Часть 2-55. Частные требования...",
+   "year": "2015",
+   "urlSlug": "gost-r-iso-80601-2-55-2015-izdeliya-medicinskie-elektricheskie-chast-2-55-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-iso-80601-2-55-2015-izdeliya-medicinskie-elektricheskie-chast-2-55-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-iso-80601-2-55-2015-izdeliya-medicinskie-elektricheskie-chast-2-55-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-1-2-2014 Изделия медицинские электрические. Часть 1-2. Общие требования...",
+   "year": "2014",
+   "urlSlug": "gost-r-mek-60601-1-2-2014-izdeliya-medicinskie-elektricheskie-chast-1-2-obschie-trebovaniy",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-1-2-2014-izdeliya-medicinskie-elektricheskie-chast-1-2-obschie-trebovaniy.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-1-2-2014-izdeliya-medicinskie-elektricheskie-chast-1-2-obschie-trebovaniy/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-1-2022 Изделия медицинские электрические. Часть 1. Общие требования безопасности с...",
+   "year": "2022",
+   "urlSlug": "gost-r-mek-60601-1-2022-izdeliya-medicinskie-elektricheskie-chast-1-obschie-trebovaniya-be",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-1-2022-izdeliya-medicinskie-elektricheskie-chast-1-obschie-trebovaniya-be.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-1-2022-izdeliya-medicinskie-elektricheskie-chast-1-obschie-trebovaniya-be/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-1-3-2013 Изделия медицинские электрические. Часть 1-3. Общие требования...",
+   "year": "2013",
+   "urlSlug": "gost-r-mek-60601-1-3-2013-izdeliya-medicinskie-elektricheskie-chast-1-3-obschie-trebovaniy",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-1-3-2013-izdeliya-medicinskie-elektricheskie-chast-1-3-obschie-trebovaniy.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-1-3-2013-izdeliya-medicinskie-elektricheskie-chast-1-3-obschie-trebovaniy/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-1-2013 Изделия медицинские электрические. Часть 2-1. Частные требования...",
+   "year": "2013",
+   "urlSlug": "gost-r-mek-60601-2-1-2013-izdeliya-medicinskie-elektricheskie-chast-2-1-chastnye-trebovani",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-1-2013-izdeliya-medicinskie-elektricheskie-chast-2-1-chastnye-trebovani.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-1-2013-izdeliya-medicinskie-elektricheskie-chast-2-1-chastnye-trebovani/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-16-2022 Изделия медицинские электрические. Часть 2-16. Частные требования...",
+   "year": "2022",
+   "urlSlug": "gost-r-mek-60601-2-16-2022-izdeliya-medicinskie-elektricheskie-chast-2-16-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-16-2022-izdeliya-medicinskie-elektricheskie-chast-2-16-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-16-2022-izdeliya-medicinskie-elektricheskie-chast-2-16-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-18-2014 Изделия медицинские электрические. Часть 2-18. Частные требования...",
+   "year": "2014",
+   "urlSlug": "gost-r-mek-60601-2-18-2014-izdeliya-medicinskie-elektricheskie-chast-2-18-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-18-2014-izdeliya-medicinskie-elektricheskie-chast-2-18-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-18-2014-izdeliya-medicinskie-elektricheskie-chast-2-18-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-19-2011 Изделия медицинские электрические. Часть 2-19. Частные требования...",
+   "year": "2011",
+   "urlSlug": "gost-r-mek-60601-2-19-2011-izdeliya-medicinskie-elektricheskie-chast-2-19-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-19-2011-izdeliya-medicinskie-elektricheskie-chast-2-19-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-19-2011-izdeliya-medicinskie-elektricheskie-chast-2-19-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-2-2022 Изделия медицинские электрические. Часть 2-2. Частные требования...",
+   "year": "2022",
+   "urlSlug": "gost-r-mek-60601-2-2-2022-izdeliya-medicinskie-elektricheskie-chast-2-2-chastnye-trebovani",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-2-2022-izdeliya-medicinskie-elektricheskie-chast-2-2-chastnye-trebovani.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-2-2022-izdeliya-medicinskie-elektricheskie-chast-2-2-chastnye-trebovani/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-20-2011 Изделия медицинские электрические. Часть 2-20. Частные требования...",
+   "year": "2011",
+   "urlSlug": "gost-r-mek-60601-2-20-2011-izdeliya-medicinskie-elektricheskie-chast-2-20-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-20-2011-izdeliya-medicinskie-elektricheskie-chast-2-20-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-20-2011-izdeliya-medicinskie-elektricheskie-chast-2-20-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-21-2013 Изделия медицинские электрические. Часть 2-21. Частные требования...",
+   "year": "2013",
+   "urlSlug": "gost-r-mek-60601-2-21-2013-izdeliya-medicinskie-elektricheskie-chast-2-21-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-21-2013-izdeliya-medicinskie-elektricheskie-chast-2-21-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-21-2013-izdeliya-medicinskie-elektricheskie-chast-2-21-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-25-2016 Изделия медицинские электрические. Часть 2-25. Частные требования...",
+   "year": "2016",
+   "urlSlug": "gost-r-mek-60601-2-25-2016-izdeliya-medicinskie-elektricheskie-chast-2-25-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-25-2016-izdeliya-medicinskie-elektricheskie-chast-2-25-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-25-2016-izdeliya-medicinskie-elektricheskie-chast-2-25-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-27-2013 Изделия медицинские электрические. Часть 2-27. Частные требования...",
+   "year": "2013",
+   "urlSlug": "gost-r-mek-60601-2-27-2013-izdeliya-medicinskie-elektricheskie-chast-2-27-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-27-2013-izdeliya-medicinskie-elektricheskie-chast-2-27-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-27-2013-izdeliya-medicinskie-elektricheskie-chast-2-27-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-28-2022 Изделия медицинские электрические. Часть 2-28. Частные требования...",
+   "year": "2022",
+   "urlSlug": "gost-r-mek-60601-2-28-2022-izdeliya-medicinskie-elektricheskie-chast-2-28-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-28-2022-izdeliya-medicinskie-elektricheskie-chast-2-28-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-28-2022-izdeliya-medicinskie-elektricheskie-chast-2-28-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-29-2013 Изделия медицинские электрические. Часть 2-29. Частные требования...",
+   "year": "2013",
+   "urlSlug": "gost-r-mek-60601-2-29-2013-izdeliya-medicinskie-elektricheskie-chast-2-29-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-29-2013-izdeliya-medicinskie-elektricheskie-chast-2-29-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-29-2013-izdeliya-medicinskie-elektricheskie-chast-2-29-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-33-2013 Изделия медицинские электрические. Часть 2-33. Частные требования...",
+   "year": "2013",
+   "urlSlug": "gost-r-mek-60601-2-33-2013-izdeliya-medicinskie-elektricheskie-chast-2-33-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-33-2013-izdeliya-medicinskie-elektricheskie-chast-2-33-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-33-2013-izdeliya-medicinskie-elektricheskie-chast-2-33-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-36-2016 Изделия медицинские электрические. Часть 2-36. Частные требования...",
+   "year": "2016",
+   "urlSlug": "gost-r-mek-60601-2-36-2016-izdeliya-medicinskie-elektricheskie-chast-2-36-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-36-2016-izdeliya-medicinskie-elektricheskie-chast-2-36-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-36-2016-izdeliya-medicinskie-elektricheskie-chast-2-36-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-37-2009 Изделия медицинские электрические. Часть 2-37. Частные требования к...",
+   "year": "2009",
+   "urlSlug": "gost-r-mek-60601-2-37-2009-izdeliya-medicinskie-elektricheskie-chast-2-37-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-37-2009-izdeliya-medicinskie-elektricheskie-chast-2-37-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-37-2009-izdeliya-medicinskie-elektricheskie-chast-2-37-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-4-2013 Изделия медицинские электрические. Часть 2-4. Частные требования...",
+   "year": "2013",
+   "urlSlug": "gost-r-mek-60601-2-4-2013-izdeliya-medicinskie-elektricheskie-chast-2-4-chastnye-trebovani",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-4-2013-izdeliya-medicinskie-elektricheskie-chast-2-4-chastnye-trebovani.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-4-2013-izdeliya-medicinskie-elektricheskie-chast-2-4-chastnye-trebovani/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-41-2014 Изделия медицинские электрические. Часть 2-41. Частные требования...",
+   "year": "2014",
+   "urlSlug": "gost-r-mek-60601-2-41-2014-izdeliya-medicinskie-elektricheskie-chast-2-41-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-41-2014-izdeliya-medicinskie-elektricheskie-chast-2-41-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-41-2014-izdeliya-medicinskie-elektricheskie-chast-2-41-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-43-2013 Изделия медицинские электрические. Часть 2-43. Частные требования...",
+   "year": "2013",
+   "urlSlug": "gost-r-mek-60601-2-43-2013-izdeliya-medicinskie-elektricheskie-chast-2-43-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-43-2013-izdeliya-medicinskie-elektricheskie-chast-2-43-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-43-2013-izdeliya-medicinskie-elektricheskie-chast-2-43-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-44-2013 Изделия медицинские электрические. Часть 2-44. Частные требования...",
+   "year": "2013",
+   "urlSlug": "gost-r-mek-60601-2-44-2013-izdeliya-medicinskie-elektricheskie-chast-2-44-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-44-2013-izdeliya-medicinskie-elektricheskie-chast-2-44-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-44-2013-izdeliya-medicinskie-elektricheskie-chast-2-44-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-45-2014 Изделия медицинские электрические. Часть 2-45. Частные требования...",
+   "year": "2014",
+   "urlSlug": "gost-r-mek-60601-2-45-2014-izdeliya-medicinskie-elektricheskie-chast-2-45-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-45-2014-izdeliya-medicinskie-elektricheskie-chast-2-45-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-45-2014-izdeliya-medicinskie-elektricheskie-chast-2-45-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-46-2022 Изделия медицинские электрические. Часть 2-46. Частные требования...",
+   "year": "2022",
+   "urlSlug": "gost-r-mek-60601-2-46-2022-izdeliya-medicinskie-elektricheskie-chast-2-46-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-46-2022-izdeliya-medicinskie-elektricheskie-chast-2-46-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-46-2022-izdeliya-medicinskie-elektricheskie-chast-2-46-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-47-2017 Изделия медицинские электрические. Часть 2-47. Частные требования...",
+   "year": "2017",
+   "urlSlug": "gost-r-mek-60601-2-47-2017-izdeliya-medicinskie-elektricheskie-chast-2-47-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-47-2017-izdeliya-medicinskie-elektricheskie-chast-2-47-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-47-2017-izdeliya-medicinskie-elektricheskie-chast-2-47-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-49-2018 Изделия медицинские электрические. Часть 2-49. Частные требования...",
+   "year": "2018",
+   "urlSlug": "gost-r-mek-60601-2-49-2018-izdeliya-medicinskie-elektricheskie-chast-2-49-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-49-2018-izdeliya-medicinskie-elektricheskie-chast-2-49-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-49-2018-izdeliya-medicinskie-elektricheskie-chast-2-49-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-50-2012 Изделия медицинские электрические. Часть 2-50. Частные требования...",
+   "year": "2012",
+   "urlSlug": "gost-r-mek-60601-2-50-2012-izdeliya-medicinskie-elektricheskie-chast-2-50-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-50-2012-izdeliya-medicinskie-elektricheskie-chast-2-50-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-50-2012-izdeliya-medicinskie-elektricheskie-chast-2-50-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-63-2015 Изделия медицинские электрические. Часть 2-63. Частные требования...",
+   "year": "2015",
+   "urlSlug": "gost-r-mek-60601-2-63-2015-izdeliya-medicinskie-elektricheskie-chast-2-63-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-63-2015-izdeliya-medicinskie-elektricheskie-chast-2-63-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-63-2015-izdeliya-medicinskie-elektricheskie-chast-2-63-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60601-2-65-2015 Изделия медицинские электрические. Часть 2-65. Частные требования...",
+   "year": "2015",
+   "urlSlug": "gost-r-mek-60601-2-65-2015-izdeliya-medicinskie-elektricheskie-chast-2-65-chastnye-trebova",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-65-2015-izdeliya-medicinskie-elektricheskie-chast-2-65-chastnye-trebova.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60601-2-65-2015-izdeliya-medicinskie-elektricheskie-chast-2-65-chastnye-trebova/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60627-2022 Оборудование для получения рентгеновских диагностических изображений....",
+   "year": "2022",
+   "urlSlug": "gost-r-mek-60627-2022-oborudovanie-dlya-polucheniya-rentgenovskih-diagnosticheskih-izobraz",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60627-2022-oborudovanie-dlya-polucheniya-rentgenovskih-diagnosticheskih-izobraz.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60627-2022-oborudovanie-dlya-polucheniya-rentgenovskih-diagnosticheskih-izobraz/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 60645-1-2017 Электроакустика. Аудиометрическое оборудование. Часть 1. Оборудование для...",
+   "year": "2017",
+   "urlSlug": "gost-r-mek-60645-1-2017-elektroakustika-audiometricheskoe-oborudovanie-chast-1-oborudovani",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-60645-1-2017-elektroakustika-audiometricheskoe-oborudovanie-chast-1-oborudovani.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-60645-1-2017-elektroakustika-audiometricheskoe-oborudovanie-chast-1-oborudovani/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 62083-2013 Изделия медицинские электрические. Требования безопасности к системам...",
+   "year": "2083",
+   "urlSlug": "gost-r-mek-62083-2013-izdeliya-medicinskie-elektricheskie-trebovaniya-bezopasnosti-k-siste",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-62083-2013-izdeliya-medicinskie-elektricheskie-trebovaniya-bezopasnosti-k-siste.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-62083-2013-izdeliya-medicinskie-elektricheskie-trebovaniya-bezopasnosti-k-siste/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 62220-1-2-2010 Изделия медицинские электрические. Характеристики устройств для получения...",
+   "year": "2010",
+   "urlSlug": "gost-r-mek-62220-1-2-2010-izdeliya-medicinskie-elektricheskie-harakteristiki-ustroystv-dly",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-62220-1-2-2010-izdeliya-medicinskie-elektricheskie-harakteristiki-ustroystv-dly.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-62220-1-2-2010-izdeliya-medicinskie-elektricheskie-harakteristiki-ustroystv-dly/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 62220-1-3-2013 Изделия медицинские электрические. Характеристики цифровых приемников... (2)",
+   "year": "2013",
+   "urlSlug": "gost-r-mek-62220-1-3-2013-izdeliya-medicinskie-elektricheskie-harakteristiki-cifrovyh-prie",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-62220-1-3-2013-izdeliya-medicinskie-elektricheskie-harakteristiki-cifrovyh-prie.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-62220-1-3-2013-izdeliya-medicinskie-elektricheskie-harakteristiki-cifrovyh-prie/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 62220-1-3-2013 Изделия медицинские электрические. Характеристики цифровых приемников...",
+   "year": "2013",
+   "urlSlug": "gost-r-mek-62220-1-3-2013-izdeliya-medicinskie-elektricheskie-harakteristiki-cifrovyh-prie-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-62220-1-3-2013-izdeliya-medicinskie-elektricheskie-harakteristiki-cifrovyh-prie-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-62220-1-3-2013-izdeliya-medicinskie-elektricheskie-harakteristiki-cifrovyh-prie-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р МЭК 62366-1-2023 Изделия медицинские. Часть 1. Проектирование медицинских изделий с учетом...",
+   "year": "2023",
+   "urlSlug": "gost-r-mek-62366-1-2023-izdeliya-medicinskie-chast-1-proektirovanie-medicinskih-izdeliy-s-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/gost-r-mek-62366-1-2023-izdeliya-medicinskie-chast-1-proektirovanie-medicinskih-izdeliy-s-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/gost-r-mek-62366-1-2023-izdeliya-medicinskie-chast-1-proektirovanie-medicinskih-izdeliy-s-2/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "Проект стандарта",
+   "title": "Проект ГОСТ Изделия медицинские. Оценка биологического действия медицинских изделий. Часть 19.... (скан)",
+   "year": "",
+   "urlSlug": "proekt-gost-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-izdeliy-chas",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/proekt-gost-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-izdeliy-chas.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/proekt-gost-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-izdeliy-chas/"
+  },
+  {
+   "category": "ГОСТы МИ общего назначения",
+   "categorySlug": "gosty-mi-obschego-naznacheniya",
+   "docType": "Проект стандарта",
+   "title": "Проект ГОСТ Изделия медицинские. Оценка биологического действия медицинских изделий. Часть 5.... (скан)",
+   "year": "",
+   "urlSlug": "proekt-gost-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-izdeliy-chas-2",
+   "fileUrl": "/biblioteka/files/gosty-mi-obschego-naznacheniya/proekt-gost-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-izdeliy-chas-2.pdf",
+   "pageUrl": "/biblioteka/gosty-mi-obschego-naznacheniya/proekt-gost-izdeliya-medicinskie-ocenka-biologicheskogo-deystviya-medicinskih-izdeliy-chas-2/"
+  },
+  {
+   "category": "Инспекция производства",
+   "categorySlug": "inspekciya-proizvodstva",
+   "docType": "ГОСТ",
+   "title": "ГОСТ ISO 13485-2017 Изделия медицинские. Системы менеджмента качества. Требования для целей...",
+   "year": "2017",
+   "urlSlug": "gost-iso-13485-2017-izdeliya-medicinskie-sistemy-menedzhmenta-kachestva-trebovaniya-dlya-c-3",
+   "fileUrl": "/biblioteka/files/inspekciya-proizvodstva/gost-iso-13485-2017-izdeliya-medicinskie-sistemy-menedzhmenta-kachestva-trebovaniya-dlya-c-3.pdf",
+   "pageUrl": "/biblioteka/inspekciya-proizvodstva/gost-iso-13485-2017-izdeliya-medicinskie-sistemy-menedzhmenta-kachestva-trebovaniya-dlya-c-3/"
+  },
+  {
+   "category": "Инспекция производства",
+   "categorySlug": "inspekciya-proizvodstva",
+   "docType": "Постановление",
+   "title": "Постановление от 09_02_2022 N 135 Об утверждении Правил организации и проведения инспектирования...",
+   "year": "2022",
+   "urlSlug": "postanovlenie-ot-09-02-2022-n-135-ob-utverzhdenii-pravil-organizacii-i-provedeniya-inspekt",
+   "fileUrl": "/biblioteka/files/inspekciya-proizvodstva/postanovlenie-ot-09-02-2022-n-135-ob-utverzhdenii-pravil-organizacii-i-provedeniya-inspekt.pdf",
+   "pageUrl": "/biblioteka/inspekciya-proizvodstva/postanovlenie-ot-09-02-2022-n-135-ob-utverzhdenii-pravil-organizacii-i-provedeniya-inspekt/"
+  },
+  {
+   "category": "Инспекция производства",
+   "categorySlug": "inspekciya-proizvodstva",
+   "docType": "Постановление",
+   "title": "Постановление от 09_02_2022 N 136 Об утверждении требований к внедрению, поддержанию и оценке...",
+   "year": "2022",
+   "urlSlug": "postanovlenie-ot-09-02-2022-n-136-ob-utverzhdenii-trebovaniy-k-vnedreniyu-podderzhaniyu-i",
+   "fileUrl": "/biblioteka/files/inspekciya-proizvodstva/postanovlenie-ot-09-02-2022-n-136-ob-utverzhdenii-trebovaniy-k-vnedreniyu-podderzhaniyu-i.pdf",
+   "pageUrl": "/biblioteka/inspekciya-proizvodstva/postanovlenie-ot-09-02-2022-n-136-ob-utverzhdenii-trebovaniy-k-vnedreniyu-podderzhaniyu-i/"
+  },
+  {
+   "category": "Инспекция производства",
+   "categorySlug": "inspekciya-proizvodstva",
+   "docType": "Приказ",
+   "title": "Приказ от 15_09_2020 N 980н Об утверждении Порядка осуществления мониторинга безопасности...",
+   "year": "2020",
+   "urlSlug": "prikaz-ot-15-09-2020-n-980n-ob-utverzhdenii-poryadka-osuschestvleniya-monitoringa-bezopasn",
+   "fileUrl": "/biblioteka/files/inspekciya-proizvodstva/prikaz-ot-15-09-2020-n-980n-ob-utverzhdenii-poryadka-osuschestvleniya-monitoringa-bezopasn.pdf",
+   "pageUrl": "/biblioteka/inspekciya-proizvodstva/prikaz-ot-15-09-2020-n-980n-ob-utverzhdenii-poryadka-osuschestvleniya-monitoringa-bezopasn/"
+  },
+  {
+   "category": "Инспекция производства",
+   "categorySlug": "inspekciya-proizvodstva",
+   "docType": "Приказ",
+   "title": "Приказ от 19_10_2020 N 1113н Об утверждении Порядка сообщения субъектами обращения медицинских...",
+   "year": "2020",
+   "urlSlug": "prikaz-ot-19-10-2020-n-1113n-ob-utverzhdenii-poryadka-soobscheniya-subektami-obrascheniya",
+   "fileUrl": "/biblioteka/files/inspekciya-proizvodstva/prikaz-ot-19-10-2020-n-1113n-ob-utverzhdenii-poryadka-soobscheniya-subektami-obrascheniya.pdf",
+   "pageUrl": "/biblioteka/inspekciya-proizvodstva/prikaz-ot-19-10-2020-n-1113n-ob-utverzhdenii-poryadka-soobscheniya-subektami-obrascheniya/"
+  },
+  {
+   "category": "Инспекция производства",
+   "categorySlug": "inspekciya-proizvodstva",
+   "docType": "Решение",
+   "title": "Решение от 10_11_2017 N 106 О Требованиях к внедрению, поддержанию и оценке системы менеджмента...",
+   "year": "2017",
+   "urlSlug": "reshenie-ot-10-11-2017-n-106-o-trebovaniyah-k-vnedreniyu-podderzhaniyu-i-ocenke-sistemy-me",
+   "fileUrl": "/biblioteka/files/inspekciya-proizvodstva/reshenie-ot-10-11-2017-n-106-o-trebovaniyah-k-vnedreniyu-podderzhaniyu-i-ocenke-sistemy-me.pdf",
+   "pageUrl": "/biblioteka/inspekciya-proizvodstva/reshenie-ot-10-11-2017-n-106-o-trebovaniyah-k-vnedreniyu-podderzhaniyu-i-ocenke-sistemy-me/"
+  },
+  {
+   "category": "Инспекция производства",
+   "categorySlug": "inspekciya-proizvodstva",
+   "docType": "Решение",
+   "title": "Решение от 22_12_2015 N 174 Об утверждении Правил проведения мониторинга безопасности, качества и...",
+   "year": "2015",
+   "urlSlug": "reshenie-ot-22-12-2015-n-174-ob-utverzhdenii-pravil-provedeniya-monitoringa-bezopasnosti-k",
+   "fileUrl": "/biblioteka/files/inspekciya-proizvodstva/reshenie-ot-22-12-2015-n-174-ob-utverzhdenii-pravil-provedeniya-monitoringa-bezopasnosti-k.pdf",
+   "pageUrl": "/biblioteka/inspekciya-proizvodstva/reshenie-ot-22-12-2015-n-174-ob-utverzhdenii-pravil-provedeniya-monitoringa-bezopasnosti-k/"
+  },
+  {
+   "category": "Испытания",
+   "categorySlug": "ispytaniya",
+   "docType": "Приказ",
+   "title": "Приказ 421н",
+   "year": "",
+   "urlSlug": "prikaz-421n",
+   "fileUrl": "/biblioteka/files/ispytaniya/prikaz-421n.pdf",
+   "pageUrl": "/biblioteka/ispytaniya/prikaz-421n/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Распоряжение",
+   "title": "Распоряжение от 22_12_2015 N 180 О проекте решения Совета Евразийской экономической комиссии Об...",
+   "year": "2015",
+   "urlSlug": "rasporyazhenie-ot-22-12-2015-n-180-o-proekte-resheniya-soveta-evraziyskoy-ekonomicheskoy-k",
+   "fileUrl": "/biblioteka/files/npa-eaes/rasporyazhenie-ot-22-12-2015-n-180-o-proekte-resheniya-soveta-evraziyskoy-ekonomicheskoy-k.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/rasporyazhenie-ot-22-12-2015-n-180-o-proekte-resheniya-soveta-evraziyskoy-ekonomicheskoy-k/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Распоряжение",
+   "title": "Распоряжение от 29_12_2015 N 184 О проекте решения Совета Евразийской экономической комиссии Об...",
+   "year": "2015",
+   "urlSlug": "rasporyazhenie-ot-29-12-2015-n-184-o-proekte-resheniya-soveta-evraziyskoy-ekonomicheskoy-k",
+   "fileUrl": "/biblioteka/files/npa-eaes/rasporyazhenie-ot-29-12-2015-n-184-o-proekte-resheniya-soveta-evraziyskoy-ekonomicheskoy-k.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/rasporyazhenie-ot-29-12-2015-n-184-o-proekte-resheniya-soveta-evraziyskoy-ekonomicheskoy-k/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Документ",
+   "title": "Рекомендации от 04_09_2017 N 16 О Порядке формирования перечня стандартов, в результате применения...",
+   "year": "2017",
+   "urlSlug": "rekomendacii-ot-04-09-2017-n-16-o-poryadke-formirovaniya-perechnya-standartov-v-rezultate",
+   "fileUrl": "/biblioteka/files/npa-eaes/rekomendacii-ot-04-09-2017-n-16-o-poryadke-formirovaniya-perechnya-standartov-v-rezultate.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/rekomendacii-ot-04-09-2017-n-16-o-poryadke-formirovaniya-perechnya-standartov-v-rezultate/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Документ",
+   "title": "Рекомендации от 04_09_2017 N 17 О перечне стандартов, в результате применения которых на...",
+   "year": "2017",
+   "urlSlug": "rekomendacii-ot-04-09-2017-n-17-o-perechne-standartov-v-rezultate-primeneniya-kotoryh-na",
+   "fileUrl": "/biblioteka/files/npa-eaes/rekomendacii-ot-04-09-2017-n-17-o-perechne-standartov-v-rezultate-primeneniya-kotoryh-na.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/rekomendacii-ot-04-09-2017-n-17-o-perechne-standartov-v-rezultate-primeneniya-kotoryh-na/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Документ",
+   "title": "Рекомендации от 08_10_2019 N 29 О Методических рекомендациях по содержанию и структуре документов...",
+   "year": "2019",
+   "urlSlug": "rekomendacii-ot-08-10-2019-n-29-o-metodicheskih-rekomendaciyah-po-soderzhaniyu-i-strukture",
+   "fileUrl": "/biblioteka/files/npa-eaes/rekomendacii-ot-08-10-2019-n-29-o-metodicheskih-rekomendaciyah-po-soderzhaniyu-i-strukture.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/rekomendacii-ot-08-10-2019-n-29-o-metodicheskih-rekomendaciyah-po-soderzhaniyu-i-strukture/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Документ",
+   "title": "Рекомендации от 12_11_2018 N 25 О Критериях отнесения продукции к медицинским изделиям в рамках...",
+   "year": "2018",
+   "urlSlug": "rekomendacii-ot-12-11-2018-n-25-o-kriteriyah-otneseniya-produkcii-k-medicinskim-izdeliyam",
+   "fileUrl": "/biblioteka/files/npa-eaes/rekomendacii-ot-12-11-2018-n-25-o-kriteriyah-otneseniya-produkcii-k-medicinskim-izdeliyam.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/rekomendacii-ot-12-11-2018-n-25-o-kriteriyah-otneseniya-produkcii-k-medicinskim-izdeliyam/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Документ",
+   "title": "Рекомендации от 21_05_2019 N 14 О Методических рекомендациях по проведению экспертизы безопасности,...",
+   "year": "2019",
+   "urlSlug": "rekomendacii-ot-21-05-2019-n-14-o-metodicheskih-rekomendaciyah-po-provedeniyu-ekspertizy-b",
+   "fileUrl": "/biblioteka/files/npa-eaes/rekomendacii-ot-21-05-2019-n-14-o-metodicheskih-rekomendaciyah-po-provedeniyu-ekspertizy-b.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/rekomendacii-ot-21-05-2019-n-14-o-metodicheskih-rekomendaciyah-po-provedeniyu-ekspertizy-b/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Решение",
+   "title": "Решение от 03_04_2018 N 48 О классификаторе видов документов регистрационного досье медицинского...",
+   "year": "2018",
+   "urlSlug": "reshenie-ot-03-04-2018-n-48-o-klassifikatore-vidov-dokumentov-registracionnogo-dose-medici",
+   "fileUrl": "/biblioteka/files/npa-eaes/reshenie-ot-03-04-2018-n-48-o-klassifikatore-vidov-dokumentov-registracionnogo-dose-medici.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/reshenie-ot-03-04-2018-n-48-o-klassifikatore-vidov-dokumentov-registracionnogo-dose-medici/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Решение",
+   "title": "Решение от 10_11_2017 N 106 О Требованиях к внедрению, поддержанию и оценке системы менеджмента...",
+   "year": "2017",
+   "urlSlug": "reshenie-ot-10-11-2017-n-106-o-trebovaniyah-k-vnedreniyu-podderzhaniyu-i-ocenke-sistemy-me-2",
+   "fileUrl": "/biblioteka/files/npa-eaes/reshenie-ot-10-11-2017-n-106-o-trebovaniyah-k-vnedreniyu-podderzhaniyu-i-ocenke-sistemy-me-2.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/reshenie-ot-10-11-2017-n-106-o-trebovaniyah-k-vnedreniyu-podderzhaniyu-i-ocenke-sistemy-me-2/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Решение",
+   "title": "Решение от 12_02_2016 N 26 О специальном знаке обращения медицинских изделий на рынке Евразийского...",
+   "year": "2016",
+   "urlSlug": "reshenie-ot-12-02-2016-n-26-o-specialnom-znake-obrascheniya-medicinskih-izdeliy-na-rynke-e",
+   "fileUrl": "/biblioteka/files/npa-eaes/reshenie-ot-12-02-2016-n-26-o-specialnom-znake-obrascheniya-medicinskih-izdeliy-na-rynke-e.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/reshenie-ot-12-02-2016-n-26-o-specialnom-znake-obrascheniya-medicinskih-izdeliy-na-rynke-e/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Решение",
+   "title": "Решение от 12_02_2016 N 27 Об утверждении Общих требований безопасности и эффективности медицинских...",
+   "year": "2016",
+   "urlSlug": "reshenie-ot-12-02-2016-n-27-ob-utverzhdenii-obschih-trebovaniy-bezopasnosti-i-effektivnost",
+   "fileUrl": "/biblioteka/files/npa-eaes/reshenie-ot-12-02-2016-n-27-ob-utverzhdenii-obschih-trebovaniy-bezopasnosti-i-effektivnost.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/reshenie-ot-12-02-2016-n-27-ob-utverzhdenii-obschih-trebovaniy-bezopasnosti-i-effektivnost/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Решение",
+   "title": "Решение от 12_02_2016 N 28 Об утверждении Правил проведения технических испытаний медицинских...",
+   "year": "2016",
+   "urlSlug": "reshenie-ot-12-02-2016-n-28-ob-utverzhdenii-pravil-provedeniya-tehnicheskih-ispytaniy-medi",
+   "fileUrl": "/biblioteka/files/npa-eaes/reshenie-ot-12-02-2016-n-28-ob-utverzhdenii-pravil-provedeniya-tehnicheskih-ispytaniy-medi.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/reshenie-ot-12-02-2016-n-28-ob-utverzhdenii-pravil-provedeniya-tehnicheskih-ispytaniy-medi/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Решение",
+   "title": "Решение от 12_02_2016 N 29 О Правилах проведения клинических и клинико-лабораторных испытаний...",
+   "year": "2016",
+   "urlSlug": "reshenie-ot-12-02-2016-n-29-o-pravilah-provedeniya-klinicheskih-i-kliniko-laboratornyh-isp",
+   "fileUrl": "/biblioteka/files/npa-eaes/reshenie-ot-12-02-2016-n-29-o-pravilah-provedeniya-klinicheskih-i-kliniko-laboratornyh-isp.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/reshenie-ot-12-02-2016-n-29-o-pravilah-provedeniya-klinicheskih-i-kliniko-laboratornyh-isp/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Решение",
+   "title": "Решение от 12_02_2016 N 42 Об утверждении перечня видов медицинских изделий, подлежащих отнесению...",
+   "year": "2016",
+   "urlSlug": "reshenie-ot-12-02-2016-n-42-ob-utverzhdenii-perechnya-vidov-medicinskih-izdeliy-podlezhasc",
+   "fileUrl": "/biblioteka/files/npa-eaes/reshenie-ot-12-02-2016-n-42-ob-utverzhdenii-perechnya-vidov-medicinskih-izdeliy-podlezhasc.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/reshenie-ot-12-02-2016-n-42-ob-utverzhdenii-perechnya-vidov-medicinskih-izdeliy-podlezhasc/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Решение",
+   "title": "Решение от 12_02_2016 N 46 О Правилах регистрации и экспертизы безопасности, качества и...",
+   "year": "2016",
+   "urlSlug": "reshenie-ot-12-02-2016-n-46-o-pravilah-registracii-i-ekspertizy-bezopasnosti-kachestva-i",
+   "fileUrl": "/biblioteka/files/npa-eaes/reshenie-ot-12-02-2016-n-46-o-pravilah-registracii-i-ekspertizy-bezopasnosti-kachestva-i.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/reshenie-ot-12-02-2016-n-46-o-pravilah-registracii-i-ekspertizy-bezopasnosti-kachestva-i/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Решение",
+   "title": "Решение от 13_07_2018 N 49 Об утверждении Правил определения происхождения товаров, ввозимых на...",
+   "year": "2018",
+   "urlSlug": "reshenie-ot-13-07-2018-n-49-ob-utverzhdenii-pravil-opredeleniya-proishozhdeniya-tovarov-vv",
+   "fileUrl": "/biblioteka/files/npa-eaes/reshenie-ot-13-07-2018-n-49-ob-utverzhdenii-pravil-opredeleniya-proishozhdeniya-tovarov-vv.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/reshenie-ot-13-07-2018-n-49-ob-utverzhdenii-pravil-opredeleniya-proishozhdeniya-tovarov-vv/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Решение",
+   "title": "Решение от 16_04_2019 N 62 О классификаторе областей медицинского применения медицинских изделий",
+   "year": "2019",
+   "urlSlug": "reshenie-ot-16-04-2019-n-62-o-klassifikatore-oblastey-medicinskogo-primeneniya-medicinskih",
+   "fileUrl": "/biblioteka/files/npa-eaes/reshenie-ot-16-04-2019-n-62-o-klassifikatore-oblastey-medicinskogo-primeneniya-medicinskih.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/reshenie-ot-16-04-2019-n-62-o-klassifikatore-oblastey-medicinskogo-primeneniya-medicinskih/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Решение",
+   "title": "Решение от 16_05_2016 N 38 Об утверждении Правил проведения исследований (испытаний) с целью оценки...",
+   "year": "2016",
+   "urlSlug": "reshenie-ot-16-05-2016-n-38-ob-utverzhdenii-pravil-provedeniya-issledovaniy-ispytaniy-s-ce",
+   "fileUrl": "/biblioteka/files/npa-eaes/reshenie-ot-16-05-2016-n-38-ob-utverzhdenii-pravil-provedeniya-issledovaniy-ispytaniy-s-ce.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/reshenie-ot-16-05-2016-n-38-ob-utverzhdenii-pravil-provedeniya-issledovaniy-ispytaniy-s-ce/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Решение",
+   "title": "Решение от 22_12_2015 N 173 Об утверждении Правил классификации медицинских изделий в зависимости...",
+   "year": "2015",
+   "urlSlug": "reshenie-ot-22-12-2015-n-173-ob-utverzhdenii-pravil-klassifikacii-medicinskih-izdeliy-v-za",
+   "fileUrl": "/biblioteka/files/npa-eaes/reshenie-ot-22-12-2015-n-173-ob-utverzhdenii-pravil-klassifikacii-medicinskih-izdeliy-v-za.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/reshenie-ot-22-12-2015-n-173-ob-utverzhdenii-pravil-klassifikacii-medicinskih-izdeliy-v-za/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Решение",
+   "title": "Решение от 22_12_2015 N 174 Об утверждении Правил проведения мониторинга безопасности, качества и...",
+   "year": "2015",
+   "urlSlug": "reshenie-ot-22-12-2015-n-174-ob-utverzhdenii-pravil-provedeniya-monitoringa-bezopasnosti-k-2",
+   "fileUrl": "/biblioteka/files/npa-eaes/reshenie-ot-22-12-2015-n-174-ob-utverzhdenii-pravil-provedeniya-monitoringa-bezopasnosti-k-2.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/reshenie-ot-22-12-2015-n-174-ob-utverzhdenii-pravil-provedeniya-monitoringa-bezopasnosti-k-2/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Решение",
+   "title": "Решение от 29_12_2015 N 177 О Правилах ведения номенклатуры медицинских изделий",
+   "year": "2015",
+   "urlSlug": "reshenie-ot-29-12-2015-n-177-o-pravilah-vedeniya-nomenklatury-medicinskih-izdeliy",
+   "fileUrl": "/biblioteka/files/npa-eaes/reshenie-ot-29-12-2015-n-177-o-pravilah-vedeniya-nomenklatury-medicinskih-izdeliy.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/reshenie-ot-29-12-2015-n-177-o-pravilah-vedeniya-nomenklatury-medicinskih-izdeliy/"
+  },
+  {
+   "category": "НПА ЕАЭС",
+   "categorySlug": "npa-eaes",
+   "docType": "Решение",
+   "title": "Решение от 30_06_2017 N 78 О Требованиях к электронному виду заявлений и документов...",
+   "year": "2017",
+   "urlSlug": "reshenie-ot-30-06-2017-n-78-o-trebovaniyah-k-elektronnomu-vidu-zayavleniy-i-dokumentov",
+   "fileUrl": "/biblioteka/files/npa-eaes/reshenie-ot-30-06-2017-n-78-o-trebovaniyah-k-elektronnomu-vidu-zayavleniy-i-dokumentov.pdf",
+   "pageUrl": "/biblioteka/npa-eaes/reshenie-ot-30-06-2017-n-78-o-trebovaniyah-k-elektronnomu-vidu-zayavleniy-i-dokumentov/"
+  },
+  {
+   "category": "НПА РФ",
+   "categorySlug": "npa-rf",
+   "docType": "ГОСТ",
+   "title": "ГОСТ 2.503-2013 Единая система конструкторской документации (ЕСКД). Правила внесения изменений (с...",
+   "year": "2013",
+   "urlSlug": "gost-2503-2013-edinaya-sistema-konstruktorskoy-dokumentacii-eskd-pravila-vneseniya-izmenen",
+   "fileUrl": "/biblioteka/files/npa-rf/gost-2503-2013-edinaya-sistema-konstruktorskoy-dokumentacii-eskd-pravila-vneseniya-izmenen.pdf",
+   "pageUrl": "/biblioteka/npa-rf/gost-2503-2013-edinaya-sistema-konstruktorskoy-dokumentacii-eskd-pravila-vneseniya-izmenen/"
+  },
+  {
+   "category": "НПА РФ",
+   "categorySlug": "npa-rf",
+   "docType": "Документ",
+   "title": "ПП РФ 1684",
+   "year": "",
+   "urlSlug": "pp-rf-1684",
+   "fileUrl": "/biblioteka/files/npa-rf/pp-rf-1684.pdf",
+   "pageUrl": "/biblioteka/npa-rf/pp-rf-1684/"
+  },
+  {
+   "category": "НПА РФ",
+   "categorySlug": "npa-rf",
+   "docType": "Перечень",
+   "title": "Перечень 552",
+   "year": "",
+   "urlSlug": "perechen-552",
+   "fileUrl": "/biblioteka/files/npa-rf/perechen-552.pdf",
+   "pageUrl": "/biblioteka/npa-rf/perechen-552/"
+  },
+  {
+   "category": "НПА РФ",
+   "categorySlug": "npa-rf",
+   "docType": "Постановление",
+   "title": "Постановление от 01_04_2022 N 552 Об утверждении особенностей обращения, включая особенности...",
+   "year": "2022",
+   "urlSlug": "postanovlenie-ot-01-04-2022-n-552-ob-utverzhdenii-osobennostey-obrascheniya-vklyuchaya-oso",
+   "fileUrl": "/biblioteka/files/npa-rf/postanovlenie-ot-01-04-2022-n-552-ob-utverzhdenii-osobennostey-obrascheniya-vklyuchaya-oso.pdf",
+   "pageUrl": "/biblioteka/npa-rf/postanovlenie-ot-01-04-2022-n-552-ob-utverzhdenii-osobennostey-obrascheniya-vklyuchaya-oso/"
+  },
+  {
+   "category": "НПА РФ",
+   "categorySlug": "npa-rf",
+   "docType": "Постановление",
+   "title": "Постановление от 03_04_2020 N 430 Об особенностях обращения медицинских изделий, в том числе...",
+   "year": "2020",
+   "urlSlug": "postanovlenie-ot-03-04-2020-n-430-ob-osobennostyah-obrascheniya-medicinskih-izdeliy-v-tom",
+   "fileUrl": "/biblioteka/files/npa-rf/postanovlenie-ot-03-04-2020-n-430-ob-osobennostyah-obrascheniya-medicinskih-izdeliy-v-tom.pdf",
+   "pageUrl": "/biblioteka/npa-rf/postanovlenie-ot-03-04-2020-n-430-ob-osobennostyah-obrascheniya-medicinskih-izdeliy-v-tom/"
+  },
+  {
+   "category": "НПА РФ",
+   "categorySlug": "npa-rf",
+   "docType": "Приказ",
+   "title": "Приказ181н",
+   "year": "",
+   "urlSlug": "prikaz181n",
+   "fileUrl": "/biblioteka/files/npa-rf/prikaz181n.pdf",
+   "pageUrl": "/biblioteka/npa-rf/prikaz181n/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ 21552-84 Средства вычислительной техники. Общие технические требования, приемка, методы...",
+   "year": "",
+   "urlSlug": "gost-21552-84-sredstva-vychislitelnoy-tehniki-obschie-tehnicheskie-trebovaniya-priemka-met",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-21552-84-sredstva-vychislitelnoy-tehniki-obschie-tehnicheskie-trebovaniya-priemka-met.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-21552-84-sredstva-vychislitelnoy-tehniki-obschie-tehnicheskie-trebovaniya-priemka-met/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ 28195-89 Оценка качества программных средств. Общие положения",
+   "year": "",
+   "urlSlug": "gost-28195-89-ocenka-kachestva-programmnyh-sredstv-obschie-polozheniya",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-28195-89-ocenka-kachestva-programmnyh-sredstv-obschie-polozheniya.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-28195-89-ocenka-kachestva-programmnyh-sredstv-obschie-polozheniya/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ IEC 62304-2022 Изделия медицинские. Программное обеспечение. Процессы жизненного цикла",
+   "year": "2022",
+   "urlSlug": "gost-iec-62304-2022-izdeliya-medicinskie-programmnoe-obespechenie-processy-zhiznennogo-cik-5",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-iec-62304-2022-izdeliya-medicinskie-programmnoe-obespechenie-processy-zhiznennogo-cik-5.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-iec-62304-2022-izdeliya-medicinskie-programmnoe-obespechenie-processy-zhiznennogo-cik-5/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 50444-2020 Приборы, аппараты и оборудование медицинские. Общие технические требования",
+   "year": "2020",
+   "urlSlug": "gost-r-50444-2020-pribory-apparaty-i-oborudovanie-medicinskie-obschie-tehnicheskie-trebova",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-r-50444-2020-pribory-apparaty-i-oborudovanie-medicinskie-obschie-tehnicheskie-trebova.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-r-50444-2020-pribory-apparaty-i-oborudovanie-medicinskie-obschie-tehnicheskie-trebova/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 51188-98 Защита информации. Испытания программных средств на наличие компьютерных вирусов....",
+   "year": "",
+   "urlSlug": "gost-r-51188-98-zaschita-informacii-ispytaniya-programmnyh-sredstv-na-nalichie-kompyuterny",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-r-51188-98-zaschita-informacii-ispytaniya-programmnyh-sredstv-na-nalichie-kompyuterny.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-r-51188-98-zaschita-informacii-ispytaniya-programmnyh-sredstv-na-nalichie-kompyuterny/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 59921.0-2022 Системы искусственного интеллекта в клинической медицине. Основные положения",
+   "year": "2022",
+   "urlSlug": "gost-r-599210-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-osnovnye-polo",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-r-599210-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-osnovnye-polo.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-r-599210-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-osnovnye-polo/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 59921.1-2022 Системы искусственного интеллекта в клинической медицине. Часть 1. Клиническая...",
+   "year": "2022",
+   "urlSlug": "gost-r-599211-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-1-klini",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-r-599211-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-1-klini.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-r-599211-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-1-klini/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 59921.2-2021 Системы искусственного интеллекта в клинической медицине. Часть 2. Программа и...",
+   "year": "2021",
+   "urlSlug": "gost-r-599212-2021-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-2-progr",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-r-599212-2021-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-2-progr.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-r-599212-2021-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-2-progr/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 59921.3-2021 Системы искусственного интеллекта в клинической медицине. Часть 3. Управление...",
+   "year": "2021",
+   "urlSlug": "gost-r-599213-2021-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-3-uprav",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-r-599213-2021-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-3-uprav.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-r-599213-2021-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-3-uprav/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 59921.4-2021 Системы искусственного интеллекта в клинической медицине. Часть 4. Оценка и...",
+   "year": "2021",
+   "urlSlug": "gost-r-599214-2021-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-4-ocenk",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-r-599214-2021-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-4-ocenk.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-r-599214-2021-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-4-ocenk/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 59921.5-2022 Системы искусственного интеллекта в клинической медицине. Часть 5. Требования к...",
+   "year": "2022",
+   "urlSlug": "gost-r-599215-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-5-trebo",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-r-599215-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-5-trebo.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-r-599215-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-5-trebo/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 59921.6-2021 Системы искусственного интеллекта в клинической медицине. Часть 6. Общие...",
+   "year": "2021",
+   "urlSlug": "gost-r-599216-2021-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-6-obsch",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-r-599216-2021-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-6-obsch.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-r-599216-2021-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-6-obsch/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 59921.7-2022 Системы искусственного интеллекта в клинической медицине. Алгоритмы анализа...",
+   "year": "2022",
+   "urlSlug": "gost-r-599217-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-algoritmy-ana",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-r-599217-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-algoritmy-ana.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-r-599217-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-algoritmy-ana/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 59921.8-2022 Системы искусственного интеллекта в клинической медицине. Часть 8. Руководящие...",
+   "year": "2022",
+   "urlSlug": "gost-r-599218-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-8-rukov",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-r-599218-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-8-rukov.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-r-599218-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-chast-8-rukov/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р 59921.9-2022 Системы искусственного интеллекта в клинической медицине. Алгоритмы анализа...",
+   "year": "2022",
+   "urlSlug": "gost-r-599219-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-algoritmy-ana",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-r-599219-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-algoritmy-ana.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-r-599219-2022-sistemy-iskusstvennogo-intellekta-v-klinicheskoy-medicine-algoritmy-ana/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 15223-1-2023 Изделия медицинские. Символы, применяемые для передачи информации,... (2)",
+   "year": "2023",
+   "urlSlug": "gost-r-iso-15223-1-2023-izdeliya-medicinskie-simvoly-primenyaemye-dlya-peredachi-informaci-3",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-r-iso-15223-1-2023-izdeliya-medicinskie-simvoly-primenyaemye-dlya-peredachi-informaci-3.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-r-iso-15223-1-2023-izdeliya-medicinskie-simvoly-primenyaemye-dlya-peredachi-informaci-3/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСО 9127-94 Системы обработки информации. Документация пользователя и информация на упаковке...",
+   "year": "",
+   "urlSlug": "gost-r-iso-9127-94-sistemy-obrabotki-informacii-dokumentaciya-polzovatelya-i-informaciya-n",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-r-iso-9127-94-sistemy-obrabotki-informacii-dokumentaciya-polzovatelya-i-informaciya-n.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-r-iso-9127-94-sistemy-obrabotki-informacii-dokumentaciya-polzovatelya-i-informaciya-n/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСОМЭК 12119-2000 Информационная технология (ИТ). Пакеты программ. Требования к качеству и...",
+   "year": "2000",
+   "urlSlug": "gost-r-isomek-12119-2000-informacionnaya-tehnologiya-it-pakety-programm-trebovaniya-k-kach",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-r-isomek-12119-2000-informacionnaya-tehnologiya-it-pakety-programm-trebovaniya-k-kach.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-r-isomek-12119-2000-informacionnaya-tehnologiya-it-pakety-programm-trebovaniya-k-kach/"
+  },
+  {
+   "category": "ПО с ИИ",
+   "categorySlug": "po-s-ii",
+   "docType": "ГОСТ",
+   "title": "ГОСТ Р ИСОМЭК 9126-93 Информационная технология (ИТ). Оценка программной продукции. Характеристики...",
+   "year": "",
+   "urlSlug": "gost-r-isomek-9126-93-informacionnaya-tehnologiya-it-ocenka-programmnoy-produkcii-harakter",
+   "fileUrl": "/biblioteka/files/po-s-ii/gost-r-isomek-9126-93-informacionnaya-tehnologiya-it-ocenka-programmnoy-produkcii-harakter.pdf",
+   "pageUrl": "/biblioteka/po-s-ii/gost-r-isomek-9126-93-informacionnaya-tehnologiya-it-ocenka-programmnoy-produkcii-harakter/"
+  },
+  {
+   "category": "Пострегистрационный мониторинг",
+   "categorySlug": "postregistracionnyy-monitoring",
+   "docType": "Приказ",
+   "title": "Приказ от 19_10_2020 N 1113н Об утверждении Порядка сообщения субъектами обращения медицинских...",
+   "year": "2020",
+   "urlSlug": "prikaz-ot-19-10-2020-n-1113n-ob-utverzhdenii-poryadka-soobscheniya-subektami-obrascheniya-2",
+   "fileUrl": "/biblioteka/files/postregistracionnyy-monitoring/prikaz-ot-19-10-2020-n-1113n-ob-utverzhdenii-poryadka-soobscheniya-subektami-obrascheniya-2.pdf",
+   "pageUrl": "/biblioteka/postregistracionnyy-monitoring/prikaz-ot-19-10-2020-n-1113n-ob-utverzhdenii-poryadka-soobscheniya-subektami-obrascheniya-2/"
+  },
+  {
+   "category": "Пострегистрационный мониторинг",
+   "categorySlug": "postregistracionnyy-monitoring",
+   "docType": "Приказ",
+   "title": "Приказ от 20_05_2021 N 4513 Об утверждении классификации неблагоприятных событий, связанных с...",
+   "year": "2021",
+   "urlSlug": "prikaz-ot-20-05-2021-n-4513-ob-utverzhdenii-klassifikacii-neblagopriyatnyh-sobytiy-svyazan",
+   "fileUrl": "/biblioteka/files/postregistracionnyy-monitoring/prikaz-ot-20-05-2021-n-4513-ob-utverzhdenii-klassifikacii-neblagopriyatnyh-sobytiy-svyazan.pdf",
+   "pageUrl": "/biblioteka/postregistracionnyy-monitoring/prikaz-ot-20-05-2021-n-4513-ob-utverzhdenii-klassifikacii-neblagopriyatnyh-sobytiy-svyazan/"
+  }
+ ]
+}

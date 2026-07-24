@@ -1,0 +1,96 @@
+<!--
+  Страница раздела "Библиотека" — med-local.ru/biblioteka/
+
+  Как подключить:
+  1. Разместите этот HTML в шаблоне раздела вашей CMS (или как отдельный статический шаблон).
+  2. Подключите biblioteka.css и biblioteka.js (пути ниже — поправьте под структуру сайта).
+  3. Данные документов лежат в biblioteka-data.json — грузятся через fetch() в biblioteka.js.
+     На проде замените путь на реальный API-эндпоинт или сгенерированный JSON из вашей CMS/БД.
+  4. Сами PDF-файлы разложите по путям, указанным в biblioteka-data.json (поле fileUrl),
+     например /files/biblioteka/po-s-ii/gost-iec-62304-....pdf
+  5. Для SEO рекомендуется ТАКЖE сгенерировать отдельную статическую страницу на каждый
+     документ (шаблон — card-template-example.html из предыдущей поставки) — модалка на этой
+     странице ускоряет и упрощает UX, а отдельные страницы дают возможность индексации в
+     поисковиках по прямому URL документа.
+-->
+
+<link rel="stylesheet" href="biblioteka.css?v=5">
+
+<section class="lib">
+
+  <nav class="lib-breadcrumbs" aria-label="Хлебные крошки">
+    <a href="/">Главная</a> <span aria-hidden="true">/</span> <span>Библиотека</span>
+  </nav>
+
+  <header class="lib-header">
+    <h1>Библиотека НПА и ГОСТов</h1>
+    <p class="lib-subtitle">Бесплатная база нормативных документов и стандартов для медицинских изделий. Скачивайте любой документ одним нажатием — без регистрации.</p>
+  </header>
+
+  <section class="lib-ask" id="libAsk">
+    <h2>Нужна консультация по вашему изделию?</h2>
+    <p class="lib-ask-lead">Задайте вопрос — поможем разобраться с требованиями и подберём нужные стандарты. Отвечаем в течение одного рабочего дня.</p>
+
+    <form class="lib-ask-form" id="libAskForm">
+      <div class="lib-ask-row">
+        <div>
+          <label for="libAskName">Имя</label>
+          <input id="libAskName" name="name" required placeholder="Как к вам обращаться">
+        </div>
+        <div>
+          <label for="libAskPhone">Телефон или email</label>
+          <input id="libAskPhone" name="contact" required placeholder="+7 ... или email">
+        </div>
+      </div>
+      <div>
+        <label for="libAskQuestion">Ваш вопрос</label>
+        <textarea id="libAskQuestion" name="question" rows="3" placeholder="Например: какой ГОСТ нужен для регистрации моего изделия?"></textarea>
+      </div>
+      <input type="hidden" name="source" value="Библиотека НПА и ГОСТов">
+      <div class="lib-ask-agree">
+        <input type="checkbox" id="libAskAgree" required>
+        <label for="libAskAgree">Согласен с <a href="/privacy">Политикой конфиденциальности</a> и обработкой персональных данных</label>
+      </div>
+      <button type="submit" class="lib-ask-submit">Задать вопрос</button>
+      <p class="lib-ask-success" id="libAskSuccess" hidden>Спасибо! Заявка отправлена, мы свяжемся с вами в течение одного рабочего дня.</p>
+      <p class="lib-ask-error" id="libAskError" hidden>Не получилось отправить заявку. Попробуйте ещё раз или напишите нам в Telegram.</p>
+    </form>
+  </section>
+
+  <div class="lib-controls">
+    <label class="lib-search">
+      <span aria-hidden="true">&#128269;</span>
+      <input type="text" id="libSearch" placeholder="Найти документ по названию или номеру">
+    </label>
+    <div class="lib-chips" id="libChips" role="tablist" aria-label="Категории документов"></div>
+  </div>
+
+  <p class="lib-count" id="libCount" aria-live="polite"></p>
+
+  <div class="lib-list" id="libList"></div>
+
+  <div class="lib-empty" id="libEmpty" hidden>Ничего не найдено. Попробуйте изменить запрос.</div>
+
+  <a class="lib-back-bottom" href="/">← Вернуться на главную</a>
+
+</section>
+
+<!-- Модальное окно документа -->
+<div class="lib-modal-overlay" id="libModalOverlay" hidden>
+  <div class="lib-modal" role="dialog" aria-modal="true" aria-labelledby="libModalTitle">
+    <button class="lib-modal-close" id="libModalClose" aria-label="Закрыть окно">&times;</button>
+    <span class="lib-modal-badge" id="libModalBadge"></span>
+    <h2 class="lib-modal-title" id="libModalTitle"></h2>
+    <p class="lib-modal-meta" id="libModalMeta"></p>
+    <a class="lib-modal-download" id="libModalDownload" download>
+      &#8595; Скачать PDF бесплатно
+    </a>
+    <div class="lib-modal-links">
+      <a class="lib-modal-fullpage" id="libModalFullpage">Открыть страницу документа</a>
+      <a class="lib-modal-ask" id="libModalAsk" href="#libAsk">Не нашли то, что нужно? Задать вопрос</a>
+      <a class="lib-modal-home" href="/">На главную</a>
+    </div>
+  </div>
+</div>
+
+<script src="biblioteka.js?v=5" defer></script>
