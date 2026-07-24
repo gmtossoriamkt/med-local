@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Реверс-инжиниринг медицинских изделий — законно, FTO-анализ, КД</title>
+<meta name="description" content="Законный реверс-инжиниринг МИ: FTO-анализ, декомпозиция, 3D-сканирование, независимое техническое решение без нарушения патентов.">
+<link rel="canonical" href="https://med-local.ru/reverse">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Реверс-инжиниринг медицинских изделий — законно, FTO-анализ, КД">
+<meta property="og:description" content="Законный реверс-инжиниринг МИ: FTO-анализ, декомпозиция, 3D-сканирование, независимое техническое решение без нарушения патентов.">
+<meta property="og:url" content="https://med-local.ru/reverse">
+<meta property="og:image" content="https://med-local.ru/og-image.png">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C232E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@700;800&family=JetBrains+Mono:wght@600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"></noscript>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+:root{
+ --graphite:#1C232E;--graphite-2:#27303E;--ink:#1C232E;--muted:#4A5568;
+ --blue:#3D6FB4;--cyan:#2FA8A0;--cyan-soft:#E4F4F3;--blue-soft:#E9F0FA;
+ --orange:#FF6B3D;--orange-soft:#FFE9DC;
+ --paper:#F6F7F9;--card:#FFFFFF;--line:#E5E8ED;
+ --body:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+ --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{overflow-x:hidden;max-width:100vw}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.mono{font-family:var(--mono)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:12px;font-weight:600;font-size:13.5px;border:none;transition:.18s;cursor:pointer}
+.btn.pri{background:var(--orange);color:#fff;box-shadow:0 10px 24px -10px rgba(255,107,61,.6)}
+.btn.pri:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn.gh{background:transparent;border:1.5px solid #fff;color:#fff}
+.btn.gh:hover{background:rgba(255,255,255,.1)}
+.btn.dark{background:var(--graphite);color:#fff}
+.btn.line-btn{background:#fff;border:1.5px solid var(--line);color:var(--ink)}
+.btn.line-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--cyan)}
+.tag::before{content:"";width:22px;height:2px;background:var(--cyan)}
+h1,h2,h3{line-height:1.15;margin:0}
+.h-xl{font-size:clamp(30px,4.6vw,52px);font-weight:800;letter-spacing:-1.2px}
+.h-l{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.8px}
+.h-m{font-size:19px;font-weight:700}
+.lead{font-size:17px;color:var(--muted);line-height:1.65}
+.sec{padding:74px 0}
+.sec.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:960px){.g3,.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+@media(max-width:620px){.g3,.g4,.g2{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.kv{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.kv span{color:var(--muted)}.kv b{text-align:right}
+header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:22px;height:66px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:16.5px;letter-spacing:-.3px}
+.logo small{display:block;font-size:10px;font-weight:600;color:var(--muted);letter-spacing:1.6px;text-transform:uppercase}
+.nav a.lnk{font-size:12.5px;font-weight:500;color:var(--muted);transition:.15s;white-space:nowrap}
+.nav a.lnk:hover,.nav a.lnk.on{color:var(--ink)}
+.nav .sp{flex:1}
+@media(max-width:900px){.nav a.lnk{display:none}}
+.hero{position:relative;background:linear-gradient(140deg,var(--graphite) 0%,#202b3c 60%,#1d3a45 100%);color:#fff;overflow:hidden}
+.hero .pcb{position:absolute;inset:0;opacity:.16;pointer-events:none}
+.hero .in{position:relative;padding:92px 0 86px}
+.hero .lead{color:#B9C2D0;max-width:640px}
+.hero .stats{display:flex;gap:38px;margin-top:42px;flex-wrap:wrap}
+.hero .stats b{font-size:26px;font-weight:800;display:block;letter-spacing:-.5px}
+.hero .stats span{font-size:12.5px;color:#8E99AB}
+.crumbs{font-size:12.5px;color:var(--muted);margin:18px 0 0}
+.crumbs b{color:var(--ink)}
+.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:8px}
+.route .st{position:relative;padding:20px 18px 0}
+
+.route .st::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+.route .st h3{font-size:15.5px;margin:8px 0 6px}
+.route .st p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+@media(max-width:880px){.route{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.route{grid-template-columns:1fr}}
+.svc{display:flex;flex-direction:column;gap:10px;position:relative;transition:.2s}
+.svc:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.svc .ic{width:44px;height:44px;border-radius:12px;background:var(--cyan-soft);color:var(--cyan);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:15px}
+.svc p{font-size:14px;color:var(--muted);margin:0;line-height:1.6;flex:1}
+.svc .go{font-size:13.5px;font-weight:700;color:var(--cyan)}
+.seg{border-left:3px solid var(--blue);padding:16px 20px;background:#fff;border-radius:0 14px 14px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.seg b{display:block;margin-bottom:5px}
+.seg p{font-size:13.5px;color:var(--muted);margin:0 0 8px;line-height:1.55}
+.seg .of{font-size:13px;font-weight:600;color:var(--cyan)}
+.law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
+.law b{display:block;margin-bottom:6px;font-size:14px}
+.post{display:flex;flex-direction:column;gap:9px;transition:.2s}
+.post:hover{transform:translateY(-3px)}
+.post .rub{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)}
+.post h3{font-size:16.5px;line-height:1.35}
+.post p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.6}
+.post .cta-link{font-size:13px;font-weight:700;color:var(--orange)}
+.frm{display:grid;gap:13px}
+.frm label{font-size:12.5px;font-weight:600}
+.frm input,.frm select,.frm textarea{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:12px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.frm input:focus,.frm select:focus,.frm textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:620px){.f2{grid-template-columns:1fr}}
+.mag{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:var(--r);padding:30px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.mag b{font-size:19px;display:block;margin-bottom:6px}
+.mag p{color:#AFBAC9;font-size:14px;margin:0;max-width:520px}
+.mag .sp{flex:1}
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2}footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+.proof{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.proof .n{font-family:var(--mono);color:var(--cyan);font-weight:600;font-size:12.5px;padding-top:2px;white-space:nowrap}
+.steps li{margin-bottom:10px;line-height:1.6;font-size:14.5px}
+.lift{box-shadow:var(--sh)}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}
+.pain-item{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px}
+.pain-item h4{font-size:14px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.pain-item p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+.compare-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:14px}
+.compare-table th{background:var(--graphite);color:#fff;font-weight:600;padding:12px 16px;text-align:left}
+.compare-table td{padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink)}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table td.bad{color:#C0392B}
+.compare-table td.good{color:#1A7A6E;font-weight:600}
+.calc-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;margin-top:24px;box-shadow:var(--sh)}
+.calc-box h3{font-size:18px;font-weight:700;margin:0 0 20px}
+.form-row{margin-bottom:14px}
+.form-row label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;color:var(--ink)}
+.form-row select,.form-row input{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:10px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.form-row select:focus,.form-row input:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.calc-result{background:var(--cyan-soft);border:1px solid #BCE4E1;border-radius:11px;padding:18px;margin-top:16px;display:none}
+.calc-result.show{display:block}
+.calc-result h4{font-size:15px;font-weight:700;color:#1A7A6E;margin:0 0 6px}
+.calc-result p{font-size:13.5px;color:#2D7A72;margin:0}
+.related{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.related a{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan);transition:.15s}
+.related a:hover{border-color:var(--cyan)}
+
+/* Бургер-меню для мобильных */
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;z-index:200}
+.burger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:100;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+.mob-menu a:hover{color:var(--cyan)}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .nav{gap:12px}
+}
+/* Хлебные крошки */
+.crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:.15s}.crumbs a:hover{color:var(--cyan)}
+.crumbs span{color:var(--muted)}
+.crumbs b{color:var(--ink);font-weight:600}
+/* Таблицы на мобильных */
+@media(max-width:640px){
+  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .article-body table{display:block;overflow-x:auto}
+}
+/* Плавающая кнопка на мобильных */
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+.float-btn.max-btn{bottom:74px;background:#fff;box-shadow:0 8px 24px rgba(107,63,231,.25);color:var(--ink)}
+@media(max-width:768px){.float-btn{display:flex}}
+/* Состояния кнопок */
+.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.btn.pri:active{transform:translateY(0);filter:brightness(.95)}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+/* Единый подвал */
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2;transition:.15s}
+footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){footer .cols{grid-template-columns:1fr}}
+
+.header-icons{display:flex;align-items:center;gap:8px;margin-right:4px}
+.header-icons a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s}
+.header-icons a.tg-icon{background:#2FA8A0}
+.header-icons a.max-icon{background:transparent;padding:0}
+.header-icons a:hover{filter:brightness(1.1);transform:translateY(-1px)}
+@media(max-width:900px){.header-icons{display:none}}
+.lang-switch{display:flex;align-items:center;gap:4px;margin-right:8px}
+.lang-switch a{font-size:12.5px;font-weight:700;padding:4px 8px;border-radius:6px;color:var(--muted);transition:.15s;text-decoration:none}
+.lang-switch a.active{background:var(--graphite);color:#fff}
+.lang-switch a:hover:not(.active){color:var(--ink)}
+</style>
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Инженерный центр локализации медицинских изделий",
+  "legalName": "ООО «ГМТ» (Глобальные Медицинские Технологии)",
+  "url": "https://med-local.ru",
+  "logo": "https://med-local.ru/logo.svg",
+  "description": "Полный цикл локализации производства медицинских изделий в России: реверс-инжиниринг, разработка, производство, регистрация в Росздравнадзоре.",
+  "telephone": ["+7-985-316-91-04", "+7-988-877-72-95"],
+  "email": "info@med-local.ru",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1-й Тверской-Ямской пер., д. 16, помещ. 1/п",
+    "addressLocality": "Москва",
+    "postalCode": "125047",
+    "addressCountry": "RU"
+  },
+  "areaServed": ["RU", "KZ", "BY", "AM", "KG"],
+  "sameAs": [
+    "https://t.me/tandelovtat",
+    "https://rzn.expert",
+    "https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ"
+  ],
+  "foundingDate": "2022",
+  "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 20},
+  "knowsAbout": [
+    "Локализация медицинских изделий",
+    "Постановление Правительства РФ №719",
+    "Регистрация МИ в Росздравнадзоре",
+    "Реверс-инжиниринг медицинской техники",
+    "ISO 13485", "ISO 14971", "ГОСТ Р МЭК 60601",
+    "Адвалорная доля", "ГИСП", "ЕАЭС"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://med-local.ru/"}, {"@type": "ListItem", "position": 2, "name": "Реверс-инжиниринг", "item": "https://med-local.ru/reverse"}]}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Законный реверс-инжиниринг медицинских изделий",
+  "description": "FTO-анализ, инженерная декомпозиция, 3D-сканирование и разработка независимого технического решения без нарушения патентных прав.",
+  "provider": {"@type": "Organization", "name": "Инженерный центр локализации МИ", "url": "https://med-local.ru"},
+  "areaServed": "RU",
+  "url": "https://med-local.ru/reverse"
+}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Законен ли реверс-инжиниринг медицинских изделий?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Функциональный анализ без воспроизведения патентоохраняемых решений — законная практика. Ключевой шаг — FTO-анализ до начала работ."}}, {"@type": "Question", "name": "Что такое FTO-анализ?", "acceptedAnswer": {"@type": "Answer", "text": "Freedom To Operate — анализ патентного ландшафта для выявления патентных рисков до начала инженерных работ по созданию аналога."}}, {"@type": "Question", "name": "Сколько занимает реверс-инжиниринг?", "acceptedAnswer": {"@type": "Answer", "text": "Простой прибор — 2–3 месяца, сложная система с ПО — 4–6 месяцев."}}]}
+</script>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DZXMBECL0"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-9DZXMBECL0");
+</script>
+</head>
+<body>
+<div class="mob-menu" id="mob-menu"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:18px;right:18px;background:none;border:none;cursor:pointer;padding:8px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button><a href="/">Главная</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">Блог</a><a href="/pricing">Стоимость</a><a href="/about">О центре</a><a href="/#lead" class="btn pri" style="margin-top:16px">Оценить проект</a></div>
+<header><div class="wrap nav">
+  <a class="logo" href="/"><span style="display:flex;align-items:center;gap:11px"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="7" stroke="#1C232E" stroke-width="2.6" fill="none"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#2FA8A0"/><path d="M24 2v7M24 39v7M2 24h7M39 24h7M8 8l5 5M40 8l-5 5M8 40l5-5M40 40l-5-5" stroke="#3D6FB4" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.6" fill="#FF6B3D"/></svg><span><span style="font-weight:800;font-size:14px;letter-spacing:-.3px;line-height:1.2;display:block">Инженерный<br>центр</span><span style="font-size:9px;font-weight:600;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;line-height:1.3;display:block">локализации МИ</span></span></span></a>
+  <span class="sp"></span>
+  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk on" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk" href="/blog">Блог</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a></div>
+  <div class="header-icons">
+    <a class="tg-icon" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer" title="Написать в Telegram" aria-label="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg></a>
+    <a class="max-icon" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer" title="Написать в MAX" aria-label="MAX"><img src="/images/max-icon.png" alt="MAX" width="26" height="26" style="border-radius:7px;display:block"></a>
+  </div>
+  <div class="lang-switch"><a href="#" class="active">RU</a><a href="/en/reverse">EN</a></div>
+  <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span></span><span></span><span></span></button>
+</div></header>
+<main>
+<div class="wrap"><nav class="crumbs"><a href="/">Главная</a><span>›</span><b>Реверс-инжиниринг</b></nav></div>
+<section style="background:#fff;border-bottom:1px solid var(--line)"><div class="wrap" style="padding:54px 0 44px">
+  <span class="tag" style="display:inline-flex">Реверс-инжиниринг · Москва</span>
+  <h1 class="h-xl" style="margin:14px 0 18px;max-width:860px">Законный реверс-инжиниринг медицинского изделия: от импортного образца к российскому аналогу</h1>
+  <p class="lead" style="max-width:680px">FTO-проверка, инженерная декомпозиция, 3D-сканирование и разработка независимого технического решения — без нарушения патентных прав.</p>
+  <div style="display:flex;gap:13px;margin-top:28px;flex-wrap:wrap">
+    <a class="btn pri" href="mailto:info@med-local.ru?subject=Реверс-инжиниринг">Запросить диагностику</a>
+    <a class="btn dark" href="/development">К разработке</a>
+  </div>
+</div></section><section class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap"><span class="tag">Этапы реверс-инжиниринга</span><h2 class="h-l" style="margin:14px 0 26px">Пять шагов от образца до КД</h2><div class="grid g3"><div class="card"><div style="font-family:var(--mono);font-size:12px;color:var(--cyan);font-weight:600;margin-bottom:10px">FTO</div><h3 class="h-m" style="margin-bottom:8px">FTO-анализ</h3><p style="font-size:14px;color:var(--muted);margin:0;line-height:1.6">Проверка патентного ландшафта, выявление рисков до начала инженерных работ</p></div><div class="card"><div style="font-family:var(--mono);font-size:12px;color:var(--cyan);font-weight:600;margin-bottom:10px">DEC</div><h3 class="h-m" style="margin-bottom:8px">Декомпозиция</h3><p style="font-size:14px;color:var(--muted);margin:0;line-height:1.6">Функциональный анализ узлов, компонентов и материалов оригинального изделия</p></div><div class="card"><div style="font-family:var(--mono);font-size:12px;color:var(--cyan);font-weight:600;margin-bottom:10px">3D</div><h3 class="h-m" style="margin-bottom:8px">3D-сканирование</h3><p style="font-size:14px;color:var(--muted);margin:0;line-height:1.6">Точная геометрия корпуса и механических частей для разработки КД</p></div><div class="card"><div style="font-family:var(--mono);font-size:12px;color:var(--cyan);font-weight:600;margin-bottom:10px">IND</div><h3 class="h-m" style="margin-bottom:8px">Независимое решение</h3><p style="font-size:14px;color:var(--muted);margin:0;line-height:1.6">Разработка технического решения без копирования патентоохраняемых элементов</p></div><div class="card"><div style="font-family:var(--mono);font-size:12px;color:var(--cyan);font-weight:600;margin-bottom:10px">KD</div><h3 class="h-m" style="margin-bottom:8px">КД для производства</h3><p style="font-size:14px;color:var(--muted);margin:0;line-height:1.6">Конструкторская документация, готовая к изготовлению и регистрации</p></div></div></div></section><section class="sec"><div class="wrap"><span class="tag">Частые вопросы</span><h2 class="h-l" style="margin:14px 0 24px">FAQ</h2><div style="border-bottom:1px solid var(--line);padding:18px 0"><h4 style="font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)">Это законно?</h4><p style="font-size:14px;color:var(--muted);margin:0;line-height:1.6">Да. Реверс-инжиниринг для создания аналогичной продукции без нарушения патентных прав — законная инженерная практика. Ключевой шаг — FTO-анализ до начала работ.</p></div><div style="border-bottom:1px solid var(--line);padding:18px 0"><h4 style="font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)">В чём отличие от копирования?</h4><p style="font-size:14px;color:var(--muted);margin:0;line-height:1.6">Реверс-инжиниринг — анализ функций и создание собственного технического решения. Копирование — воспроизведение конструкции напрямую, нарушающее права правообладателя.</p></div><div style="border-bottom:1px solid var(--line);padding:18px 0"><h4 style="font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)">Что если на изделие есть действующий патент?</h4><p style="font-size:14px;color:var(--muted);margin:0;line-height:1.6">FTO-анализ покажет это на старте. Предложим варианты: обойти защиту через иное решение или дождаться истечения срока.</p></div><div style="border-bottom:1px solid var(--line);padding:18px 0"><h4 style="font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)">Сколько занимает реверс-инжиниринг?</h4><p style="font-size:14px;color:var(--muted);margin:0;line-height:1.6">Зависит от сложности изделия. Простой прибор — 2–3 месяца, сложная система с ПО — 4–6 месяцев.</p></div><div style="border-bottom:1px solid var(--line);padding:18px 0"><h4 style="font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)">Что я получу на выходе?</h4><p style="font-size:14px;color:var(--muted);margin:0;line-height:1.6">Независимую конструкторскую документацию, которая является основой для разработки и последующей регистрации изделия в Росздравнадзоре.</p></div></div></section><section class="sec"><div class="wrap"><div style="background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:var(--r);padding:30px;display:flex;gap:24px;align-items:center;flex-wrap:wrap"><div><b style="font-size:19px;display:block;margin-bottom:6px">Инженерная диагностика изделия</b><p style="color:#AFBAC9;font-size:14px;margin:0;max-width:520px">Пришлите название или фото — проведём предварительный FTO-анализ и оценим сложность реверс-инжиниринга.</p></div><span class="sp"></span><a class="btn pri" href="mailto:info@med-local.ru?subject=Реверс-инжиниринг">Написать на info@med-local.ru</a></div></div></section><section class="sec" style="padding-top:0"><div class="wrap"><span class="tag">Связанные услуги</span><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px"><a href="/development" style="background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan)">Разработка прибора</a><a href="/localization" style="background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan)">Локализация</a><a href="/registration" style="background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan)">Регистрация</a></div></div></section>
+</main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div><b>Инженерный центр локализации МИ</b>
+      <p style="font-size:13px;line-height:1.65;margin:0 0 14px;color:#97A1B2">Локализация производства медицинских изделий в России. От анализа ниши до регистрационного удостоверения.</p>
+      <a href="tel:+79853169104">+7 985 316-91-04 (Россия)</a>
+      <a href="tel:+79888777295">+7 988 877-72-95 (Россия)</a>
+      <a href="tel:+79888777295">MAX: +7 988 877-72-95</a>
+      <a href="tel:+77021394489">+7 702 139-44-89 (Казахстан)</a>
+      <a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a>
+      <a href="https://t.me/tandelovtat" style="color:#2FA8A0" target="_blank" rel="noopener noreferrer">Telegram: @tandelovtat</a>
+    </div>
+    <div><b>Услуги</b>
+      <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a>
+      <a href="/development">Разработка</a><a href="/production">Производство</a>
+      <a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a>
+    </div>
+    <div><b>Компания</b>
+      <a href="/pricing">Стоимость</a><a href="/blog">Блог</a>
+      <a href="/contacts">Контакты</a><a href="/glossary">Глоссарий</a><a href="/privacy">Политика ПДн</a>
+    </div>
+    <div><b>Контакты</b>
+      <a href="mailto:info@med-local.ru">info@med-local.ru</a>
+      <a href="mailto:sales@med-local.ru">sales@med-local.ru</a>
+      <a href="mailto:marketing@med-local.ru">marketing@med-local.ru</a>
+      <a href="mailto:ceo@med-local.ru">ceo@med-local.ru</a>
+    </div>
+  </div>
+  <div class="fine">
+    <span>© 2024–2026 ООО «ГМТ» (Глобальные Медицинские Технологии) · 125047, г. Москва, 1-й Тверской-Ямской пер., д. 16, помещ. 1/п</span>
+    <a href="/privacy">Политика конфиденциальности</a>
+  </div>
+</div></footer>
+<a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg>
+  Написать в Telegram
+</a>
+<a class="float-btn max-btn" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer">
+  <img src="/images/max-icon.png" alt="MAX" width="22" height="22" style="border-radius:6px">
+  Написать в MAX
+</a>
+<script>
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';}
+function submitLead(f){
+  var btn=f.querySelector('button[type=submit]');
+  btn.textContent='Отправляем...';btn.disabled=true;
+  var data=new FormData(f);
+  fetch(f.action,{method:'POST',body:data,headers:{'Accept':'application/json'}})
+    .then(function(r){
+      if(r.ok){f.innerHTML='<div style="text-align:center;padding:32px"><div style="font-size:36px;margin-bottom:12px">✅</div><h3 style="font-size:20px;font-weight:800;margin:0 0 8px">Заявка принята!</h3><p style="color:var(--muted);margin:0">Мы свяжемся с вами в течение одного рабочего дня.</p></div>';}
+      else{btn.textContent='Ошибка — попробуйте снова';btn.disabled=false;}
+    })
+    .catch(function(){btn.textContent='Ошибка сети';btn.disabled=false;});
+  return false;
+}
+function sendLead(f){return submitLead(f);}
+</script>
+</body>
+</html>
