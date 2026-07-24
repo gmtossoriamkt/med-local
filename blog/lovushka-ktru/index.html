@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Ловушка КТРУ и классификаторов: несовпадение кодов ведёт к автоотклонению по ПП 1875 — Инженерный центр</title>
+<meta name="description" content="Как сопоставить коды КТРУ, ОКПД2 и номенклатуру реестровой записи по ПП 719, чтобы заявка не была отклонена из-за технического расхождения кодов.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+:root{
+ --graphite:#1C232E;--graphite-2:#27303E;--ink:#1C232E;--muted:#6C7686;
+ --blue:#3D6FB4;--cyan:#2FA8A0;--cyan-soft:#E4F4F3;--blue-soft:#E9F0FA;
+ --orange:#FF6B3D;--orange-soft:#FFE9DC;
+ --paper:#F6F7F9;--card:#FFFFFF;--line:#E5E8ED;
+ --body:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+ --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:600;font-size:14.5px;border:none;transition:.18s;cursor:pointer}
+.btn.pri{background:var(--orange);color:#fff;box-shadow:0 10px 24px -10px rgba(255,107,61,.6)}
+.btn.pri:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--cyan)}
+.tag::before{content:"";width:22px;height:2px;background:var(--cyan)}
+h1,h2,h3{line-height:1.15;margin:0}
+.h-xl{font-size:clamp(30px,4.6vw,52px);font-weight:800;letter-spacing:-1.2px}
+.sec{padding:74px 0}
+header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:22px;height:66px}
+.nav .sp{flex:1}
+.nav a.lnk{font-size:14px;font-weight:500;color:var(--muted);transition:.15s;white-space:nowrap}
+.nav a.lnk:hover,.nav a.lnk.on{color:var(--ink)}
+@media(max-width:900px){.nav-links{display:none}.burger{display:flex}.nav{gap:12px}}
+.law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
+.law b{display:block;margin-bottom:6px;font-size:14px}
+.warn{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#8B3A1E;line-height:1.65;margin:24px 0}
+.warn b{display:block;margin-bottom:6px;font-size:14px}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2}footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+.article-body h2{font-size:22px;font-weight:800;margin:36px 0 14px;color:var(--ink)}
+.article-body h3{font-size:18px;font-weight:700;margin:28px 0 10px;color:var(--ink)}
+.article-body p{font-size:15px;color:#3a4455;line-height:1.75;margin:0 0 16px}
+.article-body ul,.article-body ol{margin:0 0 16px 20px}
+.article-body li{font-size:15px;color:#3a4455;line-height:1.7;margin-bottom:6px}
+.article-body b{color:var(--ink)}
+.article-body .law{margin:24px 0}
+.article-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-body th{background:var(--graphite);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+.article-body td{padding:10px 14px;border-bottom:1px solid var(--line);color:#3a4455}
+.article-body tr:last-child td{border-bottom:none}
+.article-cta{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:16px;padding:28px 32px;margin:40px 0}
+.article-cta b{font-size:18px;display:block;margin-bottom:8px}
+.article-cta p{color:#AFBAC9;font-size:14px;margin:0 0 18px}
+.step-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 24px;margin:12px 0;border-left:3px solid var(--cyan)}
+.step-box h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.step-box p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;z-index:200}
+.burger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:100;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+@media(max-width:768px){.float-btn{display:flex}}
+</style>
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+</head>
+<body>
+<div class="mob-menu" id="mob-menu"><a href="/">Главная</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">Блог</a><a href="/pricing">Стоимость</a><a href="/about">О центре</a><a href="/#lead" class="btn pri" style="margin-top:16px">Оценить проект</a></div>
+<header><div class="wrap nav">
+  <a class="logo" href="/"><span style="display:flex;align-items:center;gap:11px"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="7" stroke="#1C232E" stroke-width="2.6" fill="none"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#2FA8A0"/><path d="M24 2v7M24 39v7M2 24h7M39 24h7M8 8l5 5M40 8l-5 5M8 40l5-5M40 40l-5-5" stroke="#3D6FB4" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.6" fill="#FF6B3D"/></svg><span><span style="font-weight:800;font-size:14px;letter-spacing:-.3px;line-height:1.2;display:block">Инженерный<br>центр</span><span style="font-size:9px;font-weight:600;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;line-height:1.3;display:block">локализации МИ</span></span></span></a>
+  <span class="sp"></span>
+  <div class="nav-links" style="display:flex;align-items:center;gap:18px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk on" href="/blog">Блог</a><a class="lnk" href="/pricing">Стоимость</a></div>
+  <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span></span><span></span><span></span></button>
+</div></header>
+
+<section style="background:#fff;border-bottom:1px solid var(--line)">
+  <div class="wrap" style="padding:48px 0 36px;max-width:820px">
+    <a href="/blog" style="font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:20px">← Все статьи</a>
+    <span class="tag" style="display:inline-flex;margin-bottom:14px">ПП 1875 · Нацрежим · Госзакупки</span>
+    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">Ловушка КТРУ и классификаторов: несовпадение кодов ведёт к автоотклонению по ПП 1875</h1>
+    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap">
+      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ · совместно с юристом по 44-ФЗ / ФАС</span>
+      <span>24 июля 2026</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap" style="max-width:820px">
+    <div class="article-body">
+
+      <p>Производитель с действующей реестровой записью по ПП 719, безупречной адвалорной долей и полным пакетом документов может проиграть тендер по одной-единственной причине — код, указанный заказчиком в закупочной документации, технически не совпадает с кодом в его реестровой записи. Для системы ЕИС и, соответственно, для заказчика это не техническая мелочь, а содержательное основание не применять национальный режим: без совпадения кодов подтверждение происхождения не проходит верификацию, и вся конкурентная защита обнуляется, несмотря на реальное и подтверждённое российское происхождение товара. Эта статья разбирает механику классификации кодов КТРУ и ОКПД2 применительно к медицинским изделиям и даёт алгоритм, как обнаружить и устранить расхождение до подачи заявки.</p>
+
+      <div class="law"><b>Суть в четырёх предложениях</b>Реестровая запись по ПП 719 содержит код ОКПД2, присвоенный изделию Минпромторгом на основании регистрационного удостоверения и технической документации, тогда как заказчик в закупочной документации указывает код КТРУ (Каталог товаров, работ, услуг), который формально привязан к ОКПД2, но не всегда совпадает с ним однозначно — особенно для комплексных или пограничных категорий медицинских изделий. Автоматическая верификация в ЕИС сверяет именно указанный участником код с данными реестровой записи в ГИСП, и расхождение хотя бы в одной цифре или субпозиции классификатора приводит к статусу «Не подтверждено» либо «Запись не найдена», обнуляя применение нацрежима независимо от реального соответствия товара требованиям закупки. Проблема усугубляется тем, что один и тот же физический товар в разных закупках нередко описывается разными кодами КТРУ — заказчики формируют документацию, опираясь на собственное понимание номенклатуры, а не на код, присвоенный производителю в реестре. Единственный надёжный способ избежать автоотклонения — систематическая сверка кодов до подачи заявки и, при расхождении, своевременный запрос разъяснений у заказчика в установленные законом сроки.</p>
+
+      <h2>1. Нормативная база</h2>
+      <p><b>ПП РФ № 1875 от 23.12.2024</b> (ред. от 11.02.2026) — национальный режим в госзакупках, применение которого требует совпадения кодов при подтверждении происхождения товара в структурированной форме ЕИС. — <b>pravo.gov.ru</b>, <b>zakupki.gov.ru</b>.</p>
+      <p><b>44-ФЗ, статья 14</b> — правовая основа национального режима. <b>44-ФЗ, статья 33</b> — требования к описанию объекта закупки, включая обязанность заказчика использовать корректные коды КТРУ. — <b>consultant.ru</b>, <b>pravo.gov.ru</b>.</p>
+      <p><b>Письмо Минфина России № 24-01-06/8697 от 31.01.2025</b> — разъяснения о порядке применения нацрежима, включая вопросы сопоставления кодов классификаторов. — <b>consultant.ru</b>.</p>
+      <p><b>ПП РФ № 719 от 17.07.2015</b>, раздел VII — источник реестровой записи с кодом ОКПД2, на который ссылается заявка. — <b>pravo.gov.ru</b>, <b>gisp.gov.ru</b>.</p>
+      <p>Коды ОКПД2 для медицинских изделий: <b>32.50</b>, <b>21.20</b>. Реестр КТРУ — <b>zakupki.gov.ru</b>, раздел «Каталог товаров, работ, услуг».</p>
+
+      <h2>2. Что такое КТРУ и почему он не совпадает с ОКПД2 автоматически</h2>
+      <p>Каталог товаров, работ, услуг (КТРУ) — детализированный справочник, созданный для стандартизации описания объектов закупки в рамках 44-ФЗ. Каждая позиция КТРУ формально привязана к коду ОКПД2, однако связь эта не взаимно однозначная: одному коду ОКПД2 может соответствовать несколько позиций КТРУ с разной степенью детализации характеристик, а заказчик при формировании документации выбирает конкретную позицию исходя из собственного понимания закупаемого товара.</p>
+      <p>Для медицинских изделий эта неоднозначность усиливается спецификой номенклатуры: одно и то же физическое изделие (например, набор реагентов для конкретного вида анализа) может подпадать под несколько позиций КТРУ в зависимости от того, как заказчик классифицирует назначение — как «диагностический набор», «реагент для лабораторных исследований» или «расходный материал для анализатора». Реестровая запись производителя при этом содержит один конкретный код ОКПД2, присвоенный на основании регистрационного удостоверения Росздравнадзора, — и он может не совпасть с позицией КТРУ, выбранной заказчиком.</p>
+
+      <h2>3. Где именно происходит сбой верификации</h2>
+      <p>Автоматическая верификация в ЕИС при подаче заявки сверяет код, указанный участником в структурированной форме подтверждения происхождения, с данными реестровой записи в базе ГИСП. Расхождение может произойти на нескольких уровнях одновременно.</p>
+
+      <h3>Расхождение на уровне субпозиции ОКПД2</h3>
+      <p>Реестровая запись может содержать код с точностью до шестого — восьмого знака классификатора (например, 32.50.13.190), тогда как заказчик в документации указывает код КТРУ, привязанный к более общей субпозиции (32.50.13). Формально коды относятся к одной группе, но система верификации может не распознать соответствие автоматически при точном посимвольном сравнении.</p>
+
+      <h3>Расхождение из-за устаревшей версии классификатора</h3>
+      <p>Классификатор ОКПД2 периодически обновляется, и коды отдельных позиций меняются. Если реестровая запись оформлена по одной редакции классификатора, а закупочная документация ссылается на актуальную (изменённую) версию — возникает формальное несовпадение при абсолютном содержательном тождестве товара.</p>
+
+      <h3>Расхождение из-за неверного выбора позиции КТРУ заказчиком</h3>
+      <p>Заказчик, формируя документацию, может выбрать позицию КТРУ, которая по существу соответствует иной категории изделий, чем та, что фактически закупается. Это не ошибка производителя, но её последствия ложатся именно на участников закупки — при расхождении кодов верификация не проходит независимо от того, кто допустил неточность.</p>
+
+      <div class="warn"><b>⚠ Ключевое правило</b>Система верификации ЕИС не «понимает» содержательного соответствия товаров — она сверяет формальное совпадение кодов. Даже абсолютно идентичный по назначению и характеристикам товар не пройдёт верификацию, если код в заявке технически отличается от кода в реестровой записи хотя бы на уровне одной цифры классификатора.</div>
+
+      <h2>4. Алгоритм проверки соответствия кодов до подачи заявки</h2>
+
+      <div class="step-box"><h4>Шаг 1. Зафиксируйте точный код ОКПД2 вашей реестровой записи</h4><p>Откройте личный кабинет ГИСП и выпишите код ОКПД2 в точности так, как он указан в реестровой записи — со всеми знаками субпозиции. Не полагайтесь на память или на код из заключения Минпромторга, если оно оформлено давно, — используйте актуальные данные из личного кабинета.</p></div>
+
+      <div class="step-box"><h4>Шаг 2. Найдите позицию КТРУ, указанную заказчиком в документации закупки</h4><p>Изучите извещение и документацию о закупке — код КТРУ указывается в описании объекта закупки. Зафиксируйте его точно.</p></div>
+
+      <div class="step-box"><h4>Шаг 3. Проверьте соответствие через реестр КТРУ на zakupki.gov.ru</h4><p>В карточке каждой позиции КТРУ указана привязка к коду ОКПД2. Сверьте эту привязку с кодом вашей реестровой записи — совпадение должно быть точным, а не приблизительным.</p></div>
+
+      <div class="step-box"><h4>Шаг 4. При расхождении — определите его характер</h4><p>Если расхождение связано с уровнем детализации (общая субпозиция против более узкой) — это техническое расхождение, которое можно попытаться прояснить через запрос заказчику. Если расхождение содержательное (позиция КТРУ описывает принципиально иной товар) — участие в этой конкретной закупке с применением нацрежима технически невозможно без изменения документации заказчиком.</p></div>
+
+      <div class="step-box"><h4>Шаг 5. Направьте запрос на разъяснение документации заказчику</h4><p>Право участника на запрос разъяснений закупочной документации предусмотрено 44-ФЗ. Направьте запрос до истечения срока подачи заявок с указанием на расхождение кодов и просьбой уточнить документацию или подтвердить корректность выбранной позиции КТРУ.</p></div>
+
+      <div class="step-box"><h4>Шаг 6. Если заказчик не устраняет расхождение — оцените риски участия</h4><p>Если заказчик отказывается уточнять документацию или не отвечает в установленный срок, оцените: стоит ли подавать заявку без гарантии применения нацрежима, либо целесообразнее воздержаться от участия в этой конкретной закупке и сосредоточиться на процедурах с корректно сопоставленными кодами.</p></div>
+
+      <h2>5. Что делать, если заявка уже отклонена из-за расхождения кодов</h2>
+      <p>Если заявка подана, верификация не прошла, и заказчик отклонил её или не применил нацрежим со ссылкой на несовпадение кодов — у производителя есть путь защиты, но действовать нужно быстро.</p>
+      <p><b>Соберите доказательства содержательного тождества товара.</b> Регистрационное удостоверение Росздравнадзора, техническая документация, сравнение характеристик вашего изделия с описанием объекта закупки — всё это подтверждает, что несовпадение кодов носит формальный, а не содержательный характер.</p>
+      <p><b>Направьте жалобу в ФАС в течение 10 рабочих дней с момента получения протокола.</b> Жалоба должна содержать аргумент о том, что заказчик неправомерно составил документацию с использованием кода КТРУ, не соответствующего реальному объекту закупки, чем нарушил требования статьи 33 44-ФЗ об однозначности описания объекта закупки.</p>
+      <p><b>Приложите скриншот статуса верификации и точное указание на расхождение кодов.</b> Техническая детализация усиливает позицию: покажите точно, на каком уровне классификатора произошло расхождение и почему оно не отражает реального различия товаров.</p>
+
+      <h2>6. Практический кейс</h2>
+      <p>Производитель тест-полосок для определения глюкозы в крови (ОКПД2 21.20.23.110) с действующей реестровой записью подал заявку на региональный тендер для обеспечения ЛПУ расходными материалами. Заказчик в документации указал позицию КТРУ, привязанную к более общему коду 21.20.23 без конкретизации субпозиции — что формально относится к широкой категории «реагенты диагностические прочие».</p>
+      <p><b>Проблема.</b> При автоматической верификации ЕИС система не смогла однозначно сопоставить точный код реестровой записи (с детализацией до восьмого знака) с более общей позицией КТРУ, указанной заказчиком, — статус верификации остался «Ошибка сопоставления». Заказчик, получив документы, отказался применить нацрежим, сославшись на технический сбой верификации, не зависящий от него.</p>
+      <p><b>Решение.</b> Производитель в течение трёх рабочих дней направил заказчику официальный запрос на разъяснение документации с приложением выписки из реестра ГИСП, показывающей точный код реестровой записи, и пояснением, что указанная в закупке позиция КТРУ является более широкой категорией, полностью охватывающей конкретное изделие производителя. Заказчик, признав обоснованность запроса, внёс уточнение в документацию, дополнительно указав детализированный код в описании объекта закупки.</p>
+      <p><b>Итог.</b> После уточнения документации повторная подача заявки прошла верификацию без затруднений, нацрежим был применён, заявка производителя признана соответствующей условиям правила «второй лишний», контракт заключён.</p>
+
+      <h2>FAQ</h2>
+      <div class="faq-item"><h4>Кто несёт ответственность за правильный выбор кода КТРУ — заказчик или участник закупки?</h4><p>Формально ответственность за корректное описание объекта закупки, включая выбор кода КТРУ, лежит на заказчике в силу статьи 33 44-ФЗ. Однако практические последствия расхождения (отклонение заявки, неприменение нацрежима) ложатся на участника, что делает превентивную проверку кодов необходимой мерой самозащиты.</p></div>
+      <div class="faq-item"><h4>Можно ли изменить код ОКПД2 в реестровой записи, чтобы он точнее соответствовал типовым позициям КТРУ?</h4><p>Изменение кода реестровой записи возможно только через процедуру, аналогичную первичному включению в реестр — с новой экспертизой ТПП, если код существенно меняется. Для незначительных уточнений в рамках той же номенклатурной группы возможна корректировка через обращение в Минпромторг, однако процедура и сроки зависят от конкретной ситуации.</p></div>
+      <div class="faq-item"><h4>Что если один и тот же товар в разных закупках попадает под разные коды КТРУ у разных заказчиков?</h4><p>Это распространённая практика, отражающая отсутствие единого подхода заказчиков к классификации. Рекомендуем вести собственный реестр соответствий: для каждой позиции КТРУ, с которой вы сталкивались, фиксируйте, потребовалось ли уточнение и как оно было решено — это ускорит работу с аналогичными закупками в будущем.</p></div>
+      <div class="faq-item"><h4>Сколько времени занимает получение разъяснения документации от заказчика?</h4><p>Срок ответа на запрос разъяснений установлен 44-ФЗ и зависит от способа закупки, как правило, составляет несколько рабочих дней. Направляйте запрос как можно раньше после публикации извещения, не дожидаясь последних дней перед истечением срока подачи заявок.</p></div>
+      <div class="faq-item"><h4>Влияет ли обновление классификатора ОКПД2 на уже действующую реестровую запись?</h4><p>Сама реестровая запись не аннулируется автоматически при технических изменениях классификатора, однако при последующей отчётности или проверке рекомендуется сверить актуальность указанного кода и при необходимости уточнить его через обращение в Минпромторг, чтобы избежать проблем при верификации в будущих закупках.</p></div>
+      <div class="faq-item"><h4>Что делать, если ФАС признаёт правоту заказчика в споре о кодах?</h4><p>Решение ФАС может быть обжаловано в арбитражном суде в течение трёх месяцев. При значительных суммах контракта и очевидном содержательном тождестве товара судебное обжалование может быть оправданным, особенно если аналогичная проблема с кодами способна повторяться в последующих закупках того же заказчика.</p></div>
+
+      <div class="article-cta">
+        <b>Готовите заявку и не уверены в совпадении кодов?</b>
+        <p>ГМТ проверит заявку до подачи: сверим код вашей реестровой записи с позицией КТРУ в конкретной закупке, выявим потенциальные расхождения и подготовим запрос на разъяснение документации при необходимости — до того, как несовпадение кодов обнулит вашу конкурентную защиту.</p>
+        <a class="btn pri" href="mailto:info@med-local.ru?subject=Проверка заявки на соответствие ПП 1875">Проверить заявку бесплатно</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><b>Инженерный центр локализации МИ</b>
+      <p style="font-size:13px;line-height:1.65;margin:0 0 14px;color:#97A1B2">Локализация производства медицинских изделий в России.</p>
+      <a href="tel:+79853169104">+7 985 316-91-04</a>
+      <a href="tel:+79888777295">+7 988 877-72-95</a>
+      <a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a>
+      <a href="https://t.me/tandelovtat" style="color:#2FA8A0">Telegram: @tandelovtat</a>
+    </div>
+    <div><b>Услуги</b>
+      <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a>
+      <a href="/development">Разработка</a><a href="/production">Производство</a>
+      <a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a>
+    </div>
+    <div><b>Компания</b>
+      <a href="/pricing">Стоимость</a><a href="/blog">Блог</a>
+      <a href="/contacts">Контакты</a><a href="/privacy">Политика ПДн</a>
+    </div>
+    <div><b>Контакты</b>
+      <a href="mailto:info@med-local.ru">info@med-local.ru</a>
+      <a href="mailto:sales@med-local.ru">sales@med-local.ru</a>
+      <a href="mailto:marketing@med-local.ru">marketing@med-local.ru</a>
+      <a href="mailto:ceo@med-local.ru">ceo@med-local.ru</a>
+    </div>
+  </div>
+  <div class="fine">
+    <span>© 2024–2026 Инженерный центр локализации медицинских изделий</span>
+    <a href="/privacy">Политика конфиденциальности</a>
+  </div>
+</div></footer>
+<a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg>
+  Написать в Telegram
+</a>
+<script>
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';}
+</script>
+</body>
+</html>
