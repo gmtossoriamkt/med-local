@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Как подтвердить происхождение товара в ЕИС: внесение реестровой записи ПП 719 в форму — Инженерный центр</title>
+<meta name="description" content="Пошаговая инструкция по заполнению структурированной формы подтверждения происхождения товара в ЕИС с реквизитами реестровой записи по ПП 719.">
+<link rel="canonical" href="https://med-local.ru/blog/eis-podtverzhdenie-proiskhozhdeniya">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Как подтвердить происхождение товара в ЕИС: внесение реестровой записи ПП 719 в форму">
+<meta property="og:description" content="Пошаговая инструкция по структурированной форме в ЕИС для медицинских изделий.">
+<meta property="og:url" content="https://med-local.ru/blog/eis-podtverzhdenie-proiskhozhdeniya">
+<meta property="og:image" content="https://med-local.ru/og-image.png">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C232E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+:root{
+ --graphite:#1C232E;--graphite-2:#27303E;--ink:#1C232E;--muted:#4A5568;
+ --blue:#3D6FB4;--cyan:#2FA8A0;--cyan-soft:#E4F4F3;--blue-soft:#E9F0FA;
+ --orange:#FF6B3D;--orange-soft:#FFE9DC;
+ --paper:#F6F7F9;--card:#FFFFFF;--line:#E5E8ED;
+ --body:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+ --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{overflow-x:hidden;max-width:100vw}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:12px;font-weight:600;font-size:13.5px;border:none;transition:.18s;cursor:pointer}
+.btn.pri{background:var(--orange);color:#fff;box-shadow:0 10px 24px -10px rgba(255,107,61,.6)}
+.btn.pri:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--cyan)}
+.tag::before{content:"";width:22px;height:2px;background:var(--cyan)}
+h1,h2,h3{line-height:1.15;margin:0}
+.h-xl{font-size:clamp(30px,4.6vw,52px);font-weight:800;letter-spacing:-1.2px}
+.sec{padding:74px 0}
+header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:22px;height:66px}
+.nav .sp{flex:1}
+.nav a.lnk{font-size:12.5px;font-weight:500;color:var(--muted);transition:.15s;white-space:nowrap}
+.nav a.lnk:hover,.nav a.lnk.on{color:var(--ink)}
+@media(max-width:900px){.nav a.lnk{display:none}}
+.law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
+.law b{display:block;margin-bottom:6px;font-size:14px}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2}footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+.article-body h2{font-size:22px;font-weight:800;margin:36px 0 14px;color:var(--ink)}
+.article-body h3{font-size:18px;font-weight:700;margin:28px 0 10px;color:var(--ink)}
+.article-body p{font-size:15px;color:#3a4455;line-height:1.75;margin:0 0 16px}
+.article-body ul,.article-body ol{margin:0 0 16px 20px}
+.article-body li{font-size:15px;color:#3a4455;line-height:1.7;margin-bottom:6px}
+.article-body b{color:var(--ink)}
+.article-body .law{margin:24px 0}
+.article-cta{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:16px;padding:28px 32px;margin:40px 0}
+.article-cta b{font-size:18px;display:block;margin-bottom:8px}
+.article-cta p{color:#AFBAC9;font-size:14px;margin:0 0 18px}
+.field-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:10px 0}
+.field-box .fname{font-family:var(--mono);font-size:12.5px;font-weight:700;color:var(--blue);display:block;margin-bottom:6px}
+.field-box p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.6}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;z-index:200}
+.burger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:100;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+@media(max-width:900px){.nav-links{display:none}.burger{display:flex}.nav{gap:12px}}
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+.float-btn.max-btn{bottom:74px;background:#fff;box-shadow:0 8px 24px rgba(107,63,231,.25);color:var(--ink)}
+@media(max-width:768px){.float-btn{display:flex}}
+.header-icons{display:flex;align-items:center;gap:8px;margin-right:4px}
+.header-icons a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s}
+.header-icons a.tg-icon{background:#2FA8A0}
+.header-icons a.max-icon{background:transparent;padding:0}
+.header-icons a:hover{filter:brightness(1.1);transform:translateY(-1px)}
+@media(max-width:900px){.header-icons{display:none}}
+.lang-switch{display:flex;align-items:center;gap:4px;margin-right:8px}
+.lang-switch a{font-size:12.5px;font-weight:700;padding:4px 8px;border-radius:6px;color:var(--muted);transition:.15s;text-decoration:none}
+.lang-switch a.active{background:var(--graphite);color:#fff}
+.lang-switch a:hover:not(.active){color:var(--ink)}
+</style>
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DZXMBECL0"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-9DZXMBECL0");
+</script>
+</head>
+<body>
+<div class="mob-menu" id="mob-menu"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:18px;right:18px;background:none;border:none;cursor:pointer;padding:8px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button><a href="/">Главная</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">Блог</a><a href="/pricing">Стоимость</a><a href="/about">О центре</a><a href="/#lead" class="btn pri" style="margin-top:16px">Оценить проект</a></div>
+<header><div class="wrap nav">
+  <a class="logo" href="/"><span style="display:flex;align-items:center;gap:11px"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="7" stroke="#1C232E" stroke-width="2.6" fill="none"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#2FA8A0"/><path d="M24 2v7M24 39v7M2 24h7M39 24h7M8 8l5 5M40 8l-5 5M8 40l5-5M40 40l-5-5" stroke="#3D6FB4" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.6" fill="#FF6B3D"/></svg><span><span style="font-weight:800;font-size:14px;letter-spacing:-.3px;line-height:1.2;display:block">Инженерный<br>центр</span><span style="font-size:9px;font-weight:600;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;line-height:1.3;display:block">локализации МИ</span></span></span></a>
+  <span class="sp"></span>
+  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk on" href="/blog">Блог</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a></div>
+  <div class="header-icons">
+    <a class="tg-icon" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer" title="Написать в Telegram" aria-label="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg></a>
+    <a class="max-icon" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer" title="Написать в MAX" aria-label="MAX"><img src="/images/max-icon.png" alt="MAX" width="26" height="26" style="border-radius:7px;display:block"></a>
+  </div>
+  <div class="lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
+  <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span></span><span></span><span></span></button>
+</div></header>
+
+<main>
+<section style="background:#fff;border-bottom:1px solid var(--line)">
+  <div class="wrap" style="padding:48px 0 36px;max-width:820px">
+    <a href="/blog" style="font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:20px">← Все статьи</a>
+    <span class="tag" style="display:inline-flex;margin-bottom:14px">ПП 1875 · Нацрежим · Госзакупки</span>
+    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">Как подтвердить происхождение товара в ЕИС: внесение реестровой записи ПП 719 в форму</h1>
+    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap">
+      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ · совместно с юристом по 44-ФЗ / ФАС</span>
+      <span>22 июля 2026</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap" style="max-width:820px">
+    <div class="article-body">
+
+      <p>Наличие действующей реестровой записи по ПП 719 само по себе не активирует механизмы национального режима в конкретной закупке. Единственный способ заявить о российском происхождении товара и получить защиту по ПП 1875 — правильно заполнить структурированную форму подтверждения происхождения в личном кабинете ЕИС. Ошибка в одном из обязательных полей — неверный номер записи, устаревшая дата заключения, несовпадение кода ОКПД2 — обнуляет всю конкурентную защиту, даже если сама реестровая запись действует и не вызывает вопросов. Эта статья — детальная, поле за полем, инструкция по заполнению формы для производителя медицинских изделий.</p>
+
+      <div class="law"><b>Суть в четырёх предложениях</b>Форма подтверждения происхождения товара в ЕИС состоит из четырёх разделов: сведения о товаре, подтверждение происхождения, сведения о производителе и декларация участника, — каждый из которых содержит обязательные поля с жёсткими требованиями к формату данных. Реквизиты реестровой записи по ПП 719 (номер, дата заключения, срок действия, код ОКПД2) должны точно совпадать с данными в личном кабинете ГИСП и в тексте самого заключения Минпромторга — любое расхождение, включая опечатку, приводит к статусу «Не подтверждено» при автоматической верификации. После заполнения формы система ЕИС проверяет данные по базе ГИСП в режиме реального времени, и только статус «Подтверждено» активирует применение правила «второй лишний», запрета на допуск или ценовой преференции 15% в зависимости от того, к какому приложению ПП 1875 относится товар. Эта инструкция проходит по каждому полю формы отдельно, указывая источник данных и типичные ошибки заполнения.</div>
+
+      <h2>1. Нормативная база</h2>
+      <p><b>ПП РФ № 1875 от 23.12.2024</b> (ред. от 11.02.2026) — национальный режим в госзакупках: устанавливает обязательность структурированного подтверждения происхождения товара для применения запрета на допуск, ценовой преференции 15% и правила «второй лишний». — <b>pravo.gov.ru</b>, <b>zakupki.gov.ru</b>.</p>
+      <p><b>44-ФЗ, статья 14</b> — правовая основа национального режима в государственных и муниципальных закупках. — <b>consultant.ru</b>, <b>pravo.gov.ru</b>.</p>
+      <p><b>Письмо Минфина России № 24-01-06/8697 от 31.01.2025</b> — разъяснения о порядке заполнения структурированной формы и разделении заказчиков на группы по применению нацрежима. — <b>consultant.ru</b>.</p>
+      <p><b>ПП РФ № 719 от 17.07.2015</b>, раздел VII — источник реестровой записи, реквизиты которой вносятся в форму ЕИС. — <b>pravo.gov.ru</b>, <b>gisp.gov.ru</b>.</p>
+      <p>Коды ОКПД2 для медицинских изделий: <b>32.50</b>, <b>21.20</b>. Коды КТРУ — реестр на <b>zakupki.gov.ru</b>.</p>
+
+      <h2>2. Где найти форму и когда её заполнять</h2>
+      <p>Форма подтверждения происхождения товара доступна в личном кабинете участника закупки на портале <b>zakupki.gov.ru</b> непосредственно при формировании заявки на конкретную закупочную процедуру. Форма заполняется отдельно для каждой закупки — реестровая запись, однажды внесённая в одну заявку, не переносится автоматически в другие: для каждой новой закупки процедура повторяется заново.</p>
+      <p>Заполнение формы актуально для закупок, объект которых включён в Приложение 1 или Приложение 2 к ПП 1875. Перед началом заполнения убедитесь, что код ОКПД2 вашего изделия присутствует в одном из приложений в актуальной редакции постановления.</p>
+
+      <h2>3. Раздел 1. Сведения о товаре</h2>
+      <p>Первый раздел формы фиксирует, что именно вы предлагаете к поставке, и связывает это с объектом закупки, указанным заказчиком.</p>
+
+      <div class="field-box"><span class="fname">Наименование товара</span><p>Указывается точно по регистрационному удостоверению Росздравнадзора или по тексту заключения Минпромторга. Расхождение в формулировке (например, «набор реагентов» вместо «диагностический набор») может стать формальным основанием для отклонения заявки заказчиком, даже если речь идёт об одном и том же изделии.</p></div>
+
+      <div class="field-box"><span class="fname">Код ОКПД2</span><p>Должен точно совпадать с кодом, указанным в вашей реестровой записи по ПП 719 в ГИСП. Проверьте совпадение до заполнения — если код в закупочной документации заказчика отличается от кода в вашей реестровой записи, направьте запрос на разъяснение документации до истечения срока подачи заявок.</p></div>
+
+      <div class="field-box"><span class="fname">Код КТРУ</span><p>Указывается по коду, установленному заказчиком в извещении о закупке. Совпадение кода КТРУ с кодом вашей реестровой записи по ОКПД2 — необходимое условие для корректной верификации происхождения.</p></div>
+
+      <h2>4. Раздел 2. Подтверждение происхождения</h2>
+      <p>Ключевой и наиболее чувствительный к ошибкам раздел формы. Здесь выбирается тип подтверждения и вносятся конкретные реквизиты.</p>
+
+      <div class="field-box"><span class="fname">Тип подтверждения</span><p>Для производителей медицинских изделий с реестровой записью выбирается значение «Реестровая запись по ПП 719». Иные варианты (СТ-1, декларация о происхождении) применяются в других ситуациях и для целей данной инструкции не рассматриваются.</p></div>
+
+      <div class="field-box"><span class="fname">Номер реестровой записи</span><p>Регистрационный номер записи в ГИСП — берётся из личного кабинета ГИСП, раздел «Реестр российской промышленной продукции». Не путайте с номером заявления на включение в реестр или номером экспертного заключения ТПП — нужен именно номер реестровой записи.</p></div>
+
+      <div class="field-box"><span class="fname">Дата выдачи заключения Минпромторга</span><p>Дата подписания первоначального заключения Минпромторга — берётся из текста самого заключения. <b>Частая ошибка:</b> производители указывают дату последнего ежегодного отчёта в ГИСП вместо даты первоначального заключения. Это разные даты: заключение выдаётся один раз при включении в реестр, а отчёт лишь подтверждает сохранение статуса ежегодно.</p></div>
+
+      <div class="field-box"><span class="fname">Срок действия записи</span><p>Дата окончания действия реестровой записи — указана в личном кабинете ГИСП. Убедитесь, что срок действия не истекает до предполагаемой даты заключения контракта по итогам закупки — если запись истекает раньше, заранее инициируйте процедуру продления.</p></div>
+
+      <h2>5. Раздел 3. Сведения о производителе</h2>
+
+      <div class="field-box"><span class="fname">Наименование организации-производителя</span><p>Указывается строго по данным ЕГРЮЛ и в точном соответствии с наименованием, на которое выдано заключение Минпромторга. Если производство осуществляется через контрактного производителя, указывается именно производитель, на которого оформлено заключение, а не торговый представитель или дистрибьютор.</p></div>
+
+      <div class="field-box"><span class="fname">ИНН производителя</span><p>Должен совпадать с ИНН в реестровой записи ГИСП и в выписке ЕГРЮЛ. Несовпадение — например, при указании ИНН головной организации вместо ИНН производственной площадки, оформленной как отдельное юридическое лицо, — приводит к ошибке верификации.</p></div>
+
+      <h2>6. Раздел 4. Декларация участника</h2>
+      <p>Финальный раздел формы, в котором участник закупки подтверждает достоверность указанных сведений. Подписывается усиленной квалифицированной электронной подписью (УКЭП) уполномоченного лица организации. Проверьте действительность сертификата УКЭП заранее — истёкшая или отозванная подпись технически блокирует подачу заявки в последний момент.</p>
+      <p>Декларирование заведомо ложных сведений о происхождении товара является основанием для включения организации в реестр недобросовестных поставщиков — не пытайтесь «подогнать» реквизиты под требования закупки при отсутствии реального соответствия.</p>
+
+      <h2>7. Что происходит после отправки: три результата верификации</h2>
+
+      <h3>Статус «Подтверждено»</h3>
+      <p>Система ЕИС автоматически сверила указанные реквизиты с базой ГИСП, и они совпали. Заявка получает признак российского происхождения, и заказчик обязан применить соответствующий механизм нацрежима — запрет на допуск, преференцию 15% или правило «второй лишний» в зависимости от приложения ПП 1875.</p>
+
+      <h3>Статус «Ошибка верификации»</h3>
+      <p>Указанные реквизиты не совпали с данными ГИСП — как правило, из-за опечатки в номере записи, неверной даты или расхождения в наименовании. Если срок подачи заявок ещё не истёк, отзовите заявку, исправьте реквизиты и подайте заново. Проверяйте каждую цифру и букву перед повторной отправкой.</p>
+
+      <h3>Статус «Запись не найдена»</h3>
+      <p>Система не обнаружила в базе ГИСП реестровую запись с указанным кодом ОКПД2 — как правило, из-за несовпадения кода в заявке с кодом в вашей реестровой записи. Это не техническая ошибка заполнения, а содержательное расхождение, требующее уточнения у заказчика документации закупки или проверки актуальности вашей записи в ГИСП.</p>
+
+      <h2>8. Практический кейс</h2>
+      <p>Производитель шприцевых насосов (ОКПД2 32.50) подавал заявку на федеральный тендер с реестровой записью, действующей уже второй год без изменений. При заполнении формы ЕИС специалист по тендерам скопировал реквизиты из предыдущей успешной заявки трёхмесячной давности — включая номер записи и дату заключения.</p>
+      <p><b>Проблема.</b> За две недели до подачи новой заявки реестровая запись была технически перевыпущена в ГИСП в связи с уточнением производственного адреса (переезд на новую площадку в рамках того же юридического лица) — номер записи не изменился, однако дата документа в системе ГИСП обновилась. Форма ЕИС при верификации сверяла именно актуальную дату из ГИСП, а не ту, что была указана в старой заявке, — верификация не прошла.</p>
+      <p><b>Решение.</b> Специалист по тендерам, обнаружив статус «Ошибка верификации» на следующий день после подачи, немедленно проверил актуальные реквизиты в личном кабинете ГИСП, обнаружил расхождение в дате и отозвал заявку в пределах срока подачи. Заявка подана повторно с актуальной датой из обновлённой записи ГИСП.</p>
+      <p><b>Итог.</b> Повторная верификация прошла успешно, заявка получила статус «Подтверждено» за три дня до окончания срока подачи. Компания дополнительно внедрила практику: перед каждой новой заявкой сверять реквизиты записи непосредственно в личном кабинете ГИСП, а не полагаться на данные из предыдущих заявок.</p>
+
+      <h2>FAQ</h2>
+      <div class="faq-item"><h4>Нужно ли прикладывать скан заключения Минпромторга к заявке отдельно?</h4><p>По ПП 1875 формально достаточно корректно заполненной структурированной формы с реквизитами. Однако ряд заказчиков запрашивает скан заключения дополнительно в составе заявки — прикладывать его превентивно не будет нарушением и снижает риск разногласий при ручной проверке заказчиком.</p></div>
+      <div class="faq-item"><h4>Что делать, если реестровая запись была продлена и реквизиты изменились?</h4><p>Используйте реквизиты актуальной записи, действующей на момент подачи заявки — именно её данные система будет сверять при верификации. Не используйте реквизиты из прежних успешных заявок без проверки их актуальности.</p></div>
+      <div class="faq-item"><h4>Можно ли указать несколько реестровых записей в рамках одной заявки?</h4><p>Да, если заявка подаётся на лот с несколькими позициями изделий, для каждой позиции с отдельной реестровой записью заполняется собственный блок подтверждения происхождения в форме.</p></div>
+      <div class="faq-item"><h4>Обязан ли заказчик самостоятельно проверять реестр, если участник не указал реквизиты в форме?</h4><p>Нет. Бремя подтверждения происхождения лежит на участнике закупки. Заказчик, не получивший корректно заполненную структурированную форму с реквизитами, вправе рассматривать заявку как поданную без подтверждения российского происхождения товара.</p></div>
+      <div class="faq-item"><h4>Что делать при статусе «Запись не найдена», если реестровая запись точно действует?</h4><p>Проверьте точное совпадение кода ОКПД2 в заявке с кодом в реестровой записи по ГИСП — расхождение в последней цифре кода классификатора уже приводит к такому статусу. Если коды совпадают, но статус всё равно «Запись не найдена» — обратитесь в техническую поддержку ЕИС.</p></div>
+      <div class="faq-item"><h4>Применяется ли эта форма при закупках по 223-ФЗ?</h4><p>Структурированная форма ЕИС применяется в том же объёме, однако положение о закупке конкретного заказчика по 223-ФЗ может содержать дополнительные требования к содержанию заявки — изучайте их отдельно по каждой процедуре.</p></div>
+
+      <div class="article-cta">
+        <b>Готовите заявку на тендер?</b>
+        <p>ГМТ проверит заявку до подачи: сверим реквизиты реестровой записи с оригиналом заключения Минпромторга и актуальными данными ГИСП, убедимся в совместимости кодов ОКПД2 и КТРУ и исключим технические ошибки, способные обнулить конкурентную защиту.</p>
+        <a class="btn pri" href="mailto:info@med-local.ru?subject=Проверка заявки на соответствие ПП 1875">Проверить заявку бесплатно</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><b>Инженерный центр локализации МИ</b>
+      <p style="font-size:13px;line-height:1.65;margin:0 0 14px;color:#97A1B2">Локализация производства медицинских изделий в России. От анализа ниши до регистрационного удостоверения.</p>
+      <a href="tel:+79853169104">+7 985 316-91-04 (Россия)</a>
+      <a href="tel:+79888777295">+7 988 877-72-95 (Россия)</a>
+      <a href="tel:+79888777295">MAX: +7 988 877-72-95</a>
+      <a href="tel:+77021394489">+7 702 139-44-89 (Казахстан)</a>
+      <a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a>
+      <a href="https://t.me/tandelovtat" style="color:#2FA8A0" target="_blank" rel="noopener noreferrer">Telegram: @tandelovtat</a>
+    </div>
+    <div><b>Услуги</b>
+      <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a>
+      <a href="/development">Разработка</a><a href="/production">Производство</a>
+      <a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a>
+    </div>
+    <div><b>Компания</b>
+      <a href="/pricing">Стоимость</a><a href="/blog">Блог</a>
+      <a href="/contacts">Контакты</a><a href="/glossary">Глоссарий</a><a href="/privacy">Политика ПДн</a>
+    </div>
+    <div><b>Контакты</b>
+      <a href="mailto:info@med-local.ru">info@med-local.ru</a>
+      <a href="mailto:sales@med-local.ru">sales@med-local.ru</a>
+      <a href="mailto:marketing@med-local.ru">marketing@med-local.ru</a>
+      <a href="mailto:ceo@med-local.ru">ceo@med-local.ru</a>
+    </div>
+  </div>
+  <div class="fine">
+    <span>© 2024–2026 ООО «ГМТ» (Глобальные Медицинские Технологии) · 125047, г. Москва, 1-й Тверской-Ямской пер., д. 16, помещ. 1/п</span>
+    <a href="/privacy">Политика конфиденциальности</a>
+  </div>
+</div></footer>
+<a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg>
+  Написать в Telegram
+</a>
+<a class="float-btn max-btn" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer">
+  <img src="/images/max-icon.png" alt="MAX" width="22" height="22" style="border-radius:6px">
+  Написать в MAX
+</a>
+<script>
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';}
+</script>
+</body>
+</html>
