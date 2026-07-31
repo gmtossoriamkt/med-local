@@ -6,50 +6,64 @@ Disallow: /private/
 # Яндекс
 User-agent: YandexBot
 Allow: /
+Disallow: /private/
 
 # Google
 User-agent: Googlebot
 Allow: /
+Disallow: /private/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /private/
 
 # ChatGPT / OpenAI
 User-agent: GPTBot
 Allow: /
+Disallow: /private/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /private/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /private/
 
 # Perplexity
 User-agent: PerplexityBot
 Allow: /
+Disallow: /private/
 
 User-agent: Perplexity-User
 Allow: /
+Disallow: /private/
 
 # Claude / Anthropic
 User-agent: ClaudeBot
 Allow: /
+Disallow: /private/
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /private/
 
 # Bing / Microsoft Copilot
 User-agent: BingBot
 Allow: /
+Disallow: /private/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /private/
 
 # Другие ИИ
 User-agent: cohere-ai
 Allow: /
+Disallow: /private/
 
 User-agent: Meta-ExternalAgent
 Allow: /
+Disallow: /private/
 
 Sitemap: https://med-local.ru/sitemap.xml
