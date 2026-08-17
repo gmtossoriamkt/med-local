@@ -331,7 +331,7 @@ gtag("config", "G-9DZXMBECL0");
         <div><label>Задача</label><input name="device" placeholder="Тип изделия или вопрос"></div>
         <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--muted)">
           <input type="checkbox" id="ag2" required style="margin-top:3px;width:auto;accent-color:var(--cyan)">
-          <label for="ag2">Согласен с <a href="/privacy" style="color:var(--cyan)">Политикой конфиденциальности</a></label>
+          <label for="ag2">Даю согласие на обработку персональных данных, включая трансграничную передачу (Google Analytics, Formspree), в соответствии с <a href="/privacy" style="color:var(--cyan)">Политикой конфиденциальности</a></label>
         </div>
         <button type="submit" class="btn pri" style="width:100%;justify-content:center">Отправить</button>
       </form>
@@ -368,7 +368,7 @@ gtag("config", "G-9DZXMBECL0");
   </div>
   <div class="fine">
     <span>© 2024–2026 ООО «ГМТ» (Глобальные Медицинские Технологии) · 125047, г. Москва, 1-й Тверской-Ямской пер., д. 16, помещ. 1/п</span>
-    <a href="/privacy">Политика конфиденциальности</a>
+    <span style="display:flex;gap:14px;flex-wrap:wrap"><a href="/privacy">Политика конфиденциальности</a><a href="/oferta">Публичная оферта</a><a href="/terms">Пользовательское соглашение</a></span>
   </div>
 </div></footer>
 <a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
@@ -395,5 +395,6 @@ function submitLead(f){
 }
 function sendLead(f){return submitLead(f);}
 </script>
+<script src="/cookie-consent.js" defer></script>
 </body>
 </html>

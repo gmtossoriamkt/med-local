@@ -328,7 +328,7 @@ ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webv
     <div><label>Device / Task</label><input name="device" placeholder="Device type or task description"></div>
     <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--muted)">
       <input type="checkbox" id="ag" required style="margin-top:3px;width:auto;accent-color:var(--cyan)">
-      <label for="ag">I agree to the <a href="/privacy" style="color:var(--cyan)">Privacy Policy</a></label>
+      <label for="ag">I consent to the processing of my personal data, including cross-border transfer (Google Analytics, Formspree), in accordance with the <a href="/privacy" style="color:var(--cyan)">Privacy Policy</a></label>
     </div>
     <button type="submit" class="btn pri" style="width:100%;justify-content:center;padding:15px">Send Request</button>
   </form>
@@ -364,12 +364,13 @@ ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webv
   </div>
   <div class="fine">
     <span>© 2024–2026 GMT LLC (Global Medical Technologies) · Moscow, Russia</span>
-    <a href="/privacy">Privacy Policy</a>
+    <span style="display:flex;gap:14px;flex-wrap:wrap"><a href="/privacy">Privacy Policy</a><a href="/oferta">Public Offer (RU)</a><a href="/terms">Terms of Use (RU)</a></span>
   </div>
 </div></footer>
 <a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg>Write in Telegram</a>
 <a class="float-btn max-btn" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer"><img src="/images/max-icon.png" alt="MAX" width="22" height="22" style="border-radius:6px">Write in MAX</a>
 <script>function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';}
 function sendLead(f){f.querySelector('button[type=submit]').textContent='Sending...';setTimeout(function(){f.innerHTML='<div style="text-align:center;padding:32px"><div style="font-size:36px;margin-bottom:12px">✅</div><h3 style="font-size:20px;font-weight:800;margin:0 0 8px">Request received!</h3><p style="color:var(--muted);margin:0">We will contact you within one business day.</p></div>';},600);return false;}</script>
+<script src="/cookie-consent.js" defer></script>
 </body>
 </html>
