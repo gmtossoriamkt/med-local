@@ -24,13 +24,18 @@
 
 - [Как сдать отчёт в ГИСП до 1 июля](https://med-local.ru/blog/gisp-otchet)
 - [Что делать при исключении из ГИСП](https://med-local.ru/blog/gisp-annulirovanie)
+- [90 дней на спасение: уведомление об исключении из ГИСП](https://med-local.ru/blog/uvedomlenie-isklyuchenie)
 - [Чек-лист ПП 719 для малого предприятия](https://med-local.ru/blog/pp719-checklist)
 - [Расчёт адвалорной доли](https://med-local.ru/blog/advalornaya-dolya)
 - [ПП 719 vs ПП 1875](https://med-local.ru/blog/pp719-vs-pp1875)
 - [Нацрежим по ПП 1875: подача заявок](https://med-local.ru/blog/pp1875-zayavki)
 - [Правило «второй лишний» по ПП 1875](https://med-local.ru/blog/pp1875-vtoroy-lishniy)
-- [Локализация IVD реагентов и тест-систем](https://med-local.ru/blog/ivd-lokalizaciya)
-- [Локализация гемоконтейнеров Службы крови](https://med-local.ru/blog/gemokonteynery-pp719)
+- [Медицинские изделия в ПП 1875: блокировка импортной медтехники](https://med-local.ru/blog/pp1875-medtehnika-blokirovka)
+- [Ловушка КТРУ и классификаторов](https://med-local.ru/blog/lovushka-ktru)
+- [Ловушка балльной системы 2026](https://med-local.ru/blog/ballnaya-lovushka-2026)
+- [Анатомия балльной системы для сложной медтехники](https://med-local.ru/blog/ballnaya-sistema-medtekhnika)
+- [Подтверждение происхождения товара в ЕИС](https://med-local.ru/blog/eis-podtverzhdenie-proiskhozhdeniya)
+- [Внеплановая проверка ТПП](https://med-local.ru/blog/proverka-tpp)
 
 ## Глоссарий терминов
 
