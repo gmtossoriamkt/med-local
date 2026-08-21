@@ -73,8 +73,12 @@ footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-
 .field-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:10px 0}
 .field-box .fname{font-family:var(--mono);font-size:12.5px;font-weight:700;color:var(--blue);display:block;margin-bottom:6px}
 .field-box p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.6}
-.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;z-index:200}
-.burger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger{display:none;align-items:center;gap:8px;cursor:pointer;padding:6px 10px;background:#fff;border:1.5px solid var(--line);border-radius:10px;transition:.15s;z-index:200}
+.burger:hover{border-color:var(--cyan)}
+.burger-icon{display:flex;flex-direction:column;gap:5px}
+.burger-icon span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger-label{font-size:12.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+@media(max-width:680px){.burger{padding:4px;background:none;border:none;gap:0}.burger-label{display:none}}
 .mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:100;flex-direction:column;align-items:center;justify-content:center;gap:28px}
 .mob-menu.open{display:flex}
 .mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
@@ -196,7 +200,7 @@ gtag("config", "G-9DZXMBECL0");
   </div>
   <div class="lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
   <a class="btn pri" href="/#lead">Оценить проект</a>
-  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span></span><span></span><span></span></button>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span class="burger-icon"><span></span><span></span><span></span></span><span class="burger-label">Меню</span></button>
 </div></header>
 
 <main>
