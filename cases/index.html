@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Пользовательское соглашение — Инженерный центр</title>
-<meta name="description" content="Правила пользования сайтом med-local.ru: интеллектуальная собственность, ограничение ответственности, применимое право.">
-<link rel="canonical" href="https://med-local.ru/terms">
+<title>Кейсы и референс-лист — Инженерный центр локализации МИ</title>
+<meta name="description" content="Портфолио проектов ГМТ: сопровождение регистрации медицинских изделий, разработка тест-систем, инспекция производства. Реквизиты регистрационных удостоверений и отчётов.">
+<link rel="canonical" href="https://med-local.ru/cases">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Пользовательское соглашение — Инженерный центр">
-<meta property="og:description" content="Правила пользования сайтом med-local.ru: интеллектуальная собственность, ограничение ответственности, применимое право.">
-<meta property="og:url" content="https://med-local.ru/terms">
+<meta property="og:title" content="Кейсы и референс-лист — Инженерный центр локализации МИ">
+<meta property="og:description" content="Портфолио проектов ГМТ: сопровождение регистрации медицинских изделий, разработка тест-систем, инспекция производства.">
+<meta property="og:url" content="https://med-local.ru/cases">
 <meta property="og:image" content="https://med-local.ru/og-image.png">
 <meta property="og:locale" content="ru_RU">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -38,16 +38,21 @@ a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:12px;font-weight:600;font-size:13.5px;border:none;transition:.18s;cursor:pointer}
 .btn.pri{background:var(--orange);color:#fff;box-shadow:0 10px 24px -10px rgba(255,107,61,.6)}
 .btn.pri:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--cyan)}
+.tag::before{content:"";width:22px;height:2px;background:var(--cyan)}
 h1,h2,h3{line-height:1.15;margin:0}
 .h-xl{font-size:clamp(30px,4.6vw,52px);font-weight:800;letter-spacing:-1.2px}
+.h-l{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.8px}
+.h-m{font-size:19px;font-weight:700}
+.lead{font-size:17px;color:var(--muted);line-height:1.65}
 .sec{padding:74px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
 header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;gap:22px;height:66px}
 .nav .sp{flex:1}
 .nav a.lnk{font-size:12.5px;font-weight:500;color:var(--muted);transition:.15s;white-space:nowrap}
 .nav a.lnk:hover,.nav a.lnk.on{color:var(--ink)}
 @media(max-width:900px){.nav a.lnk{display:none}}
-.lead{font-size:17px;color:var(--muted);line-height:1.65}
 footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
 footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
 footer b{color:#fff;display:block;margin-bottom:10px}
@@ -73,9 +78,14 @@ footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-
 .header-icons a.max-icon{background:transparent;padding:0}
 .header-icons a:hover{filter:brightness(1.1);transform:translateY(-1px)}
 @media(max-width:900px){.header-icons{display:none}}
-.legal-body h2{font-size:19px;font-weight:700;margin:28px 0 10px}
-.legal-body h2:first-child{margin-top:0}
-.legal-body p{color:var(--muted);font-size:15px;margin-bottom:16px;line-height:1.7}
+.lang-switch{display:flex;align-items:center;gap:4px;margin-right:8px}
+.lang-switch a{font-size:12.5px;font-weight:700;padding:4px 8px;border-radius:6px;color:var(--muted);transition:.15s;text-decoration:none}
+.lang-switch a.active{background:var(--graphite);color:#fff}
+.lang-switch a:hover:not(.active){color:var(--ink)}
+.case-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 28px;margin-bottom:16px}
+.case-card h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.case-card p{font-size:14.5px;color:var(--muted);margin:0 0 10px;line-height:1.6}
+.case-card .doc{font-family:var(--mono);font-size:12.5px;color:var(--cyan);background:var(--cyan-soft);display:inline-block;padding:4px 10px;border-radius:8px}
 </style>
 <script type="text/javascript">
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -90,49 +100,90 @@ function gtag(){dataLayer.push(arguments);}
 gtag("js", new Date());
 gtag("config", "G-9DZXMBECL0");
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Кейсы и референс-лист ГМТ",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "ООО «Мастер»", "description": "Сопровождение и получение 2 регистрационных удостоверений."},
+    {"@type": "ListItem", "position": 2, "name": "ООО «НПО ДЕОСТ»", "description": "Сопровождение и получение 1 регистрационного удостоверения."},
+    {"@type": "ListItem", "position": 3, "name": "ООО «ЛИДКОР»", "description": "Сопровождение и получение 5 регистрационных удостоверений."},
+    {"@type": "ListItem", "position": 4, "name": "РНИМУ им. Пирогова", "description": "Разработка мультиплексного ИХА-теста для диагностики миокардита, УГТ 3."},
+    {"@type": "ListItem", "position": 5, "name": "Baihe Medical (Китай)", "description": "Услуги УПП, инспекция производства."}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://med-local.ru/"}, {"@type": "ListItem", "position": 2, "name": "Кейсы", "item": "https://med-local.ru/cases"}]}
+</script>
 </head>
 <body>
-<div class="mob-menu" id="mob-menu"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:18px;right:18px;background:none;border:none;cursor:pointer;padding:8px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button><a href="/">Главная</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">Блог</a><a href="/cases">Кейсы</a><a href="/pricing">Стоимость</a><a href="/about">О центре</a><a href="/cases">Кейсы</a><a href="/#lead" class="btn pri" style="margin-top:16px">Оценить проект</a></div>
+<div class="mob-menu" id="mob-menu"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:18px;right:18px;background:none;border:none;cursor:pointer;padding:8px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button><a href="/">Главная</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">Блог</a><a href="/pricing">Стоимость</a><a href="/about">О центре</a><a href="/cases">Кейсы</a><a href="/#lead" class="btn pri" style="margin-top:16px">Оценить проект</a></div>
 <header><div class="wrap nav">
   <a class="logo" href="/"><span style="display:flex;align-items:center;gap:11px"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="7" stroke="#1C232E" stroke-width="2.6" fill="none"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#2FA8A0"/><path d="M24 2v7M24 39v7M2 24h7M39 24h7M8 8l5 5M40 8l-5 5M8 40l5-5M40 40l-5-5" stroke="#3D6FB4" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.6" fill="#FF6B3D"/></svg><span><span style="font-weight:800;font-size:14px;letter-spacing:-.3px;line-height:1.2;display:block">Инженерный<br>центр</span><span style="font-size:9px;font-weight:600;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;line-height:1.3;display:block">локализации МИ</span></span></span></a>
   <span class="sp"></span>
-  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk" href="/blog">Блог</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a><a class="lnk" href="/cases">Кейсы</a></div>
+  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk" href="/blog">Блог</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a><a class="lnk on" href="/cases">Кейсы</a></div>
   <div class="header-icons">
     <a class="tg-icon" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer" title="Написать в Telegram" aria-label="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg></a>
     <a class="max-icon" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer" title="Написать в MAX" aria-label="MAX"><img src="/images/max-icon.png" alt="MAX" width="26" height="26" style="border-radius:7px;display:block"></a>
   </div>
+  <div class="lang-switch"><a href="#" class="active">RU</a><a href="/en/cases">EN</a></div>
   <a class="btn pri" href="/#lead">Оценить проект</a>
   <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span></span><span></span><span></span></button>
 </div></header>
+
 <main>
-<div class="wrap"><nav class="crumbs"><a href="/">Главная</a><span>›</span><b>Пользовательское соглашение</b></nav></div>
+<div class="wrap"><nav class="crumbs"><a href="/">Главная</a><span>›</span><b>Кейсы</b></nav></div>
 <section style="background:#fff;border-bottom:1px solid var(--line)"><div class="wrap" style="padding:54px 0 36px">
-  <h1 class="h-xl" style="margin:0 0 18px">Пользовательское соглашение</h1>
-  <p class="lead" style="max-width:760px">Общие правила пользования сайтом med-local.ru</p>
+  <span class="tag" style="display:inline-flex;margin-bottom:14px">Портфолио проектов</span>
+  <h1 class="h-xl" style="margin:0 0 18px;max-width:820px">Кейсы и референс-лист</h1>
+  <p class="lead" style="max-width:700px">Контакты лиц, принимающих решения, предоставляются по запросу. В работе — более 30 проектов для разных организаций. Ниже — часть портфолио с публичными реквизитами регистрационных удостоверений и отчётов.</p>
 </div></section>
-<section class="sec"><div class="wrap legal-body" style="max-width:760px">
 
-  <h2>1. Общие положения</h2>
-  <p>Используя сайт med-local.ru (далее — «Сайт»), принадлежащий ООО «ГМТ» (Глобальные Медицинские Технологии), ОГРН 1247700287834, вы соглашаетесь с условиями настоящего Соглашения. Если вы не согласны с условиями — пожалуйста, прекратите использование Сайта.</p>
+<section class="sec"><div class="wrap" style="max-width:820px">
 
-  <h2>2. Интеллектуальная собственность</h2>
-  <p>Все материалы Сайта — тексты, статьи блога, графика, логотип, структура и оформление страниц — являются объектами интеллектуальной собственности ООО «ГМТ» либо используются на законных основаниях. Копирование, воспроизведение и распространение материалов Сайта без предварительного письменного согласия правообладателя не допускается, за исключением цитирования с указанием прямой ссылки на источник в объёме, допустимом законодательством РФ.</p>
+  <div class="case-card">
+    <h3>ООО «Мастер»</h3>
+    <p>Сопровождение и получение 2 регистрационных удостоверений на медицинские изделия.</p>
+    <span class="doc">Г004-00110-00/04506917</span>
+  </div>
 
-  <h2>3. Ограничение ответственности</h2>
-  <p>Материалы Сайта (включая статьи блога) носят информационно-справочный характер и не являются юридической, налоговой или иной профессиональной консультацией применительно к конкретной ситуации. ООО «ГМТ» не гарантирует полноту, точность и актуальность информации на Сайте на момент её прочтения и не несёт ответственности за решения, принятые пользователем на основании этих материалов без дополнительной консультации со специалистом. Условия конкретных услуг, стоимость и сроки определяются отдельно — см. <a href="/oferta" style="color:var(--cyan)">Публичную оферту</a>.</p>
+  <div class="case-card">
+    <h3>ООО «НПО ДЕОСТ»</h3>
+    <p>Сопровождение и получение регистрационного удостоверения на медицинское изделие.</p>
+    <span class="doc">РЗН 2025/26379</span>
+  </div>
 
-  <h2>4. Применимое право и разрешение споров</h2>
-  <p>К настоящему Соглашению применяется законодательство Российской Федерации. Споры, возникающие в связи с использованием Сайта, разрешаются путём переговоров, а при недостижении согласия — в судебном порядке по месту нахождения ООО «ГМТ» в соответствии с законодательством РФ.</p>
+  <div class="case-card">
+    <h3>ООО «ЛИДКОР»</h3>
+    <p>Сопровождение и получение 5 регистрационных удостоверений на медицинские изделия.</p>
+    <span class="doc">РЗН 2024/22679 и др.</span>
+  </div>
 
-  <h2>5. Изменение условий</h2>
-  <p>ООО «ГМТ» вправе изменять условия настоящего Соглашения в одностороннем порядке путём публикации новой редакции на этой странице. Продолжение использования Сайта после публикации изменений означает согласие с новой редакцией.</p>
+  <div class="case-card">
+    <h3>РНИМУ им. Пирогова</h3>
+    <p>Разработка мультиплексного иммунохроматографического (ИХА) теста для диагностики миокардита.</p>
+    <span class="doc">УГТ 3</span>
+  </div>
 
-  <h2>6. Контакты</h2>
-  <p>По вопросам, связанным с настоящим Соглашением: <a href="mailto:info@med-local.ru" style="color:var(--cyan)">info@med-local.ru</a>.</p>
+  <div class="case-card">
+    <h3>Baihe Medical (Китай)</h3>
+    <p>Услуги по управлению производственным процессом (УПП), инспекция производства.</p>
+    <span class="doc">№ ИП-24-554</span>
+  </div>
 
-  <p style="font-size:13px;color:var(--muted);margin-top:8px">Дата актуализации: август 2026 года.</p>
+  <p style="font-size:13px;color:var(--muted);font-style:italic;margin-top:24px">Список неполный — приведена часть портфолио с публично раскрываемыми реквизитами. Подробности и контакты по остальным проектам — по запросу.</p>
+
+  <div class="card" style="margin-top:32px;background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff">
+    <h3 class="h-m" style="color:#fff;margin-bottom:8px">Хотите обсудить свой проект?</h3>
+    <p style="color:#AFBAC9;font-size:14px;margin:0 0 18px">Расскажите об изделии и задаче — ответим в течение одного рабочего дня.</p>
+    <a class="btn pri" href="/#lead">Оценить проект</a>
+  </div>
+
 </div></section>
 </main>
+
 <footer><div class="wrap">
   <div class="cols">
     <div><b>Инженерный центр локализации МИ</b>
@@ -150,7 +201,7 @@ gtag("config", "G-9DZXMBECL0");
       <a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a>
     </div>
     <div><b>Компания</b>
-      <a href="/cases">Кейсы</a><a href="/pricing">Стоимость</a><a href="/blog">Блог</a>
+      <a href="/about">О центре</a><a href="/cases">Кейсы</a><a href="/pricing">Стоимость</a><a href="/blog">Блог</a>
       <a href="/contacts">Контакты</a><a href="/glossary">Глоссарий</a><a href="/privacy">Политика ПДн</a>
     </div>
     <div><b>Контакты</b>
@@ -173,9 +224,9 @@ gtag("config", "G-9DZXMBECL0");
   <img src="/images/max-icon.png" alt="MAX" width="22" height="22" style="border-radius:6px">
   Написать в MAX
 </a>
-<script src="/cookie-consent.js" defer></script>
 <script>
 function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';}
 </script>
+<script src="/cookie-consent.js" defer></script>
 </body>
 </html>
