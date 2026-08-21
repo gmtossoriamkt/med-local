@@ -208,6 +208,10 @@ footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-
 .lang-switch{display:flex;align-items:center;gap:4px;margin-right:8px}
 .lang-switch a{font-size:12.5px;font-weight:700;padding:4px 8px;border-radius:6px;color:var(--muted);transition:.15s;text-decoration:none}
 .lang-switch a.active{background:var(--graphite);color:#fff}
+.mob-lang-switch{display:flex;align-items:center;gap:10px;margin-top:10px}
+.mob-lang-switch a{font-size:15px;font-weight:700;padding:8px 20px;border-radius:10px;color:var(--muted);background:var(--paper);border:1.5px solid var(--line)}
+.mob-lang-switch a.active{background:var(--graphite);color:#fff;border-color:var(--graphite)}
+@media(max-width:680px){.lang-switch{display:none}}
 .lang-switch a:hover:not(.active){color:var(--ink)}
 </style>
 <script type="text/javascript">
@@ -285,6 +289,7 @@ gtag("config", "G-9DZXMBECL0");
 <div class="mob-menu" id="mob-menu"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:18px;right:18px;background:none;border:none;cursor:pointer;padding:8px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
   <a href="/">Главная</a>
   <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">Блог</a><a href="https://biblioteka.med-local.ru/">Библиотека</a><a href="/cases">Кейсы</a><a href="/pricing">Стоимость</a><a href="/about">О центре</a><a href="/cases">Кейсы</a>
+  <div class="mob-lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
   <a href="/#lead" class="btn pri" style="margin-top:16px">Оценить проект</a>
 </div>
 <header><div class="wrap nav">
