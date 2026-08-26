@@ -3,8 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>ПП 719 против ПП 1875: критические отличия для защиты позиций в госзакупках — Инженерно-регуляторный центр</title>
-<meta name="description" content="ПП 719 подтверждает российское производство, ПП 1875 защищает от иностранной конкуренции в госзакупках. Без записи по ПП 719 механизмы ПП 1875 недоступны.">
+<title>ПП №719 и ПП №1875: в чём разница и как реестровая запись влияет на госзакупки — Инженерно-регуляторный центр</title>
+<meta name="description" content="ПП 719 подтверждает российское происхождение промышленной продукции, ПП 1875 устанавливает правила применения запрета, ограничения и преимущества в госзакупках. Разбираем, как реестровая запись по ПП 719 влияет на защиту заявки по ПП 1875 и в чём разница между этими постановлениями.">
+<link rel="canonical" href="https://med-local.ru/blog/pp719-vs-pp1875">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ПП №719 и ПП №1875: в чём разница и как реестровая запись влияет на госзакупки">
+<meta property="og:description" content="ПП 719 и ПП 1875 решают разные задачи: подтверждение происхождения и правила применения нацрежима в закупках. Разбираем их связь и разницу.">
+<meta property="og:url" content="https://med-local.ru/blog/pp719-vs-pp1875">
+<meta property="og:image" content="https://med-local.ru/og-image.png">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C232E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@700;800&family=JetBrains+Mono:wght@600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -18,7 +31,7 @@
  --body:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
  --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
 }
-*{box-sizing:border-box}html{scroll-behavior:smooth}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{max-width:100vw}
 body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
 .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
@@ -44,6 +57,8 @@ h1,h2,h3{line-height:1.15;margin:0}
 .g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
 @media(max-width:960px){.g3,.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
 @media(max-width:620px){.g3,.g4,.g2{grid-template-columns:1fr}}
+@media(max-width:880px){.route{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:560px){.route{grid-template-columns:1fr!important}.route .st{padding:16px 0 0!important;border-bottom:1px solid var(--line);padding-bottom:16px!important;margin-bottom:8px}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
 .kv{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
 .kv span{color:var(--muted)}.kv b{text-align:right}
@@ -64,9 +79,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdro
 .hero .stats span{font-size:12.5px;color:#8E99AB}
 .crumbs{font-size:12.5px;color:var(--muted);margin:18px 0 0}
 .crumbs b{color:var(--ink)}
-.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:rt;margin-top:8px}
-.route .st{position:relative;padding:20px 18px 0;counter-increment:rt}
-.route .st::before{content:counter(rt,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--cyan);font-weight:600}
+.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:8px}
+.route .st{position:relative;padding:20px 18px 0}
 .route .st::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
 .route .st h3{font-size:15.5px;margin:8px 0 6px}
 .route .st p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
@@ -83,6 +97,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdro
 .seg .of{font-size:13px;font-weight:600;color:var(--cyan)}
 .law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
 .law b{display:block;margin-bottom:6px;font-size:14px}
+.warn{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#8B3A1E;line-height:1.65;margin:24px 0}
+.warn b{display:block;margin-bottom:6px;font-size:14px}
 .post{display:flex;flex-direction:column;gap:9px;transition:.2s}
 .post:hover{transform:translateY(-3px)}
 .post .rub{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)}
@@ -136,219 +152,224 @@ footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-
 .related a{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan);transition:.15s}
 .related a:hover{border-color:var(--cyan)}
 
+/* Бургер-меню для мобильных */
+.burger{display:none;align-items:center;gap:8px;cursor:pointer;padding:6px 10px;background:#fff;border:1.5px solid var(--line);border-radius:10px;transition:.15s;z-index:200}
+.burger:hover{border-color:var(--cyan)}
+.burger-icon{display:flex;flex-direction:column;gap:5px}
+.burger-icon span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger-label{font-size:12.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+.burger.open .burger-icon span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open .burger-icon span:nth-child(2){opacity:0}
+.burger.open .burger-icon span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:680px){.burger{padding:4px;background:none;border:none;gap:0}.burger-label{display:none}}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:100;flex-direction:column}
+.mob-menu-links{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:70px 20px 16px}
+.mob-menu-cta{flex-shrink:0;display:flex;justify-content:center;padding:14px 24px 20px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+.mob-menu a:hover{color:var(--cyan)}
+@media(max-width:2000px){
+  .nav-links{display:none!important}
+  .burger{display:flex}
+  .nav{gap:12px}
+}
+/* Хлебные крошки */
+.crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:.15s}.crumbs a:hover{color:var(--cyan)}
+.crumbs span{color:var(--muted)}
+.crumbs b{color:var(--ink);font-weight:600}
+/* Таблицы на мобильных */
+@media(max-width:640px){
+  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .article-body table{display:block;overflow-x:auto}
+}
+/* Плавающая кнопка на мобильных */
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+.float-btn.max-btn{bottom:74px;background:#fff;box-shadow:0 8px 24px rgba(107,63,231,.25);color:var(--ink)}
+@media(max-width:768px){.float-btn{display:flex}}
+/* Состояния кнопок */
+.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.btn.pri:active{transform:translateY(0);filter:brightness(.95)}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+/* Единый подвал */
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2;transition:.15s}
+footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){footer .cols{grid-template-columns:1fr}}
+
+.header-icons{display:flex;align-items:center;gap:8px;margin-right:4px}
+.header-icons a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s}
+.header-icons a.tg-icon{background:#2FA8A0}
+.header-icons a.max-icon{background:transparent;padding:0}
+.header-icons a:hover{filter:brightness(1.1);transform:translateY(-1px)}
+@media(max-width:2000px){.header-icons{display:none}}
+.lang-switch{display:flex;align-items:center;gap:4px;margin-right:8px}
+.lang-switch a{font-size:12.5px;font-weight:700;padding:4px 8px;border-radius:6px;color:var(--muted);transition:.15s;text-decoration:none}
+.lang-switch a.active{background:var(--graphite);color:#fff}
+.mob-lang-switch{display:flex;align-items:center;gap:10px;margin-top:10px}
+.mob-lang-switch a{font-size:15px;font-weight:700;padding:8px 20px;border-radius:10px;color:var(--muted);background:var(--paper);border:1.5px solid var(--line)}
+.mob-lang-switch a.active{background:var(--graphite);color:#fff;border-color:var(--graphite)}
+@media(max-width:680px){.lang-switch{display:none}}
+.lang-switch a:hover:not(.active){color:var(--ink)}
+
 .article-body h2{font-size:22px;font-weight:800;margin:36px 0 14px;color:var(--ink)}
 .article-body h3{font-size:18px;font-weight:700;margin:28px 0 10px;color:var(--ink)}
+.article-body h4{font-size:16px;font-weight:700;margin:24px 0 8px;color:var(--ink)}
 .article-body p{font-size:15px;color:#3a4455;line-height:1.75;margin:0 0 16px}
 .article-body ul,.article-body ol{margin:0 0 16px 20px}
 .article-body li{font-size:15px;color:#3a4455;line-height:1.7;margin-bottom:6px}
-.article-body b{color:var(--ink)}
-.article-body .law{margin:24px 0}
+.article-body strong,.article-body b{color:var(--ink)}
+.article-body .law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:16px 20px;font-size:14px;color:#2D4F7E;line-height:1.65;margin:20px 0}
 .article-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
 .article-body th{background:var(--graphite);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
 .article-body td{padding:10px 14px;border-bottom:1px solid var(--line);color:#3a4455}
-.article-body tr:last-child td{border-bottom:none}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
 .article-cta{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:16px;padding:28px 32px;margin:40px 0}
 .article-cta b{font-size:18px;display:block;margin-bottom:8px}
 .article-cta p{color:#AFBAC9;font-size:14px;margin:0 0 18px}
 </style>
-<script type="text/javascript">
-(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
-ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Инженерно-регуляторный центр локализации медицинских изделий",
-  "legalName": "ООО «Глобальные Медицинские Технологии»",
-  "url": "https://med-local.ru",
-  "logo": "https://med-local.ru/logo.svg",
-  "description": "Полный цикл локализации производства медицинских изделий в России: реверс-инжиниринг, разработка, производство, регистрация в Росздравнадзоре.",
-  "telephone": ["+7-985-316-91-04", "+7-988-877-72-95"],
-  "email": "info@med-local.ru",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "1-й Тверской-Ямской пер., д. 16, помещ. 1/п",
-    "addressLocality": "Москва",
-    "postalCode": "125047",
-    "addressCountry": "RU"
-  },
-  "areaServed": ["RU", "KZ", "BY", "AM", "KG"],
-  "sameAs": [
-    "https://t.me/tandelovtat",
-    "https://rzn.expert",
-    "https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ"
-  ],
-  "foundingDate": "2022",
-  "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 20},
-  "knowsAbout": [
-    "Локализация медицинских изделий",
-    "Постановление Правительства РФ №719",
-    "Регистрация МИ в Росздравнадзоре",
-    "Реверс-инжиниринг медицинской техники",
-    "ISO 13485", "ISO 14971", "ГОСТ Р МЭК 60601",
-    "Адвалорная доля", "ГИСП", "ЕАЭС"
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "ПП 719 против ПП 1875: критические отличия для защиты позиций в госзакупках",
-  "description": "Сравнение механизмов: запрет на допуск, преференция 15%, правило второй лишний. Четыре точки отказа при подаче заявки.",
-  "url": "https://med-local.ru/blog/pp719-vs-pp1875",
-  "datePublished": "2026-06-20",
-  "dateModified": "2026-08-10",
-  "author": {"@type": "Person", "name": "Артемий-Татуш Танделов", "url": "https://med-local.ru/about"},
-  "publisher": {"@type": "Organization", "name": "Инженерно-регуляторный центр локализации МИ", "url": "https://med-local.ru", "logo": {"@type": "ImageObject", "url": "https://med-local.ru/logo.svg"}},
-  "image": "https://med-local.ru/og-image.png",
-  "inLanguage": "ru"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Можно ли участвовать без записи по ПП 719?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Можно — но без нацрежима. В закупках с запретом по Приложению 1 — автоматическое отклонение при наличии конкурента с российской записью."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Нужно ли указывать реквизиты записи в каждой заявке?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Да. Заявка на каждую закупку — самостоятельный документ. Наличие записи в реестре не освобождает от обязанности ссылаться на неё."
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://med-local.ru/"}, {"@type": "ListItem", "position": 2, "name": "База знаний", "item": "https://med-local.ru/blog"}, {"@type": "ListItem", "position": 3, "name": "ПП 719 против ПП 1875: критические отличия для защ...", "item": "https://med-local.ru/blog/pp719-vs-pp1875"}]}
-</script>
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DZXMBECL0"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date());
-gtag("config", "G-9DZXMBECL0");
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9DZXMBECL0");</script>
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"ПП №719 и ПП №1875: в чём разница и как реестровая запись влияет на госзакупки","description":"ПП 719 подтверждает российское происхождение промышленной продукции, ПП 1875 устанавливает правила применения запрета, ограничения и преимущества в госзакупках. Разбираем, как реестровая запись по ПП 719 влияет на защиту заявки по ПП 1875 и в чём разница между этими постановлениями.","url":"https://med-local.ru/blog/pp719-vs-pp1875","datePublished":"2026-06-20","dateModified":"2026-08-26","author":{"@type":"Person","name":"А.-Т. Танделов","url":"https://med-local.ru/about"},"publisher":{"@type":"Organization","name":"Инженерно-регуляторный центр локализации МИ","url":"https://med-local.ru"},"image":"https://med-local.ru/og-image.png","inLanguage":"ru"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Можно ли участвовать в закупке без реестровой записи по ПП 719?","acceptedAnswer":{"@type":"Answer","text":"Можно, но без права на применение запрета или ограничения по ПП 1875 для товара, чьё происхождение подтверждается через этот реестр. В закупках с запретом (Приложение №1) заявка с таким иностранным товаром не будет допущена при соответствии позиции этому приложению — вне зависимости от наличия записи у конкурентов."}},{"@type":"Question","name":"Нужно ли указывать реквизиты записи в каждой заявке?","acceptedAnswer":{"@type":"Answer","text":"Да. Заявка на каждую закупку — самостоятельный документ, и наличие записи в реестре не освобождает от необходимости отразить подтверждение происхождения именно в этой заявке."}},{"@type":"Question","name":"В чём принципиальная разница между ПП 719 и ПП 1875?","acceptedAnswer":{"@type":"Answer","text":"ПП 719 отвечает на вопрос «подтверждено ли, что товар произведён в России», ПП 1875 — на вопрос «как это подтверждённое происхождение учитывается при рассмотрении заявок в конкретной закупке». Это разные, но связанные регулирования, а не альтернативные или конкурирующие акты."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://med-local.ru/"},{"@type":"ListItem","position":2,"name":"База знаний","item":"https://med-local.ru/blog"},{"@type":"ListItem","position":3,"name":"ПП №719 и ПП №1875: в чём разница и как реестровая запись","item":"https://med-local.ru/blog/pp719-vs-pp1875"}]}
 </script>
 </head>
 <body>
+<div class="mob-menu" id="mob-menu"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:18px;right:18px;background:none;border:none;cursor:pointer;padding:8px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button><div class="mob-menu-links"><a href="/">Главная</a><a href="/about">О центре</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">База знаний</a><a href="/pricing">Стоимость</a><a href="/cases">Кейсы</a><a href="/glossary">Глоссарий</a><a href="/contacts">Контакты</a><div class="mob-lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
+  </div><div class="mob-menu-cta"><a href="/#lead" class="btn pri" style="margin-top:16px">Оценить проект</a></div></div>
 <header><div class="wrap nav">
-  <a class="logo" href="/">
-    <svg width="36" height="36" viewBox="0 0 48 48" fill="none"><rect x="9" y="9" width="30" height="30" rx="7" stroke="#1C232E" stroke-width="2.6"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#2FA8A0"/><path d="M24 2v7M24 39v7M2 24h7M39 24h7M8 8l5 5M40 8l-5 5M8 40l5-5M40 40l-5-5" stroke="#3D6FB4" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.6" fill="#FF6B3D"/></svg>
-    <div><div style="font-weight:800;font-size:12px;letter-spacing:-.3px;line-height:1.15">Инженерно-<br>регуляторный<br>центр</div><div style="font-size:9px;font-weight:600;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;line-height:1.3">локализации МИ</div></div>
-  </a>
+  <a class="logo" href="/"><span style="display:flex;align-items:center;gap:11px"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="7" stroke="#1C232E" stroke-width="2.6" fill="none"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#2FA8A0"/><path d="M24 2v7M24 39v7M2 24h7M39 24h7M8 8l5 5M40 8l-5 5M8 40l5-5M40 40l-5-5" stroke="#3D6FB4" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.6" fill="#FF6B3D"/></svg><span><span style="font-weight:800;font-size:12px;letter-spacing:-.3px;line-height:1.15;display:block">Инженерно-<br>регуляторный<br>центр</span><span style="font-size:9px;font-weight:600;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;line-height:1.3;display:block">локализации МИ</span></span></span></a>
   <span class="sp"></span>
-  <a class="lnk" href="/localization" target="_blank">Локализация</a>
-  <a class="lnk" href="/reverse" target="_blank">Реверс-инжиниринг</a>
-  <a class="lnk" href="/development" target="_blank">Разработка</a>
-  <a class="lnk" href="/production" target="_blank">Производство</a>
-  <a class="lnk" href="/registration" target="_blank">Регистрация</a>
-  <a class="lnk" href="/analytics" target="_blank">Аналитика</a>
-  <a class="lnk on" href="/blog" target="_blank">База знаний</a>
-  <a class="lnk" href="/pricing" target="_blank">Стоимость</a>
-  <a class="lnk" href="/cases" target="_blank">Кейсы</a>
+  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk on" href="/blog">База знаний</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a><a class="lnk" href="/cases">Кейсы</a><a class="lnk" href="/glossary">Глоссарий</a><a class="lnk" href="/contacts">Контакты</a></div>
+  <div class="header-icons">
+    <a class="tg-icon" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer" title="Написать в Telegram" aria-label="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg></a>
+    <a class="max-icon" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer" title="Написать в MAX" aria-label="MAX"><img src="/images/max-icon.png" alt="MAX" width="26" height="26" style="border-radius:7px;display:block"></a>
+  </div>
+  <div class="lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
   <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span class="burger-icon"><span></span><span></span><span></span></span><span class="burger-label">Меню</span></button>
 </div></header>
-<main>
+
+<div class="wrap"><nav class="crumbs"><a href="/">Главная</a><span>›</span><a href="/blog">База знаний</a><span>›</span><b>ПП №719 и ПП №1875: в чём разница и как реестровая запись...</b></nav></div>
 <section style="background:#fff;border-bottom:1px solid var(--line)">
   <div class="wrap" style="padding:48px 0 36px;max-width:820px">
     <a href="/blog" style="font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:20px">← Все статьи</a>
     <span class="tag" style="display:inline-flex;margin-bottom:14px">Госзакупки · Нацрежим</span>
-    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">ПП 719 против ПП 1875: критические отличия для защиты позиций в госзакупках</h1>
-    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap">
-      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ</span><span style="font-size:12.5px;color:var(--muted)">Опубликовано: <time datetime="2026">20 июня 2026</time></span>
-      <span>Июнь 2026</span>
+    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">ПП №719 и ПП №1875: в чём разница и как реестровая запись влияет на госзакупки</h1>
+    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ</span>
+      <span>·</span>
+      <time datetime="2026-06-20">Опубликовано: 20 июня 2026</time>
     </div>
   </div>
 </section>
+<main>
 <section class="sec">
   <div class="wrap" style="max-width:820px">
-    <div class="article-body"><div class="law"><b>Суть в четырёх предложениях</b>ПП 719 и ПП 1875 — два разных инструмента: ПП 719 подтверждает, что изделие произведено в России, тогда как ПП 1875 устанавливает правила допуска к госзакупкам. Без действующей записи по ПП 719 механизмы ПП 1875 — запрет на иностранные товары, правило «второй лишний» и преференция 15% — недоступны. Наличие записи ещё не гарантирует автоматического применения нацрежима: необходимо правильно встроить её в заявку.</div>
+    <div class="article-body">
 
-<h2>Сравнение двух постановлений</h2>
+<div class="law"><b>Суть в четырёх предложениях</b>ПП 719 и ПП 1875 решают разные, но связанные задачи: ПП 719 регулирует формирование и ведение реестра российской промышленной продукции — то есть подтверждение, что изделие произведено в России; ПП 1875 устанавливает правила применения запрета, ограничения и преимущества при государственных и муниципальных закупках. Для промышленной продукции, российское происхождение которой в целях ПП 1875 подтверждается сведениями из реестра, одной декларации «Россия» в заявке недостаточно — требуется надлежащее подтверждение номером реестровой записи и, где это предусмотрено, соответствие установленным требованиям (например, к количеству баллов). Наличие реестровой записи само по себе ещё не гарантирует автоматического применения нацрежима — необходимо правильно отразить подтверждение в заявке на конкретную закупку. При этом ПП 1875 регулирует более широкий круг товаров, работ и услуг, чем только продукция, подтверждённая по ПП 719, — например, отдельно предусмотрены товары государств ЕАЭС.</div>
+
+<h2>1. Сравнение двух постановлений</h2>
 <table>
 <thead><tr><th>Параметр</th><th>ПП 719</th><th>ПП 1875</th></tr></thead>
 <tbody>
-<tr><td>Цель</td><td>Подтверждение производства в РФ</td><td>Защита российских товаров в госзакупках</td></tr>
-<tr><td>Регулятор</td><td>Минпромторг</td><td>Минфин России (нормативные разъяснения, порядок применения) — контроль и рассмотрение жалоб: ФАС России</td></tr>
-<tr><td>Результат</td><td>Реестровая запись в ГИСП</td><td>Право на применение нацрежима</td></tr>
-<tr><td>Применяется</td><td>Один раз + ежегодная отчётность</td><td>При каждой закупочной процедуре</td></tr>
-<tr><td>Основной риск</td><td>Аннулирование при непредоставлении отчёта</td><td>Отклонение заявки при неправильном оформлении</td></tr>
+<tr><td>Цель</td><td>Формирование и ведение реестра российской промышленной продукции — подтверждение производства в РФ</td><td>Установление правил применения запрета, ограничения и преимущества при закупках</td></tr>
+<tr><td>Регулятор</td><td>Минпромторг</td><td>Минфин России (нормативные разъяснения, порядок применения); контроль и рассмотрение жалоб — ФАС России</td></tr>
+<tr><td>Результат</td><td>Реестровая запись в реестре российской промышленной продукции</td><td>Правила применения запрета/ограничения/преимущества к конкретным категориям товаров</td></tr>
+<tr><td>Применяется</td><td>На этапе включения продукции в реестр + поддержание актуальности записи (ежегодная отчётность, соответствие установленным требованиям)</td><td>При каждой закупочной процедуре, если товар подпадает под соответствующий перечень</td></tr>
+<tr><td>Основной риск</td><td>Исключение записи из реестра при непредставлении отчётности или установлении несоответствия</td><td>Отклонение заявки при отсутствии надлежащего подтверждения происхождения или ошибке в его оформлении</td></tr>
 </tbody>
 </table>
 
-<h2>Три механизма ПП 1875</h2>
-<h3>Механизм 1. Запрет на допуск (Приложение 1)</h3>
-<p>Заказчик обязан отклонить иностранные заявки, если хотя бы одна заявка содержит российский товар с действующей записью по ПП 719. Это наиболее сильный инструмент защиты рынка.</p>
-<h3>Механизм 2. Преференция 15% (Приложение 2)</h3>
-<p>При сравнении заявок цена иностранного товара условно увеличивается на 15%. Российский производитель может предложить цену на 15% выше конкурента и всё равно выиграть торги.</p>
-<h3>Механизм 3. Правило «второй лишний»</h3>
-<p>Если на торгах есть хотя бы одна заявка с товаром российского (или приравненного к нему по праву ЕАЭС) происхождения — все заявки с товарами из третьих стран (Китай, ЕС, США) автоматически отклоняются.</p>
+<h2>2. Три механизма ПП 1875 — а не «запрет / преференция / второй лишний» как три равнозначных варианта</h2>
+<p>Важно точно понимать структуру: <b>Приложение №1 → запрет</b>, <b>Приложение №2 → ограничение</b> (на практике его называют «второй лишний»), а отдельно от приложений — <b>преимущество</b>. Это не три параллельных «опции на выбор» для одной позиции, а три разных механизма, применяемых к разным категориям товаров.</p>
 
-<h2>Четыре точки отказа</h2>
-<ul>
-<li><b>Запись есть, но не указана в заявке.</b> Заказчик не обязан самостоятельно проверять реестр.</li>
-<li><b>Несовпадение кодов ОКПД2 и КТРУ.</b> Проверяйте до подачи, а не после отклонения.</li>
-<li><b>Аннулирование между подачей заявки и заключением контракта.</b> Записи должна действовать на весь период.</li>
-<li><b>Смешанная заявка.</b> Нельзя включать российский и иностранный товар по одному предмету закупки.</li>
-</ul>
+<h3>Запрет (Приложение №1)</h3>
+<p>Товар, включённый в Приложение №1, к закупке в принципе не допускается — заявки с таким иностранным товаром не рассматриваются. Наличие или отсутствие конкурирующей российской заявки значения не имеет.</p>
 
-<h2>Практический кейс</h2>
-<p>Производитель систем для афереза тромбоцитов с действующей записью по ПП 719 подал заявку на тендер. Заявка отклонена: специалист заполнил поле «страна происхождения — Россия», но не внёс реквизиты записи ПП 719 в специальное поле ЕИС. ФАС признала отклонение неправомерным. Контракт заключён. Потери — три недели на обжалование.</p>
+<h3>Ограничение (Приложение №2), в обиходе — «второй лишний»</h3>
+<p>Для товаров Приложения №2 при наличии соответствующей требованиям заявки с надлежащим образом подтверждённым российским или евразийским товаром заявки с иностранным товаром подлежат отклонению.</p>
+
+<h3>Преимущество</h3>
+<p>Отдельная мера ценовой поддержки российских товаров — заявка с российским товаром получает предусмотренную преференцию при оценке предложений. Это повышает конкурентоспособность российского предложения, но не означает автоматической победы при любом соотношении цен — итог зависит от конкретной процедуры оценки, критериев закупки и состава поданных заявок.</p>
+
+<h2>3. Без реестровой записи — не «недоступны все механизмы», а зависит от категории товара</h2>
+<p>Для промышленной продукции, включённой в соответствующие перечни ПП 1875 и подтверждаемой через реестр российской промышленной продукции, отсутствие действующей реестровой записи означает, что товар не может быть признан российским для целей применения запрета или ограничения. Но ПП 1875 регулирует более широкий круг товаров, работ и услуг — например, отдельно предусмотрено происхождение из других государств ЕАЭС, подтверждаемое иным образом, не через реестр по ПП 719. Поэтому формулировка «без записи по ПП 719 все механизмы ПП 1875 недоступны» слишком широка — верно говорить: для товаров, чьё происхождение подтверждается именно через этот реестр, отсутствие записи закрывает применение запрета и ограничения к вашей заявке.</p>
+
+<h2>4. Где производитель чаще всего теряет преимущества нацрежима</h2>
+
+<h3>Запись есть, но не отражена в заявке надлежащим образом</h3>
+<p>Наличие записи в реестре само по себе не заменяет её отражение в конкретной заявке — сведения о происхождении нужно включить в состав заявки в установленном порядке (подробнее — в статье про <a href="/blog/pp1875-zayavki">подготовку заявки</a>).</p>
+
+<h3>Несовпадение кода ОКПД2 заказчика и товара</h3>
+<p>Само по себе расхождение кода ОКПД2, указанного заказчиком, и кода предлагаемого товара не установлено 44-ФЗ как условие допуска или основание отказа в заключении контракта (разъяснение Минпромторга от 05.05.2026). Тем не менее до подачи заявки стоит проверить, действительно ли товар относится к позиции, к которой заказчиком применена мера нацрежима.</p>
+
+<h3>Истечение срока действия записи между подачей заявки и заключением контракта</h3>
+<p>Реестровая запись должна оставаться действующей на значимые для конкретной процедуры моменты — учитывайте срок её действия при планировании участия в длительных закупочных процедурах.</p>
+
+<h3>Объединение товаров разных категорий в одной закупке</h3>
+<p>Здесь нет универсального правила «нельзя включать российский и иностранный товар по одному предмету закупки» — ПП 1875 предусматривает ситуации, когда объект закупки может включать товары разных категорий, и отдельно устанавливает конкретные ограничения на объединение определённых групп товаров в один лот. Применимость таких ограничений нужно проверять по конкретной позиции и составу лота, а не исходить из общего запрета.</p>
+
+<h2>5. Обезличенный пример из практики</h2>
+<div class="law">Ниже — обобщённый пример логики ситуации, а не описание конкретного проверяемого дела ФАС (номер закупки и решения не приводятся, поскольку пример иллюстративный). Производитель медицинского изделия с действующей записью в реестре подал заявку, указав страну происхождения «Россия» в общем текстовом поле, но не включив реквизиты реестровой записи в предусмотренном для этого разделе заявки. Заказчик расценил происхождение как неподтверждённое и отклонил заявку. Производитель обжаловал отклонение, указав на формальный характер недочёта при фактическом наличии действующей записи. Это иллюстрирует ключевую мысль всей серии материалов о ПП 1875: реестровая запись сама по себе не защищает заявку — важно, как именно подтверждение отражено в конкретной поданной заявке. Именно поэтому в статье о подготовке заявки мы подробно разбираем, куда и как вносить эти сведения, а не только то, что запись должна существовать.</div>
 
 <h2>FAQ</h2>
-<div class="faq-item"><h4>Можно ли участвовать без записи по ПП 719?</h4><p>Можно — но без нацрежима. В закупках с запретом по Приложению 1 — автоматическое отклонение при наличии конкурента с российской записью.</p></div>
-<div class="faq-item"><h4>Нужно ли указывать реквизиты записи в каждой заявке?</h4><p>Да. Заявка на каждую закупку — самостоятельный документ. Наличие записи в реестре не освобождает от обязанности ссылаться на неё.</p></div>
+<div class="faq-item"><h4>Можно ли участвовать в закупке без реестровой записи по ПП 719?</h4><p>Можно, но без права на применение запрета или ограничения по ПП 1875 для товара, чьё происхождение подтверждается через этот реестр. В закупках с запретом (Приложение №1) заявка с таким иностранным товаром не будет допущена при соответствии позиции этому приложению — вне зависимости от наличия записи у конкурентов.</p></div>
+<div class="faq-item"><h4>Нужно ли указывать реквизиты записи в каждой заявке?</h4><p>Да. Заявка на каждую закупку — самостоятельный документ, и наличие записи в реестре не освобождает от необходимости отразить подтверждение происхождения именно в этой заявке.</p></div>
+<div class="faq-item"><h4>В чём принципиальная разница между ПП 719 и ПП 1875?</h4><p>ПП 719 отвечает на вопрос «подтверждено ли, что товар произведён в России», ПП 1875 — на вопрос «как это подтверждённое происхождение учитывается при рассмотрении заявок в конкретной закупке». Это разные, но связанные регулирования, а не альтернативные или конкурирующие акты.</p></div>
 
 <div class="article-cta">
   <b>Заявка была отклонена или сомневаетесь в правильности оформления?</b>
-  <p>ГМТ проверит заявку на соответствие ПП 1875 до её подачи — коды ОКПД2/КТРУ, ссылки на реестровую запись, смешанные позиции.</p>
+  <p>ГМТ проверит заявку на соответствие ПП 1875 до её подачи: применимость запрета/ограничения к вашей позиции, корректность отражения реестровой записи, вопросы объединения лотов.</p>
   <a class="btn pri" href="mailto:info@med-local.ru?subject=Проверка заявки ПП 1875">Проверить заявку</a>
-</div></div>
+</div>
+
+    </div>
   </div>
 </section>
-<section style="background:var(--paper);border-top:1px solid var(--line);padding:32px 0;margin-top:0">
+<section style="background:var(--paper);border-top:1px solid var(--line);padding:32px 0">
   <div class="wrap" style="max-width:820px">
     <h3 style="font-size:16px;font-weight:700;margin:0 0 16px;color:var(--ink)">Читайте также</h3>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><a href="/blog/pp1875-zayavki" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Как правильно подать заявку</a><a href="/blog/pp1875-vtoroy-lishniy" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Правило «второй лишний»</a><a href="/localization" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Локализация под ключ</a></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><a href="/blog/pp1875-zayavki" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Как правильно подать заявку</a><a href="/blog/pp1875-vtoroy-lishniy" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Ограничение по ПП 1875 («второй лишний»)</a><a href="/localization" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Локализация под ключ</a></div>
   </div>
 </section>
 </main>
 <footer><div class="wrap">
   <div class="cols">
-    <div><b>Инженерно-регуляторный центр</b><p style="font-size:13px;line-height:1.65;margin:0 0 16px">Локализация производства медицинских изделий в России.</p>
-      <a href="tel:+79853169104">+7 985 316-91-04</a>
-      <a href="tel:+79888777295">+7 988 877-72-95</a>
+    <div><b>Инженерно-регуляторный центр локализации МИ</b>
+      <p style="font-size:13px;line-height:1.65;margin:0 0 14px;color:#97A1B2">Локализация производства медицинских изделий в России. От анализа ниши до регистрационного удостоверения.</p>
+      <a href="tel:+79853169104">+7 985 316-91-04 (Россия)</a>
+      <a href="tel:+79888777295">+7 988 877-72-95 (Россия)</a>
+      <a href="tel:+79888777295">MAX: +7 988 877-72-95</a>
+      <a href="tel:+77021394489">+7 702 139-44-89 (Казахстан)</a>
       <a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a>
-      <a href="https://t.me/tandelovtat" style="color:#2FA8A0">Telegram: @tandelovtat</a>
+      <a href="https://t.me/tandelovtat" style="color:#2FA8A0" target="_blank" rel="noopener noreferrer">Telegram: @tandelovtat</a>
     </div>
     <div><b>Услуги</b>
-      <a href="/localization" target="_blank">Локализация</a>
-      <a href="/reverse" target="_blank">Реверс-инжиниринг</a>
-      <a href="/development" target="_blank">Разработка</a>
-      <a href="/production" target="_blank">Производство</a>
-      <a href="/registration" target="_blank">Регистрация</a>
-      <a href="/analytics" target="_blank">Аналитика</a>
+      <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a>
+      <a href="/development">Разработка</a><a href="/production">Производство</a>
+      <a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a>
     </div>
     <div><b>Компания</b>
-      <a href="/cases">Кейсы</a><a href="/pricing" target="_blank">Стоимость</a>
-      <a href="/blog" target="_blank">База знаний</a>
-      <a href="/contacts" target="_blank">Контакты</a>
+      <a href="/cases">Кейсы</a><a href="/pricing">Стоимость</a><a href="/blog">База знаний</a>
+      <a href="/contacts">Контакты</a><a href="/glossary">Глоссарий</a><a href="/privacy">Политика ПДн</a>
     </div>
-    <div><b>Почта</b>
+    <div><b>Контакты</b>
       <a href="mailto:info@med-local.ru">info@med-local.ru</a>
       <a href="mailto:sales@med-local.ru">sales@med-local.ru</a>
       <a href="mailto:marketing@med-local.ru">marketing@med-local.ru</a>
@@ -360,6 +381,17 @@ gtag("config", "G-9DZXMBECL0");
     <span style="display:flex;gap:14px;flex-wrap:wrap"><a href="/privacy">Политика конфиденциальности</a><a href="/oferta">Публичная оферта</a><a href="/terms">Пользовательское соглашение</a></span>
   </div>
 </div></footer>
+<a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg>
+  Написать в Telegram
+</a>
+<a class="float-btn max-btn" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer">
+  <img src="/images/max-icon.png" alt="MAX" width="22" height="22" style="border-radius:6px">
+  Написать в MAX
+</a>
+<script>
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';}
+</script>
 <script src="/cookie-consent.js" defer></script>
 </body>
 </html>
