@@ -3,8 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Новые правила нацрежима по ПП 1875: как интегрировать реестровые записи в заявки — Инженерно-регуляторный центр</title>
-<meta name="description" content="С 2025 года реестровая запись по ПП 719 вносится в специализированный раздел заявки ЕИС. Ошибка в реквизитах обнуляет конкурентную защиту.">
+<title>Новые правила нацрежима по ПП 1875: как отразить реестровую запись в заявке правильно — Инженерно-регуляторный центр</title>
+<meta name="description" content="Как правильно отразить подтверждение российского происхождения товара в заявке по 44-ФЗ для целей ПП 1875: определение применимой меры нацрежима, номер реестровой записи, последствия отсутствия подтверждения и разница между 44-ФЗ и 223-ФЗ.">
+<link rel="canonical" href="https://med-local.ru/blog/pp1875-zayavki">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Новые правила нацрежима по ПП 1875: как отразить реестровую запись в заявке правильно">
+<meta property="og:description" content="Как правильно подтвердить происхождение товара в заявке для целей ПП 1875 — от определения меры нацрежима до последствий отсутствия подтверждения.">
+<meta property="og:url" content="https://med-local.ru/blog/pp1875-zayavki">
+<meta property="og:image" content="https://med-local.ru/og-image.png">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C232E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@700;800&family=JetBrains+Mono:wght@600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -18,7 +31,7 @@
  --body:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
  --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
 }
-*{box-sizing:border-box}html{scroll-behavior:smooth}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{max-width:100vw}
 body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
 .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
@@ -44,6 +57,8 @@ h1,h2,h3{line-height:1.15;margin:0}
 .g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
 @media(max-width:960px){.g3,.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
 @media(max-width:620px){.g3,.g4,.g2{grid-template-columns:1fr}}
+@media(max-width:880px){.route{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:560px){.route{grid-template-columns:1fr!important}.route .st{padding:16px 0 0!important;border-bottom:1px solid var(--line);padding-bottom:16px!important;margin-bottom:8px}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
 .kv{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
 .kv span{color:var(--muted)}.kv b{text-align:right}
@@ -64,9 +79,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdro
 .hero .stats span{font-size:12.5px;color:#8E99AB}
 .crumbs{font-size:12.5px;color:var(--muted);margin:18px 0 0}
 .crumbs b{color:var(--ink)}
-.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:rt;margin-top:8px}
-.route .st{position:relative;padding:20px 18px 0;counter-increment:rt}
-.route .st::before{content:counter(rt,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--cyan);font-weight:600}
+.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:8px}
+.route .st{position:relative;padding:20px 18px 0}
 .route .st::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
 .route .st h3{font-size:15.5px;margin:8px 0 6px}
 .route .st p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
@@ -83,6 +97,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdro
 .seg .of{font-size:13px;font-weight:600;color:var(--cyan)}
 .law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
 .law b{display:block;margin-bottom:6px;font-size:14px}
+.warn{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#8B3A1E;line-height:1.65;margin:24px 0}
+.warn b{display:block;margin-bottom:6px;font-size:14px}
 .post{display:flex;flex-direction:column;gap:9px;transition:.2s}
 .post:hover{transform:translateY(-3px)}
 .post .rub{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)}
@@ -136,229 +152,248 @@ footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-
 .related a{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan);transition:.15s}
 .related a:hover{border-color:var(--cyan)}
 
+/* Бургер-меню для мобильных */
+.burger{display:none;align-items:center;gap:8px;cursor:pointer;padding:6px 10px;background:#fff;border:1.5px solid var(--line);border-radius:10px;transition:.15s;z-index:200}
+.burger:hover{border-color:var(--cyan)}
+.burger-icon{display:flex;flex-direction:column;gap:5px}
+.burger-icon span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger-label{font-size:12.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+.burger.open .burger-icon span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open .burger-icon span:nth-child(2){opacity:0}
+.burger.open .burger-icon span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:680px){.burger{padding:4px;background:none;border:none;gap:0}.burger-label{display:none}}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:100;flex-direction:column}
+.mob-menu-links{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:70px 20px 16px}
+.mob-menu-cta{flex-shrink:0;display:flex;justify-content:center;padding:14px 24px 20px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+.mob-menu a:hover{color:var(--cyan)}
+@media(max-width:2000px){
+  .nav-links{display:none!important}
+  .burger{display:flex}
+  .nav{gap:12px}
+}
+/* Хлебные крошки */
+.crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:.15s}.crumbs a:hover{color:var(--cyan)}
+.crumbs span{color:var(--muted)}
+.crumbs b{color:var(--ink);font-weight:600}
+/* Таблицы на мобильных */
+@media(max-width:640px){
+  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .article-body table{display:block;overflow-x:auto}
+}
+/* Плавающая кнопка на мобильных */
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+.float-btn.max-btn{bottom:74px;background:#fff;box-shadow:0 8px 24px rgba(107,63,231,.25);color:var(--ink)}
+@media(max-width:768px){.float-btn{display:flex}}
+/* Состояния кнопок */
+.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.btn.pri:active{transform:translateY(0);filter:brightness(.95)}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+/* Единый подвал */
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2;transition:.15s}
+footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){footer .cols{grid-template-columns:1fr}}
+
+.header-icons{display:flex;align-items:center;gap:8px;margin-right:4px}
+.header-icons a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s}
+.header-icons a.tg-icon{background:#2FA8A0}
+.header-icons a.max-icon{background:transparent;padding:0}
+.header-icons a:hover{filter:brightness(1.1);transform:translateY(-1px)}
+@media(max-width:2000px){.header-icons{display:none}}
+.lang-switch{display:flex;align-items:center;gap:4px;margin-right:8px}
+.lang-switch a{font-size:12.5px;font-weight:700;padding:4px 8px;border-radius:6px;color:var(--muted);transition:.15s;text-decoration:none}
+.lang-switch a.active{background:var(--graphite);color:#fff}
+.mob-lang-switch{display:flex;align-items:center;gap:10px;margin-top:10px}
+.mob-lang-switch a{font-size:15px;font-weight:700;padding:8px 20px;border-radius:10px;color:var(--muted);background:var(--paper);border:1.5px solid var(--line)}
+.mob-lang-switch a.active{background:var(--graphite);color:#fff;border-color:var(--graphite)}
+@media(max-width:680px){.lang-switch{display:none}}
+.lang-switch a:hover:not(.active){color:var(--ink)}
+
 .article-body h2{font-size:22px;font-weight:800;margin:36px 0 14px;color:var(--ink)}
 .article-body h3{font-size:18px;font-weight:700;margin:28px 0 10px;color:var(--ink)}
+.article-body h4{font-size:16px;font-weight:700;margin:24px 0 8px;color:var(--ink)}
 .article-body p{font-size:15px;color:#3a4455;line-height:1.75;margin:0 0 16px}
 .article-body ul,.article-body ol{margin:0 0 16px 20px}
 .article-body li{font-size:15px;color:#3a4455;line-height:1.7;margin-bottom:6px}
-.article-body b{color:var(--ink)}
-.article-body .law{margin:24px 0}
+.article-body strong,.article-body b{color:var(--ink)}
+.article-body .law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:16px 20px;font-size:14px;color:#2D4F7E;line-height:1.65;margin:20px 0}
 .article-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
 .article-body th{background:var(--graphite);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
 .article-body td{padding:10px 14px;border-bottom:1px solid var(--line);color:#3a4455}
-.article-body tr:last-child td{border-bottom:none}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
 .article-cta{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:16px;padding:28px 32px;margin:40px 0}
 .article-cta b{font-size:18px;display:block;margin-bottom:8px}
 .article-cta p{color:#AFBAC9;font-size:14px;margin:0 0 18px}
 </style>
-<script type="text/javascript">
-(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
-ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Инженерно-регуляторный центр локализации медицинских изделий",
-  "legalName": "ООО «Глобальные Медицинские Технологии»",
-  "url": "https://med-local.ru",
-  "logo": "https://med-local.ru/logo.svg",
-  "description": "Полный цикл локализации производства медицинских изделий в России: реверс-инжиниринг, разработка, производство, регистрация в Росздравнадзоре.",
-  "telephone": ["+7-985-316-91-04", "+7-988-877-72-95"],
-  "email": "info@med-local.ru",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "1-й Тверской-Ямской пер., д. 16, помещ. 1/п",
-    "addressLocality": "Москва",
-    "postalCode": "125047",
-    "addressCountry": "RU"
-  },
-  "areaServed": ["RU", "KZ", "BY", "AM", "KG"],
-  "sameAs": [
-    "https://t.me/tandelovtat",
-    "https://rzn.expert",
-    "https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ"
-  ],
-  "foundingDate": "2022",
-  "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 20},
-  "knowsAbout": [
-    "Локализация медицинских изделий",
-    "Постановление Правительства РФ №719",
-    "Регистрация МИ в Росздравнадзоре",
-    "Реверс-инжиниринг медицинской техники",
-    "ISO 13485", "ISO 14971", "ГОСТ Р МЭК 60601",
-    "Адвалорная доля", "ГИСП", "ЕАЭС"
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Новые правила нацрежима по ПП 1875: как интегрировать реестровые записи в заявки",
-  "description": "Структурированный блок сведений о происхождении товара в составе заявки ЕИС, обязательные атрибуты, пошаговый алгоритм подготовки заявки на тендер.",
-  "url": "https://med-local.ru/blog/pp1875-zayavki",
-  "datePublished": "2026-06-25",
-  "dateModified": "2026-08-10",
-  "author": {"@type": "Person", "name": "Артемий-Татуш Танделов", "url": "https://med-local.ru/about"},
-  "publisher": {"@type": "Organization", "name": "Инженерно-регуляторный центр локализации МИ", "url": "https://med-local.ru", "logo": {"@type": "ImageObject", "url": "https://med-local.ru/logo.svg"}},
-  "image": "https://med-local.ru/og-image.png",
-  "inLanguage": "ru"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Нужно ли прикладывать скан заключения?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "По ПП 1875 не обязательно, но рекомендуем прикладывать превентивно — снижает риск разногласий."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Обязан ли заказчик проверять реестр самостоятельно?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Нет. Бремя подтверждения лежит на участнике. Заказчик без корректных реквизитов вправе считать происхождение неподтверждённым."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Распространяется ли ПП 1875 на закупки по 223-ФЗ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Да, с особенностями: положение о закупке конкретного заказчика может содержать дополнительные требования."
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://med-local.ru/"}, {"@type": "ListItem", "position": 2, "name": "База знаний", "item": "https://med-local.ru/blog"}, {"@type": "ListItem", "position": 3, "name": "Новые правила нацрежима по ПП 1875: как интегриров...", "item": "https://med-local.ru/blog/pp1875-zayavki"}]}
-</script>
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DZXMBECL0"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date());
-gtag("config", "G-9DZXMBECL0");
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9DZXMBECL0");</script>
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Новые правила нацрежима по ПП 1875: как отразить реестровую запись в заявке правильно","description":"Как правильно отразить подтверждение российского происхождения товара в заявке по 44-ФЗ для целей ПП 1875: определение применимой меры нацрежима, номер реестровой записи, последствия отсутствия подтверждения и разница между 44-ФЗ и 223-ФЗ.","url":"https://med-local.ru/blog/pp1875-zayavki","datePublished":"2026-06-25","dateModified":"2026-08-26","author":{"@type":"Person","name":"А.-Т. Танделов","url":"https://med-local.ru/about"},"publisher":{"@type":"Organization","name":"Инженерно-регуляторный центр локализации МИ","url":"https://med-local.ru"},"image":"https://med-local.ru/og-image.png","inLanguage":"ru"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Нужно ли прикладывать скан заключения Минпромторга?","acceptedAnswer":{"@type":"Answer","text":"ПП 1875 прямо не требует именно скана как самостоятельного документа — ключевое подтверждение по существу — номер реестровой записи. Тем не менее приложение подтверждающих документов может снизить риск разногласий при рассмотрении заявки заказчиком."}},{"@type":"Question","name":"Обязан ли заказчик проверять реестр самостоятельно?","acceptedAnswer":{"@type":"Answer","text":"Да. Комиссия заказчика проверяет соответствующие реестровые записи при рассмотрении заявок — представление участником сведений не освобождает заказчика от этой проверки."}},{"@type":"Question","name":"Является ли расхождение кода ОКПД2 заказчика и товара основанием для отказа?","acceptedAnswer":{"@type":"Answer","text":"Само по себе расхождение кода ОКПД2, указанного заказчиком, и кода предлагаемого товара не установлено 44-ФЗ как условие допуска или основание отказа в заключении контракта — по разъяснению Минпромторга от 05.05.2026. Тем не менее стоит проверить соответствие продукции требованиям извещения по существу."}},{"@type":"Question","name":"Что будет, если в заявке нет подтверждения происхождения?","acceptedAnswer":{"@type":"Answer","text":"Заявка для целей применения нацрежима может рассматриваться как заявка с предложением иностранного товара. Дальнейшие последствия зависят от применяемой к позиции меры — запрета, ограничения или преимущества."}},{"@type":"Question","name":"Распространяется ли ПП 1875 на закупки по 223-ФЗ?","acceptedAnswer":{"@type":"Answer","text":"Да — постановление прямо регулирует применение национального режима в закупках по обоим законам, а не только по 44-ФЗ. Конкретный порядок оформления подтверждения в заявке может иметь особенности для конкретного заказчика по 223-ФЗ."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://med-local.ru/"},{"@type":"ListItem","position":2,"name":"База знаний","item":"https://med-local.ru/blog"},{"@type":"ListItem","position":3,"name":"Новые правила нацрежима по ПП 1875: как отразить реестровую","item":"https://med-local.ru/blog/pp1875-zayavki"}]}
 </script>
 </head>
 <body>
+<div class="mob-menu" id="mob-menu"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:18px;right:18px;background:none;border:none;cursor:pointer;padding:8px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button><div class="mob-menu-links"><a href="/">Главная</a><a href="/about">О центре</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">База знаний</a><a href="/pricing">Стоимость</a><a href="/cases">Кейсы</a><a href="/glossary">Глоссарий</a><a href="/contacts">Контакты</a><div class="mob-lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
+  </div><div class="mob-menu-cta"><a href="/#lead" class="btn pri" style="margin-top:16px">Оценить проект</a></div></div>
 <header><div class="wrap nav">
-  <a class="logo" href="/">
-    <svg width="36" height="36" viewBox="0 0 48 48" fill="none"><rect x="9" y="9" width="30" height="30" rx="7" stroke="#1C232E" stroke-width="2.6"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#2FA8A0"/><path d="M24 2v7M24 39v7M2 24h7M39 24h7M8 8l5 5M40 8l-5 5M8 40l5-5M40 40l-5-5" stroke="#3D6FB4" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.6" fill="#FF6B3D"/></svg>
-    <div><div style="font-weight:800;font-size:12px;letter-spacing:-.3px;line-height:1.15">Инженерно-<br>регуляторный<br>центр</div><div style="font-size:9px;font-weight:600;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;line-height:1.3">локализации МИ</div></div>
-  </a>
+  <a class="logo" href="/"><span style="display:flex;align-items:center;gap:11px"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="7" stroke="#1C232E" stroke-width="2.6" fill="none"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#2FA8A0"/><path d="M24 2v7M24 39v7M2 24h7M39 24h7M8 8l5 5M40 8l-5 5M8 40l5-5M40 40l-5-5" stroke="#3D6FB4" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.6" fill="#FF6B3D"/></svg><span><span style="font-weight:800;font-size:12px;letter-spacing:-.3px;line-height:1.15;display:block">Инженерно-<br>регуляторный<br>центр</span><span style="font-size:9px;font-weight:600;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;line-height:1.3;display:block">локализации МИ</span></span></span></a>
   <span class="sp"></span>
-  <a class="lnk" href="/localization" target="_blank">Локализация</a>
-  <a class="lnk" href="/reverse" target="_blank">Реверс-инжиниринг</a>
-  <a class="lnk" href="/development" target="_blank">Разработка</a>
-  <a class="lnk" href="/production" target="_blank">Производство</a>
-  <a class="lnk" href="/registration" target="_blank">Регистрация</a>
-  <a class="lnk" href="/analytics" target="_blank">Аналитика</a>
-  <a class="lnk on" href="/blog" target="_blank">База знаний</a>
-  <a class="lnk" href="/pricing" target="_blank">Стоимость</a>
-  <a class="lnk" href="/cases" target="_blank">Кейсы</a>
+  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk on" href="/blog">База знаний</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a><a class="lnk" href="/cases">Кейсы</a><a class="lnk" href="/glossary">Глоссарий</a><a class="lnk" href="/contacts">Контакты</a></div>
+  <div class="header-icons">
+    <a class="tg-icon" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer" title="Написать в Telegram" aria-label="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg></a>
+    <a class="max-icon" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer" title="Написать в MAX" aria-label="MAX"><img src="/images/max-icon.png" alt="MAX" width="26" height="26" style="border-radius:7px;display:block"></a>
+  </div>
+  <div class="lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
   <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span class="burger-icon"><span></span><span></span><span></span></span><span class="burger-label">Меню</span></button>
 </div></header>
-<main>
+
+<div class="wrap"><nav class="crumbs"><a href="/">Главная</a><span>›</span><a href="/blog">База знаний</a><span>›</span><b>Новые правила нацрежима по ПП 1875: как отразить реестровую...</b></nav></div>
 <section style="background:#fff;border-bottom:1px solid var(--line)">
   <div class="wrap" style="padding:48px 0 36px;max-width:820px">
     <a href="/blog" style="font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:20px">← Все статьи</a>
     <span class="tag" style="display:inline-flex;margin-bottom:14px">Госзакупки · Нацрежим</span>
-    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">Новые правила нацрежима по ПП 1875: как интегрировать реестровые записи в заявки</h1>
-    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap">
-      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ</span><span style="font-size:12.5px;color:var(--muted)">Опубликовано: <time datetime="2026">25 июня 2026</time></span>
-      <span>Июнь 2026</span>
+    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">Новые правила нацрежима по ПП 1875: как отразить реестровую запись в заявке правильно</h1>
+    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ</span>
+      <span>·</span>
+      <time datetime="2026-06-25">Опубликовано: 25 июня 2026</time>
     </div>
   </div>
 </section>
+<main>
 <section class="sec">
   <div class="wrap" style="max-width:820px">
-    <div class="article-body"><div class="law"><b>Суть в четырёх предложениях</b>С 1 января 2025 года применяется новый механизм подтверждения страны происхождения товара для целей национального режима по ПП №1875 — необходимые сведения и документы включаются в состав заявки в соответствии со статьёй 43 44-ФЗ (а не как отдельная специальная форма). Корректно указанные сведения автоматически активируют применение механизмов нацрежима. Ошибка в любом реквизите обнуляет конкурентную защиту.</div>
+    <div class="article-body">
 
-<h2>Что изменилось с ПП 1875</h2>
-<p>До 1 января 2025 года подтверждение происхождения регулировалось разными актами. Теперь — единый механизм: участник включает структурированный блок сведений о происхождении товара в состав заявки в ЕИС, система автоматически верифицирует запись по базе ГИСП.</p>
-<p>Три практических следствия:</p>
+<div class="law"><b>Суть в четырёх предложениях</b>С 1 января 2025 года сведения и документы, подтверждающие страну происхождения товара для целей ПП 1875, включаются в состав самой заявки участника в соответствии со статьёй 43 44-ФЗ, а не подаются отдельной специальной формой. Ключевое подтверждение для российской промышленной продукции — номер реестровой записи из реестра российской промышленной продукции с предусмотренными постановлением сведениями (в применимых случаях — включая информацию о баллах и/или уровне радиоэлектронной продукции). Заказчик (комиссия) самостоятельно проверяет соответствующие реестровые записи при рассмотрении заявок — представление сведений участником не освобождает заказчика от этой проверки и не заменяет её автоматической системной верификацией. Если надлежащее подтверждение происхождения в заявке отсутствует, для целей применения нацрежима товар может рассматриваться как иностранный — а дальнейшие последствия зависят от того, какая мера (запрет, ограничение или преимущество) применяется к конкретной позиции.</div>
+
+<h2>1. Что изменилось с 1 января 2025 года</h2>
+<p>До этой даты подтверждение происхождения для разных случаев регулировалось разрозненно. С 1 января 2025 года действует единый подход: сведения и документы, подтверждающие происхождение товара, включаются в состав заявки участника закупки в порядке, предусмотренном статьёй 43 44-ФЗ.</p>
+
+<h2>2. Сначала определите применимую меру: запрет, ограничение или преимущество</h2>
+<p>Прежде чем разбираться, как заполнять заявку, определите, какая мера ПП 1875 вообще применяется к вашей позиции — от этого зависят и требуемый способ подтверждения, и последствия его отсутствия:</p>
 <ul>
-<li>Бумажные сканы заключений Минпромторга больше не достаточны — нужен структурированный блок сведений в составе заявки</li>
-<li>Автоматическая верификация немедленно обнаруживает ошибки в реквизитах</li>
-<li>Заказчик освобождён от самостоятельной проверки реестра</li>
+<li><b>Запрет</b> (Приложение №1) — иностранный товар к закупке не допускается вовсе;</li>
+<li><b>Ограничение</b> (Приложение №2, в обиходе «второй лишний») — иностранная заявка отклоняется при наличии соответствующей требованиям заявки с надлежаще подтверждённым российским/евразийским товаром;</li>
+<li><b>Преимущество</b> — ценовая мера поддержки российских товаров, не связанная напрямую с отклонением заявок.</li>
 </ul>
+<p>Подробнее о разнице этих механизмов — в статье про <a href="/blog/pp1875-vtoroy-lishniy">ограничение («второй лишний»)</a>.</p>
 
-<h2>Структурированный блок сведений: что и в каком поле заполнять</h2>
+<h2>3. Чем подтверждается российское происхождение</h2>
+<p>Ключевое подтверждение для товара, включённого в соответствующий перечень ПП 1875, — <b>номер реестровой записи из реестра российской промышленной продукции</b>. В предусмотренных постановлением случаях реестровая запись также должна содержать необходимую дополнительную информацию (например, о количестве баллов и/или уровне радиоэлектронной продукции) — состав этой информации нужно проверять применительно к конкретной позиции.</p>
+<p>Для товаров из других государств ЕАЭС применяется соответствующая евразийская реестровая запись.</p>
+<div class="warn"><b>⚠ Важное уточнение</b>Мы убрали из этой статьи прежнее утверждение о том, что «система автоматически верифицирует запись по базе ГИСП», а заказчик «освобождён от самостоятельной проверки». Это не подтверждается нормативно — напротив, комиссия заказчика самостоятельно проверяет соответствующие реестровые записи при рассмотрении заявок. Представление участником сведений о происхождении не заменяет эту проверку и не гарантирует автоматического признания происхождения подтверждённым.</div>
+
+<h2>4. Что происходит, если подтверждения в заявке нет</h2>
+<p>Закон допускает ситуацию, когда участник не представляет предусмотренные информацию и документы, подтверждающие страну происхождения (п. 5 ч. 1 ст. 43 44-ФЗ), — но в этом случае заявка для целей применения нацрежима приравнивается к заявке с предложением иностранного товара. Дальнейшие последствия зависят от применяемой к позиции меры:</p>
+<ul>
+<li>если применяется <b>запрет</b> — такая заявка не будет допущена;</li>
+<li>если применяется <b>ограничение</b> — такая заявка будет отклонена при наличии конкурирующей заявки с надлежаще подтверждённым российским/евразийским товаром;</li>
+<li>если применяется только <b>преимущество</b> — заявка участвует, но без права на ценовую поддержку.</li>
+</ul>
+<p>Это точнее и практичнее, чем формулировка «ошибка в любом реквизите обнуляет конкурентную защиту» — важно не любое отклонение от идеального заполнения, а именно отсутствие надлежащего подтверждения по существу.</p>
+
+<h2>5. Что фактически отражается при подготовке заявки — и что из этого требует само ПП 1875</h2>
+<p>Важно разделять два разных вопроса: что именно <b>требует ПП 1875</b> как подтверждение происхождения, и что <b>дополнительно отображается или запрашивается</b> интерфейсом ЕИС или конкретной площадкой при оформлении заявки.</p>
+<p><b>Требование ПП 1875 по существу</b> — номер реестровой записи (и, где применимо, дополнительные сведения о баллах/уровне РЭП).</p>
+<p><b>Что практически указывается при оформлении заявки в ЕИС</b> (может отличаться в деталях от площадки к площадке):</p>
 <table>
 <thead><tr><th>Поле</th><th>Что вносить</th><th>Где найти</th></tr></thead>
 <tbody>
-<tr><td>Номер реестровой записи</td><td>Регистрационный номер в ГИСП</td><td>ЛК ГИСП / выписка из реестра</td></tr>
-<tr><td>Дата выдачи заключения</td><td>Дата подписания заключения Минпромторга</td><td>Текст заключения</td></tr>
+<tr><td>Номер реестровой записи</td><td>Регистрационный номер в реестре</td><td>ЛК ГИСП / выписка из реестра</td></tr>
+<tr><td>Дата заключения Минпромторга</td><td>Дата первоначального заключения (не путать с датой последнего ежегодного отчёта — это разные документы)</td><td>Текст заключения</td></tr>
 <tr><td>Срок действия записи</td><td>Дата окончания действия</td><td>ЛК ГИСП</td></tr>
 <tr><td>Код ОКПД2</td><td>Код из реестровой записи</td><td>Текст заключения / ГИСП</td></tr>
 <tr><td>Наименование изделия</td><td>Точно по реестровой записи</td><td>Текст заключения Минпромторга</td></tr>
 </tbody>
 </table>
-<p><b>Типичная ошибка:</b> вносят дату ежегодного отчёта как «дату подтверждения» вместо даты первоначального заключения Минпромторга. Это разные даты.</p>
+<p><b>Типичная ошибка:</b> указывают дату ежегодного отчёта как «дату подтверждения» вместо даты первоначального заключения Минпромторга — это разные даты, и такая путаница может создать видимость расхождения при проверке заказчиком.</p>
 
-<h2>Пошаговый алгоритм подготовки заявки</h2>
-<p><b>Заблаговременно:</b> проверьте статус записи в ГИСП — «Действующая», отчёт принят, срок действия не истекает раньше предполагаемой даты заключения контракта.</p>
-<p><b>Не позднее чем за 3 дня (не рабочих) до окончания срока подачи заявок</b> (ч. 4 ст. 42 44-ФЗ, для электронного конкурса/аукциона): сверьте код ОКПД2 вашей записи с кодом КТРУ в документации заказчика. При расхождении — направьте заказчику запрос на разъяснение документации; заказчик обязан разместить разъяснение не позднее 2 дней (не рабочих) со дня, следующего за поступлением запроса (ч. 5 ст. 42 44-ФЗ).</p>
-<p><b>При подготовке заявки:</b> выпишите все реквизиты из заключения Минпромторга и данных ГИСП. Сведения о происхождении товара представляются в составе самой заявки в соответствии со статьёй 43 44-ФЗ, а не отдельной формой с самостоятельным сроком подачи.</p>
+<h2>6. ОКПД2 и КТРУ: когда расхождение действительно имеет значение</h2>
+<p>По разъяснению Минпромторга (письмо от 05.05.2026 № ПГ-12-4662), само по себе различие между кодом ОКПД2, указанным заказчиком, и кодом ОКПД2 предлагаемого товара <b>не установлено 44-ФЗ как условие допуска либо основание отказа в заключении контракта</b>. То есть расхождение кодов само по себе не является предусмотренным законом основанием для отклонения заявки.</p>
+<p>Тем не менее до подачи заявки разумно проверить, действительно ли предлагаемая продукция относится к позиции, в отношении которой заказчиком применена соответствующая мера национального режима, и соответствует ли товар требованиям извещения по существу — это практическая мера предосторожности, а не требование закона о совпадении кодов.</p>
+
+<h2>7. 44-ФЗ и 223-ФЗ: в чём разница применения</h2>
+<p>ПП 1875 прямо регулирует применение национального режима как в закупках по 44-ФЗ, так и по 223-ФЗ — это не сводится к тому, что «положение о закупке может содержать дополнительные требования». Конкретный порядок отражения подтверждения происхождения в заявке может отличаться в деталях процедуры между двумя законами и конкретным заказчиком по 223-ФЗ, но само обязательное применение установленных постановлением мер (запрет/ограничение/преимущество) не зависит от усмотрения заказчика.</p>
+
+<h2>8. Пошаговый алгоритм подготовки заявки</h2>
+<p><b>Заблаговременно:</b> определите применимую к вашей позиции меру нацрежима (раздел 2) и проверьте статус реестровой записи в ГИСП — «Действующая», отчёт принят, срок действия не истекает раньше предполагаемой даты заключения контракта.</p>
+<p><b>Не позднее чем за 3 дня (не рабочих) до окончания срока подачи заявок</b> (ч. 4 ст. 42 44-ФЗ, для электронного конкурса/аукциона): проверьте по существу, относится ли ваша продукция к позиции, в отношении которой заказчик применил меру нацрежима. Если у вас есть сомнения по документации — направьте запрос на разъяснение; заказчик обязан разместить разъяснение не позднее 2 дней (не рабочих) со дня, следующего за поступлением запроса (ч. 5 ст. 42 44-ФЗ).</p>
+<p><b>При подготовке заявки:</b> выпишите номер реестровой записи и точные сведения из заключения Минпромторга. Включите сведения о происхождении товара в состав заявки в соответствии со статьёй 43 44-ФЗ.</p>
 <p><b>В день подачи заявки:</b> включите сведения и подтверждающие документы о происхождении товара в состав заявки.</p>
 <p><b>После подачи:</b> сохраните копию поданной заявки со всеми приложениями как подтверждение состава и даты подачи.</p>
 
-<h2>Практический кейс</h2>
-<p>Производитель систем для гемодиализа при заполнении формы ЕИС внёс в поле «дата заключения» дату последнего ежегодного отчёта (апрель 2025) вместо даты первоначального заключения (март 2023). Автоматическая верификация прошла, но при ручной проверке заказчик обнаружил расхождение и отклонил заявку. ФАС поддержала производителя: расхождение носило технический характер. Контракт заключён. Потери — две недели на обжалование. Вывод: автоматическая верификация не отменяет ручной проверки заказчиком.</p>
+<h2>9. Чек-лист перед подачей заявки</h2>
+<ul>
+<li>Определена применимая к позиции мера нацрежима (запрет/ограничение/преимущество)</li>
+<li>Реестровая запись действующая, срок не истекает раньше даты предполагаемого заключения контракта</li>
+<li>Номер реестровой записи и наименование изделия в заявке совпадают с текстом заключения дословно</li>
+<li>Указана дата именно первоначального заключения, а не дата последнего ежегодного отчёта</li>
+<li>Проверено соответствие продукции требованиям извещения по существу (не только формальное совпадение ОКПД2)</li>
+<li>Сохранена копия поданной заявки со всеми приложениями</li>
+</ul>
 
 <h2>FAQ</h2>
-<div class="faq-item"><h4>Нужно ли прикладывать скан заключения?</h4><p>По ПП 1875 не обязательно, но рекомендуем прикладывать превентивно — снижает риск разногласий.</p></div>
-<div class="faq-item"><h4>Обязан ли заказчик проверять реестр самостоятельно?</h4><p>Нет. Бремя подтверждения лежит на участнике. Заказчик без корректных реквизитов вправе считать происхождение неподтверждённым.</p></div>
-<div class="faq-item"><h4>Распространяется ли ПП 1875 на закупки по 223-ФЗ?</h4><p>Да, с особенностями: положение о закупке конкретного заказчика может содержать дополнительные требования.</p></div>
+<div class="faq-item"><h4>Нужно ли прикладывать скан заключения Минпромторга?</h4><p>ПП 1875 прямо не требует именно скана как самостоятельного документа — ключевое подтверждение по существу — номер реестровой записи. Тем не менее приложение подтверждающих документов может снизить риск разногласий при рассмотрении заявки заказчиком.</p></div>
+<div class="faq-item"><h4>Обязан ли заказчик проверять реестр самостоятельно?</h4><p>Да. Комиссия заказчика проверяет соответствующие реестровые записи при рассмотрении заявок — представление участником сведений не освобождает заказчика от этой проверки.</p></div>
+<div class="faq-item"><h4>Является ли расхождение кода ОКПД2 заказчика и товара основанием для отказа?</h4><p>Само по себе расхождение кода ОКПД2, указанного заказчиком, и кода предлагаемого товара не установлено 44-ФЗ как условие допуска или основание отказа в заключении контракта — по разъяснению Минпромторга от 05.05.2026. Тем не менее стоит проверить соответствие продукции требованиям извещения по существу.</p></div>
+<div class="faq-item"><h4>Что будет, если в заявке нет подтверждения происхождения?</h4><p>Заявка для целей применения нацрежима может рассматриваться как заявка с предложением иностранного товара. Дальнейшие последствия зависят от применяемой к позиции меры — запрета, ограничения или преимущества.</p></div>
+<div class="faq-item"><h4>Распространяется ли ПП 1875 на закупки по 223-ФЗ?</h4><p>Да — постановление прямо регулирует применение национального режима в закупках по обоим законам, а не только по 44-ФЗ. Конкретный порядок оформления подтверждения в заявке может иметь особенности для конкретного заказчика по 223-ФЗ.</p></div>
 
 <div class="article-cta">
-  <b>Хотите убедиться, что запись встроена в заявку корректно?</b>
-  <p>ГМТ проверит заявку до подачи: сверит реквизиты, совместимость кодов ОКПД2 и КТРУ, исключит технические ошибки.</p>
+  <b>Хотите убедиться, что реестровая запись и заявка соответствуют требованиям ПП 1875?</b>
+  <p>ГМТ проверит применимость меры нацрежима к вашей позиции и реестровую запись до подачи заявки — прежде чем произойдёт формальная ошибка.</p>
   <a class="btn pri" href="mailto:info@med-local.ru?subject=Проверка заявки ПП 1875">Проверить заявку</a>
-</div></div>
+</div>
+
+    </div>
   </div>
 </section>
-<section style="background:var(--paper);border-top:1px solid var(--line);padding:32px 0;margin-top:0">
+<section style="background:var(--paper);border-top:1px solid var(--line);padding:32px 0">
   <div class="wrap" style="max-width:820px">
     <h3 style="font-size:16px;font-weight:700;margin:0 0 16px;color:var(--ink)">Читайте также</h3>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><a href="/blog/pp719-vs-pp1875" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">ПП 719 vs ПП 1875</a><a href="/blog/pp1875-vtoroy-lishniy" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Правило «второй лишний»</a><a href="/registration" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Регистрация МИ</a></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><a href="/blog/pp719-vs-pp1875" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">ПП 719 vs ПП 1875</a><a href="/blog/pp1875-vtoroy-lishniy" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Ограничение по ПП 1875 («второй лишний»)</a><a href="/registration" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Регистрация МИ</a></div>
   </div>
 </section>
 </main>
 <footer><div class="wrap">
   <div class="cols">
-    <div><b>Инженерно-регуляторный центр</b><p style="font-size:13px;line-height:1.65;margin:0 0 16px">Локализация производства медицинских изделий в России.</p>
-      <a href="tel:+79853169104">+7 985 316-91-04</a>
-      <a href="tel:+79888777295">+7 988 877-72-95</a>
+    <div><b>Инженерно-регуляторный центр локализации МИ</b>
+      <p style="font-size:13px;line-height:1.65;margin:0 0 14px;color:#97A1B2">Локализация производства медицинских изделий в России. От анализа ниши до регистрационного удостоверения.</p>
+      <a href="tel:+79853169104">+7 985 316-91-04 (Россия)</a>
+      <a href="tel:+79888777295">+7 988 877-72-95 (Россия)</a>
+      <a href="tel:+79888777295">MAX: +7 988 877-72-95</a>
+      <a href="tel:+77021394489">+7 702 139-44-89 (Казахстан)</a>
       <a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a>
-      <a href="https://t.me/tandelovtat" style="color:#2FA8A0">Telegram: @tandelovtat</a>
+      <a href="https://t.me/tandelovtat" style="color:#2FA8A0" target="_blank" rel="noopener noreferrer">Telegram: @tandelovtat</a>
     </div>
     <div><b>Услуги</b>
-      <a href="/localization" target="_blank">Локализация</a>
-      <a href="/reverse" target="_blank">Реверс-инжиниринг</a>
-      <a href="/development" target="_blank">Разработка</a>
-      <a href="/production" target="_blank">Производство</a>
-      <a href="/registration" target="_blank">Регистрация</a>
-      <a href="/analytics" target="_blank">Аналитика</a>
+      <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a>
+      <a href="/development">Разработка</a><a href="/production">Производство</a>
+      <a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a>
     </div>
     <div><b>Компания</b>
-      <a href="/cases">Кейсы</a><a href="/pricing" target="_blank">Стоимость</a>
-      <a href="/blog" target="_blank">База знаний</a>
-      <a href="/contacts" target="_blank">Контакты</a>
+      <a href="/cases">Кейсы</a><a href="/pricing">Стоимость</a><a href="/blog">База знаний</a>
+      <a href="/contacts">Контакты</a><a href="/glossary">Глоссарий</a><a href="/privacy">Политика ПДн</a>
     </div>
-    <div><b>Почта</b>
+    <div><b>Контакты</b>
       <a href="mailto:info@med-local.ru">info@med-local.ru</a>
       <a href="mailto:sales@med-local.ru">sales@med-local.ru</a>
       <a href="mailto:marketing@med-local.ru">marketing@med-local.ru</a>
@@ -370,6 +405,17 @@ gtag("config", "G-9DZXMBECL0");
     <span style="display:flex;gap:14px;flex-wrap:wrap"><a href="/privacy">Политика конфиденциальности</a><a href="/oferta">Публичная оферта</a><a href="/terms">Пользовательское соглашение</a></span>
   </div>
 </div></footer>
+<a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg>
+  Написать в Telegram
+</a>
+<a class="float-btn max-btn" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer">
+  <img src="/images/max-icon.png" alt="MAX" width="22" height="22" style="border-radius:6px">
+  Написать в MAX
+</a>
+<script>
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';}
+</script>
 <script src="/cookie-consent.js" defer></script>
 </body>
 </html>
