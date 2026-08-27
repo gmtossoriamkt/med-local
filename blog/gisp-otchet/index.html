@@ -3,8 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Как не вылететь из Реестра Минпромторга 1 июля: алгоритм сдачи отчёта в ГИСП — Инженерно-регуляторный центр</title>
-<meta name="description" content="Производитель МИ обязан подать ежегодный отчёт в ГИСП до 1 апреля — иначе запись аннулируется 1 июля автоматически. Пошаговый алгоритм.">
+<title>Отчётность в ГИСП по ПП №719: как сохранить запись в Реестре Минпромторга — Инженерно-регуляторный центр</title>
+<meta name="description" content="Отчётность в ГИСП по ПП 719 — кто обязан подавать, сроки (до 1 апреля), что происходит при пропуске (90 дней до исключения записи по подп. «е» п.41 Правил) и пошаговая инструкция подачи отчёта.">
+<link rel="canonical" href="https://med-local.ru/blog/gisp-otchet">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Отчётность в ГИСП по ПП №719: как сохранить запись в Реестре Минпромторга">
+<meta property="og:description" content="Как подать ежегодный отчёт в ГИСП по ПП 719 и сохранить реестровую запись — сроки, пошаговая инструкция, типичные ошибки.">
+<meta property="og:url" content="https://med-local.ru/blog/gisp-otchet">
+<meta property="og:image" content="https://med-local.ru/og-image.png">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C232E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@700;800&family=JetBrains+Mono:wght@600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -18,7 +31,7 @@
  --body:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
  --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
 }
-*{box-sizing:border-box}html{scroll-behavior:smooth}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{max-width:100vw}
 body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
 .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
@@ -44,6 +57,8 @@ h1,h2,h3{line-height:1.15;margin:0}
 .g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
 @media(max-width:960px){.g3,.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
 @media(max-width:620px){.g3,.g4,.g2{grid-template-columns:1fr}}
+@media(max-width:880px){.route{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:560px){.route{grid-template-columns:1fr!important}.route .st{padding:16px 0 0!important;border-bottom:1px solid var(--line);padding-bottom:16px!important;margin-bottom:8px}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
 .kv{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
 .kv span{color:var(--muted)}.kv b{text-align:right}
@@ -64,9 +79,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdro
 .hero .stats span{font-size:12.5px;color:#8E99AB}
 .crumbs{font-size:12.5px;color:var(--muted);margin:18px 0 0}
 .crumbs b{color:var(--ink)}
-.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:rt;margin-top:8px}
-.route .st{position:relative;padding:20px 18px 0;counter-increment:rt}
-.route .st::before{content:counter(rt,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--cyan);font-weight:600}
+.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:8px}
+.route .st{position:relative;padding:20px 18px 0}
 .route .st::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
 .route .st h3{font-size:15.5px;margin:8px 0 6px}
 .route .st p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
@@ -83,6 +97,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdro
 .seg .of{font-size:13px;font-weight:600;color:var(--cyan)}
 .law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
 .law b{display:block;margin-bottom:6px;font-size:14px}
+.warn{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#8B3A1E;line-height:1.65;margin:24px 0}
+.warn b{display:block;margin-bottom:6px;font-size:14px}
 .post{display:flex;flex-direction:column;gap:9px;transition:.2s}
 .post:hover{transform:translateY(-3px)}
 .post .rub{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)}
@@ -136,242 +152,246 @@ footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-
 .related a{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan);transition:.15s}
 .related a:hover{border-color:var(--cyan)}
 
+/* Бургер-меню для мобильных */
+.burger{display:none;align-items:center;gap:8px;cursor:pointer;padding:6px 10px;background:#fff;border:1.5px solid var(--line);border-radius:10px;transition:.15s;z-index:200}
+.burger:hover{border-color:var(--cyan)}
+.burger-icon{display:flex;flex-direction:column;gap:5px}
+.burger-icon span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger-label{font-size:12.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+.burger.open .burger-icon span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open .burger-icon span:nth-child(2){opacity:0}
+.burger.open .burger-icon span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:680px){.burger{padding:4px;background:none;border:none;gap:0}.burger-label{display:none}}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:100;flex-direction:column}
+.mob-menu-links{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:70px 20px 16px}
+.mob-menu-cta{flex-shrink:0;display:flex;justify-content:center;padding:14px 24px 20px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+.mob-menu a:hover{color:var(--cyan)}
+@media(max-width:2000px){
+  .nav-links{display:none!important}
+  .burger{display:flex}
+  .nav{gap:12px}
+}
+/* Хлебные крошки */
+.crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:.15s}.crumbs a:hover{color:var(--cyan)}
+.crumbs span{color:var(--muted)}
+.crumbs b{color:var(--ink);font-weight:600}
+/* Таблицы на мобильных */
+@media(max-width:640px){
+  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .article-body table{display:block;overflow-x:auto}
+}
+/* Плавающая кнопка на мобильных */
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+.float-btn.max-btn{bottom:74px;background:#fff;box-shadow:0 8px 24px rgba(107,63,231,.25);color:var(--ink)}
+@media(max-width:768px){.float-btn{display:flex}}
+/* Состояния кнопок */
+.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.btn.pri:active{transform:translateY(0);filter:brightness(.95)}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+/* Единый подвал */
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2;transition:.15s}
+footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){footer .cols{grid-template-columns:1fr}}
+
+.header-icons{display:flex;align-items:center;gap:8px;margin-right:4px}
+.header-icons a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s}
+.header-icons a.tg-icon{background:#2FA8A0}
+.header-icons a.max-icon{background:transparent;padding:0}
+.header-icons a:hover{filter:brightness(1.1);transform:translateY(-1px)}
+@media(max-width:2000px){.header-icons{display:none}}
+.lang-switch{display:flex;align-items:center;gap:4px;margin-right:8px}
+.lang-switch a{font-size:12.5px;font-weight:700;padding:4px 8px;border-radius:6px;color:var(--muted);transition:.15s;text-decoration:none}
+.lang-switch a.active{background:var(--graphite);color:#fff}
+.mob-lang-switch{display:flex;align-items:center;gap:10px;margin-top:10px}
+.mob-lang-switch a{font-size:15px;font-weight:700;padding:8px 20px;border-radius:10px;color:var(--muted);background:var(--paper);border:1.5px solid var(--line)}
+.mob-lang-switch a.active{background:var(--graphite);color:#fff;border-color:var(--graphite)}
+@media(max-width:680px){.lang-switch{display:none}}
+.lang-switch a:hover:not(.active){color:var(--ink)}
+
 .article-body h2{font-size:22px;font-weight:800;margin:36px 0 14px;color:var(--ink)}
 .article-body h3{font-size:18px;font-weight:700;margin:28px 0 10px;color:var(--ink)}
+.article-body h4{font-size:16px;font-weight:700;margin:24px 0 8px;color:var(--ink)}
 .article-body p{font-size:15px;color:#3a4455;line-height:1.75;margin:0 0 16px}
 .article-body ul,.article-body ol{margin:0 0 16px 20px}
 .article-body li{font-size:15px;color:#3a4455;line-height:1.7;margin-bottom:6px}
-.article-body b{color:var(--ink)}
-.article-body .law{margin:24px 0}
+.article-body strong,.article-body b{color:var(--ink)}
+.article-body .law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:16px 20px;font-size:14px;color:#2D4F7E;line-height:1.65;margin:20px 0}
 .article-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
 .article-body th{background:var(--graphite);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
 .article-body td{padding:10px 14px;border-bottom:1px solid var(--line);color:#3a4455}
-.article-body tr:last-child td{border-bottom:none}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
 .article-cta{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:16px;padding:28px 32px;margin:40px 0}
 .article-cta b{font-size:18px;display:block;margin-bottom:8px}
 .article-cta p{color:#AFBAC9;font-size:14px;margin:0 0 18px}
 </style>
-<script type="text/javascript">
-(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
-ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Инженерно-регуляторный центр локализации медицинских изделий",
-  "legalName": "ООО «Глобальные Медицинские Технологии»",
-  "url": "https://med-local.ru",
-  "logo": "https://med-local.ru/logo.svg",
-  "description": "Полный цикл локализации производства медицинских изделий в России: реверс-инжиниринг, разработка, производство, регистрация в Росздравнадзоре.",
-  "telephone": ["+7-985-316-91-04", "+7-988-877-72-95"],
-  "email": "info@med-local.ru",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "1-й Тверской-Ямской пер., д. 16, помещ. 1/п",
-    "addressLocality": "Москва",
-    "postalCode": "125047",
-    "addressCountry": "RU"
-  },
-  "areaServed": ["RU", "KZ", "BY", "AM", "KG"],
-  "sameAs": [
-    "https://t.me/tandelovtat",
-    "https://rzn.expert",
-    "https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ"
-  ],
-  "foundingDate": "2022",
-  "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 20},
-  "knowsAbout": [
-    "Локализация медицинских изделий",
-    "Постановление Правительства РФ №719",
-    "Регистрация МИ в Росздравнадзоре",
-    "Реверс-инжиниринг медицинской техники",
-    "ISO 13485", "ISO 14971", "ГОСТ Р МЭК 60601",
-    "Адвалорная доля", "ГИСП", "ЕАЭС"
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Как не вылететь из Реестра Минпромторга 1 июля: алгоритм сдачи отчёта в ГИСП",
-  "description": "Пошаговый алгоритм сдачи ежегодного отчёта в ГИСП до 1 апреля для сохранения записи в реестре Минпромторга по ПП 719.",
-  "url": "https://med-local.ru/blog/gisp-otchet",
-  "datePublished": "2026-06-01",
-  "dateModified": "2026-08-10",
-  "author": {"@type": "Person", "name": "Артемий-Татуш Танделов", "url": "https://med-local.ru/about"},
-  "publisher": {"@type": "Organization", "name": "Инженерно-регуляторный центр локализации МИ", "url": "https://med-local.ru", "logo": {"@type": "ImageObject", "url": "https://med-local.ru/logo.svg"}},
-  "image": "https://med-local.ru/og-image.png",
-  "inLanguage": "ru"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Что будет, если отчёт подан с ошибкой в объёмах?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "До 1 мая можно подать корректировочный отчёт. После 1 мая исправления не принимаются."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Нужно ли подавать отчёт, если изделие не производилось?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Да. Необходимо подать отчёт с нулевыми показателями, иначе запись будет аннулирована 1 июля."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Когда система ГИСП наиболее загружена?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Пиковая нагрузка — 29–31 марта. Рекомендуем подавать не позднее 27–28 марта."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Можно ли отозвать отчёт после отправки?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "До статуса «Принят» — через службу поддержки ГИСП. После принятия — только корректировка до 1 мая."
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://med-local.ru/"}, {"@type": "ListItem", "position": 2, "name": "База знаний", "item": "https://med-local.ru/blog"}, {"@type": "ListItem", "position": 3, "name": "Как не вылететь из Реестра Минпромторга 1 июля: ал...", "item": "https://med-local.ru/blog/gisp-otchet"}]}
-</script>
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DZXMBECL0"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date());
-gtag("config", "G-9DZXMBECL0");
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9DZXMBECL0");</script>
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Отчётность в ГИСП по ПП №719: как сохранить запись в Реестре Минпромторга","description":"Отчётность в ГИСП по ПП 719 — кто обязан подавать, сроки (до 1 апреля), что происходит при пропуске (90 дней до исключения записи по подп. «е» п.41 Правил) и пошаговая инструкция подачи отчёта.","url":"https://med-local.ru/blog/gisp-otchet","datePublished":"2026-06-01","dateModified":"2026-08-27","author":{"@type":"Person","name":"А.-Т. Танделов","url":"https://med-local.ru/about"},"publisher":{"@type":"Organization","name":"Инженерно-регуляторный центр локализации МИ","url":"https://med-local.ru"},"image":"https://med-local.ru/og-image.png","inLanguage":"ru"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Кто обязан сдавать отчётность в ГИСП?","acceptedAnswer":{"@type":"Answer","text":"Производитель, продукция которого включена в реестр российской промышленной продукции по ПП 719 — отдельно по каждой действующей реестровой записи."}},{"@type":"Question","name":"Нужно ли сдавать отчёт, если производства не было?","acceptedAnswer":{"@type":"Answer","text":"Да. Отчёт с нулевыми показателями всё равно нужно подать — отсутствие производства не освобождает от обязанности отчитаться, а непредставление отчёта в любом случае может стать основанием для исключения записи по истечении 90-дневного периода."}},{"@type":"Question","name":"Нужно ли отчитываться по каждой реестровой записи отдельно?","acceptedAnswer":{"@type":"Answer","text":"Да, если у вас несколько действующих записей — отчёт подаётся по каждой."}},{"@type":"Question","name":"Что считать объёмом производства, а что объёмом отгрузки?","acceptedAnswer":{"@type":"Answer","text":"Это два разных показателя: объём производства — сколько продукции фактически изготовлено за отчётный период, объём отгрузки — сколько отгружено покупателям. Уточняйте точные определения, применяемые в форме ГИСП, при заполнении конкретного отчёта."}},{"@type":"Question","name":"Что делать, если данные бухгалтерии не совпадают с реестровыми записями в ГИСП?","acceptedAnswer":{"@type":"Answer","text":"Прежде чем подавать отчёт, сверьте номенклатуру бухгалтерского учёта с реестровыми записями и, при необходимости, разделите консолидированные учётные данные по каждой записи отдельно."}},{"@type":"Question","name":"Можно ли исправить отчёт после отправки?","acceptedAnswer":{"@type":"Answer","text":"До статуса «Принят» — как правило, через службу поддержки ГИСП. Возможность и порядок корректировки уже принятого отчёта уточняйте непосредственно в сервисе ГИСП на момент подачи — единого фиксированного дедлайна «до 1 мая» для всех корректировок мы не нашли подтверждённым нормативно."}},{"@type":"Question","name":"Что делать после истечения 90-дневного периода, если отчёт так и не подан?","acceptedAnswer":{"@type":"Answer","text":"Обращаться к процедуре восстановления записи — подробности в статье «Исключение реестровой записи из ГИСП: что делать»."}},{"@type":"Question","name":"Нужно ли заново подтверждать баллы или адвалорную долю при сдаче ежегодной отчётности?","acceptedAnswer":{"@type":"Answer","text":"Нет, ежегодная отчётность об объёмах производства и отгрузки — отдельная процедура, не совпадающая с расчётом баллов или адвалорной доли. Подробный разбор этого расчёта — в статье «Как считать адвалорную долю по ПП 719»."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://med-local.ru/"},{"@type":"ListItem","position":2,"name":"База знаний","item":"https://med-local.ru/blog"},{"@type":"ListItem","position":3,"name":"Отчётность в ГИСП по ПП №719: как сохранить запись","item":"https://med-local.ru/blog/gisp-otchet"}]}
 </script>
 </head>
 <body>
+<div class="mob-menu" id="mob-menu"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:18px;right:18px;background:none;border:none;cursor:pointer;padding:8px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button><div class="mob-menu-links"><a href="/">Главная</a><a href="/about">О центре</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">База знаний</a><a href="/pricing">Стоимость</a><a href="/cases">Кейсы</a><a href="/glossary">Глоссарий</a><a href="/contacts">Контакты</a><div class="mob-lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
+  </div><div class="mob-menu-cta"><a href="/#lead" class="btn pri" style="margin-top:16px">Оценить проект</a></div></div>
 <header><div class="wrap nav">
-  <a class="logo" href="/">
-    <svg width="36" height="36" viewBox="0 0 48 48" fill="none"><rect x="9" y="9" width="30" height="30" rx="7" stroke="#1C232E" stroke-width="2.6"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#2FA8A0"/><path d="M24 2v7M24 39v7M2 24h7M39 24h7M8 8l5 5M40 8l-5 5M8 40l5-5M40 40l-5-5" stroke="#3D6FB4" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.6" fill="#FF6B3D"/></svg>
-    <div><div style="font-weight:800;font-size:12px;letter-spacing:-.3px;line-height:1.15">Инженерно-<br>регуляторный<br>центр</div><div style="font-size:9px;font-weight:600;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;line-height:1.3">локализации МИ</div></div>
-  </a>
+  <a class="logo" href="/"><span style="display:flex;align-items:center;gap:11px"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="7" stroke="#1C232E" stroke-width="2.6" fill="none"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#2FA8A0"/><path d="M24 2v7M24 39v7M2 24h7M39 24h7M8 8l5 5M40 8l-5 5M8 40l5-5M40 40l-5-5" stroke="#3D6FB4" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.6" fill="#FF6B3D"/></svg><span><span style="font-weight:800;font-size:12px;letter-spacing:-.3px;line-height:1.15;display:block">Инженерно-<br>регуляторный<br>центр</span><span style="font-size:9px;font-weight:600;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;line-height:1.3;display:block">локализации МИ</span></span></span></a>
   <span class="sp"></span>
-  <a class="lnk" href="/localization" target="_blank">Локализация</a>
-  <a class="lnk" href="/reverse" target="_blank">Реверс-инжиниринг</a>
-  <a class="lnk" href="/development" target="_blank">Разработка</a>
-  <a class="lnk" href="/production" target="_blank">Производство</a>
-  <a class="lnk" href="/registration" target="_blank">Регистрация</a>
-  <a class="lnk" href="/analytics" target="_blank">Аналитика</a>
-  <a class="lnk on" href="/blog" target="_blank">База знаний</a>
-  <a class="lnk" href="/pricing" target="_blank">Стоимость</a>
-  <a class="lnk" href="/cases" target="_blank">Кейсы</a>
+  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk on" href="/blog">База знаний</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a><a class="lnk" href="/cases">Кейсы</a><a class="lnk" href="/glossary">Глоссарий</a><a class="lnk" href="/contacts">Контакты</a></div>
+  <div class="header-icons">
+    <a class="tg-icon" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer" title="Написать в Telegram" aria-label="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg></a>
+    <a class="max-icon" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer" title="Написать в MAX" aria-label="MAX"><img src="/images/max-icon.png" alt="MAX" width="26" height="26" style="border-radius:7px;display:block"></a>
+  </div>
+  <div class="lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
   <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span class="burger-icon"><span></span><span></span><span></span></span><span class="burger-label">Меню</span></button>
 </div></header>
-<main>
+
+<div class="wrap"><nav class="crumbs"><a href="/">Главная</a><span>›</span><a href="/blog">База знаний</a><span>›</span><b>Отчётность в ГИСП по ПП №719: как сохранить запись...</b></nav></div>
 <section style="background:#fff;border-bottom:1px solid var(--line)">
   <div class="wrap" style="padding:48px 0 36px;max-width:820px">
     <a href="/blog" style="font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:20px">← Все статьи</a>
     <span class="tag" style="display:inline-flex;margin-bottom:14px">Локализация · ПП 719</span>
-    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">Как не вылететь из Реестра Минпромторга 1 июля: алгоритм сдачи отчёта в ГИСП</h1>
-    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap">
-      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ</span><span style="font-size:12.5px;color:var(--muted)">Опубликовано: <time datetime="2026">1 июня 2026</time></span>
-      <span>Июнь 2026</span>
+    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">Отчётность в ГИСП по ПП №719: как сохранить запись в Реестре Минпромторга</h1>
+    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ</span>
+      <span>·</span>
+      <time datetime="2026-06-01">Опубликовано: 1 июня 2026</time>
     </div>
   </div>
 </section>
+<main>
 <section class="sec">
   <div class="wrap" style="max-width:820px">
-    <div class="article-body"><div class="law"><b>Суть в четырёх предложениях</b>Производитель медицинских изделий, внесённый в Реестр российской промышленной продукции Минпромторга по ПП 719, обязан подать ежегодный отчёт об объёмах производства и отгрузки через личный кабинет ГИСП до 1 апреля — иначе запись аннулируется 1 июля автоматически, без уведомления. Окно корректировки закрывается 1 мая. Чтобы сохранить запись, достаточно пяти последовательных шагов.</div>
+    <div class="article-body">
 
-<h2>1. Нормативная база</h2>
-<p>Правовой фундамент процедуры — <b>Постановление Правительства РФ № 719 от 17.07.2015</b> (раздел VII регулирует медицинские изделия). Поправки <b>ПП РФ № 351 от 31.03.2026</b> скорректировали балльные пороги, однако сроки подачи отчётности остались неизменными.</p>
-<p>Отчёт подаётся исключительно в электронном виде через личный кабинет ГИСП — бумажные копии юридической силы не имеют.</p>
+<p>Что производителю нужно подать, в какие сроки и что произойдёт при пропуске отчётности.</p>
 
-<h2>2. Почему 1 июля — жёсткий дедлайн</h2>
-<p>Механизм аннулирования встроен в информационную систему ГИСП и запускается автоматически. Последствия наступают немедленно:</p>
-<ul>
-<li>Поданные заявки на тендеры по ПП 1875 становятся уязвимыми для отклонения</li>
-<li>Заказчики вправе потребовать перерасчёт цены или расторгнуть договор</li>
-<li>Восстановление записи займёт от трёх до шести месяцев</li>
-</ul>
+<div class="law"><b>Главное</b><ul style="margin:8px 0 0 20px"><li><b>До 1 апреля</b> — представить ежегодную отчётность об объёмах производства и отгрузки через ЛК ГИСП.</li><li><b>С 1 апреля начинается отсчёт 90 календарных дней</b> — весь этот период отчёт ещё можно подать.</li><li><b>По истечении 90 дней</b> непредставление отчётности становится основанием для исключения реестровой записи.</li><li><b>Где подавать</b> — сервис подтверждения производства российской промышленной продукции: <a href="https://gisp.gov.ru/pp719v2/pub/prod/" target="_blank" rel="noopener noreferrer" style="color:#2D4F7E;text-decoration:underline">gisp.gov.ru</a>.</li></ul></div>
 
-<h2>3. Пошаговый алгоритм сдачи отчёта</h2>
-<h3>Шаг 1. Проверьте статус записи</h3>
-<p>Зайдите в личный кабинет ГИСП (<a href="https://gisp.gov.ru/pp719v2/pub/prod/" target="_blank" rel="noopener noreferrer">gisp.gov.ru</a>). Убедитесь, что запись имеет статус «Действующая».</p>
-<h3>Шаг 2. Подготовьте первичную документацию</h3>
+<div class="warn"><b>Важное исправление.</b>Более ранняя версия этой статьи содержала неточности: ссылалась на ПП №351 как на источник правил отчётности (это постановление регулирует требования к отдельным медицинским изделиям в разделе VII, а не порядок отчётности), утверждала «аннулирование 1 июля автоматически, без уведомления» и указывала жёсткий дедлайн исправлений «до 1 мая». Актуальная конструкция иная — подробности в разделе 3.</div>
+
+<h2>1. Кто обязан сдавать отчётность</h2>
+<p>Обязанность распространяется на производителя, чья продукция включена в реестр российской промышленной продукции по ПП 719 — отчётность подаётся отдельно по каждой действующей реестровой записи, а не одним общим документом на компанию. Если у вас несколько реестровых записей (например, на разные модели одного вида изделий), отчёт подаётся по каждой.</p>
+
+<h2>2. Сроки отчётности в ГИСП</h2>
+<table>
+<thead><tr><th>Событие</th><th>Срок</th><th>Что делать</th></tr></thead>
+<tbody>
+<tr><td>Представление ежегодного отчёта</td><td>До 1 апреля</td><td>Подать отчёт через ЛК ГИСП по каждой реестровой записи</td></tr>
+<tr><td>Период, в течение которого отчёт ещё можно подать</td><td>90 календарных дней с 1 апреля</td><td>Если отчёт не был подан до 1 апреля — подать его немедленно, не дожидаясь окончания этого срока</td></tr>
+<tr><td>Истечение 90-дневного периода</td><td>Ближе к концу июня (точная дата зависит от календаря года)</td><td>Если отчёт всё ещё не подан — возникает основание для исключения записи</td></tr>
+<tr><td>Информирование об исключении (если решение принято)</td><td>В течение 5 рабочих дней со дня принятия решения</td><td>Проверьте ЛК ГИСП и электронную почту, указанную в реестровой записи</td></tr>
+</tbody>
+</table>
+
+<h2>3. Что произойдёт, если не подать отчёт</h2>
+<p>Пункт 43 Правил формирования и ведения реестра российской промышленной продукции (утв. ПП РФ №719) устанавливает обязанность ежегодно, до 1 апреля, представить через ЛК ГИСП информацию о произведённой и отгруженной продукции.</p>
+<p>Подпункт «е» пункта 41 Правил — основание для исключения записи: непредставление этой информации по истечении 90 календарных дней с 1 апреля. Эта норма действует с 1 января 2026 года и введена постановлением №901 от 16.06.2025 — не постановлением №351 (оно, в свою очередь, вносит изменения в раздел VII приложения к ПП 719, устанавливающий требования к конкретным медицинским изделиям, и с процедурой отчётности не связано).</p>
+<p>Пункт 42 Правил — информирование производителя об исключении в течение 5 рабочих дней со дня принятия решения через ЛК ГИСП и по электронной почте. Это не «аннулирование без уведомления»: уведомление предусмотрено, оно приходит по факту принятого решения.</p>
+<p><b>Важное исключение.</b> Обязанность представлять отчётность за 2025 год отсутствует по продукции, реестровые записи которой были сформированы после 31 декабря 2025 года.</p>
+<p>Подробный разбор процедуры исключения записи и восстановления — в отдельной статье <a href="/blog/gisp-annulirovanie">«Исключение реестровой записи из ГИСП: что делать»</a>.</p>
+
+<h2>4. Какие данные подготовить заранее</h2>
 <ul>
 <li>Данные бухгалтерского учёта об объёме произведённой продукции за отчётный год</li>
-<li>Данные об объёме отгрузки с разбивкой по кодам ОКПД2</li>
+<li>Данные об объёме отгрузки с разбивкой по кодам ОКПД2 и по каждой реестровой записи отдельно</li>
 <li>Сведения о среднесписочной численности работников</li>
 <li>Документы, подтверждающие право на использование производственных мощностей</li>
+<li>Действующая квалифицированная электронная подпись (УКЭП)</li>
 </ul>
-<h3>Шаг 3. Заполните форму отчёта в ЛК ГИСП</h3>
-<p>Для каждой позиции укажите объём производства и отгрузки. Если изделие не производилось — отразите нулевые показатели. Пустые строки система квалифицирует как незаполненный отчёт.</p>
-<h3>Шаг 4. Подпишите отчёт УКЭП</h3>
-<p>Подпись должна быть действующей на дату отправки. Проверьте срок действия сертификата за две недели до дедлайна.</p>
-<h3>Шаг 5. Отправьте и сохраните подтверждение</h3>
-<p>После отправки сделайте скриншот страницы с подтверждением и системным номером — это доказательство своевременной подачи.</p>
 
-<h2>4. Математика: адвалорная доля</h2>
-<p>Формула, установленная ПП 719:</p>
-<div class="law"><b>Адвалорная доля (%) = (Стоимость иностранных комплектующих / Производственная себестоимость) × 100</b><br>Максимальная допустимая адвалорная доля не является единой для всех медицинских изделий — порог и база расчёта (цена товара, цена конечной продукции или себестоимость) устанавливаются отдельно для каждой конкретной товарной позиции раздела VII ПП 719. Постановление №351 от 31.03.2026 меняет требования для медизделий преимущественно через балльную систему для новых позиций (вступает в силу с 1 июля 2026), а не через единое снижение адвалорного порога с 2027 года. Уточняйте точную формулировку для вашего кода ОКПД2 в актуальной редакции раздела VII.</div>
+<h2>5. Как подать отчёт в ГИСП — пошаговая инструкция</h2>
+<h4>Шаг 1. Проверьте статус записи</h4>
+<p>Зайдите в личный кабинет ГИСП (<a href="https://gisp.gov.ru/pp719v2/pub/prod/" target="_blank" rel="noopener noreferrer">gisp.gov.ru</a>). Убедитесь, что запись имеет статус «Действующая», и уточните, по скольким записям вам нужно отчитаться.</p>
+<h4>Шаг 2. Подготовьте первичную документацию</h4>
+<p>Соберите данные из раздела 4 выше — заранее, до начала заполнения формы.</p>
+<h4>Шаг 3. Заполните форму отчёта по каждой реестровой записи</h4>
+<p>Для каждой позиции укажите объём производства и отгрузки за отчётный период. Если изделие по конкретной записи не производилось — отразите нулевые показатели, а не оставляйте поле пустым: по нашей практике, незаполненные строки чаще создают вопросы при проверке, чем корректно указанный ноль.</p>
+<h4>Шаг 4. Подпишите отчёт УКЭП</h4>
+<p>Проверьте срок действия сертификата заранее — по нашей рекомендации, за две недели до предполагаемой даты отправки, чтобы успеть переоформить подпись при необходимости.</p>
+<h4>Шаг 5. Отправьте и сохраните подтверждение</h4>
+<p>После отправки сохраните скриншот страницы с подтверждением и системным номером — это подтверждение своевременной подачи, которое может понадобиться при последующих вопросах.</p>
 
-<h2>5. Практический кейс</h2>
-<p>Производитель расходных материалов для трансфузиологии (гемоконтейнеры) обратился в ГМТ в марте — за три недели до дедлайна. При заполнении формы выяснилось: в ЛК ГИСП числились две позиции, тогда как в бухучёте они консолидированы в одну группу. За десять рабочих дней произведена развёртка учётных данных по позициям заключения, согласована методология. Отчёт подан 28 марта — за четыре дня до дедлайна. Запись сохранена.</p>
+<h2>6. Пять типичных ошибок при подаче отчёта</h2>
+<p><b>Расхождение номенклатуры ГИСП и бухгалтерского учёта.</b> В ГИСП несколько реестровых записей могут числиться отдельно, тогда как в учёте они консолидированы в одну номенклатурную группу — без предварительной сверки это легко приводит к неверному распределению объёмов.</p>
+<p><b>Пропуск одной из нескольких реестровых записей.</b> При наличии нескольких записей легко подать отчёт по одной и забыть про другую.</p>
+<p><b>Истёкшая УКЭП на момент отправки.</b> Обнаруживается обычно в последний момент, когда времени на переоформление уже недостаточно.</p>
+<p><b>Пустые строки вместо нулевых показателей.</b> См. Шаг 3 выше.</p>
+<p><b>Отсутствие сохранённого подтверждения подачи.</b> Если статус отчёта впоследствии вызовет вопросы, скриншот с системным номером — самое простое доказательство своевременности.</p>
+
+<h2>7. Кейс из практики</h2>
+<p><b>Проблема.</b> Производитель расходных материалов для трансфузиологии обратился в ГМТ в марте, за несколько недель до 1 апреля. В ГИСП по его продукции числились две отдельные реестровые записи, тогда как в бухгалтерском учёте объёмы производства были консолидированы в одну номенклатурную группу.</p>
+<p><b>Риск.</b> Без разделения учётных данных по двум записям корректно заполнить отчёт по каждой записи в отдельности было невозможно.</p>
+<p><b>Что сделали.</b> Провели развёртку учётных данных по двум реестровым записям и согласовали методологию разнесения объёмов производства и отгрузки между ними.</p>
+<p><b>Срок.</b> Около десяти рабочих дней.</p>
+<p><b>Результат.</b> Отчёт подан до 1 апреля, обе записи сохранены.</p>
+<p style="font-size:13px;color:var(--muted);font-style:italic">Это иллюстрация типичной ситуации — конкретные сроки и результат в вашем случае могут отличаться.</p>
 
 <h2>FAQ</h2>
-<div class="faq-item"><h4>Что будет, если отчёт подан с ошибкой в объёмах?</h4><p>До 1 мая можно подать корректировочный отчёт. После 1 мая исправления не принимаются.</p></div>
-<div class="faq-item"><h4>Нужно ли подавать отчёт, если изделие не производилось?</h4><p>Да. Необходимо подать отчёт с нулевыми показателями, иначе запись будет аннулирована 1 июля.</p></div>
-<div class="faq-item"><h4>Когда система ГИСП наиболее загружена?</h4><p>Пиковая нагрузка — 29–31 марта. Рекомендуем подавать не позднее 27–28 марта.</p></div>
-<div class="faq-item"><h4>Можно ли отозвать отчёт после отправки?</h4><p>До статуса «Принят» — через службу поддержки ГИСП. После принятия — только корректировка до 1 мая.</p></div>
+<div class="faq-item"><h4>Кто обязан сдавать отчётность в ГИСП?</h4><p>Производитель, продукция которого включена в реестр российской промышленной продукции по ПП 719 — отдельно по каждой действующей реестровой записи.</p></div>
+<div class="faq-item"><h4>Нужно ли сдавать отчёт, если производства не было?</h4><p>Да. Отчёт с нулевыми показателями всё равно нужно подать — отсутствие производства не освобождает от обязанности отчитаться, а непредставление отчёта в любом случае может стать основанием для исключения записи по истечении 90-дневного периода.</p></div>
+<div class="faq-item"><h4>Нужно ли отчитываться по каждой реестровой записи отдельно?</h4><p>Да, если у вас несколько действующих записей — отчёт подаётся по каждой.</p></div>
+<div class="faq-item"><h4>Что считать объёмом производства, а что объёмом отгрузки?</h4><p>Это два разных показателя: объём производства — сколько продукции фактически изготовлено за отчётный период, объём отгрузки — сколько отгружено покупателям. Уточняйте точные определения, применяемые в форме ГИСП, при заполнении конкретного отчёта.</p></div>
+<div class="faq-item"><h4>Что делать, если данные бухгалтерии не совпадают с реестровыми записями в ГИСП?</h4><p>Прежде чем подавать отчёт, сверьте номенклатуру бухгалтерского учёта с реестровыми записями и, при необходимости, разделите консолидированные учётные данные по каждой записи отдельно — см. кейс выше.</p></div>
+<div class="faq-item"><h4>Можно ли исправить отчёт после отправки?</h4><p>До статуса «Принят» — как правило, через службу поддержки ГИСП. Возможность и порядок корректировки уже принятого отчёта уточняйте непосредственно в сервисе ГИСП на момент подачи — единого фиксированного дедлайна «до 1 мая» для всех корректировок мы не нашли подтверждённым нормативно.</p></div>
+<div class="faq-item"><h4>Что делать после истечения 90-дневного периода, если отчёт так и не подан?</h4><p>Обращаться к процедуре восстановления записи — подробности в статье <a href="/blog/gisp-annulirovanie">«Исключение реестровой записи из ГИСП: что делать»</a>.</p></div>
+<div class="faq-item"><h4>Нужно ли заново подтверждать баллы или адвалорную долю при сдаче ежегодной отчётности?</h4><p>Нет, ежегодная отчётность об объёмах производства и отгрузки — отдельная процедура, не совпадающая с расчётом баллов или адвалорной доли. Подробный разбор этого расчёта — в статье <a href="/blog/advalornaya-dolya">«Как считать адвалорную долю по ПП 719»</a>.</p></div>
 
 <div class="article-cta">
-  <b>Не успели подать отчёт или обнаружили расхождения?</b>
-  <p>Специалисты ГМТ проведут бесплатный аудит рисков исключения из ГИСП и подготовят отчёт к подаче в течение пяти рабочих дней.</p>
-  <a class="btn pri" href="mailto:info@med-local.ru?subject=Аудит ГИСП">Заказать бесплатный аудит</a>
-</div></div>
+  <b>Не уверены, что данные учёта совпадают с реестровыми записями?</b>
+  <p>Перед подачей отчёта мы проверим: какие позиции сейчас находятся в реестре; совпадают ли они с номенклатурой учёта; корректно ли распределены производство и отгрузка по каждой записи; есть ли риск исключения записи; что нужно исправить до подачи.</p>
+  <a class="btn pri" href="mailto:info@med-local.ru?subject=Проверка отчётности перед подачей в ГИСП">Получить предварительную проверку</a>
+</div>
+
+    </div>
   </div>
 </section>
-<section style="background:var(--paper);border-top:1px solid var(--line);padding:32px 0;margin-top:0">
+<section style="background:var(--paper);border-top:1px solid var(--line);padding:32px 0">
   <div class="wrap" style="max-width:820px">
     <h3 style="font-size:16px;font-weight:700;margin:0 0 16px;color:var(--ink)">Читайте также</h3>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><a href="/blog/gisp-annulirovanie" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Что делать, если запись аннулирована</a><a href="/blog/advalornaya-dolya" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Расчёт адвалорной доли</a><a href="/blog/pp719-checklist" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Чек-лист для малого предприятия</a></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><a href="/blog/gisp-annulirovanie" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Исключение реестровой записи из ГИСП</a><a href="/blog/advalornaya-dolya" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Как считать адвалорную долю по ПП 719</a><a href="/blog/pp719-checklist" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Чек-лист для малого предприятия</a></div>
   </div>
 </section>
 </main>
 <footer><div class="wrap">
   <div class="cols">
-    <div><b>Инженерно-регуляторный центр</b><p style="font-size:13px;line-height:1.65;margin:0 0 16px">Локализация производства медицинских изделий в России.</p>
-      <a href="tel:+79853169104">+7 985 316-91-04</a>
-      <a href="tel:+79888777295">+7 988 877-72-95</a>
+    <div><b>Инженерно-регуляторный центр локализации МИ</b>
+      <p style="font-size:13px;line-height:1.65;margin:0 0 14px;color:#97A1B2">Локализация производства медицинских изделий в России. От анализа ниши до регистрационного удостоверения.</p>
+      <a href="tel:+79853169104">+7 985 316-91-04 (Россия)</a>
+      <a href="tel:+79888777295">+7 988 877-72-95 (Россия)</a>
+      <a href="tel:+79888777295">MAX: +7 988 877-72-95</a>
+      <a href="tel:+77021394489">+7 702 139-44-89 (Казахстан)</a>
       <a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a>
-      <a href="https://t.me/tandelovtat" style="color:#2FA8A0">Telegram: @tandelovtat</a>
+      <a href="https://t.me/tandelovtat" style="color:#2FA8A0" target="_blank" rel="noopener noreferrer">Telegram: @tandelovtat</a>
     </div>
     <div><b>Услуги</b>
-      <a href="/localization" target="_blank">Локализация</a>
-      <a href="/reverse" target="_blank">Реверс-инжиниринг</a>
-      <a href="/development" target="_blank">Разработка</a>
-      <a href="/production" target="_blank">Производство</a>
-      <a href="/registration" target="_blank">Регистрация</a>
-      <a href="/analytics" target="_blank">Аналитика</a>
+      <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a>
+      <a href="/development">Разработка</a><a href="/production">Производство</a>
+      <a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a>
     </div>
     <div><b>Компания</b>
-      <a href="/cases">Кейсы</a><a href="/pricing" target="_blank">Стоимость</a>
-      <a href="/blog" target="_blank">База знаний</a>
-      <a href="/contacts" target="_blank">Контакты</a>
+      <a href="/cases">Кейсы</a><a href="/pricing">Стоимость</a><a href="/blog">База знаний</a>
+      <a href="/contacts">Контакты</a><a href="/glossary">Глоссарий</a><a href="/privacy">Политика ПДн</a>
     </div>
-    <div><b>Почта</b>
+    <div><b>Контакты</b>
       <a href="mailto:info@med-local.ru">info@med-local.ru</a>
       <a href="mailto:sales@med-local.ru">sales@med-local.ru</a>
       <a href="mailto:marketing@med-local.ru">marketing@med-local.ru</a>
@@ -383,6 +403,17 @@ gtag("config", "G-9DZXMBECL0");
     <span style="display:flex;gap:14px;flex-wrap:wrap"><a href="/privacy">Политика конфиденциальности</a><a href="/oferta">Публичная оферта</a><a href="/terms">Пользовательское соглашение</a></span>
   </div>
 </div></footer>
+<a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg>
+  Написать в Telegram
+</a>
+<a class="float-btn max-btn" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer">
+  <img src="/images/max-icon.png" alt="MAX" width="22" height="22" style="border-radius:6px">
+  Написать в MAX
+</a>
+<script>
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';}
+</script>
 <script src="/cookie-consent.js" defer></script>
 </body>
 </html>
