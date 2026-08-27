@@ -3,8 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Чек-лист комплаенса по ПП 719: как малому предприятию подтвердить штат и основные средства — Инженерно-регуляторный центр</title>
-<meta name="description" content="Малое предприятие вправе войти в Реестр Минпромторга по ПП 719 — закон не устанавливает минимального штата. Но ТПП проверяет доказательность.">
+<title>Подготовка к экспертизе ТПП по ПП 719: чек-лист для малого предприятия — Инженерно-регуляторный центр</title>
+<meta name="description" content="Чек-лист подготовки к экспертизе ТПП по ПП 719 для малого предприятия: как определить требования именно к вашей продукции и разделить обязательные нормы, требования процедуры ТПП и практические рекомендации по подтверждению штата, оборудования и технологической документации.">
+<link rel="canonical" href="https://med-local.ru/blog/pp719-checklist">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Подготовка к экспертизе ТПП по ПП 719: чек-лист для малого предприятия">
+<meta property="og:description" content="Как малому предприятию подготовиться к экспертизе ТПП по ПП 719 — от определения требований к конкретной продукции до документов на персонал и оборудование.">
+<meta property="og:url" content="https://med-local.ru/blog/pp719-checklist">
+<meta property="og:image" content="https://med-local.ru/og-image.png">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C232E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@700;800&family=JetBrains+Mono:wght@600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -18,7 +31,7 @@
  --body:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
  --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
 }
-*{box-sizing:border-box}html{scroll-behavior:smooth}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{max-width:100vw}
 body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
 .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
@@ -44,6 +57,8 @@ h1,h2,h3{line-height:1.15;margin:0}
 .g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
 @media(max-width:960px){.g3,.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
 @media(max-width:620px){.g3,.g4,.g2{grid-template-columns:1fr}}
+@media(max-width:880px){.route{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:560px){.route{grid-template-columns:1fr!important}.route .st{padding:16px 0 0!important;border-bottom:1px solid var(--line);padding-bottom:16px!important;margin-bottom:8px}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
 .kv{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
 .kv span{color:var(--muted)}.kv b{text-align:right}
@@ -64,9 +79,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdro
 .hero .stats span{font-size:12.5px;color:#8E99AB}
 .crumbs{font-size:12.5px;color:var(--muted);margin:18px 0 0}
 .crumbs b{color:var(--ink)}
-.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:rt;margin-top:8px}
-.route .st{position:relative;padding:20px 18px 0;counter-increment:rt}
-.route .st::before{content:counter(rt,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--cyan);font-weight:600}
+.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:8px}
+.route .st{position:relative;padding:20px 18px 0}
 .route .st::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
 .route .st h3{font-size:15.5px;margin:8px 0 6px}
 .route .st p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
@@ -83,6 +97,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdro
 .seg .of{font-size:13px;font-weight:600;color:var(--cyan)}
 .law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
 .law b{display:block;margin-bottom:6px;font-size:14px}
+.warn{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#8B3A1E;line-height:1.65;margin:24px 0}
+.warn b{display:block;margin-bottom:6px;font-size:14px}
 .post{display:flex;flex-direction:column;gap:9px;transition:.2s}
 .post:hover{transform:translateY(-3px)}
 .post .rub{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)}
@@ -136,203 +152,204 @@ footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-
 .related a{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan);transition:.15s}
 .related a:hover{border-color:var(--cyan)}
 
+/* Бургер-меню для мобильных */
+.burger{display:none;align-items:center;gap:8px;cursor:pointer;padding:6px 10px;background:#fff;border:1.5px solid var(--line);border-radius:10px;transition:.15s;z-index:200}
+.burger:hover{border-color:var(--cyan)}
+.burger-icon{display:flex;flex-direction:column;gap:5px}
+.burger-icon span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger-label{font-size:12.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+.burger.open .burger-icon span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open .burger-icon span:nth-child(2){opacity:0}
+.burger.open .burger-icon span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:680px){.burger{padding:4px;background:none;border:none;gap:0}.burger-label{display:none}}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:100;flex-direction:column}
+.mob-menu-links{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:70px 20px 16px}
+.mob-menu-cta{flex-shrink:0;display:flex;justify-content:center;padding:14px 24px 20px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+.mob-menu a:hover{color:var(--cyan)}
+@media(max-width:2000px){
+  .nav-links{display:none!important}
+  .burger{display:flex}
+  .nav{gap:12px}
+}
+/* Хлебные крошки */
+.crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:.15s}.crumbs a:hover{color:var(--cyan)}
+.crumbs span{color:var(--muted)}
+.crumbs b{color:var(--ink);font-weight:600}
+/* Таблицы на мобильных */
+@media(max-width:640px){
+  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .article-body table{display:block;overflow-x:auto}
+}
+/* Плавающая кнопка на мобильных */
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+.float-btn.max-btn{bottom:74px;background:#fff;box-shadow:0 8px 24px rgba(107,63,231,.25);color:var(--ink)}
+@media(max-width:768px){.float-btn{display:flex}}
+/* Состояния кнопок */
+.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.btn.pri:active{transform:translateY(0);filter:brightness(.95)}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+/* Единый подвал */
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2;transition:.15s}
+footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){footer .cols{grid-template-columns:1fr}}
+
+.header-icons{display:flex;align-items:center;gap:8px;margin-right:4px}
+.header-icons a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s}
+.header-icons a.tg-icon{background:#2FA8A0}
+.header-icons a.max-icon{background:transparent;padding:0}
+.header-icons a:hover{filter:brightness(1.1);transform:translateY(-1px)}
+@media(max-width:2000px){.header-icons{display:none}}
+.lang-switch{display:flex;align-items:center;gap:4px;margin-right:8px}
+.lang-switch a{font-size:12.5px;font-weight:700;padding:4px 8px;border-radius:6px;color:var(--muted);transition:.15s;text-decoration:none}
+.lang-switch a.active{background:var(--graphite);color:#fff}
+.mob-lang-switch{display:flex;align-items:center;gap:10px;margin-top:10px}
+.mob-lang-switch a{font-size:15px;font-weight:700;padding:8px 20px;border-radius:10px;color:var(--muted);background:var(--paper);border:1.5px solid var(--line)}
+.mob-lang-switch a.active{background:var(--graphite);color:#fff;border-color:var(--graphite)}
+@media(max-width:680px){.lang-switch{display:none}}
+.lang-switch a:hover:not(.active){color:var(--ink)}
+
 .article-body h2{font-size:22px;font-weight:800;margin:36px 0 14px;color:var(--ink)}
 .article-body h3{font-size:18px;font-weight:700;margin:28px 0 10px;color:var(--ink)}
+.article-body h4{font-size:16px;font-weight:700;margin:24px 0 8px;color:var(--ink)}
 .article-body p{font-size:15px;color:#3a4455;line-height:1.75;margin:0 0 16px}
 .article-body ul,.article-body ol{margin:0 0 16px 20px}
 .article-body li{font-size:15px;color:#3a4455;line-height:1.7;margin-bottom:6px}
-.article-body b{color:var(--ink)}
-.article-body .law{margin:24px 0}
+.article-body strong,.article-body b{color:var(--ink)}
+.article-body .law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:16px 20px;font-size:14px;color:#2D4F7E;line-height:1.65;margin:20px 0}
 .article-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
 .article-body th{background:var(--graphite);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
 .article-body td{padding:10px 14px;border-bottom:1px solid var(--line);color:#3a4455}
-.article-body tr:last-child td{border-bottom:none}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
 .article-cta{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:16px;padding:28px 32px;margin:40px 0}
 .article-cta b{font-size:18px;display:block;margin-bottom:8px}
 .article-cta p{color:#AFBAC9;font-size:14px;margin:0 0 18px}
 </style>
-<script type="text/javascript">
-(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
-ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Инженерно-регуляторный центр локализации медицинских изделий",
-  "legalName": "ООО «Глобальные Медицинские Технологии»",
-  "url": "https://med-local.ru",
-  "logo": "https://med-local.ru/logo.svg",
-  "description": "Полный цикл локализации производства медицинских изделий в России: реверс-инжиниринг, разработка, производство, регистрация в Росздравнадзоре.",
-  "telephone": ["+7-985-316-91-04", "+7-988-877-72-95"],
-  "email": "info@med-local.ru",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "1-й Тверской-Ямской пер., д. 16, помещ. 1/п",
-    "addressLocality": "Москва",
-    "postalCode": "125047",
-    "addressCountry": "RU"
-  },
-  "areaServed": ["RU", "KZ", "BY", "AM", "KG"],
-  "sameAs": [
-    "https://t.me/tandelovtat",
-    "https://rzn.expert",
-    "https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ"
-  ],
-  "foundingDate": "2022",
-  "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 20},
-  "knowsAbout": [
-    "Локализация медицинских изделий",
-    "Постановление Правительства РФ №719",
-    "Регистрация МИ в Росздравнадзоре",
-    "Реверс-инжиниринг медицинской техники",
-    "ISO 13485", "ISO 14971", "ГОСТ Р МЭК 60601",
-    "Адвалорная доля", "ГИСП", "ЕАЭС"
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Чек-лист комплаенса по ПП 719: как малому предприятию подтвердить штат и основные средства",
-  "description": "Три раздела чек-листа для экспертизы ТПП: персонал, основные средства, технологическая документация.",
-  "url": "https://med-local.ru/blog/pp719-checklist",
-  "datePublished": "2026-06-10",
-  "dateModified": "2026-08-07",
-  "author": {"@type": "Person", "name": "Артемий-Татуш Танделов", "url": "https://med-local.ru/about"},
-  "publisher": {"@type": "Organization", "name": "Инженерно-регуляторный центр локализации МИ", "url": "https://med-local.ru", "logo": {"@type": "ImageObject", "url": "https://med-local.ru/logo.svg"}},
-  "image": "https://med-local.ru/og-image.png",
-  "inLanguage": "ru"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Есть ли минимальный штат для получения заключения?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Формально нет. Практически ТПП ожидает хотя бы одного технолога и специалиста по качеству — для микропредприятия эти функции может совмещать один человек."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Принимается ли договор ГПХ вместо трудового?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Да, при условии что договор прямо описывает производственные операции и подрядчик физически работает на площадке заявителя."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Нужна ли собственная аккредитованная лаборатория?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Нет. Испытания могут проводиться в сторонней аккредитованной лаборатории при наличии договора и протоколов."
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://med-local.ru/"}, {"@type": "ListItem", "position": 2, "name": "База знаний", "item": "https://med-local.ru/blog"}, {"@type": "ListItem", "position": 3, "name": "Чек-лист комплаенса по ПП 719: как малому предприя...", "item": "https://med-local.ru/blog/pp719-checklist"}]}
-</script>
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DZXMBECL0"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date());
-gtag("config", "G-9DZXMBECL0");
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9DZXMBECL0");</script>
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Подготовка к экспертизе ТПП по ПП 719: чек-лист для малого предприятия","description":"Чек-лист подготовки к экспертизе ТПП по ПП 719 для малого предприятия: как определить требования именно к вашей продукции и разделить обязательные нормы, требования процедуры ТПП и практические рекомендации по подтверждению штата, оборудования и технологической документации.","url":"https://med-local.ru/blog/pp719-checklist","datePublished":"2026-06-10","dateModified":"2026-08-27","author":{"@type":"Person","name":"А.-Т. Танделов","url":"https://med-local.ru/about"},"publisher":{"@type":"Organization","name":"Инженерно-регуляторный центр локализации МИ","url":"https://med-local.ru"},"image":"https://med-local.ru/og-image.png","inLanguage":"ru"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Есть ли минимальный штат для включения продукции в реестр?","acceptedAnswer":{"@type":"Answer","text":"Формально нет — ПП 719 не устанавливает минимального порога численности персонала для всей промышленности. Требования к тому, кто и как выполняет операции, определяются применительно к конкретной позиции продукции."}},{"@type":"Question","name":"Принимается ли договор ГПХ вместо трудового?","acceptedAnswer":{"@type":"Answer","text":"Как правило, да, при условии, что договор описывает конкретные производственные операции, выполняемые в связи с деятельностью заявителя. Работа подрядчика непосредственно на площадке заявителя — не универсальное требование само по себе, важна возможность подтвердить содержание и фактическое выполнение операции согласно применимому требованию для позиции."}},{"@type":"Question","name":"Нужна ли собственная аккредитованная лаборатория?","acceptedAnswer":{"@type":"Answer","text":"Как правило, нет, если применимое требование для вашей позиции этого прямо не предусматривает. Испытания могут проводиться в сторонней аккредитованной лаборатории при наличии договора и протоколов — это тот же принцип, что и с контрактными производственными операциями: важна возможность подтвердить операцию документально, а не то, кто физически её выполняет."}},{"@type":"Question","name":"Можно ли привлекать подрядчика для выполнения производственных операций?","acceptedAnswer":{"@type":"Answer","text":"Возможность привлечения третьих лиц для конкретной операции зависит от того, что установлено применимым требованием для вашей позиции. Если это допустимо, договор должен содержать конкретный перечень операций и, как правило, право заказчика на производственный контроль."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://med-local.ru/"},{"@type":"ListItem","position":2,"name":"База знаний","item":"https://med-local.ru/blog"},{"@type":"ListItem","position":3,"name":"Подготовка к экспертизе ТПП по ПП 719: чек-лист для","item":"https://med-local.ru/blog/pp719-checklist"}]}
 </script>
 </head>
 <body>
+<div class="mob-menu" id="mob-menu"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:18px;right:18px;background:none;border:none;cursor:pointer;padding:8px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button><div class="mob-menu-links"><a href="/">Главная</a><a href="/about">О центре</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">База знаний</a><a href="/pricing">Стоимость</a><a href="/cases">Кейсы</a><a href="/glossary">Глоссарий</a><a href="/contacts">Контакты</a><div class="mob-lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
+  </div><div class="mob-menu-cta"><a href="/#lead" class="btn pri" style="margin-top:16px">Оценить проект</a></div></div>
 <header><div class="wrap nav">
-  <a class="logo" href="/">
-    <svg width="36" height="36" viewBox="0 0 48 48" fill="none"><rect x="9" y="9" width="30" height="30" rx="7" stroke="#1C232E" stroke-width="2.6"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#2FA8A0"/><path d="M24 2v7M24 39v7M2 24h7M39 24h7M8 8l5 5M40 8l-5 5M8 40l5-5M40 40l-5-5" stroke="#3D6FB4" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.6" fill="#FF6B3D"/></svg>
-    <div><div style="font-weight:800;font-size:12px;letter-spacing:-.3px;line-height:1.15">Инженерно-<br>регуляторный<br>центр</div><div style="font-size:9px;font-weight:600;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;line-height:1.3">локализации МИ</div></div>
-  </a>
+  <a class="logo" href="/"><span style="display:flex;align-items:center;gap:11px"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="7" stroke="#1C232E" stroke-width="2.6" fill="none"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#2FA8A0"/><path d="M24 2v7M24 39v7M2 24h7M39 24h7M8 8l5 5M40 8l-5 5M8 40l5-5M40 40l-5-5" stroke="#3D6FB4" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.6" fill="#FF6B3D"/></svg><span><span style="font-weight:800;font-size:12px;letter-spacing:-.3px;line-height:1.15;display:block">Инженерно-<br>регуляторный<br>центр</span><span style="font-size:9px;font-weight:600;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;line-height:1.3;display:block">локализации МИ</span></span></span></a>
   <span class="sp"></span>
-  <a class="lnk" href="/localization" target="_blank">Локализация</a>
-  <a class="lnk" href="/reverse" target="_blank">Реверс-инжиниринг</a>
-  <a class="lnk" href="/development" target="_blank">Разработка</a>
-  <a class="lnk" href="/production" target="_blank">Производство</a>
-  <a class="lnk" href="/registration" target="_blank">Регистрация</a>
-  <a class="lnk" href="/analytics" target="_blank">Аналитика</a>
-  <a class="lnk on" href="/blog" target="_blank">База знаний</a>
-  <a class="lnk" href="/pricing" target="_blank">Стоимость</a>
-  <a class="lnk" href="/cases" target="_blank">Кейсы</a>
+  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk on" href="/blog">База знаний</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a><a class="lnk" href="/cases">Кейсы</a><a class="lnk" href="/glossary">Глоссарий</a><a class="lnk" href="/contacts">Контакты</a></div>
+  <div class="header-icons">
+    <a class="tg-icon" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer" title="Написать в Telegram" aria-label="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg></a>
+    <a class="max-icon" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer" title="Написать в MAX" aria-label="MAX"><img src="/images/max-icon.png" alt="MAX" width="26" height="26" style="border-radius:7px;display:block"></a>
+  </div>
+  <div class="lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
   <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span class="burger-icon"><span></span><span></span><span></span></span><span class="burger-label">Меню</span></button>
 </div></header>
-<main>
+
+<div class="wrap"><nav class="crumbs"><a href="/">Главная</a><span>›</span><a href="/blog">База знаний</a><span>›</span><b>Подготовка к экспертизе ТПП по ПП 719: чек-лист для...</b></nav></div>
 <section style="background:#fff;border-bottom:1px solid var(--line)">
   <div class="wrap" style="padding:48px 0 36px;max-width:820px">
     <a href="/blog" style="font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:20px">← Все статьи</a>
     <span class="tag" style="display:inline-flex;margin-bottom:14px">Локализация · ПП 719</span>
-    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">Чек-лист комплаенса по ПП 719: как малому предприятию подтвердить штат и основные средства</h1>
-    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap">
-      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ</span><span style="font-size:12.5px;color:var(--muted)">Опубликовано: <time datetime="2026">10 июня 2026</time></span>
-      <span>Июнь 2026</span>
+    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">Подготовка к экспертизе ТПП по ПП 719: чек-лист для малого предприятия</h1>
+    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ</span>
+      <span>·</span>
+      <time datetime="2026-06-10">Опубликовано: 10 июня 2026</time>
     </div>
   </div>
 </section>
+<main>
 <section class="sec">
   <div class="wrap" style="max-width:820px">
-    <div class="article-body"><div class="law"><b>Суть в четырёх предложениях</b>Малое предприятие вправе получить заключение Минпромторга по ПП 719 — закон не устанавливает минимального порога численности. Однако ТПП проверяет не количество людей и станков, а доказательность: все операции должны быть фактически выполнены силами и на мощностях заявителя. Критические точки — подтверждение трудовых функций сотрудников, права на оборудование от 500 000 руб. и реальности технологических операций.</div>
+    <div class="article-body">
 
-<h2>Чек-лист: Раздел I — Персонал</h2>
-<p>ТПП ожидает увидеть в штате или в договорах подряда:</p>
+<div class="law"><b>Суть в четырёх предложениях</b>Малое предприятие вправе включить продукцию в реестр российской промышленной продукции по ПП 719 — закон не устанавливает минимального порога численности персонала. Но прежде чем готовить документы на персонал и оборудование, нужно определить конкретные требования, установленные приложением к ПП 719 именно для вашей продукции (обязательные операции, балльные критерии, условия), — общего для всей промышленности стандарта нет. Далее важно разделять три разных уровня: что прямо требует ПП 719, что запрашивает процедура ТПП для подтверждения выполнения этого требования, и что является практической рекомендацией по подготовке — их смешение создаёт риск неверных выводов о том, что обязательно, а что нет. Критические точки подготовки — подтверждение трудовых функций сотрудников, документальное право на использование оборудования и производственных площадей, а также реальность и прослеживаемость заявленных технологических операций.</div>
+
+<h2>Шаг 0. Определите требования именно к вашей продукции</h2>
+<p>Это отсутствовало в более ранней версии статьи и было её главным пробелом. ПП 719 нельзя корректно применять к «малому предприятию» абстрактно — сначала определяется конкретная продукция и применимая позиция приложения, и только затем становится понятно, какие операции, условия и/или баллы нужно подтвердить.</p>
+<p><b>Найдите свою продукцию в приложении к ПП 719</b> по коду ОКПД2 и наименованию позиции. <b>Зафиксируйте требования, установленные для этой позиции на дату подачи</b>: обязательные операции, балльные критерии (если применяются), требования к адвалорной доле (если применяются), иные условия. Только после этого переходите к составлению перечня персонала, оборудования и подтверждающих документов, необходимых именно для этих требований — не для абстрактного «производства вообще».</p>
+<div class="warn"><b>⚠ Актуализация</b>Материал обновлён с учётом того, что действующая редакция ПП 719 на 26.08.2026 отличается от редакции на дату первой публикации — постановление менялось в течение 2026 года. Терминология тоже уточнена: базовый результат прохождения процедуры — включение сведений о продукции в реестр российской промышленной продукции, а не «заключение Минпромторга» в широком смысле (хотя оба термина на практике используются). Для продукции, уже включённой в реестр, применяется также последующая оценка соответствия в течение срока действия записи (акт экспертизы или акт о проведении оценки ТПП) — это отдельный этап, не то же самое, что первичное включение.</div>
+
+<h2>Как читать этот чек-лист: три уровня требований</h2>
+<p>Чтобы не смешивать обязательные нормы с практикой, в каждом пункте ниже мы разделяем:</p>
 <ul>
-<li>Технолог или инженер-технолог производственного процесса</li>
-<li>Специалист по контролю качества (ОТК или уполномоченный по качеству ISO 13485)</li>
-<li>Производственные рабочие, выполняющие засчитываемые операции</li>
+<li><b>Норма ПП 719</b> — то, что прямо установлено постановлением для вашей позиции;</li>
+<li><b>Процедура ТПП</b> — документы, которыми ТПП подтверждает выполнение нормы, согласно применимому Положению;</li>
+<li><b>Рекомендация ГМТ</b> — то, что снижает риск вопросов эксперта, но не является нормативным требованием само по себе.</li>
 </ul>
+
+<h2>Раздел I. Персонал</h2>
+<p><b>Норма ПП 719.</b> Требования к тому, кто именно выполняет операции, устанавливаются для соответствующей позиции — универсального требования к конкретным должностям (технолог, специалист ОТК и т.п.) для всей промышленности в самом постановлении нет. Значение имеет подтверждение того, что заявленные операции фактически выполняются в связи с деятельностью заявителя, а возможность привлечения третьих лиц (подряд, аутсорсинг) для конкретной операции зависит от того, что установлено применимым требованием для этой позиции.</p>
+<p><b>Процедура ТПП.</b> Для подтверждения выполнения операций эксперт может запросить документы, показывающие соответствие заявленных трудовых функций реально выполняемым операциям.</p>
 <table>
-<thead><tr><th>Документ</th><th>На что обращает внимание ТПП</th></tr></thead>
+<thead><tr><th>Документ</th><th>На что обращает внимание эксперт</th></tr></thead>
 <tbody>
-<tr><td>Штатное расписание</td><td>Наличие производственных должностей</td></tr>
-<tr><td>Трудовые договоры</td><td>Соответствие функций заявленным операциям</td></tr>
-<tr><td>Должностные инструкции</td><td>Прямое указание на производственные операции</td></tr>
+<tr><td>Штатное расписание</td><td>Наличие должностей, связанных с заявленными операциями</td></tr>
+<tr><td>Трудовые договоры (или ГПХ)</td><td>Соответствие функций заявленным операциям</td></tr>
+<tr><td>Должностные инструкции</td><td>Указание на выполнение конкретных производственных операций</td></tr>
 <tr><td>Табели учёта рабочего времени</td><td>Фактическое присутствие на производстве</td></tr>
-<tr><td>Данные СЗВ-М / ЕФС-1</td><td>Численность, совпадающая с данными отчёта в ГИСП</td></tr>
+<tr><td>Данные СЗВ-М / ЕФС-1</td><td>Согласованность численности с данными, заявленными в ГИСП</td></tr>
 </tbody>
 </table>
+<p><b>Рекомендация ГМТ.</b> На практике для подтверждения выполнения операций удобно иметь в штате или в договоре подряда специалиста, ответственного за технологический процесс, и отдельно — за контроль качества; для микропредприятия эти функции может совмещать один человек, если это не противоречит применимому требованию для позиции.</p>
 
-<h2>Чек-лист: Раздел II — Основные средства</h2>
-<p><b>Оборудование свыше 500 000 руб.</b> — ТПП запрашивает правоустанавливающие документы:</p>
+<h2>Раздел II. Основные средства</h2>
+<p><b>Норма ПП 719.</b> Требуется подтвердить законное право использования оборудования и производственной площадки, необходимых для выполнения заявленных операций, в течение периода, относящегося к заключению/реестровой записи.</p>
+<p><b>Процедура ТПП.</b> Правоустанавливающие документы на оборудование и площадку:</p>
 <ul>
 <li>Собственность — инвентарная карточка ОС-6, договор купли-продажи, акт приёмки</li>
-<li>Аренда — договор с идентификационными признаками (серийный номер), акт приёмки</li>
+<li>Аренда — договор с идентификационными признаками объекта (позволяющими его однозначно определить), акт приёмки</li>
 <li>Лизинг — договор лизинга и подтверждение постановки на баланс</li>
 </ul>
-<p><b>Производственные помещения.</b> Договор аренды — долгосрочный (не менее срока действия заключения). Субаренда — только с письменного согласия основного арендодателя.</p>
+<p><b>Мы убрали из этого раздела прежнюю формулировку «оборудование свыше 500 000 рублей — ТПП запрашивает правоустанавливающие документы»</b> — конкретный денежный порог, за которым начинается такое требование именно в этом виде, мы не смогли подтвердить нормативным или официальным методическим источником, поэтому не приводим его как факт. На практике разумно готовить правоустанавливающие документы на любое оборудование, которое непосредственно используется для заявленных операций, вне зависимости от его стоимости.</p>
+<p><b>Производственные помещения.</b> Необходимо подтвердить законное право использования площадки на период, относящийся к заключению/реестровой записи — конкретный минимальный срок аренды нужно проверять применительно к вашей ситуации, а не считать универсальным правилом «не менее срока действия заключения» без источника. При субаренде необходимо проверить, допускает ли её основной договор и имеются ли необходимые согласия — это гражданско-правовой вопрос, а не отдельно установленное требование ПП 719.</p>
 
-<h2>Чек-лист: Раздел III — Технологическая документация</h2>
-<p>Для каждой производственной операции необходима технологическая карта с описанием операции, оборудования и квалификационных требований. Отсутствие технологической документации = невозможность засчитать операцию в баллы.</p>
-<p>Журналы операционного контроля, акты входного контроля, протоколы испытаний — всё это «след» реального производства. ТПП хорошо различает «живые» журналы от заполненных задним числом.</p>
+<h2>Раздел III. Технологическая документация</h2>
+<p><b>Норма ПП 719.</b> Если для соответствующей позиции применяются балльные требования или требования к конкретным технологическим операциям, необходимо подтвердить содержание и фактическое выполнение этих операций.</p>
+<p><b>Процедура ТПП.</b> Для заявляемых операций нужна технологическая документация, позволяющая проследить содержание операции, применяемое оборудование и её фактическое выполнение. Журналы операционного контроля, акты входного контроля, протоколы испытаний — материальные следы того, что операция реально выполняется, а не только описана на бумаге. Записи должны формироваться в ходе реального производственного процесса и позволять проследить выполнение заявленных операций.</p>
+<p><b>Рекомендация ГМТ.</b> Заведите технологическую карту на каждую заявленную операцию заранее, а не восстанавливайте документацию непосредственно перед визитом эксперта — это снижает риск вопросов о достоверности записей.</p>
 
-<h2>Практический кейс</h2>
-<p>Малое предприятие (11 сотрудников) производит одноразовые ланцеты. Из шести заявленных операций только три имели надлежащую документацию. Операция «штамповка иглы» выполнялась на оборудовании учредителя без права доступа ТПП. «Стерилизация» передавалась подрядчику без договора. За три недели: переоформлен договор аренды, заключён договор на контрактную стерилизацию, дооформлены журналы. Экспертиза пройдена с первого раза.</p>
+<h2>Практический пример</h2>
+<p>Ниже — обобщённый пример логики подготовки, а не описание конкретной реальной компании.</p>
+<p>Малое предприятие (около 10 сотрудников) производит одноразовые ланцеты. Из шести заявленных операций три имели надлежащую документацию, а по трём другим обнаружились разрывы: операция механической обработки выполнялась на оборудовании, право использования которого документально не было оформлено на заявителя; операция стерилизации передавалась контрактному подрядчику без договора, содержащего конкретный перечень операций.</p>
+<p><b>Важное уточнение по сравнению с более ранней версией этого примера.</b> Передача операции стерилизации контрактному подрядчику сама по себе не является нарушением — возможность выполнения операции третьим лицом зависит от того, что установлено применимым требованием для конкретной позиции. Проблемой было не привлечение подрядчика как таковое, а отсутствие договора с конкретным перечнем операций и правом заказчика на производственный контроль — то есть недостаточное документальное подтверждение, а не факт кооперации.</p>
+<p>За несколько недель компания: переоформила документы на оборудование, заключила надлежаще оформленный договор на контрактную стерилизацию с перечнем операций, дооформила технологические журналы на основе фактических данных производства. Это иллюстрация логики подготовки — конкретный результат экспертизы зависит от применимых к вашей позиции требований.</p>
 
 <h2>FAQ</h2>
-<div class="faq-item"><h4>Есть ли минимальный штат для получения заключения?</h4><p>Формально нет. Практически ТПП ожидает хотя бы одного технолога и специалиста по качеству — для микропредприятия эти функции может совмещать один человек.</p></div>
-<div class="faq-item"><h4>Принимается ли договор ГПХ вместо трудового?</h4><p>Да, при условии что договор прямо описывает производственные операции и подрядчик физически работает на площадке заявителя.</p></div>
-<div class="faq-item"><h4>Нужна ли собственная аккредитованная лаборатория?</h4><p>Нет. Испытания могут проводиться в сторонней аккредитованной лаборатории при наличии договора и протоколов.</p></div>
+<div class="faq-item"><h4>Есть ли минимальный штат для включения продукции в реестр?</h4><p>Формально нет — ПП 719 не устанавливает минимального порога численности персонала для всей промышленности. Требования к тому, кто и как выполняет операции, определяются применительно к конкретной позиции продукции.</p></div>
+<div class="faq-item"><h4>Принимается ли договор ГПХ вместо трудового?</h4><p>Как правило, да, при условии, что договор описывает конкретные производственные операции, выполняемые в связи с деятельностью заявителя. Работа подрядчика непосредственно на площадке заявителя — не универсальное требование само по себе, важна возможность подтвердить содержание и фактическое выполнение операции согласно применимому требованию для позиции.</p></div>
+<div class="faq-item"><h4>Нужна ли собственная аккредитованная лаборатория?</h4><p>Как правило, нет, если применимое требование для вашей позиции этого прямо не предусматривает. Испытания могут проводиться в сторонней аккредитованной лаборатории при наличии договора и протоколов — это тот же принцип, что и с контрактными производственными операциями: важна возможность подтвердить операцию документально, а не то, кто физически её выполняет.</p></div>
+<div class="faq-item"><h4>Можно ли привлекать подрядчика для выполнения производственных операций?</h4><p>Возможность привлечения третьих лиц для конкретной операции зависит от того, что установлено применимым требованием для вашей позиции. Если это допустимо, договор должен содержать конкретный перечень операций и, как правило, право заказчика на производственный контроль.</p></div>
 
 <div class="article-cta">
   <b>Готовите малое предприятие к экспертизе ТПП?</b>
-  <p>ГМТ проверит каждый из трёх разделов чек-листа и поможет устранить пробелы до выхода эксперта на площадку.</p>
+  <p>ГМТ определит требования именно к вашей продукции, проверит каждый из трёх разделов чек-листа и поможет устранить пробелы до выхода эксперта на площадку.</p>
   <a class="btn pri" href="mailto:info@med-local.ru?subject=Аудит перед экспертизой ТПП">Записаться на бесплатный аудит</a>
-</div></div>
+</div>
+
+    </div>
   </div>
 </section>
-<section style="background:var(--paper);border-top:1px solid var(--line);padding:32px 0;margin-top:0">
+<section style="background:var(--paper);border-top:1px solid var(--line);padding:32px 0">
   <div class="wrap" style="max-width:820px">
     <h3 style="font-size:16px;font-weight:700;margin:0 0 16px;color:var(--ink)">Читайте также</h3>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><a href="/blog/advalornaya-dolya" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Расчёт адвалорной доли</a><a href="/blog/gisp-otchet" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Отчётность в ГИСП</a><a href="/localization" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Локализация под ключ</a></div>
@@ -341,26 +358,25 @@ gtag("config", "G-9DZXMBECL0");
 </main>
 <footer><div class="wrap">
   <div class="cols">
-    <div><b>Инженерно-регуляторный центр</b><p style="font-size:13px;line-height:1.65;margin:0 0 16px">Локализация производства медицинских изделий в России.</p>
-      <a href="tel:+79853169104">+7 985 316-91-04</a>
-      <a href="tel:+79888777295">+7 988 877-72-95</a>
+    <div><b>Инженерно-регуляторный центр локализации МИ</b>
+      <p style="font-size:13px;line-height:1.65;margin:0 0 14px;color:#97A1B2">Локализация производства медицинских изделий в России. От анализа ниши до регистрационного удостоверения.</p>
+      <a href="tel:+79853169104">+7 985 316-91-04 (Россия)</a>
+      <a href="tel:+79888777295">+7 988 877-72-95 (Россия)</a>
+      <a href="tel:+79888777295">MAX: +7 988 877-72-95</a>
+      <a href="tel:+77021394489">+7 702 139-44-89 (Казахстан)</a>
       <a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a>
-      <a href="https://t.me/tandelovtat" style="color:#2FA8A0">Telegram: @tandelovtat</a>
+      <a href="https://t.me/tandelovtat" style="color:#2FA8A0" target="_blank" rel="noopener noreferrer">Telegram: @tandelovtat</a>
     </div>
     <div><b>Услуги</b>
-      <a href="/localization" target="_blank">Локализация</a>
-      <a href="/reverse" target="_blank">Реверс-инжиниринг</a>
-      <a href="/development" target="_blank">Разработка</a>
-      <a href="/production" target="_blank">Производство</a>
-      <a href="/registration" target="_blank">Регистрация</a>
-      <a href="/analytics" target="_blank">Аналитика</a>
+      <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a>
+      <a href="/development">Разработка</a><a href="/production">Производство</a>
+      <a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a>
     </div>
     <div><b>Компания</b>
-      <a href="/cases">Кейсы</a><a href="/pricing" target="_blank">Стоимость</a>
-      <a href="/blog" target="_blank">База знаний</a>
-      <a href="/contacts" target="_blank">Контакты</a>
+      <a href="/cases">Кейсы</a><a href="/pricing">Стоимость</a><a href="/blog">База знаний</a>
+      <a href="/contacts">Контакты</a><a href="/glossary">Глоссарий</a><a href="/privacy">Политика ПДн</a>
     </div>
-    <div><b>Почта</b>
+    <div><b>Контакты</b>
       <a href="mailto:info@med-local.ru">info@med-local.ru</a>
       <a href="mailto:sales@med-local.ru">sales@med-local.ru</a>
       <a href="mailto:marketing@med-local.ru">marketing@med-local.ru</a>
@@ -372,6 +388,17 @@ gtag("config", "G-9DZXMBECL0");
     <span style="display:flex;gap:14px;flex-wrap:wrap"><a href="/privacy">Политика конфиденциальности</a><a href="/oferta">Публичная оферта</a><a href="/terms">Пользовательское соглашение</a></span>
   </div>
 </div></footer>
+<a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg>
+  Написать в Telegram
+</a>
+<a class="float-btn max-btn" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer">
+  <img src="/images/max-icon.png" alt="MAX" width="22" height="22" style="border-radius:6px">
+  Написать в MAX
+</a>
+<script>
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';}
+</script>
 <script src="/cookie-consent.js" defer></script>
 </body>
 </html>
