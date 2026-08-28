@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Где брать легитимные российские компоненты: верификация субпоставщиков через СТ-1 и ГИСП — Инженерно-регуляторный центр</title>
+<meta name="description" content="Как проверить легитимность российского происхождения компонента у субпоставщика — где смотреть СТ-1 через сервис ТПП, как проверить реестровую запись по ПП 719 в ГИСП, и почему это разные документы для разных юридических целей.">
+<link rel="canonical" href="https://med-local.ru/blog/verifikaciya-subpostavshchikov-st1-gisp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Где брать легитимные российские компоненты: верификация субпоставщиков через СТ-1 и ГИСП">
+<meta property="og:description" content="Практический разбор верификации субпоставщиков — сервис проверки СТ-1 ТПП, публичная выписка из реестра ГИСП, красные флаги недобросовестного поставщика.">
+<meta property="og:url" content="https://med-local.ru/blog/verifikaciya-subpostavshchikov-st1-gisp">
+<meta property="og:image" content="https://med-local.ru/og-image.png">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C232E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@700;800&family=JetBrains+Mono:wght@600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{
+ --graphite:#1C232E;--graphite-2:#27303E;--ink:#1C232E;--muted:#4A5568;
+ --blue:#3D6FB4;--cyan:#2FA8A0;--cyan-soft:#E4F4F3;--blue-soft:#E9F0FA;
+ --orange:#FF6B3D;--orange-soft:#FFE9DC;
+ --paper:#F6F7F9;--card:#FFFFFF;--line:#E5E8ED;
+ --body:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+ --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{max-width:100vw}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.mono{font-family:var(--mono)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:600;font-size:14.5px;border:none;transition:.18s;cursor:pointer}
+.btn.pri{background:var(--orange);color:#fff;box-shadow:0 10px 24px -10px rgba(255,107,61,.6)}
+.btn.pri:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn.gh{background:transparent;border:1.5px solid #fff;color:#fff}
+.btn.gh:hover{background:rgba(255,255,255,.1)}
+.btn.dark{background:var(--graphite);color:#fff}
+.btn.line-btn{background:#fff;border:1.5px solid var(--line);color:var(--ink)}
+.btn.line-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--cyan)}
+.tag::before{content:"";width:22px;height:2px;background:var(--cyan)}
+h1,h2,h3{line-height:1.15;margin:0}
+.h-xl{font-size:clamp(30px,4.6vw,52px);font-weight:800;letter-spacing:-1.2px}
+.h-l{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.8px}
+.h-m{font-size:19px;font-weight:700}
+.lead{font-size:17px;color:var(--muted);line-height:1.65}
+.sec{padding:74px 0}
+.sec.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:960px){.g3,.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+@media(max-width:620px){.g3,.g4,.g2{grid-template-columns:1fr}}
+@media(max-width:880px){.route{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:560px){.route{grid-template-columns:1fr!important}.route .st{padding:16px 0 0!important;border-bottom:1px solid var(--line);padding-bottom:16px!important;margin-bottom:8px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.kv{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.kv span{color:var(--muted)}.kv b{text-align:right}
+header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:22px;height:66px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:16.5px;letter-spacing:-.3px}
+.logo small{display:block;font-size:10px;font-weight:600;color:var(--muted);letter-spacing:1.6px;text-transform:uppercase}
+.nav a.lnk{font-size:14px;font-weight:500;color:var(--muted);transition:.15s;white-space:nowrap}
+.nav a.lnk:hover,.nav a.lnk.on{color:var(--ink)}
+.nav .sp{flex:1}
+@media(max-width:2000px){.nav a.lnk{display:none}}
+.hero{position:relative;background:linear-gradient(140deg,var(--graphite) 0%,#202b3c 60%,#1d3a45 100%);color:#fff;overflow:hidden}
+.hero .pcb{position:absolute;inset:0;opacity:.16;pointer-events:none}
+.hero .in{position:relative;padding:92px 0 86px}
+.hero .lead{color:#B9C2D0;max-width:640px}
+.hero .stats{display:flex;gap:38px;margin-top:42px;flex-wrap:wrap}
+.hero .stats b{font-size:26px;font-weight:800;display:block;letter-spacing:-.5px}
+.hero .stats span{font-size:12.5px;color:#8E99AB}
+.crumbs{font-size:12.5px;color:var(--muted);margin:18px 0 0}
+.crumbs b{color:var(--ink)}
+.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:8px}
+.route .st{position:relative;padding:20px 18px 0}
+.route .st::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+.route .st h3{font-size:15.5px;margin:8px 0 6px}
+.route .st p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+@media(max-width:880px){.route{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.route{grid-template-columns:1fr}}
+.svc{display:flex;flex-direction:column;gap:10px;position:relative;transition:.2s}
+.svc:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.svc .ic{width:44px;height:44px;border-radius:12px;background:var(--cyan-soft);color:var(--cyan);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:15px}
+.svc p{font-size:14px;color:var(--muted);margin:0;line-height:1.6;flex:1}
+.svc .go{font-size:13.5px;font-weight:700;color:var(--cyan)}
+.seg{border-left:3px solid var(--blue);padding:16px 20px;background:#fff;border-radius:0 14px 14px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.seg b{display:block;margin-bottom:5px}
+.seg p{font-size:13.5px;color:var(--muted);margin:0 0 8px;line-height:1.55}
+.seg .of{font-size:13px;font-weight:600;color:var(--cyan)}
+.law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
+.law b{display:block;margin-bottom:6px;font-size:14px}
+.warn{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#8B3A1E;line-height:1.65;margin:24px 0}
+.warn b{display:block;margin-bottom:6px;font-size:14px}
+.post{display:flex;flex-direction:column;gap:9px;transition:.2s}
+.post:hover{transform:translateY(-3px)}
+.post .rub{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)}
+.post h3{font-size:16.5px;line-height:1.35}
+.post p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.6}
+.post .cta-link{font-size:13px;font-weight:700;color:var(--orange)}
+.frm{display:grid;gap:13px}
+.frm label{font-size:12.5px;font-weight:600}
+.frm input,.frm select,.frm textarea{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:12px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.frm input:focus,.frm select:focus,.frm textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:620px){.f2{grid-template-columns:1fr}}
+.mag{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:var(--r);padding:30px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.mag b{font-size:19px;display:block;margin-bottom:6px}
+.mag p{color:#AFBAC9;font-size:14px;margin:0;max-width:520px}
+.mag .sp{flex:1}
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2}footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+.proof{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.proof .n{font-family:var(--mono);color:var(--cyan);font-weight:600;font-size:12.5px;padding-top:2px;white-space:nowrap}
+.steps li{margin-bottom:10px;line-height:1.6;font-size:14.5px}
+.lift{box-shadow:var(--sh)}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}
+.pain-item{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px}
+.pain-item h4{font-size:14px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.pain-item p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+.compare-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:14px}
+.compare-table th{background:var(--graphite);color:#fff;font-weight:600;padding:12px 16px;text-align:left}
+.compare-table td{padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink)}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table td.bad{color:#C0392B}
+.compare-table td.good{color:#1A7A6E;font-weight:600}
+.calc-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;margin-top:24px;box-shadow:var(--sh)}
+.calc-box h3{font-size:18px;font-weight:700;margin:0 0 20px}
+.form-row{margin-bottom:14px}
+.form-row label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;color:var(--ink)}
+.form-row select,.form-row input{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:10px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.form-row select:focus,.form-row input:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.calc-result{background:var(--cyan-soft);border:1px solid #BCE4E1;border-radius:11px;padding:18px;margin-top:16px;display:none}
+.calc-result.show{display:block}
+.calc-result h4{font-size:15px;font-weight:700;color:#1A7A6E;margin:0 0 6px}
+.calc-result p{font-size:13.5px;color:#2D7A72;margin:0}
+.related{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.related a{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan);transition:.15s}
+.related a:hover{border-color:var(--cyan)}
+
+/* Бургер-меню для мобильных */
+.burger{display:none;align-items:center;gap:8px;cursor:pointer;padding:6px 10px;background:#fff;border:1.5px solid var(--line);border-radius:10px;transition:.15s;z-index:200}
+.burger:hover{border-color:var(--cyan)}
+.burger-icon{display:flex;flex-direction:column;gap:5px}
+.burger-icon span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger-label{font-size:12.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+.burger.open .burger-icon span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open .burger-icon span:nth-child(2){opacity:0}
+.burger.open .burger-icon span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:680px){.burger{padding:4px;background:none;border:none;gap:0}.burger-label{display:none}}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:100;flex-direction:column}
+.mob-menu-links{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:70px 20px 16px}
+.mob-menu-cta{flex-shrink:0;display:flex;justify-content:center;padding:14px 24px 20px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+.mob-menu a:hover{color:var(--cyan)}
+@media(max-width:2000px){
+  .nav-links{display:none!important}
+  .burger{display:flex}
+  .nav{gap:12px}
+}
+/* Хлебные крошки */
+.crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:.15s}.crumbs a:hover{color:var(--cyan)}
+.crumbs span{color:var(--muted)}
+.crumbs b{color:var(--ink);font-weight:600}
+/* Таблицы на мобильных */
+@media(max-width:640px){
+  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .article-body table{display:block;overflow-x:auto}
+}
+/* Плавающая кнопка на мобильных */
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+.float-btn.max-btn{bottom:74px;background:#fff;box-shadow:0 8px 24px rgba(107,63,231,.25);color:var(--ink)}
+@media(max-width:768px){.float-btn{display:flex}}
+/* Состояния кнопок */
+.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.btn.pri:active{transform:translateY(0);filter:brightness(.95)}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+/* Единый подвал */
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2;transition:.15s}
+footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){footer .cols{grid-template-columns:1fr}}
+
+.header-icons{display:flex;align-items:center;gap:8px;margin-right:4px}
+.header-icons a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s}
+.header-icons a.tg-icon{background:#2FA8A0}
+.header-icons a.max-icon{background:transparent;padding:0}
+.header-icons a:hover{filter:brightness(1.1);transform:translateY(-1px)}
+@media(max-width:2000px){.header-icons{display:none}}
+.lang-switch{display:flex;align-items:center;gap:4px;margin-right:8px}
+.lang-switch a{font-size:12.5px;font-weight:700;padding:4px 8px;border-radius:6px;color:var(--muted);transition:.15s;text-decoration:none}
+.lang-switch a.active{background:var(--graphite);color:#fff}
+.mob-lang-switch{display:flex;align-items:center;gap:10px;margin-top:10px}
+.mob-lang-switch a{font-size:15px;font-weight:700;padding:8px 20px;border-radius:10px;color:var(--muted);background:var(--paper);border:1.5px solid var(--line)}
+.mob-lang-switch a.active{background:var(--graphite);color:#fff;border-color:var(--graphite)}
+@media(max-width:680px){.lang-switch{display:none}}
+.lang-switch a:hover:not(.active){color:var(--ink)}
+
+.article-body h2{font-size:22px;font-weight:800;margin:36px 0 14px;color:var(--ink)}
+.article-body h3{font-size:18px;font-weight:700;margin:28px 0 10px;color:var(--ink)}
+.article-body h4{font-size:16px;font-weight:700;margin:24px 0 8px;color:var(--ink)}
+.article-body p{font-size:15px;color:#3a4455;line-height:1.75;margin:0 0 16px}
+.article-body ul,.article-body ol{margin:0 0 16px 20px}
+.article-body li{font-size:15px;color:#3a4455;line-height:1.7;margin-bottom:6px}
+.article-body strong,.article-body b{color:var(--ink)}
+.article-body .law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:16px 20px;font-size:14px;color:#2D4F7E;line-height:1.65;margin:20px 0}
+.article-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-body th{background:var(--graphite);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+.article-body td{padding:10px 14px;border-bottom:1px solid var(--line);color:#3a4455}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.article-cta{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:16px;padding:28px 32px;margin:40px 0}
+.article-cta b{font-size:18px;display:block;margin-bottom:8px}
+.article-cta p{color:#AFBAC9;font-size:14px;margin:0 0 18px}
+</style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DZXMBECL0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9DZXMBECL0");</script>
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Где брать легитимные российские компоненты: верификация субпоставщиков через СТ-1 и ГИСП","description":"Как проверить легитимность российского происхождения компонента у субпоставщика — где смотреть СТ-1 через сервис ТПП, как проверить реестровую запись по ПП 719 в ГИСП, и почему это разные документы для разных юридических целей.","url":"https://med-local.ru/blog/verifikaciya-subpostavshchikov-st1-gisp","datePublished":"2026-08-28","dateModified":"2026-08-28","author":{"@type":"Person","name":"А.-Т. Танделов","url":"https://med-local.ru/about"},"publisher":{"@type":"Organization","name":"Инженерно-регуляторный центр локализации МИ","url":"https://med-local.ru"},"image":"https://med-local.ru/og-image.png","inLanguage":"ru"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"СТ-1 и реестровая запись по ПП 719 — это одно и то же?","acceptedAnswer":{"@type":"Answer","text":"Нет. Это разные документы, выдаваемые по разным процедурам для разных юридических целей. Для участия товара непосредственно в закупке по ПП 1875 обычно требуется именно реестровая запись; для подтверждения происхождения компонента в рамках локализации по ПП 719 набор допустимых доказательств шире и зависит от конкретной строки требований."}},{"@type":"Question","name":"Как проверить подлинность СТ-1, который прислал поставщик?","acceptedAnswer":{"@type":"Answer","text":"Через официальный сервис ТПП России verification.tpprf.ru — по реквизитам конкретного сертификата. Визуальная проверка PDF-файла подлинность не подтверждает."}},{"@type":"Question","name":"Нужен ли личный кабинет ГИСП, чтобы проверить поставщика?","acceptedAnswer":{"@type":"Answer","text":"Нет. Реестр российской промышленной продукции публичен — сведения предоставляются любому заинтересованному лицу через выписку в ГИСП, без необходимости входить в личный кабинет держателя записи."}},{"@type":"Question","name":"Достаточно ли того, что у поставщика «есть запись в реестре по ПП 719»?","acceptedAnswer":{"@type":"Answer","text":"Не обязательно. С учётом изменений постановления №400 от 13.04.2026 нужно проверять не только сам факт наличия записи, но и то, соответствует ли количество набранных в ней баллов значению, установленному для нужной вам цели (например, для закупок)."}},{"@type":"Question","name":"Как проверить компонент, произведённый в Беларуси или Казахстане?","acceptedAnswer":{"@type":"Answer","text":"Через Евразийский реестр промышленных товаров государств — членов ЕАЭС (ЕРПТ), если компонент сам участвует как товар в закупке по ПП 1875. Если это сырьё для вашей собственной локализации по ПП 719 — смотрите требование конкретной строки раздела приложения, а не автоматически требуйте запись в ЕРПТ."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://med-local.ru/"},{"@type":"ListItem","position":2,"name":"База знаний","item":"https://med-local.ru/blog"},{"@type":"ListItem","position":3,"name":"Где брать легитимные российские компоненты: верифи","item":"https://med-local.ru/blog/verifikaciya-subpostavshchikov-st1-gisp"}]}
+</script>
+</head>
+<body>
+<div class="mob-menu" id="mob-menu"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:18px;right:18px;background:none;border:none;cursor:pointer;padding:8px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button><div class="mob-menu-links"><a href="/">Главная</a><a href="/about">О центре</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">База знаний</a><a href="/pricing">Стоимость</a><a href="/cases">Кейсы</a><a href="/glossary">Глоссарий</a><a href="/contacts">Контакты</a><div class="mob-lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
+  </div><div class="mob-menu-cta"><a href="/#lead" class="btn pri" style="margin-top:16px">Оценить проект</a></div></div>
+<header><div class="wrap nav">
+  <a class="logo" href="/"><span style="display:flex;align-items:center;gap:11px"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="7" stroke="#1C232E" stroke-width="2.6" fill="none"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#2FA8A0"/><path d="M24 2v7M24 39v7M2 24h7M39 24h7M8 8l5 5M40 8l-5 5M8 40l5-5M40 40l-5-5" stroke="#3D6FB4" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.6" fill="#FF6B3D"/></svg><span><span style="font-weight:800;font-size:12px;letter-spacing:-.3px;line-height:1.15;display:block">Инженерно-<br>регуляторный<br>центр</span><span style="font-size:9px;font-weight:600;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;line-height:1.3;display:block">локализации МИ</span></span></span></a>
+  <span class="sp"></span>
+  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk on" href="/blog">База знаний</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a><a class="lnk" href="/cases">Кейсы</a><a class="lnk" href="/glossary">Глоссарий</a><a class="lnk" href="/contacts">Контакты</a></div>
+  <div class="header-icons">
+    <a class="tg-icon" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer" title="Написать в Telegram" aria-label="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg></a>
+    <a class="max-icon" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer" title="Написать в MAX" aria-label="MAX"><img src="/images/max-icon.png" alt="MAX" width="26" height="26" style="border-radius:7px;display:block"></a>
+  </div>
+  <div class="lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
+  <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span class="burger-icon"><span></span><span></span><span></span></span><span class="burger-label">Меню</span></button>
+</div></header>
+
+<div class="wrap"><nav class="crumbs"><a href="/">Главная</a><span>›</span><a href="/blog">База знаний</a><span>›</span><b>Где брать легитимные российские компоненты: верифи...</b></nav></div>
+<section style="background:#fff;border-bottom:1px solid var(--line)">
+  <div class="wrap" style="padding:48px 0 36px;max-width:820px">
+    <a href="/blog" style="font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:20px">← Все статьи</a>
+    <span class="tag" style="display:inline-flex;margin-bottom:14px">Локализация · ПП 719 · СТ-1</span>
+    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">Где брать легитимные российские компоненты: верификация субпоставщиков через СТ-1 и ГИСП</h1>
+    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ · совместно со специалистом по СТ-1</span>
+      <span>·</span>
+      <time datetime="2026-08-28">Опубликовано: 28 августа 2026</time>
+    </div>
+  </div>
+</section>
+<main>
+<section class="sec">
+  <div class="wrap" style="max-width:820px">
+    <div class="article-body">
+
+<p>Производитель, локализующий медицинское изделие по ПП 719, рано или поздно сталкивается с вопросом: поставщик прислал документ, похожий на подтверждение российского происхождения компонента, — но как убедиться, что это не просто красиво оформленная бумага? Фраза «у нашего поставщика есть ПП 719» юридически почти бессодержательна: проверять нужно конкретную запись на конкретный товар конкретного производителя, а не факт существования какого-то документа вообще.</p>
+
+<div class="law"><b>Суть в четырёх предложениях</b>Нельзя ориентироваться на один документ при проверке происхождения компонента — сначала нужно определить, для какой юридической цели подтверждается происхождение: непосредственное участие товара в закупке по ПП 1875 (тогда основное подтверждение — номер реестровой записи в реестре российской промышленной продукции или в евразийском реестре) либо подтверждение выполнения требований локализации конечного изделия по ПП 719 (тогда набор допустимых доказательств шире и определяется конкретной строкой раздела приложения и Положением ТПП, утверждённым приказом №52). СТ-1 и реестровая запись по ПП 719 — не взаимозаменяемые документы: они выдаются по разным процедурам и для разных целей, и «есть СТ-1, значит запись не нужна» — не универсальное правило. У ТПП России есть открытый сервис проверки выданных сертификатов по реквизитам, а реестр российской промышленной продукции по ПП 719 публично доступен любому заинтересованному лицу через ГИСП — предъявленный поставщиком PDF-файл нужно всегда сверять именно через эти сервисы, а не принимать на веру.</div>
+
+<h2>1. Три разных документа — три разные цели</h2>
+<p>Чтобы не путаться, нужно чётко разделять, что именно и для чего вы проверяете.</p>
+<p><strong>Сертификат происхождения товара формы СТ-1 (общий).</strong> Регулируется Положением, утверждённым приказом ТПП России от 01.03.2024 №14 (приложение №3), в действующей редакции приказа ТПП РФ от 16.07.2026 №59. Основан на правилах определения происхождения товаров в СНГ — это не специальный документ именно для ПП 719.</p>
+<p><strong>СТ-1 для государственных и муниципальных закупок.</strong> Отдельный документ — Положение, утверждённое приказом ТПП РФ от 28.03.2025 №31, в редакции от 28.01.2026. Пакет доказательств здесь значительно ближе к проверке реального производства: документы на производственные площади, оборудование, персонал, технологическую документацию, перечень используемых материалов и сведения о переданных сторонним организациям операциях.</p>
+<p><strong>Документы для подтверждения производства по ПП 719.</strong> Регулируются Положением, утверждённым приказом ТПП РФ от 30.05.2018 №52, в действующей редакции от 29.07.2026 (изменена приказом №64). Это тот документ, который нужен, когда вопрос звучит «какими документами производитель конечного изделия доказывает происхождение использованного компонента для ПП 719».</p>
+<div class="warn"><b>⚠ Ключевая ошибка, которую стоит избегать</b>Нельзя установить универсальное правило «есть СТ-1 — значит реестровая запись по ПП 719 не нужна». Для непосредственного участия товара в закупке по ПП 1875 основным подтверждением российского происхождения для соответствующих позиций приложений является номер реестровой записи в реестре российской промышленной продукции — с учётом баллов, если ПП 719 их устанавливает. СТ-1 не является общей равноправной альтернативой этой записи, за исключением случаев, когда само ПП 1875 прямо устанавливает специальное или переходное правило.</div>
+
+<h2>2. Где реально проверить документы поставщика</h2>
+<h3>Проверка СТ-1</h3>
+<p>У ТПП России есть открытый сервис верификации: <a href="https://verification.tpprf.ru/" target="_blank" rel="noopener noreferrer">verification.tpprf.ru</a>. Через него проверяются сертификаты формы СТ-1, СТ-1 для госзакупок и акты экспертизы для госзакупок — <strong>по реквизитам конкретного документа</strong>, а не как открытый общий список всех выданных сертификатов. Если поставщик прислал копию СТ-1 — не просматривайте PDF визуально, а сверьте реквизиты через сервис.</p>
+<h3>Проверка реестровой записи по ПП 719</h3>
+<p>Реестр российской промышленной продукции публичен: Правила прямо устанавливают, что сведения из реестра предоставляются любому заинтересованному лицу, а не только держателю записи. Выписка формируется через <a href="https://gisp.gov.ru/pp719v2/pub/prod/" target="_blank" rel="noopener noreferrer">ГИСП</a> и должна содержать:</p>
+<table>
+<thead><tr><th>Что проверить</th><th>Что показывает выписка</th></tr></thead>
+<tbody>
+<tr><td>Номер записи</td><td>Текущий и первоначальный номер</td></tr>
+<tr><td>Срок действия</td><td>Дата формирования и срок действия</td></tr>
+<tr><td>Производитель</td><td>Название, ИНН, ОГРН</td></tr>
+<tr><td>Продукция</td><td>Наименование, ОКПД2, ТН ВЭД</td></tr>
+<tr><td>Локализация</td><td>Показатели локализации</td></tr>
+<tr><td>Баллы для закупок</td><td>Соответствие набранных баллов значениям ПП 719 для целей закупок (с учётом изменений ПП №400 от 13.04.2026)</td></tr>
+</tbody>
+</table>
+<p>Личный кабинет производителя вам для этой проверки не нужен — публичная выписка доступна отдельно от кабинета держателя записи.</p>
+<h3>Проверка компонентов из других стран ЕАЭС</h3>
+<p>Для товара из другого государства ЕАЭС (не РФ) применяется отдельный публичный ресурс — <a href="https://goszakupki.eaeunion.org/erpt/ru/registers/products" target="_blank" rel="noopener noreferrer">Евразийский реестр промышленных товаров государств — членов ЕАЭС</a> (ЕРПТ). Но здесь важно то же разграничение по цели: если компонент из ЕАЭС сам участвует как товар в закупке по ПП 1875 — смотрите правила ЕРПТ; если он используется как сырьё/комплектующее в изделии, локализуемом по ПП 719 — смотрите требование конкретной строки раздела приложения к ПП 719 и доказательства по приказу ТПП №52. Требовать от каждого евразийского субпоставщика запись в ЕРПТ только потому, что его деталь используется в вашем изделии, не нужно.</p>
+
+<h2>3. Чек-лист: получили КП от поставщика — что делать</h2>
+<p><strong>Шаг 1. Запросите базовый пакет документов.</strong> Реестровая запись (номер и выписка) или СТ-1 (реквизиты сертификата); документы, подтверждающие, что поставщик — производитель, а не только продавец (устав, ИНН/ОГРН производственной площадки); при наличии — паспорт качества или сертификат на конкретную партию/модель.</p>
+<p><strong>Шаг 2. Определите, для какой цели вам нужно подтверждение.</strong> Компонент участвует напрямую в закупке по ПП 1875 (тогда нужна именно реестровая запись/ЕРПТ), или это сырьё для вашей собственной локализации по ПП 719 (тогда допустимый набор доказательств шире — смотрите требование конкретной строки).</p>
+<p><strong>Шаг 3. Сверьте реквизиты, а не полагайтесь на визуальный вид документа.</strong> СТ-1 — через verification.tpprf.ru. Реестровую запись — через публичную выписку ГИСП.</p>
+<p><strong>Шаг 4. Сопоставьте продавца и производителя.</strong> ИНН/ОГРН в договоре и в счёте должны совпадать с производителем, указанным в реестровой записи или СТ-1 — не с посредником.</p>
+<p><strong>Шаг 5. Проверьте, что документ относится именно к вашей продукции.</strong> Наименование, модель, артикул в сертификате/выписке должны совпадать с тем, что вы фактически закупаете — а не с похожей позицией того же поставщика.</p>
+<p><strong>Шаг 6. Проверьте актуальность на дату сделки.</strong> Срок действия реестровой записи; статус — не исключена ли запись из реестра.</p>
+<p><strong>Шаг 7. Для компонента ЕАЭС — уточните, применимо ли требование ЕРПТ именно к вашей ситуации.</strong> Смотрите раздел 2 выше — не для каждого евразийского компонента это требуется.</p>
+
+<h2>4. Красные флаги</h2>
+<p>Официального перечня «типовых схем мошенничества» от Минпромторга или ТПП мы не нашли и не приписываем ведомствам такой список. Но из самой логики проверки прямо вытекают контрольные риски:</p>
+<p><strong>Дистрибьютор выдаёт себя за производителя.</strong> Проверяется сопоставлением ИНН/ОГРН продавца с производителем, указанным в реестровой записи или документах ТПП.</p>
+<p><strong>Используется чужой номер реестровой записи.</strong> Проверяется открытием именно этой записи и сверкой производителя, товара, ОКПД2, модели.</p>
+<p><strong>Запись истекла или исключена, но поставщик показывает старую PDF-выписку.</strong> Проверяйте актуальный статус напрямую в ГИСП, а не сохранённый файл.</p>
+<p><strong>Запись действует, но набранных баллов недостаточно для нужной цели.</strong> Смотрите не только сам факт наличия записи, но и поле о соответствии баллам для целей закупок.</p>
+<p><strong>СТ-1 относится к другому товару.</strong> Сверяйте наименование, модель, производителя и реквизиты сертификата построчно.</p>
+<p><strong>СТ-1 предъявляется вместо обязательной реестровой записи там, где применимая норма требует именно запись.</strong> Сначала определите, какой способ подтверждения требует ваша конкретная ситуация (раздел 1 выше).</p>
+<p><strong>Поставщик — реселлер, а фактическое производство выполняет третье лицо.</strong> Запрашивайте цепочку договоров и сопоставляйте фактического изготовителя с документами происхождения.</p>
+
+<h2>5. Что изменилось недавно и важно для проверки поставщика</h2>
+<p><strong>Приказ ТПП №59 от 16.07.2026</strong> изменил Положение о СТ-1 (приказ №14) и правила экспертизы происхождения — в частности, появилась возможность в предусмотренном случае использовать экспертное заключение, связанное с СТ-1, оформленным для включения продукции в реестр, вместо отдельной повторной экспертизы, пока реестровая запись действует.</p>
+<p><strong>Приказ ТПП №64 от 29.07.2026</strong> изменил приказ №52 — документ о доказательствах для ПП 719. Конкретизировано подтверждение происхождения отдельных видов сырья/материалов документами изготовителя (паспорта качества, сертификаты). Важная оговорка: упрощённые конструкции перечисляют определённые разделы приложения к ПП 719 — медицинский раздел VII автоматически под эти упрощения не подпадает, нужно смотреть конкретную строку.</p>
+<p><strong>Постановление №400 от 13.04.2026</strong> сделало due diligence субпоставщика существенно точнее: выписка из реестра теперь прямо отражает, соответствует ли количество набранных баллов значению, установленному ПП 719 для целей закупок. Раньше вопрос «есть запись?» был достаточен для первичной проверки, теперь недостаточен — нужно смотреть именно это поле.</p>
+<p><strong>Отдельно: ПП №901 от 16.06.2025 не регулирует ни выдачу СТ-1, ни проверку происхождения компонентов у субпоставщика.</strong> Его содержание — перенос ряда позиций медицинской/специальной одежды из раздела VII в раздел XVII приложения к ПП 719 и введение с 2026 года основания для исключения реестровой записи за непредставление ежегодной отчётности (эта тема отдельно разобрана в статье <a href="/blog/gisp-otchet">«Отчётность в ГИСП по ПП №719»</a>). Если вы встретите ссылку на ПП №901 в контексте проверки поставщиков — это, вероятно, ошибка привязки нормы, а не релевантный источник.</p>
+
+<h2>FAQ</h2>
+<div class="faq-item"><h4>СТ-1 и реестровая запись по ПП 719 — это одно и то же?</h4><p>Нет. Это разные документы, выдаваемые по разным процедурам для разных юридических целей. Для участия товара непосредственно в закупке по ПП 1875 обычно требуется именно реестровая запись; для подтверждения происхождения компонента в рамках локализации по ПП 719 набор допустимых доказательств шире и зависит от конкретной строки требований.</p></div>
+<div class="faq-item"><h4>Как проверить подлинность СТ-1, который прислал поставщик?</h4><p>Через официальный сервис ТПП России <a href="https://verification.tpprf.ru/" target="_blank" rel="noopener noreferrer">verification.tpprf.ru</a> — по реквизитам конкретного сертификата. Визуальная проверка PDF-файла подлинность не подтверждает.</p></div>
+<div class="faq-item"><h4>Нужен ли личный кабинет ГИСП, чтобы проверить поставщика?</h4><p>Нет. Реестр российской промышленной продукции публичен — сведения предоставляются любому заинтересованному лицу через выписку в ГИСП, без необходимости входить в личный кабинет держателя записи.</p></div>
+<div class="faq-item"><h4>Достаточно ли того, что у поставщика «есть запись в реестре по ПП 719»?</h4><p>Не обязательно. С учётом изменений постановления №400 от 13.04.2026 нужно проверять не только сам факт наличия записи, но и то, соответствует ли количество набранных в ней баллов значению, установленному для нужной вам цели (например, для закупок).</p></div>
+<div class="faq-item"><h4>Как проверить компонент, произведённый в Беларуси или Казахстане?</h4><p>Через Евразийский реестр промышленных товаров государств — членов ЕАЭС (ЕРПТ), если компонент сам участвует как товар в закупке по ПП 1875. Если это сырьё для вашей собственной локализации по ПП 719 — смотрите требование конкретной строки раздела приложения, а не автоматически требуйте запись в ЕРПТ.</p></div>
+
+<div class="article-cta">
+  <b>Не уверены в легитимности документов вашего субпоставщика?</b>
+  <p>ГМТ проверит реестровую запись и/или СТ-1 конкретного поставщика по официальным реквизитам, сопоставит с требованиями вашей позиции по ПП 719 и укажет на возможные риски до того, как вы включите компонент в расчёт локализации.</p>
+  <a class="btn pri" href="mailto:info@med-local.ru?subject=Верификация субпоставщика">Проверить поставщика</a>
+</div>
+
+    </div>
+  </div>
+</section>
+<section style="background:var(--paper);border-top:1px solid var(--line);padding:32px 0">
+  <div class="wrap" style="max-width:820px">
+    <h3 style="font-size:16px;font-weight:700;margin:0 0 16px;color:var(--ink)">Читайте также</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><a href="/blog/advalornaya-dolya" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Как считать адвалорную долю по ПП 719</a><a href="/blog/ballnaya-lovushka-2026" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Ловушка балльной системы 2026</a><a href="/blog/gisp-otchet" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Отчётность в ГИСП по ПП №719</a></div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div><b>Инженерно-регуляторный центр локализации МИ</b>
+      <p style="font-size:13px;line-height:1.65;margin:0 0 14px;color:#97A1B2">Локализация производства медицинских изделий в России. От анализа ниши до регистрационного удостоверения.</p>
+      <a href="tel:+79853169104">+7 985 316-91-04 (Россия)</a>
+      <a href="tel:+79888777295">+7 988 877-72-95 (Россия)</a>
+      <a href="tel:+79888777295">MAX: +7 988 877-72-95</a>
+      <a href="tel:+77021394489">+7 702 139-44-89 (Казахстан)</a>
+      <a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a>
+      <a href="https://t.me/tandelovtat" style="color:#2FA8A0" target="_blank" rel="noopener noreferrer">Telegram: @tandelovtat</a>
+    </div>
+    <div><b>Услуги</b>
+      <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a>
+      <a href="/development">Разработка</a><a href="/production">Производство</a>
+      <a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a>
+    </div>
+    <div><b>Компания</b>
+      <a href="/cases">Кейсы</a><a href="/pricing">Стоимость</a><a href="/blog">База знаний</a>
+      <a href="/contacts">Контакты</a><a href="/glossary">Глоссарий</a><a href="/privacy">Политика ПДн</a>
+    </div>
+    <div><b>Контакты</b>
+      <a href="mailto:info@med-local.ru">info@med-local.ru</a>
+      <a href="mailto:sales@med-local.ru">sales@med-local.ru</a>
+      <a href="mailto:marketing@med-local.ru">marketing@med-local.ru</a>
+      <a href="mailto:ceo@med-local.ru">ceo@med-local.ru</a>
+    </div>
+  </div>
+  <div class="fine">
+    <span>© 2026 ООО «Глобальные Медицинские Технологии» · 125047, г. Москва, 1-й Тверской-Ямской пер., д. 16, помещ. 1/п</span>
+    <span style="display:flex;gap:14px;flex-wrap:wrap"><a href="/privacy">Политика конфиденциальности</a><a href="/oferta">Публичная оферта</a><a href="/terms">Пользовательское соглашение</a></span>
+  </div>
+</div></footer>
+<a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg>
+  Написать в Telegram
+</a>
+<a class="float-btn max-btn" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer">
+  <img src="/images/max-icon.png" alt="MAX" width="22" height="22" style="border-radius:6px">
+  Написать в MAX
+</a>
+<script>
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';}
+</script>
+<script src="/cookie-consent.js" defer></script>
+</body>
+</html>
