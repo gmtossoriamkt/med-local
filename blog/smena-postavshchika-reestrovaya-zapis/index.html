@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Смена поставщика и реестровая запись по ПП 719: когда это риск, а когда нет — Инженерно-регуляторный центр</title>
+<meta name="description" content="Сама по себе смена поставщика материала или комплектующего не требует уведомления Минпромторга — но если меняется происхождение компонента или показатели локализации, действует механизм внесения изменений в реестровую запись (пп. 18–30 ПП 719), а установленное несоответствие ведёт к исключению записи.">
+<link rel="canonical" href="https://med-local.ru/blog/smena-postavshchika-reestrovaya-zapis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Смена поставщика и реестровая запись по ПП 719: когда это риск, а когда нет">
+<meta property="og:description" content="Как смена поставщика компонента влияет на реестровую запись по ПП 719 — когда это безопасно, а когда создаёт реальный риск исключения.">
+<meta property="og:url" content="https://med-local.ru/blog/smena-postavshchika-reestrovaya-zapis">
+<meta property="og:image" content="https://med-local.ru/og-image.png">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C232E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@700;800&family=JetBrains+Mono:wght@600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{
+ --graphite:#1C232E;--graphite-2:#27303E;--ink:#1C232E;--muted:#4A5568;
+ --blue:#3D6FB4;--cyan:#2FA8A0;--cyan-soft:#E4F4F3;--blue-soft:#E9F0FA;
+ --orange:#FF6B3D;--orange-soft:#FFE9DC;
+ --paper:#F6F7F9;--card:#FFFFFF;--line:#E5E8ED;
+ --body:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+ --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{max-width:100vw}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.mono{font-family:var(--mono)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:600;font-size:14.5px;border:none;transition:.18s;cursor:pointer}
+.btn.pri{background:var(--orange);color:#fff;box-shadow:0 10px 24px -10px rgba(255,107,61,.6)}
+.btn.pri:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn.gh{background:transparent;border:1.5px solid #fff;color:#fff}
+.btn.gh:hover{background:rgba(255,255,255,.1)}
+.btn.dark{background:var(--graphite);color:#fff}
+.btn.line-btn{background:#fff;border:1.5px solid var(--line);color:var(--ink)}
+.btn.line-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--cyan)}
+.tag::before{content:"";width:22px;height:2px;background:var(--cyan)}
+h1,h2,h3{line-height:1.15;margin:0}
+.h-xl{font-size:clamp(30px,4.6vw,52px);font-weight:800;letter-spacing:-1.2px}
+.h-l{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.8px}
+.h-m{font-size:19px;font-weight:700}
+.lead{font-size:17px;color:var(--muted);line-height:1.65}
+.sec{padding:74px 0}
+.sec.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:960px){.g3,.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+@media(max-width:620px){.g3,.g4,.g2{grid-template-columns:1fr}}
+@media(max-width:880px){.route{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:560px){.route{grid-template-columns:1fr!important}.route .st{padding:16px 0 0!important;border-bottom:1px solid var(--line);padding-bottom:16px!important;margin-bottom:8px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.kv{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.kv span{color:var(--muted)}.kv b{text-align:right}
+header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:22px;height:66px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:16.5px;letter-spacing:-.3px}
+.logo small{display:block;font-size:10px;font-weight:600;color:var(--muted);letter-spacing:1.6px;text-transform:uppercase}
+.nav a.lnk{font-size:14px;font-weight:500;color:var(--muted);transition:.15s;white-space:nowrap}
+.nav a.lnk:hover,.nav a.lnk.on{color:var(--ink)}
+.nav .sp{flex:1}
+@media(max-width:2000px){.nav a.lnk{display:none}}
+.hero{position:relative;background:linear-gradient(140deg,var(--graphite) 0%,#202b3c 60%,#1d3a45 100%);color:#fff;overflow:hidden}
+.hero .pcb{position:absolute;inset:0;opacity:.16;pointer-events:none}
+.hero .in{position:relative;padding:92px 0 86px}
+.hero .lead{color:#B9C2D0;max-width:640px}
+.hero .stats{display:flex;gap:38px;margin-top:42px;flex-wrap:wrap}
+.hero .stats b{font-size:26px;font-weight:800;display:block;letter-spacing:-.5px}
+.hero .stats span{font-size:12.5px;color:#8E99AB}
+.crumbs{font-size:12.5px;color:var(--muted);margin:18px 0 0}
+.crumbs b{color:var(--ink)}
+.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:8px}
+.route .st{position:relative;padding:20px 18px 0}
+.route .st::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+.route .st h3{font-size:15.5px;margin:8px 0 6px}
+.route .st p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+@media(max-width:880px){.route{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.route{grid-template-columns:1fr}}
+.svc{display:flex;flex-direction:column;gap:10px;position:relative;transition:.2s}
+.svc:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.svc .ic{width:44px;height:44px;border-radius:12px;background:var(--cyan-soft);color:var(--cyan);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:15px}
+.svc p{font-size:14px;color:var(--muted);margin:0;line-height:1.6;flex:1}
+.svc .go{font-size:13.5px;font-weight:700;color:var(--cyan)}
+.seg{border-left:3px solid var(--blue);padding:16px 20px;background:#fff;border-radius:0 14px 14px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.seg b{display:block;margin-bottom:5px}
+.seg p{font-size:13.5px;color:var(--muted);margin:0 0 8px;line-height:1.55}
+.seg .of{font-size:13px;font-weight:600;color:var(--cyan)}
+.law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
+.law b{display:block;margin-bottom:6px;font-size:14px}
+.warn{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#8B3A1E;line-height:1.65;margin:24px 0}
+.warn b{display:block;margin-bottom:6px;font-size:14px}
+.post{display:flex;flex-direction:column;gap:9px;transition:.2s}
+.post:hover{transform:translateY(-3px)}
+.post .rub{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)}
+.post h3{font-size:16.5px;line-height:1.35}
+.post p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.6}
+.post .cta-link{font-size:13px;font-weight:700;color:var(--orange)}
+.frm{display:grid;gap:13px}
+.frm label{font-size:12.5px;font-weight:600}
+.frm input,.frm select,.frm textarea{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:12px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.frm input:focus,.frm select:focus,.frm textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:620px){.f2{grid-template-columns:1fr}}
+.mag{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:var(--r);padding:30px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.mag b{font-size:19px;display:block;margin-bottom:6px}
+.mag p{color:#AFBAC9;font-size:14px;margin:0;max-width:520px}
+.mag .sp{flex:1}
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2}footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+.proof{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.proof .n{font-family:var(--mono);color:var(--cyan);font-weight:600;font-size:12.5px;padding-top:2px;white-space:nowrap}
+.steps li{margin-bottom:10px;line-height:1.6;font-size:14.5px}
+.lift{box-shadow:var(--sh)}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}
+.pain-item{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px}
+.pain-item h4{font-size:14px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.pain-item p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+.compare-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:14px}
+.compare-table th{background:var(--graphite);color:#fff;font-weight:600;padding:12px 16px;text-align:left}
+.compare-table td{padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink)}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table td.bad{color:#C0392B}
+.compare-table td.good{color:#1A7A6E;font-weight:600}
+.calc-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;margin-top:24px;box-shadow:var(--sh)}
+.calc-box h3{font-size:18px;font-weight:700;margin:0 0 20px}
+.form-row{margin-bottom:14px}
+.form-row label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;color:var(--ink)}
+.form-row select,.form-row input{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:10px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.form-row select:focus,.form-row input:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.calc-result{background:var(--cyan-soft);border:1px solid #BCE4E1;border-radius:11px;padding:18px;margin-top:16px;display:none}
+.calc-result.show{display:block}
+.calc-result h4{font-size:15px;font-weight:700;color:#1A7A6E;margin:0 0 6px}
+.calc-result p{font-size:13.5px;color:#2D7A72;margin:0}
+.related{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.related a{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan);transition:.15s}
+.related a:hover{border-color:var(--cyan)}
+
+/* Бургер-меню для мобильных */
+.burger{display:none;align-items:center;gap:8px;cursor:pointer;padding:6px 10px;background:#fff;border:1.5px solid var(--line);border-radius:10px;transition:.15s;z-index:200}
+.burger:hover{border-color:var(--cyan)}
+.burger-icon{display:flex;flex-direction:column;gap:5px}
+.burger-icon span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger-label{font-size:12.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+.burger.open .burger-icon span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open .burger-icon span:nth-child(2){opacity:0}
+.burger.open .burger-icon span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:680px){.burger{padding:4px;background:none;border:none;gap:0}.burger-label{display:none}}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:100;flex-direction:column}
+.mob-menu-links{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:70px 20px 16px}
+.mob-menu-cta{flex-shrink:0;display:flex;justify-content:center;padding:14px 24px 20px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+.mob-menu a:hover{color:var(--cyan)}
+@media(max-width:2000px){
+  .nav-links{display:none!important}
+  .burger{display:flex}
+  .nav{gap:12px}
+}
+/* Хлебные крошки */
+.crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:.15s}.crumbs a:hover{color:var(--cyan)}
+.crumbs span{color:var(--muted)}
+.crumbs b{color:var(--ink);font-weight:600}
+/* Таблицы на мобильных */
+@media(max-width:640px){
+  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .article-body table{display:block;overflow-x:auto}
+}
+/* Плавающая кнопка на мобильных */
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+.float-btn.max-btn{bottom:74px;background:#fff;box-shadow:0 8px 24px rgba(107,63,231,.25);color:var(--ink)}
+@media(max-width:768px){.float-btn{display:flex}}
+/* Состояния кнопок */
+.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.btn.pri:active{transform:translateY(0);filter:brightness(.95)}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+/* Единый подвал */
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2;transition:.15s}
+footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){footer .cols{grid-template-columns:1fr}}
+
+.header-icons{display:flex;align-items:center;gap:8px;margin-right:4px}
+.header-icons a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s}
+.header-icons a.tg-icon{background:#2FA8A0}
+.header-icons a.max-icon{background:transparent;padding:0}
+.header-icons a:hover{filter:brightness(1.1);transform:translateY(-1px)}
+@media(max-width:2000px){.header-icons{display:none}}
+.lang-switch{display:flex;align-items:center;gap:4px;margin-right:8px}
+.lang-switch a{font-size:12.5px;font-weight:700;padding:4px 8px;border-radius:6px;color:var(--muted);transition:.15s;text-decoration:none}
+.lang-switch a.active{background:var(--graphite);color:#fff}
+.mob-lang-switch{display:flex;align-items:center;gap:10px;margin-top:10px}
+.mob-lang-switch a{font-size:15px;font-weight:700;padding:8px 20px;border-radius:10px;color:var(--muted);background:var(--paper);border:1.5px solid var(--line)}
+.mob-lang-switch a.active{background:var(--graphite);color:#fff;border-color:var(--graphite)}
+@media(max-width:680px){.lang-switch{display:none}}
+.lang-switch a:hover:not(.active){color:var(--ink)}
+
+.article-body h2{font-size:22px;font-weight:800;margin:36px 0 14px;color:var(--ink)}
+.article-body h3{font-size:18px;font-weight:700;margin:28px 0 10px;color:var(--ink)}
+.article-body h4{font-size:16px;font-weight:700;margin:24px 0 8px;color:var(--ink)}
+.article-body p{font-size:15px;color:#3a4455;line-height:1.75;margin:0 0 16px}
+.article-body ul,.article-body ol{margin:0 0 16px 20px}
+.article-body li{font-size:15px;color:#3a4455;line-height:1.7;margin-bottom:6px}
+.article-body strong,.article-body b{color:var(--ink)}
+.article-body .law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:16px 20px;font-size:14px;color:#2D4F7E;line-height:1.65;margin:20px 0}
+.article-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-body th{background:var(--graphite);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+.article-body td{padding:10px 14px;border-bottom:1px solid var(--line);color:#3a4455}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.article-cta{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:16px;padding:28px 32px;margin:40px 0}
+.article-cta b{font-size:18px;display:block;margin-bottom:8px}
+.article-cta p{color:#AFBAC9;font-size:14px;margin:0 0 18px}
+</style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DZXMBECL0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9DZXMBECL0");</script>
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Смена поставщика и реестровая запись по ПП 719: когда это риск, а когда нет","description":"Сама по себе смена поставщика материала или комплектующего не требует уведомления Минпромторга — но если меняется происхождение компонента или показатели локализации, действует механизм внесения изменений в реестровую запись (пп. 18–30 ПП 719), а установленное несоответствие ведёт к исключению записи.","url":"https://med-local.ru/blog/smena-postavshchika-reestrovaya-zapis","datePublished":"2026-08-28","dateModified":"2026-08-28","author":{"@type":"Person","name":"А.-Т. Танделов","url":"https://med-local.ru/about"},"publisher":{"@type":"Organization","name":"Инженерно-регуляторный центр локализации МИ","url":"https://med-local.ru"},"image":"https://med-local.ru/og-image.png","inLanguage":"ru"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Нужно ли уведомлять Минпромторг при смене поставщика компонента?","acceptedAnswer":{"@type":"Answer","text":"Прямой обязанности уведомлять о самом факте смены поставщика нет. Но если смена меняет происхождение материалов/комплектующих или показатели локализации, значимые для требований вашей позиции, применяется механизм внесения изменений в реестровую запись (пп. 18–30 Правил) — и в таком случае эту процедуру стоит инициировать, а не оставлять как внутреннее дело до следующей проверки."}},{"@type":"Question","name":"Может ли смена поставщика второстепенного компонента разрушить реестровую запись?","acceptedAnswer":{"@type":"Answer","text":"Риск зависит не от самого факта смены, а от того, насколько заменённый компонент значим для выполнения конкретного требования вашей позиции — обязательного условия, существенной доли баллов или адвалорного показателя. Смена второстепенного компонента на аналог того же подтверждённого происхождения обычно не создаёт риска."}},{"@type":"Question","name":"Если я сам обнаружил, что после смены поставщика показатели упали ниже порога — что делать?","acceptedAnswer":{"@type":"Answer","text":"Можно инициировать изменение реестровой записи через ГИСП или обратиться с заявлением об исключении записи. Но это не гарантирует сохранение записи — если рассмотрение покажет объективное несоответствие требованиям, запись будет исключена по п. 29. Специального льготного механизма добровольного раскрытия без этого риска не существует."}},{"@type":"Question","name":"Достаточно ли того, что новый поставщик — российское юридическое лицо?","acceptedAnswer":{"@type":"Answer","text":"Нет. Значение имеет подтверждённое происхождение/производство самого компонента, а не место регистрации продавца. Если новый «российский поставщик» на деле перепродаёт импортный товар, компонент для целей локализации остаётся иностранным."}},{"@type":"Question","name":"Как Минпромторг может узнать о смене поставщика, повлиявшей на локализацию?","acceptedAnswer":{"@type":"Answer","text":"Через основания, перечисленные в п. 36 Правил: анализ ежегодной отчётности, обращения органов власти, аргументированные заявления третьих лиц, сообщения СМИ. Систематической автоматической сверки данных о поставщиках с ФТС или ФНС мы не нашли подтверждённой — не стоит рассчитывать ни на то, что это происходит, ни на то, что этого точно не произойдёт."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://med-local.ru/"},{"@type":"ListItem","position":2,"name":"База знаний","item":"https://med-local.ru/blog"},{"@type":"ListItem","position":3,"name":"Смена поставщика и реестровая запись по ПП 719: когда","item":"https://med-local.ru/blog/smena-postavshchika-reestrovaya-zapis"}]}
+</script>
+</head>
+<body>
+<div class="mob-menu" id="mob-menu"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:18px;right:18px;background:none;border:none;cursor:pointer;padding:8px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button><div class="mob-menu-links"><a href="/">Главная</a><a href="/about">О центре</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">База знаний</a><a href="/pricing">Стоимость</a><a href="/cases">Кейсы</a><a href="/glossary">Глоссарий</a><a href="/contacts">Контакты</a><div class="mob-lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
+  </div><div class="mob-menu-cta"><a href="/#lead" class="btn pri" style="margin-top:16px">Оценить проект</a></div></div>
+<header><div class="wrap nav">
+  <a class="logo" href="/"><span style="display:flex;align-items:center;gap:11px"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="7" stroke="#1C232E" stroke-width="2.6" fill="none"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#2FA8A0"/><path d="M24 2v7M24 39v7M2 24h7M39 24h7M8 8l5 5M40 8l-5 5M8 40l5-5M40 40l-5-5" stroke="#3D6FB4" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.6" fill="#FF6B3D"/></svg><span><span style="font-weight:800;font-size:12px;letter-spacing:-.3px;line-height:1.15;display:block">Инженерно-<br>регуляторный<br>центр</span><span style="font-size:9px;font-weight:600;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;line-height:1.3;display:block">локализации МИ</span></span></span></a>
+  <span class="sp"></span>
+  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk on" href="/blog">База знаний</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a><a class="lnk" href="/cases">Кейсы</a><a class="lnk" href="/glossary">Глоссарий</a><a class="lnk" href="/contacts">Контакты</a></div>
+  <div class="header-icons">
+    <a class="tg-icon" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer" title="Написать в Telegram" aria-label="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg></a>
+    <a class="max-icon" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer" title="Написать в MAX" aria-label="MAX"><img src="/images/max-icon.png" alt="MAX" width="26" height="26" style="border-radius:7px;display:block"></a>
+  </div>
+  <div class="lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
+  <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span class="burger-icon"><span></span><span></span><span></span></span><span class="burger-label">Меню</span></button>
+</div></header>
+
+<div class="wrap"><nav class="crumbs"><a href="/">Главная</a><span>›</span><a href="/blog">База знаний</a><span>›</span><b>Смена поставщика и реестровая запись по ПП 719: когда...</b></nav></div>
+<section style="background:#fff;border-bottom:1px solid var(--line)">
+  <div class="wrap" style="padding:48px 0 36px;max-width:820px">
+    <a href="/blog" style="font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:20px">← Все статьи</a>
+    <span class="tag" style="display:inline-flex;margin-bottom:14px">Локализация · ПП 719 · Реестровая запись</span>
+    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">Смена поставщика и реестровая запись по ПП 719: когда это риск, а когда нет</h1>
+    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ · совместно со специалистом по СТ-1</span>
+      <span>·</span>
+      <time datetime="2026-08-28">Опубликовано: 28 августа 2026</time>
+    </div>
+  </div>
+</section>
+<main>
+<section class="sec">
+  <div class="wrap" style="max-width:820px">
+    <div class="article-body">
+
+<p>Производитель, меняющий поставщика материала или комплектующего, часто задаётся вопросом: нужно ли что-то сообщать Минпромторгу или ТПП, чтобы не потерять реестровую запись? Прямого ответа «да, обязательно уведомлять» в ПП 719 нет. Но и «нет, это чисто внутреннее дело до следующей проверки» — тоже не совсем верно. Реестровую запись разрушает не сам факт нового поставщика, а потеря того требования, происхождения компонента или количества баллов, на которых эта запись держится.</p>
+
+<div class="law"><b>Суть в четырёх предложениях</b>Смена юридического лица-поставщика сама по себе не является событием, требующим обязательного уведомления Минпромторга или ТПП, — прямой нормы такого рода в ПП 719 нет. Но если смена поставщика меняет состав, происхождение материалов/комплектующих или показатели локализации, влияющие на выполнение требований приложения к ПП 719, применяется механизм внесения изменений в реестровую запись (раздел III Правил, пп. 18–30) — а с апреля 2026 года изменения, затрагивающие состав материалов и комплектующих, влияющих на критерии происхождения, прямо выведены из упрощённой процедуры и требуют полноценного рассмотрения. Риск для записи определяется не количеством смен поставщиков, а чувствительностью конкретного требования к заменённому компоненту — если новый поставщик поставляет тот же товар того же подтверждённого производителя, риск минимален; если смена меняет происхождение компонента, от которого зависят обязательное требование или значительная доля баллов/адвалорного показателя, риск существенный. Постоянного действующего требования (запись действительна, только пока продукция продолжает соответствовать требованиям) означает, что ответственность за отслеживание последствий смены поставщика лежит на производителе — независимо от того, будет ли это выявлено проверкой.</div>
+
+<h2>1. Нормативная база</h2>
+<p><strong>ПП РФ № 719 от 17.07.2015</strong> — Правила формирования и ведения реестра российской промышленной продукции: раздел III (пп. 18–30) — внесение изменений в реестровую запись; п. 19 — право подать заявку на изменение записи при изменении показателей локализации; пп. 18¹–18³ (введены изменениями ПП №400 от 13.04.2026) — упрощённая процедура для формальных изменений, прямо исключающая изменения состава материалов/сырья/комплектующих, влияющих на критерии происхождения; раздел IV (пп. 33–40) — период действия записи и последующий контроль соответствия; п. 29 — исключение записи при выявлении несоответствия в ходе рассмотрения заявки на изменение; п. 34 — исключение при выявлении несоответствия требованиям приложения или критериям происхождения; п. 36 — основания для направления Минпромторгом требования о выездной проверке ТПП; подп. «а» п. 40 — исключение по итогам выездной проверки; п. 41 — основания исключения записи (включая подп. «ж», введённый изменениями 2026 года, — исключение по обращению самого заявителя).</p>
+<p><strong>Важно.</strong> ПП №901 от 16.06.2025 не имеет отношения к теме смены поставщика — этот акт регулирует ежегодную отчётность (подп. «е» п. 41) и перенос ряда позиций спецодежды в другой раздел приложения. Использовать его как источник для тезисов о смене поставщика некорректно.</p>
+<p style="font-size:13px;color:var(--muted)">Нормативная база проверена по состоянию на 31.08.2026.</p>
+
+<h2>2. Что на самом деле происходит при смене поставщика</h2>
+<p><strong>Формальной обязанности уведомлять о смене поставщика как таковой нет.</strong> Правила не содержат нормы вида «при смене поставщика производитель обязан в течение N дней уведомить Минпромторг или ТПП».</p>
+<p><strong>Но есть значение имеющего юридическое значение факта.</strong> Если из-за смены поставщика меняются материалы или комплектующие, происхождение которых влияет на выполнение требований приложения к ПП 719, или меняются сами показатели локализации (баллы, адвалорная доля) — применяется механизм внесения изменений в реестровую запись, предусмотренный пп. 18–30 Правил.</p>
+<div class="warn"><b>⚠ Ключевое правило</b>Не смена юридического лица-поставщика сама по себе запускает какую-либо процедуру. Значение имеет изменение доказательной базы локализации: состава/происхождения материала или комплектующего либо показателей локализации в целом. Если поставщик А заменён поставщиком Б, но Б поставляет тот же компонент того же подтверждённого российского производителя, и требования/баллы не меняются — из текста Правил отдельной обязанности «перерегистрировать поставщика» не следует.</div>
+
+<h2>3. Когда смена поставщика становится юридически значимой</h2>
+<p>С апреля 2026 года (изменениями ПП №400) появился показательный механизм: пп. 18¹–18³ позволяют вносить некоторые формальные изменения в реестровую запись по упрощённой процедуре, <strong>но прямо выводят из неё изменения, затрагивающие состав материалов, сырья и комплектующих, если их оценивание или использование определяет соответствие критериям происхождения или требованиям ПП 719</strong>. В таком случае требуются полноценные процедуры пп. 19–30.</p>
+<p>Правильная формула для оценки конкретной ситуации:</p>
+<p style="border-left:3px solid var(--cyan);padding:4px 0 4px 18px;font-weight:600;color:var(--ink);font-style:italic;margin:20px 0">Значение имеет не факт смены поставщика, а то, меняется ли при этом происхождение или характеристики компонента, от которых зависит выполнение конкретного требования приложения к ПП 719.</p>
+
+<h2>4. Таблица оценки риска</h2>
+<table>
+<thead><tr><th>Ситуация</th><th>Риск для записи</th></tr></thead>
+<tbody>
+<tr><td>Новый продавец, но тот же компонент того же подтверждённого российского производителя</td><td>Низкий</td></tr>
+<tr><td>Второстепенный компонент, происхождение которого не участвует в требованиях/баллах</td><td>Обычно низкий</td></tr>
+<tr><td>Компонент участвует в локализации, но запас баллов/доли большой</td><td>Умеренный</td></tr>
+<tr><td>Компонент даёт значительную часть баллов</td><td><strong>Высокий</strong></td></tr>
+<tr><td>Компонент необходим для выполнения обязательного (а не факультативного) требования</td><td><strong>Очень высокий</strong></td></tr>
+<tr><td>Компонент существенен для адвалорного расчёта, а запас до предельной доли импорта минимален</td><td><strong>Высокий</strong></td></tr>
+<tr><td>Новый «российский поставщик» оказывается реселлером импортного товара, а российское происхождение компонента было основанием для баллов</td><td><strong>Высокий / критический</strong></td></tr>
+</tbody>
+</table>
+<p>Само определение показателей локализации в Правилах привязано к баллам и процентным показателям, достижение которых позволяет включить продукцию в реестр, — поэтому оценивать риск нужно применительно к конкретному требованию вашей позиции, а не абстрактно.</p>
+
+<h2>5. Основания для исключения записи, относящиеся к этой ситуации</h2>
+<p>Для сценария «смена компонента снизила показатели ниже порога» юридическая цепочка выглядит так:</p>
+<p style="border-left:3px solid var(--cyan);padding:10px 0 10px 18px;font-weight:700;color:var(--ink);margin:20px 0">смена компонента → изменение фактически выполняемых требований/локализации → результат ниже минимального значения приложения к ПП 719 → несоответствие требованиям → основание для исключения.</p>
+<p>Конкретные нормы:</p>
+<ul>
+<li><strong>П. 34</strong> — Минпромторг исключает запись при выявлении несоответствия продукции требованиям приложения либо критериям определения страны происхождения.</li>
+<li><strong>П. 29</strong> — если при рассмотрении заявки производителя на изменение реестровой записи выявлено несоответствие требованиям, Минпромторг исключает запись. Это значимо: добровольное обращение за корректировкой не даёт «иммунитета» — рассмотрение новой конфигурации может закончиться исключением.</li>
+<li><strong>Подп. «а» п. 40</strong> — после выездной проверки Минпромторг исключает запись при установленном фактическом несоответствии.</li>
+<li><strong>Подп. «а», «б», «в» п. 41</strong> — несоответствие требованиям приложения (для продукции по СПИК/актам экспертизы), несоответствие критериям происхождения (для продукции по сертификату происхождения) и отрицательный результат проверки по п. 40 соответственно.</li>
+</ul>
+<p>Отдельного основания вида «сменил поставщика — запись аннулируется» в Правилах нет — работает именно цепочка через фактическое несоответствие требованиям.</p>
+
+<h2>6. Как может быть обнаружено несоответствие</h2>
+<p>Пункт 36 Правил перечисляет основания для направления Минпромторгом требования ТПП о выездной проверке: анализ документов и сведений производителя (включая ежегодную отчётность по п. 43); обращения федеральных органов, включая контрольно-надзорные и правоохранительные; аргументированные заявления физических/юридических лиц и общественных объединений; сообщения СМИ о признаках недостоверности сведений.</p>
+<p><strong>Мы не нашли подтверждения тому, что Минпромторг систематически автоматически сверяет данные о поставщиках производителя с ФТС или ФНС</strong> — если вы встретите такое утверждение в других материалах, это неподтверждённая деталь, и мы не приводим её как факт. Реальный механизм обнаружения — перечисленные выше основания п. 36, а также сама ежегодная отчётность по п. 43, которая может стать поводом для дополнительной проверки.</p>
+
+<h2>7. Если вы сами обнаружили падение показателей ниже порога</h2>
+<p>После изменений 2024–2026 годов у производителя есть путь не ждать внешней проверки: инициировать внесение изменений через ГИСП (раздел III Правил) либо обратиться с заявлением об исключении записи (с апреля 2026 года это отдельно предусмотрено подп. «ж» п. 41).</p>
+<p><strong>Но важная оговорка.</strong> Это не процедура добровольного признания нарушения с гарантированным сохранением записи. Если в ходе рассмотрения заявки на изменение выясняется, что продукция после изменения больше не соответствует требованиям приложения — действует п. 29, и Минпромторг исключает запись. Специального «льготного» режима добровольного раскрытия, позволяющего продолжать пользоваться записью при объективном несоответствии минимальным требованиям, Правила не предусматривают. Официального разъяснения именно по сценарию «сменили поставщика → сами обнаружили провал ниже порога → что делать» в доступных материалах нет — не стоит рассчитывать на специальный механизм, которого не существует.</p>
+
+<h2>8. Проверка нового поставщика — тот же принцип, но с поправкой на момент риска</h2>
+<p>Действует уже установленный принцип: <strong>«российский поставщик» ≠ «российское происхождение компонента»</strong>. Юридически важно не место регистрации продавца, а наличие подтверждения происхождения/производства, которое требует конкретная позиция приложения к ПП 719. Покупка компонента у российского юридического лица, которое лишь перепродаёт импортный товар, не превращает компонент в российский.</p>
+<p><strong>Специфика именно смены поставщика — не в новом способе проверки, а во времени возникновения риска.</strong> Исходный поставщик мог быть надлежащим образом верифицирован при получении записи, но это ничего не говорит о новом поставщике — его происхождение и документы нужно проверить до того, как новый компонент начнёт использоваться как основание для сохранения баллов или адвалорного показателя, а не постфактум. Инструменты проверки те же: сертификат СТ-1 — через официальный сервис верификации ТПП, статус производителя и продукции — через публичную выписку из реестра ГИСП.</p>
+
+<h2>9. Пошаговый алгоритм при смене поставщика</h2>
+<h4>Шаг 1. Определите, меняется ли доказательная база локализации</h4>
+<p>Тот же компонент того же подтверждённого производителя под новым продавцом — низкий приоритет. Другое происхождение, другой производитель или изменение характеристик — переходите к следующему шагу.</p>
+<h4>Шаг 2. Проверьте нового поставщика теми же инструментами, что и при первичной локализации</h4>
+<p>СТ-1 — через сервис ТПП, реестровая запись — через выписку ГИСП. Не полагайтесь на заявление «мы российская компания» без документального подтверждения происхождения именно компонента.</p>
+<h4>Шаг 3. Пересчитайте показатели локализации с учётом нового компонента</h4>
+<p>Не откладывайте до плановой отчётности — если компонент значим для баллов или адвалорной доли, посчитайте эффект сразу после перехода на нового поставщика.</p>
+<h4>Шаг 4. Оцените риск по таблице из раздела 4</h4>
+<p>Определите, затрагивает ли изменение обязательное требование или существенную долю показателей.</p>
+<h4>Шаг 5. При существенном изменении — используйте механизм пп. 18–30</h4>
+<p>Подайте заявку на внесение изменений в реестровую запись через ГИСП заблаговременно, а не дожидайтесь, пока несоответствие обнаружит проверка.</p>
+<h4>Шаг 6. Документируйте переход</h4>
+<p>Сохраните договор с новым поставщиком, подтверждающие документы происхождения и расчёт показателей на дату перехода — это пригодится, если потребуется подтвердить добросовестность при последующей проверке.</p>
+
+<h2>FAQ</h2>
+<div class="faq-item"><h4>Нужно ли уведомлять Минпромторг при смене поставщика компонента?</h4><p>Прямой обязанности уведомлять о самом факте смены поставщика нет. Но если смена меняет происхождение материалов/комплектующих или показатели локализации, значимые для требований вашей позиции, применяется механизм внесения изменений в реестровую запись (пп. 18–30 Правил) — и в таком случае эту процедуру стоит инициировать, а не оставлять как внутреннее дело до следующей проверки.</p></div>
+<div class="faq-item"><h4>Может ли смена поставщика второстепенного компонента разрушить реестровую запись?</h4><p>Риск зависит не от самого факта смены, а от того, насколько заменённый компонент значим для выполнения конкретного требования вашей позиции — обязательного условия, существенной доли баллов или адвалорного показателя. Смена второстепенного компонента на аналог того же подтверждённого происхождения обычно не создаёт риска.</p></div>
+<div class="faq-item"><h4>Если я сам обнаружил, что после смены поставщика показатели упали ниже порога — что делать?</h4><p>Можно инициировать изменение реестровой записи через ГИСП или обратиться с заявлением об исключении записи. Но это не гарантирует сохранение записи — если рассмотрение покажет объективное несоответствие требованиям, запись будет исключена по п. 29. Специального льготного механизма добровольного раскрытия без этого риска не существует.</p></div>
+<div class="faq-item"><h4>Достаточно ли того, что новый поставщик — российское юридическое лицо?</h4><p>Нет. Значение имеет подтверждённое происхождение/производство самого компонента, а не место регистрации продавца. Если новый «российский поставщик» на деле перепродаёт импортный товар, компонент для целей локализации остаётся иностранным.</p></div>
+<div class="faq-item"><h4>Как Минпромторг может узнать о смене поставщика, повлиявшей на локализацию?</h4><p>Через основания, перечисленные в п. 36 Правил: анализ ежегодной отчётности, обращения органов власти, аргументированные заявления третьих лиц, сообщения СМИ. Систематической автоматической сверки данных о поставщиках с ФТС или ФНС мы не нашли подтверждённой — не стоит рассчитывать ни на то, что это происходит, ни на то, что этого точно не произойдёт.</p></div>
+
+<div class="article-cta">
+  <b>Меняете поставщика материала или комплектующего?</b>
+  <p>ГМТ проверит нового поставщика теми же инструментами, что при первичной локализации, пересчитает показатели с учётом изменения и определит, требуется ли внесение изменений в реестровую запись до того, как это выявит проверка.</p>
+  <a class="btn pri" href="mailto:info@med-local.ru?subject=Оценка риска смены поставщика для реестровой записи">Проверить риск смены поставщика</a>
+</div>
+
+    </div>
+  </div>
+</section>
+<section style="background:var(--paper);border-top:1px solid var(--line);padding:32px 0">
+  <div class="wrap" style="max-width:820px">
+    <h3 style="font-size:16px;font-weight:700;margin:0 0 16px;color:var(--ink)">Читайте также</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><a href="/blog/verifikaciya-subpostavshchikov-st1-gisp" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Верификация субпоставщиков через СТ-1 и ГИСП</a><a href="/blog/advalornaya-dolya" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Как считать адвалорную долю по ПП 719</a><a href="/blog/proverka-tpp" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Внеплановая проверка ТПП</a></div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div><b>Инженерно-регуляторный центр локализации МИ</b>
+      <p style="font-size:13px;line-height:1.65;margin:0 0 14px;color:#97A1B2">Локализация производства медицинских изделий в России. От анализа ниши до регистрационного удостоверения.</p>
+      <a href="tel:+79853169104">+7 985 316-91-04 (Россия)</a>
+      <a href="tel:+79888777295">+7 988 877-72-95 (Россия)</a>
+      <a href="tel:+79888777295">MAX: +7 988 877-72-95</a>
+      <a href="tel:+77021394489">+7 702 139-44-89 (Казахстан)</a>
+      <a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a>
+      <a href="https://t.me/tandelovtat" style="color:#2FA8A0" target="_blank" rel="noopener noreferrer">Telegram: @tandelovtat</a>
+    </div>
+    <div><b>Услуги</b>
+      <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a>
+      <a href="/development">Разработка</a><a href="/production">Производство</a>
+      <a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a>
+    </div>
+    <div><b>Компания</b>
+      <a href="/cases">Кейсы</a><a href="/pricing">Стоимость</a><a href="/blog">База знаний</a>
+      <a href="/contacts">Контакты</a><a href="/glossary">Глоссарий</a><a href="/privacy">Политика ПДн</a>
+    </div>
+    <div><b>Контакты</b>
+      <a href="mailto:info@med-local.ru">info@med-local.ru</a>
+      <a href="mailto:sales@med-local.ru">sales@med-local.ru</a>
+      <a href="mailto:marketing@med-local.ru">marketing@med-local.ru</a>
+      <a href="mailto:ceo@med-local.ru">ceo@med-local.ru</a>
+    </div>
+  </div>
+  <div class="fine">
+    <span>© 2026 ООО «Глобальные Медицинские Технологии» · 125047, г. Москва, 1-й Тверской-Ямской пер., д. 16, помещ. 1/п</span>
+    <span style="display:flex;gap:14px;flex-wrap:wrap"><a href="/privacy">Политика конфиденциальности</a><a href="/oferta">Публичная оферта</a><a href="/terms">Пользовательское соглашение</a></span>
+  </div>
+</div></footer>
+<a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg>
+  Написать в Telegram
+</a>
+<a class="float-btn max-btn" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer">
+  <img src="/images/max-icon.png" alt="MAX" width="22" height="22" style="border-radius:6px">
+  Написать в MAX
+</a>
+<script>
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';}
+</script>
+<script src="/cookie-consent.js" defer></script>
+</body>
+</html>
