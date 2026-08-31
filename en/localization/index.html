@@ -14,8 +14,8 @@
 <meta property="og:url" content="https://med-local.ru/en/localization">
 <meta property="og:image" content="https://med-local.ru/og-image.png">
 <meta property="og:locale" content="en_US">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#1C232E">
@@ -215,6 +215,8 @@ footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-
 .mob-lang-switch a.active{background:var(--graphite);color:#fff;border-color:var(--graphite)}
 @media(max-width:680px){.lang-switch{display:none}}
 .lang-switch a:hover:not(.active){color:var(--ink)}
+.logo img{display:block;width:200px;height:48px;object-fit:contain}
+@media(max-width:768px){.logo img{width:170px;height:auto}}
 </style>
 <script type="text/javascript">
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -280,7 +282,15 @@ ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webv
 <a href="/en/about">About</a><a href="/en/localization">Localization</a><a href="/en/reverse">Reverse Engineering</a><a href="/en/development">Development</a><a href="/en/production">Production</a><a href="/en/registration">Registration</a><a href="/en/analytics">Analytics</a><a href="/en/pricing">Pricing</a><a href="/en/cases">Cases</a><a href="/en/contacts">Contacts</a><div class="mob-lang-switch"><a href="/localization">RU</a><a href="/en/localization" class="active">EN</a></div>
   </div><div class="mob-menu-cta"><a href="/en/contacts" class="btn pri" style="margin-top:16px">Get a Quote</a></div></div>
 <header><div class="wrap nav">
-  <a class="logo" href="/en"><span style="display:flex;align-items:center;gap:11px"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="9" y="9" width="30" height="30" rx="7" stroke="#1C232E" stroke-width="2.6" fill="none"/><rect x="18" y="18" width="12" height="12" rx="3" fill="#2FA8A0"/><path d="M24 2v7M24 39v7M2 24h7M39 24h7M8 8l5 5M40 8l-5 5M8 40l5-5M40 40l-5-5" stroke="#3D6FB4" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.6" fill="#FF6B3D"/></svg><span><span style="font-weight:800;font-size:14px;line-height:1.2;display:block">Engineering &<br>Regulatory Center</span><span style="font-size:9px;font-weight:600;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;display:block">Medical Device Localization</span></span></span></a>
+  <a class="logo" href="/en" aria-label="Engineering &amp; Regulatory Center — home">
+  <img
+    src="/logo-full.svg"
+    alt="Engineering &amp; Regulatory Center — Medical Device Localization"
+    width="200"
+    height="48"
+    style="display:block;"
+  >
+</a>
   <span class="sp"></span>
   <div class="nav-links" style="display:flex;align-items:center;gap:18px"><a class="lnk on" href="/en/localization">Localization</a><a class="lnk" href="/en/reverse">Reverse Engineering</a><a class="lnk" href="/en/development">Development</a><a class="lnk" href="/en/production">Production</a><a class="lnk" href="/en/registration">Registration</a><a class="lnk" href="/en/analytics">Analytics</a><a class="lnk" href="/en/pricing">Pricing</a><a class="lnk" href="/en/about">About</a><a class="lnk" href="/en/cases">Cases</a><a class="lnk" href="/en/contacts">Contacts</a></div>
   <div class="lang-switch"><a href="/localization">RU</a><a href="/en/localization" class="active">EN</a></div>
