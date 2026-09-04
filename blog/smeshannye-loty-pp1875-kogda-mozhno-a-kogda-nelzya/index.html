@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Смешанные лоты по ПП 1875: когда объединение товаров можно, а когда нельзя — Инженерный центр</title>
+<meta name="description" content="ПП 1875 разрешает объединять в одном лоте товары из приложений №1/№2 и товары вне перечней — это общее правило, а не запрет. Разбираем закрытый перечень специальных случаев, когда объединение запрещено, реальную практику ФАС и алгоритм для заказчика и поставщика.">
+<link rel="canonical" href="https://med-local.ru/blog/smeshannye-loty-pp1875-kogda-mozhno-a-kogda-nelzya">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Смешанные лоты по ПП 1875: когда объединение товаров можно, а когда нельзя">
+<meta property="og:description" content="Смешанные лоты по ПП 1875 разрешены как общее правило — но с закрытым перечнем специальных запретов. Разбираем практику ФАС и алгоритм действий.">
+<meta property="og:url" content="https://med-local.ru/blog/smeshannye-loty-pp1875-kogda-mozhno-a-kogda-nelzya">
+<meta property="og:image" content="https://med-local.ru/og-image.png">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C232E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@700;800&family=JetBrains+Mono:wght@600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{
+ --graphite:#1C232E;--graphite-2:#27303E;--ink:#1C232E;--muted:#4A5568;
+ --blue:#3D6FB4;--cyan:#2FA8A0;--cyan-soft:#E4F4F3;--blue-soft:#E9F0FA;
+ --orange:#FF6B3D;--orange-soft:#FFE9DC;
+ --paper:#F6F7F9;--card:#FFFFFF;--line:#E5E8ED;
+ --body:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+ --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{max-width:100vw}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.mono{font-family:var(--mono)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:600;font-size:14.5px;border:none;transition:.18s;cursor:pointer}
+.btn.pri{background:var(--orange);color:#fff;box-shadow:0 10px 24px -10px rgba(255,107,61,.6)}
+.btn.pri:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn.gh{background:transparent;border:1.5px solid #fff;color:#fff}
+.btn.gh:hover{background:rgba(255,255,255,.1)}
+.btn.dark{background:var(--graphite);color:#fff}
+.btn.line-btn{background:#fff;border:1.5px solid var(--line);color:var(--ink)}
+.btn.line-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--cyan)}
+.tag::before{content:"";width:22px;height:2px;background:var(--cyan)}
+h1,h2,h3{line-height:1.15;margin:0}
+.h-xl{font-size:clamp(30px,4.6vw,52px);font-weight:800;letter-spacing:-1.2px}
+.h-l{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.8px}
+.h-m{font-size:19px;font-weight:700}
+.lead{font-size:17px;color:var(--muted);line-height:1.65}
+.sec{padding:74px 0}
+.sec.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:960px){.g3,.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+@media(max-width:620px){.g3,.g4,.g2{grid-template-columns:1fr}}
+@media(max-width:880px){.route{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:560px){.route{grid-template-columns:1fr!important}.route .st{padding:16px 0 0!important;border-bottom:1px solid var(--line);padding-bottom:16px!important;margin-bottom:8px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.kv{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.kv span{color:var(--muted)}.kv b{text-align:right}
+header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:22px;height:66px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:16.5px;letter-spacing:-.3px}
+.logo small{display:block;font-size:10px;font-weight:600;color:var(--muted);letter-spacing:1.6px;text-transform:uppercase}
+.nav a.lnk{font-size:14px;font-weight:500;color:var(--muted);transition:.15s;white-space:nowrap}
+.nav a.lnk:hover,.nav a.lnk.on{color:var(--ink)}
+.nav .sp{flex:1}
+@media(max-width:2000px){.nav a.lnk{display:none}}
+.hero{position:relative;background:linear-gradient(140deg,var(--graphite) 0%,#202b3c 60%,#1d3a45 100%);color:#fff;overflow:hidden}
+.hero .pcb{position:absolute;inset:0;opacity:.16;pointer-events:none}
+.hero .in{position:relative;padding:92px 0 86px}
+.hero .lead{color:#B9C2D0;max-width:640px}
+.hero .stats{display:flex;gap:38px;margin-top:42px;flex-wrap:wrap}
+.hero .stats b{font-size:26px;font-weight:800;display:block;letter-spacing:-.5px}
+.hero .stats span{font-size:12.5px;color:#8E99AB}
+.crumbs{font-size:12.5px;color:var(--muted);margin:18px 0 0}
+.crumbs b{color:var(--ink)}
+.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:8px}
+.route .st{position:relative;padding:20px 18px 0}
+.route .st::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+.route .st h3{font-size:15.5px;margin:8px 0 6px}
+.route .st p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+@media(max-width:880px){.route{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.route{grid-template-columns:1fr}}
+.svc{display:flex;flex-direction:column;gap:10px;position:relative;transition:.2s}
+.svc:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.svc .ic{width:44px;height:44px;border-radius:12px;background:var(--cyan-soft);color:var(--cyan);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:15px}
+.svc p{font-size:14px;color:var(--muted);margin:0;line-height:1.6;flex:1}
+.svc .go{font-size:13.5px;font-weight:700;color:var(--cyan)}
+.seg{border-left:3px solid var(--blue);padding:16px 20px;background:#fff;border-radius:0 14px 14px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.seg b{display:block;margin-bottom:5px}
+.seg p{font-size:13.5px;color:var(--muted);margin:0 0 8px;line-height:1.55}
+.seg .of{font-size:13px;font-weight:600;color:var(--cyan)}
+.law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
+.law b{display:block;margin-bottom:6px;font-size:14px}
+.warn{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#8B3A1E;line-height:1.65;margin:24px 0}
+.warn b{display:block;margin-bottom:6px;font-size:14px}
+.post{display:flex;flex-direction:column;gap:9px;transition:.2s}
+.post:hover{transform:translateY(-3px)}
+.post .rub{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)}
+.post h3{font-size:16.5px;line-height:1.35}
+.post p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.6}
+.post .cta-link{font-size:13px;font-weight:700;color:var(--orange)}
+.frm{display:grid;gap:13px}
+.frm label{font-size:12.5px;font-weight:600}
+.frm input,.frm select,.frm textarea{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:12px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.frm input:focus,.frm select:focus,.frm textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:620px){.f2{grid-template-columns:1fr}}
+.mag{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:var(--r);padding:30px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.mag b{font-size:19px;display:block;margin-bottom:6px}
+.mag p{color:#AFBAC9;font-size:14px;margin:0;max-width:520px}
+.mag .sp{flex:1}
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2}footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+.proof{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.proof .n{font-family:var(--mono);color:var(--cyan);font-weight:600;font-size:12.5px;padding-top:2px;white-space:nowrap}
+.steps li{margin-bottom:10px;line-height:1.6;font-size:14.5px}
+.lift{box-shadow:var(--sh)}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}
+.pain-item{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px}
+.pain-item h4{font-size:14px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.pain-item p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+.compare-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:14px}
+.compare-table th{background:var(--graphite);color:#fff;font-weight:600;padding:12px 16px;text-align:left}
+.compare-table td{padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink)}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table td.bad{color:#C0392B}
+.compare-table td.good{color:#1A7A6E;font-weight:600}
+.calc-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;margin-top:24px;box-shadow:var(--sh)}
+.calc-box h3{font-size:18px;font-weight:700;margin:0 0 20px}
+.form-row{margin-bottom:14px}
+.form-row label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;color:var(--ink)}
+.form-row select,.form-row input{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:10px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.form-row select:focus,.form-row input:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.calc-result{background:var(--cyan-soft);border:1px solid #BCE4E1;border-radius:11px;padding:18px;margin-top:16px;display:none}
+.calc-result.show{display:block}
+.calc-result h4{font-size:15px;font-weight:700;color:#1A7A6E;margin:0 0 6px}
+.calc-result p{font-size:13.5px;color:#2D7A72;margin:0}
+.related{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.related a{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan);transition:.15s}
+.related a:hover{border-color:var(--cyan)}
+
+/* Бургер-меню для мобильных */
+.burger{display:none;align-items:center;gap:8px;cursor:pointer;padding:6px 10px;background:#fff;border:1.5px solid var(--line);border-radius:10px;transition:.15s;z-index:200}
+.burger:hover{border-color:var(--cyan)}
+.burger-icon{display:flex;flex-direction:column;gap:5px}
+.burger-icon span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger-label{font-size:12.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+.burger.open .burger-icon span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open .burger-icon span:nth-child(2){opacity:0}
+.burger.open .burger-icon span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:680px){.burger{padding:4px;background:none;border:none;gap:0}.burger-label{display:none}}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:100;flex-direction:column}
+.mob-menu-links{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:70px 20px 16px}
+.mob-menu-cta{flex-shrink:0;display:flex;justify-content:center;padding:14px 24px 20px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+.mob-menu a:hover{color:var(--cyan)}
+@media(max-width:2000px){
+  .nav-links{display:none!important}
+  .burger{display:flex}
+  .nav{gap:12px}
+}
+/* Хлебные крошки */
+.crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:.15s}.crumbs a:hover{color:var(--cyan)}
+.crumbs span{color:var(--muted)}
+.crumbs b{color:var(--ink);font-weight:600}
+/* Таблицы на мобильных */
+@media(max-width:640px){
+  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .article-body table{display:block;overflow-x:auto}
+}
+/* Плавающая кнопка на мобильных */
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+.float-btn.max-btn{bottom:74px;background:#fff;box-shadow:0 8px 24px rgba(107,63,231,.25);color:var(--ink)}
+@media(max-width:768px){.float-btn{display:flex}}
+/* Состояния кнопок */
+.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.btn.pri:active{transform:translateY(0);filter:brightness(.95)}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+/* Единый подвал */
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2;transition:.15s}
+footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){footer .cols{grid-template-columns:1fr}}
+
+.header-icons{display:flex;align-items:center;gap:8px;margin-right:4px}
+.header-icons a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s}
+.header-icons a.tg-icon{background:#2FA8A0}
+.header-icons a.max-icon{background:transparent;padding:0}
+.header-icons a:hover{filter:brightness(1.1);transform:translateY(-1px)}
+@media(max-width:2000px){.header-icons{display:none}}
+.lang-switch{display:flex;align-items:center;gap:4px;margin-right:8px}
+.lang-switch a{font-size:12.5px;font-weight:700;padding:4px 8px;border-radius:6px;color:var(--muted);transition:.15s;text-decoration:none}
+.lang-switch a.active{background:var(--graphite);color:#fff}
+.mob-lang-switch{display:flex;align-items:center;gap:10px;margin-top:10px}
+.mob-lang-switch a{font-size:15px;font-weight:700;padding:8px 20px;border-radius:10px;color:var(--muted);background:var(--paper);border:1.5px solid var(--line)}
+.mob-lang-switch a.active{background:var(--graphite);color:#fff;border-color:var(--graphite)}
+@media(max-width:680px){.lang-switch{display:none}}
+.lang-switch a:hover:not(.active){color:var(--ink)}
+
+.article-body h2{font-size:22px;font-weight:800;margin:36px 0 14px;color:var(--ink)}
+.article-body h3{font-size:18px;font-weight:700;margin:28px 0 10px;color:var(--ink)}
+.article-body h4{font-size:16px;font-weight:700;margin:24px 0 8px;color:var(--ink)}
+.article-body p{font-size:15px;color:#3a4455;line-height:1.75;margin:0 0 16px}
+.article-body ul,.article-body ol{margin:0 0 16px 20px}
+.article-body li{font-size:15px;color:#3a4455;line-height:1.7;margin-bottom:6px}
+.article-body strong,.article-body b{color:var(--ink)}
+.article-body .law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:16px 20px;font-size:14px;color:#2D4F7E;line-height:1.65;margin:20px 0}
+.article-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-body th{background:var(--graphite);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+.article-body td{padding:10px 14px;border-bottom:1px solid var(--line);color:#3a4455}
+.article-body blockquote{border-left:3px solid var(--cyan);padding:8px 0 8px 18px;margin:20px 0;font-style:italic;color:var(--ink);font-weight:600}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.article-cta{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:16px;padding:28px 32px;margin:40px 0}
+.article-cta b{font-size:18px;display:block;margin-bottom:8px}
+.article-cta p{color:#AFBAC9;font-size:14px;margin:0 0 18px}
+.logo img{display:block;width:200px;height:48px;object-fit:contain}
+@media(max-width:768px){.logo img{width:170px;height:auto}}
+</style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DZXMBECL0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9DZXMBECL0");</script>
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Смешанные лоты по ПП 1875: когда объединение товаров можно, а когда нельзя","description":"ПП 1875 разрешает объединять в одном лоте товары из приложений №1/№2 и товары вне перечней — это общее правило, а не запрет. Разбираем закрытый перечень специальных случаев, когда объединение запрещено, реальную практику ФАС и алгоритм для заказчика и поставщика.","url":"https://med-local.ru/blog/smeshannye-loty-pp1875-kogda-mozhno-a-kogda-nelzya","datePublished":"2026-09-03","dateModified":"2026-09-03","author":{"@type":"Person","name":"А.-Т. Танделов","url":"https://med-local.ru/about"},"publisher":{"@type":"Organization","name":"Инженерный центр локализации медицинских изделий","url":"https://med-local.ru"},"image":"https://med-local.ru/og-image.png","inLanguage":"ru"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Правда ли, что ПП 1875 запрещает объединять в одном лоте российские и иностранные товары?","acceptedAnswer":{"@type":"Answer","text":"Нет. Подпункт «в» п. 4 ПП 1875 прямо разрешает объединение товаров из приложения №1, приложения №2 и товаров вне приложений в одном объекте закупки как общее правило. Запреты существуют, но это закрытый перечень конкретных случаев, а не общий принцип."}},{"@type":"Question","name":"Кто формирует смешанный лот — заказчик или поставщик?","acceptedAnswer":{"@type":"Answer","text":"Заказчик, до публикации закупки. Поставщик не объединяет лот — он получает уже сформированный объект закупки и оценивает свою заявку относительно него."}},{"@type":"Question","name":"Что происходит, если в допустимом смешанном лоте предложен иностранный товар по позиции с запретом?","acceptedAnswer":{"@type":"Answer","text":"Отклоняется заявка целиком, а не только эта отдельная позиция — при том что мера национального режима определяется по каждой товарной позиции отдельно."}},{"@type":"Question","name":"Если товар формально похож на позицию из закрытого перечня запретов — запрет применяется автоматически?","acceptedAnswer":{"@type":"Answer","text":"Нет. Судебная практика (в частности, дело о «шприце-манометре», подтверждённое отказом Верховного Суда в пересмотре) показывает: нужно точно установить принадлежность товара к специальной позиции по совокупности кода ОКПД2 и точного наименования, а не по формальному сходству."}},{"@type":"Question","name":"Может ли нарушение правил объединения лота привести к признанию закупки недействительной?","acceptedAnswer":{"@type":"Answer","text":"Это возможное судебное последствие при одновременном нарушении антимонопольных требований (ст. 17 135-ФЗ), а не автоматический результат любой ошибки в формировании лота."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://med-local.ru/"},{"@type":"ListItem","position":2,"name":"База знаний","item":"https://med-local.ru/blog"},{"@type":"ListItem","position":3,"name":"Смешанные лоты по ПП 1875: когда объединение товаров","item":"https://med-local.ru/blog/smeshannye-loty-pp1875-kogda-mozhno-a-kogda-nelzya"}]}
+</script>
+</head>
+<body>
+<div class="mob-menu" id="mob-menu"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:18px;right:18px;background:none;border:none;cursor:pointer;padding:8px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button><div class="mob-menu-links"><a href="/">Главная</a><a href="/about">О центре</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">База знаний</a><a href="/pricing">Стоимость</a><a href="/cases">Кейсы</a><a href="/glossary">Глоссарий</a><a href="/contacts">Контакты</a><div class="mob-lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
+  </div><div class="mob-menu-cta"><a href="/#lead" class="btn pri" style="margin-top:16px">Оценить проект</a></div></div>
+<header><div class="wrap nav">
+  <a class="logo" href="/" aria-label="Инженерный центр — на главную">
+  <img
+    src="/logo-full.svg"
+    alt="Инженерный центр — локализация медицинских изделий"
+    width="200"
+    height="48"
+    style="display:block;"
+  >
+</a>
+  <span class="sp"></span>
+  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk on" href="/blog">База знаний</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a><a class="lnk" href="/cases">Кейсы</a><a class="lnk" href="/glossary">Глоссарий</a><a class="lnk" href="/contacts">Контакты</a></div>
+  <div class="header-icons">
+    <a class="tg-icon" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer" title="Написать в Telegram" aria-label="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg></a>
+    <a class="max-icon" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer" title="Написать в MAX" aria-label="MAX"><img src="/images/max-icon.png" alt="MAX" width="26" height="26" style="border-radius:7px;display:block"></a>
+  </div>
+  <div class="lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
+  <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span class="burger-icon"><span></span><span></span><span></span></span><span class="burger-label">Меню</span></button>
+</div></header>
+
+<div class="wrap"><nav class="crumbs"><a href="/">Главная</a><span>›</span><a href="/blog">База знаний</a><span>›</span><b>Смешанные лоты по ПП 1875: когда объединение товаров...</b></nav></div>
+<section style="background:#fff;border-bottom:1px solid var(--line)">
+  <div class="wrap" style="padding:48px 0 36px;max-width:820px">
+    <a href="/blog" style="font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:20px">← Все статьи</a>
+    <span class="tag" style="display:inline-flex;margin-bottom:14px">ПП 1875 · Госзакупки · Смешанные лоты</span>
+    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">Смешанные лоты по ПП 1875: когда объединение товаров можно, а когда нельзя</h1>
+    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ · совместно с юристом по 44-ФЗ / ФАС</span>
+      <span>·</span>
+      <time datetime="2026-09-03">Опубликовано: 3 сентября 2026</time>
+    </div>
+  </div>
+</section>
+<main>
+<section class="sec">
+  <div class="wrap" style="max-width:820px">
+    <div class="article-body">
+
+<p>Заказчик, формирующий закупку, где часть товаров подпадает под запрет или ограничение по ПП 1875, а часть — нет, часто исходит из предположения: «раз режимы разные — объединять в одном лоте нельзя». Это не так. Действующая редакция ПП 1875 прямо разрешает такое объединение как общее правило — запреты существуют, но они точечные и перечислены закрытым списком, а не выводятся из общей логики «нельзя смешивать российское и иностранное».</p>
+
+<div class="warn"><b>⚠ Важное исправление</b>Формулировка «ПП 1875 запрещает объединять в одном лоте товары с разным национальным режимом» неверна и противоречит тексту самого постановления. Подпункт «в» пункта 4 ПП 1875 прямо допускает включать в один объект закупки товары как из приложения №1, так и из приложения №2, так и не указанные в этих приложениях вовсе — если иное не установлено специальной нормой.</div>
+
+<div class="law"><b>Суть в четырёх предложениях</b>ПП 1875 разрешает смешанные закупки как общее правило (подп. «в» п. 4): один объект закупки может содержать товары из приложения №1 (запрет), приложения №2 (ограничение) и товары вне приложений (преимущество) одновременно, и к каждой позиции применяется своя мера. Запрет на объединение — не общий принцип, а закрытый перечень специальных случаев, прямо названных в подп. «г» п. 4 ПП 1875 (конкретные позиции приложений, включая, например, ряд медицинских изделий позиций 362–432 приложения №2), которые нельзя объединять с товарами вне этих позиций. Лот формирует заказчик — это ключевая деталь, определяющая, кому адресована эта статья: поставщик не «объединяет лот», он получает уже сформированный заказчиком объект закупки и оценивает свою заявку относительно него. Судебная и административная практика 2025–2026 годов показывает: прежде чем применять специальный запрет на объединение, нужно точно установить, действительно ли конкретный товар входит в названную в запрете позицию по совокупности кода ОКПД2 и наименования — совпадение только по коду ещё не означает автоматического применения запрета.</div>
+
+<h2>1. Нормативная база</h2>
+<p><strong>ПП РФ №1875 от 23.12.2024</strong> (действующая редакция) — подп. «в» п. 4: общее правило о допустимости объединения товаров из приложений №1/№2 и товаров вне приложений в одном объекте закупки; подп. «г» п. 4: закрытый перечень специальных случаев, когда определённые товарные позиции нельзя объединять с другими товарами.</p>
+<p><strong>44-ФЗ, ст. 14</strong> — применение запрета, ограничения и преимущества к соответствующим товарным позициям.</p>
+<p><strong>44-ФЗ, ст. 33, п. 6 ч. 1</strong> — отдельное ограничение для лекарственных препаратов: при превышении установленного НМЦК нельзя объединять в одном лоте препараты с различными МНН (с предусмотренными законом оговорками).</p>
+<p><strong>135-ФЗ «О защите конкуренции», ст. 17, ч. 3</strong> — отдельный, самостоятельный от ПП 1875 запрет объединять в один лот технологически и функционально не связанные товары, работы и услуги; ч. 4 — возможность признания судом торгов и заключённой по ним сделки недействительными.</p>
+<p><strong>Информационное письмо Минфина России от 31.01.2025 №24-01-06/8697</strong>, раздел 6 — прямые разъяснения именно по объединению товаров из перечней №1/№2 с товарами вне перечней, с пошаговым примером рассмотрения заявок.</p>
+<p style="font-size:13px;color:var(--muted)">Нормативная база проверена по состоянию на 03.09.2026.</p>
+
+<h2>2. Общее правило: объединять можно</h2>
+<p>Подпункт «в» п. 4 ПП 1875 устанавливает: допускается включать в один объект закупки товары, указанные в приложении №1, в приложении №2, а также не указанные в этих приложениях — с применением к каждой категории соответствующей меры: к товарам приложения №1 — запрет, к товарам приложения №2 — ограничение, к товарам вне приложений — преимущество.</p>
+<p><strong>Практический смысл:</strong> один объект закупки → несколько товарных позиций → разные меры национального режима применительно к разным позициям внутри одного лота. Формулировка «нельзя объединять российские и иностранные товары в одном лоте» юридически неверна — ПП 1875 регулирует не национальность товаров при формировании лота, а применение защитных мер к соответствующим позициям.</p>
+
+<h2>3. Закрытый перечень специальных запретов (подп. «г» п. 4)</h2>
+<p>Запрет на объединение — не общее правило, а конкретный, закрытый список случаев. В действующей редакции нельзя, в частности, объединять с товарами вне соответствующей группы:</p>
+<ul>
+<li>товары позиций 143–144 приложения №2;</li>
+<li>группы 145, 149, 150; позиции 146–148, 151–153, 162; отдельно 154; 155–160; отдельно 161; отдельно 163;</li>
+<li>специальную группу медицинских изделий: позиции 17, 139–141 приложения №1; 179, 189, 320 (в части дефибрилляторов), 362–432 приложения №2 — с товарами, не указанными в этих позициях;</li>
+<li>позицию 237 и отдельную звуковую аппаратуру из позиции 241 — с другими товарами; микрофоны и подставки к ним (ОКПД2 26.40.41.000) из позиции 241 — с другими товарами;</li>
+<li>определённые группы лекарственных препаратов позиции 433 (разграничение ЖНВЛП/не-ЖНВЛП и стратегически значимых препаратов).</li>
+</ul>
+<p><strong>Логика постановления в одной формуле:</strong> подп. «в» п. 4 — смешивать в принципе можно → подп. «г» п. 4 — кроме конкретно перечисленных комбинаций.</p>
+<div class="warn"><b>⚠ Отдельные правила вне ПП 1875</b>Есть и другие, самостоятельные от ПП 1875 ограничения на формирование лота: п. 6 ч. 1 ст. 33 44-ФЗ — для лекарственных препаратов с разными МНН при превышении НМЦК; ч. 3 ст. 17 135-ФЗ — общий антимонопольный запрет объединять технологически и функционально не связанные товары независимо от того, применяется ли к ним национальный режим вообще. Для медицинских изделий также применимы правила ПП №929 и №620, на которые отсылает п. 11 самого ПП 1875 применительно к соответствующим закупкам.</div>
+
+<h2>4. Кто на самом деле «объединяет лот» — заказчик, а не поставщик</h2>
+<p>Это принципиальное разграничение, без которого статья рискует запутать читателя.</p>
+<p><strong>Лот формирует заказчик</strong> — до публикации закупки, определяя объект закупки самостоятельно. Именно он решает, объединять ли товары в один контракт. Минфин в разъяснении прямо начинает описание алгоритма словами «заказчик самостоятельно формирует объект закупки».</p>
+<p><strong>Поставщик не «объединяет лот»</strong> — он получает уже сформированный заказчиком объект закупки и решает: участвовать или нет; какие товары предложить по позициям, входящим в его компетенцию; какие сведения о происхождении представить; выдерживает ли его предложение запрет, ограничение или условия преимущества применительно к сформированному заказчиком лоту.</p>
+<p>Если вы поставщик и уже столкнулись с объявленным заказчиком смешанным лотом — раздел 8 этой статьи посвящён именно вашей позиции.</p>
+
+<h2>5. Что происходит с заявкой на допустимый смешанный лот</h2>
+<p>Мера определяется по каждой соответствующей товарной позиции отдельно, но юридическим последствием при нарушении запрета или ограничения может стать отклонение заявки целиком — это не одно и то же, и разница здесь важна.</p>
+<p>Минфин в разъяснении приводит практический алгоритм для закупки, где одновременно присутствуют товары приложения №1, приложения №2 и товар вне приложений:</p>
+<ol>
+<li>Сначала проверяется происхождение товара по позиции приложения №1. Если предложен иностранный товар, подпадающий под запрет, — это основание для отклонения заявки.</li>
+<li>Затем отдельно проверяется товар по позиции приложения №2: иностранное предложение отклоняется при наличии соответствующей требованиям заявки с российским товаром.</li>
+<li>После этого рассматривается применение преимущества — оно возможно только для заявки, которая прошла проверку по запрету и ограничению и содержит исключительно российские товары в предусмотренном постановлением смысле, причём это правило распространяется как на товары вне перечней, так и на включённые в перечни товары.</li>
+</ol>
+<p><strong>Правильная формулировка:</strong> режим устанавливается применительно к конкретному товару, но наличие в заявке иностранного товара по позиции, подпадающей под запрет, влечёт отклонение заявки на закупку в целом — а не только исключение этой отдельной позиции из рассмотрения.</p>
+<p>Отдельно: отсутствие необходимых подтверждающих сведений о происхождении не означает нейтральный статус позиции — по п. 5 ч. 1 ст. 43 44-ФЗ такая заявка для целей национального режима приравнивается к заявке с иностранным товаром.</p>
+
+<h2>6. Что происходит, если специальный запрет нарушен</h2>
+<p>Здесь тоже нет одного универсального последствия — оно зависит от того, кто нарушил правило.</p>
+<p><strong>Если заказчик законно сформировал смешанный лот</strong>, но участник предложил иностранный товар по позиции с запретом — проблема на уровне заявки: она отклоняется, а не «вычёркивается» отдельная позиция.</p>
+<p><strong>Если сам заказчик нарушил закрытый перечень запретов подп. «г» п. 4</strong> — это дефект формирования закупки, и ФАС рассматривает такие жалобы предметно. В решении ФАС России от 25.08.2025 по делу №28/06/105-3912/2025 жалоба на неправомерное объединение товаров из подп. «г» п. 4 с другими товарами была признана обоснованной — заказчик ненадлежащим образом сформировал описание объекта закупки. Московское УФАС в решении от 21.05.2026 рассматривало аналогичный случай — смешение медизделий позиций 362–432 приложения №2 с товарами вне этих позиций — и тоже не согласилось с доводом заказчика о допустимости объединения.</p>
+<p><strong>Но есть и обратные решения</strong>, которые хорошо показывают границу нормы. Орловское УФАС в решении от 21.01.2026 отклонило аналогичную жалобу после того, как установило: спорные товары фактически не относятся к названным в запрете позициям — то есть специальный запрет просто не возникал.</p>
+<div class="warn"><b>⚠ Самый показательный прецедент</b>По делу №А40-85698/2025 арбитражный суд пришёл к выводу, что спорный «шприц-манометр» не относится к позиции 385 приложения №2 по совокупности кода ОКПД2 и наименования, поэтому его можно было объединить с другими товарами в одном лоте. Верховный Суд 02.07.2026 отказал в передаче кассационной жалобы — то есть эта позиция устояла на высшем уровне проверки.</div>
+<p><strong>Практический вывод из этой практики:</strong> сначала нужно точно установить, действительно ли конкретный товар входит в специальную позицию, названную в закрытом перечне запретов, и только после этого решать вопрос о допустимости объединения. Само по себе частичное совпадение кода классификатора или общее назначение товара ещё не означает автоматического применения запрета.</p>
+<p><strong>О последствиях для самой закупки.</strong> Если нарушение объединения одновременно ограничивает конкуренцию (ч. 3 ст. 17 135-ФЗ), возможным судебным последствием является признание торгов и заключённой по ним сделки недействительными — но это не автоматический результат обнаружения ошибки, а возможное решение суда, которое нужно инициировать отдельно.</p>
+
+<h2>7. Алгоритм для заказчика при формировании смешанного лота</h2>
+<h4>Шаг 1. Определите точную позицию каждого товара в приложениях №1/№2 по коду и наименованию</h4>
+<p>Не полагайтесь только на код ОКПД2 — как показала практика по делу о шприце-манометре, совпадение кода не гарантирует принадлежность к специальной позиции.</p>
+<h4>Шаг 2. Проверьте, не входит ли какая-либо позиция в закрытый перечень запретов подп. «г» п. 4</h4>
+<p>Если ни одна из объединяемых позиций не входит в этот перечень — общее правило подп. «в» п. 4 разрешает объединение.</p>
+<h4>Шаг 3. Проверьте антимонопольные ограничения отдельно от ПП 1875</h4>
+<p>Даже допустимое по ПП 1875 объединение может нарушать ч. 3 ст. 17 135-ФЗ, если товары технологически и функционально не связаны между собой.</p>
+<h4>Шаг 4. Корректно опишите объект закупки с учётом разных мер по разным позициям</h4>
+<p>Формулировка документации должна отражать, что к разным позициям лота применяются разные меры национального режима — это снижает риск последующих жалоб на ненадлежащее описание объекта закупки.</p>
+
+<h2>8. Что делать поставщику, если заказчик уже объявил смешанный лот</h2>
+<h4>Шаг 1. Определите, к каким именно позициям в лоте относится ваше предложение</h4>
+<p>Проверьте применимую меру (запрет/ограничение/преимущество) отдельно для каждой позиции, к которой у вас есть предложение.</p>
+<h4>Шаг 2. Подготовьте подтверждение происхождения по каждой позиции отдельно</h4>
+<p>Отсутствие подтверждения по одной позиции может привести к отклонению всей заявки, если эта позиция подпадает под запрет или ограничение.</p>
+<h4>Шаг 3. Если считаете, что заказчик неправомерно сформировал лот — соберите доказательства для жалобы</h4>
+<p>Проверьте, действительно ли объединённые товары относятся к позициям из закрытого перечня подп. «г» п. 4, или к технологически не связанным товарам по ст. 17 135-ФЗ — как показывает практика, эта проверка иногда даёт основание для успешной жалобы, а иногда показывает, что запрет вообще не применим.</p>
+
+<h2>FAQ</h2>
+<div class="faq-item"><h4>Правда ли, что ПП 1875 запрещает объединять в одном лоте российские и иностранные товары?</h4><p>Нет. Подпункт «в» п. 4 ПП 1875 прямо разрешает объединение товаров из приложения №1, приложения №2 и товаров вне приложений в одном объекте закупки как общее правило. Запреты существуют, но это закрытый перечень конкретных случаев, а не общий принцип.</p></div>
+<div class="faq-item"><h4>Кто формирует смешанный лот — заказчик или поставщик?</h4><p>Заказчик, до публикации закупки. Поставщик не объединяет лот — он получает уже сформированный объект закупки и оценивает свою заявку относительно него.</p></div>
+<div class="faq-item"><h4>Что происходит, если в допустимом смешанном лоте предложен иностранный товар по позиции с запретом?</h4><p>Отклоняется заявка целиком, а не только эта отдельная позиция — при том что мера национального режима определяется по каждой товарной позиции отдельно.</p></div>
+<div class="faq-item"><h4>Если товар формально похож на позицию из закрытого перечня запретов — запрет применяется автоматически?</h4><p>Нет. Судебная практика (в частности, дело о «шприце-манометре», подтверждённое отказом Верховного Суда в пересмотре) показывает: нужно точно установить принадлежность товара к специальной позиции по совокупности кода ОКПД2 и точного наименования, а не по формальному сходству.</p></div>
+<div class="faq-item"><h4>Может ли нарушение правил объединения лота привести к признанию закупки недействительной?</h4><p>Это возможное судебное последствие при одновременном нарушении антимонопольных требований (ст. 17 135-ФЗ), а не автоматический результат любой ошибки в формировании лота.</p></div>
+
+<div class="article-cta">
+  <b>Формируете смешанный лот или столкнулись с ним как поставщик?</b>
+  <p>ГМТ проверит корректность объединения товаров в закупке по ПП 1875 — как для заказчика при формировании документации, так и для поставщика при оценке применимости мер национального режима к конкретной заявке.</p>
+  <a class="btn pri" href="mailto:info@med-local.ru?subject=Проверка смешанного лота по ПП 1875">Проверить формирование лота</a>
+</div>
+
+    </div>
+  </div>
+</section>
+<section style="background:var(--paper);border-top:1px solid var(--line);padding:32px 0">
+  <div class="wrap" style="max-width:820px">
+    <h3 style="font-size:16px;font-weight:700;margin:0 0 16px;color:var(--ink)">Читайте также</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><a href="/blog/pp719-vs-pp1875" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">ПП 719 и ПП 1875: в чём разница</a><a href="/blog/pp1875-vtoroy-lishniy" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Ограничение по ПП 1875 («второй лишний»)</a><a href="/blog/pp1875-zayavki" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Новые правила нацрежима: как отразить реестровую запись в заявке</a></div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div><b>Инженерный центр локализации медицинских изделий</b>
+      <p style="font-size:13px;line-height:1.65;margin:0 0 14px;color:#97A1B2">Локализация производства медицинских изделий в России. От анализа ниши до регистрационного удостоверения.</p>
+      <a href="tel:+79853169104">+7 985 316-91-04 (Россия)</a>
+      <a href="tel:+79888777295">+7 988 877-72-95 (Россия)</a>
+      <a href="tel:+79888777295">MAX: +7 988 877-72-95</a>
+      <a href="tel:+77021394489">+7 702 139-44-89 (Казахстан)</a>
+      <a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a>
+      <a href="https://t.me/tandelovtat" style="color:#2FA8A0" target="_blank" rel="noopener noreferrer">Telegram: @tandelovtat</a>
+    </div>
+    <div><b>Услуги</b>
+      <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a>
+      <a href="/development">Разработка</a><a href="/production">Производство</a>
+      <a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a>
+    </div>
+    <div><b>Компания</b>
+      <a href="/cases">Кейсы</a><a href="/pricing">Стоимость</a><a href="/blog">База знаний</a>
+      <a href="/contacts">Контакты</a><a href="/glossary">Глоссарий</a><a href="/privacy">Политика ПДн</a>
+    </div>
+    <div><b>Контакты</b>
+      <a href="mailto:info@med-local.ru">info@med-local.ru</a>
+      <a href="mailto:sales@med-local.ru">sales@med-local.ru</a>
+      <a href="mailto:marketing@med-local.ru">marketing@med-local.ru</a>
+      <a href="mailto:ceo@med-local.ru">ceo@med-local.ru</a>
+    </div>
+  </div>
+  <div class="fine">
+    <span>© 2026 ООО «Глобальные Медицинские Технологии» · 125047, г. Москва, 1-й Тверской-Ямской пер., д. 16, помещ. 1/п</span>
+    <span style="display:flex;gap:14px;flex-wrap:wrap"><a href="/privacy">Политика конфиденциальности</a><a href="/oferta">Публичная оферта</a><a href="/terms">Пользовательское соглашение</a></span>
+  </div>
+</div></footer>
+<a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg>
+  Написать в Telegram
+</a>
+<a class="float-btn max-btn" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer">
+  <img src="/images/max-icon.png" alt="MAX" width="22" height="22" style="border-radius:6px">
+  Написать в MAX
+</a>
+<script>
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';}
+</script>
+<script src="/cookie-consent.js" defer></script>
+</body>
+</html>
