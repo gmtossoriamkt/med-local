@@ -488,6 +488,8 @@ function toggleMenu(){
   document.getElementById('burger').classList.toggle('open');
   document.getElementById('mob-menu').classList.toggle('open');
   document.body.style.overflow = document.getElementById('mob-menu').classList.contains('open') ? 'hidden' : '';
+  var cb = document.getElementById('cookie-consent-banner');
+  if (cb) cb.style.display = document.getElementById('mob-menu').classList.contains('open') ? 'none' : '';
 }
 function sendLead(f){
   f.querySelector('button[type=submit]').textContent='Отправляем...';

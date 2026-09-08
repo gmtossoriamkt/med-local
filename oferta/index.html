@@ -222,7 +222,7 @@ gtag("config", "G-9DZXMBECL0");
 </a>
 <script src="/cookie-consent.js" defer></script>
 <script>
-function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';}
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';var cb=document.getElementById('cookie-consent-banner');if(cb)cb.style.display=document.getElementById('mob-menu').classList.contains('open')?'none':'';}
 </script>
 </body>
 </html>

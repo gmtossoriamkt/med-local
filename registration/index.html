@@ -366,7 +366,7 @@ gtag("config", "G-9DZXMBECL0");
   Написать в MAX
 </a>
 <script>
-function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';}
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';var cb=document.getElementById('cookie-consent-banner');if(cb)cb.style.display=document.getElementById('mob-menu').classList.contains('open')?'none':'';}
 function submitLead(f){
   var btn=f.querySelector('button[type=submit]');
   btn.textContent='Отправляем...';btn.disabled=true;
