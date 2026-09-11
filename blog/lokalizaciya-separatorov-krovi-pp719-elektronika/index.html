@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Локализация сепараторов крови: 65 баллов по ПП 719</title>
+<meta name="description" content="Локализация сепаратора клеток крови по ПП 719: обязательный 100%-й монтаж плат в РФ и порог 65 баллов из 75 возможных.">
+<link rel="canonical" href="https://med-local.ru/blog/lokalizaciya-separatorov-krovi-pp719-elektronika">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Как локализовать сепаратор клеток крови по ПП 719: требования к электронике и расчёт 65 баллов">
+<meta property="og:description" content="Локализация сепаратора клеток крови по ПП 719: обязательный 100%-й монтаж плат в РФ и порог 65 баллов из 75 возможных.">
+<meta property="og:url" content="https://med-local.ru/blog/lokalizaciya-separatorov-krovi-pp719-elektronika">
+<meta property="og:image" content="https://med-local.ru/og-image.png">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C232E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@700;800&family=JetBrains+Mono:wght@600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{
+ --graphite:#1C232E;--graphite-2:#27303E;--ink:#1C232E;--muted:#4A5568;
+ --blue:#3D6FB4;--cyan:#2FA8A0;--cyan-soft:#E4F4F3;--blue-soft:#E9F0FA;
+ --orange:#FF6B3D;--orange-soft:#FFE9DC;
+ --paper:#F6F7F9;--card:#FFFFFF;--line:#E5E8ED;
+ --body:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+ --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{max-width:100vw}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.mono{font-family:var(--mono)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:600;font-size:14.5px;border:none;transition:.18s;cursor:pointer}
+.btn.pri{background:var(--orange);color:#fff;box-shadow:0 10px 24px -10px rgba(255,107,61,.6)}
+.btn.pri:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn.gh{background:transparent;border:1.5px solid #fff;color:#fff}
+.btn.gh:hover{background:rgba(255,255,255,.1)}
+.btn.dark{background:var(--graphite);color:#fff}
+.btn.line-btn{background:#fff;border:1.5px solid var(--line);color:var(--ink)}
+.btn.line-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--cyan)}
+.tag::before{content:"";width:22px;height:2px;background:var(--cyan)}
+h1,h2,h3{line-height:1.15;margin:0}
+.h-xl{font-size:clamp(30px,4.6vw,52px);font-weight:800;letter-spacing:-1.2px}
+.h-l{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.8px}
+.h-m{font-size:19px;font-weight:700}
+.lead{font-size:17px;color:var(--muted);line-height:1.65}
+.sec{padding:74px 0}
+.sec.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:960px){.g3,.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+@media(max-width:620px){.g3,.g4,.g2{grid-template-columns:1fr}}
+@media(max-width:880px){.route{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:560px){.route{grid-template-columns:1fr!important}.route .st{padding:16px 0 0!important;border-bottom:1px solid var(--line);padding-bottom:16px!important;margin-bottom:8px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.kv{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.kv span{color:var(--muted)}.kv b{text-align:right}
+header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:22px;height:66px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:16.5px;letter-spacing:-.3px}
+.logo small{display:block;font-size:10px;font-weight:600;color:var(--muted);letter-spacing:1.6px;text-transform:uppercase}
+.nav a.lnk{font-size:14px;font-weight:500;color:var(--muted);transition:.15s;white-space:nowrap}
+.nav a.lnk:hover,.nav a.lnk.on{color:var(--ink)}
+.nav .sp{flex:1}
+@media(max-width:2000px){.nav a.lnk{display:none}}
+.hero{position:relative;background:linear-gradient(140deg,var(--graphite) 0%,#202b3c 60%,#1d3a45 100%);color:#fff;overflow:hidden}
+.hero .pcb{position:absolute;inset:0;opacity:.16;pointer-events:none}
+.hero .in{position:relative;padding:92px 0 86px}
+.hero .lead{color:#B9C2D0;max-width:640px}
+.hero .stats{display:flex;gap:38px;margin-top:42px;flex-wrap:wrap}
+.hero .stats b{font-size:26px;font-weight:800;display:block;letter-spacing:-.5px}
+.hero .stats span{font-size:12.5px;color:#8E99AB}
+.crumbs{font-size:12.5px;color:var(--muted);margin:18px 0 0}
+.crumbs b{color:var(--ink)}
+.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:8px}
+.route .st{position:relative;padding:20px 18px 0}
+.route .st::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+.route .st h3{font-size:15.5px;margin:8px 0 6px}
+.route .st p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+@media(max-width:880px){.route{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.route{grid-template-columns:1fr}}
+.svc{display:flex;flex-direction:column;gap:10px;position:relative;transition:.2s}
+.svc:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.svc .ic{width:44px;height:44px;border-radius:12px;background:var(--cyan-soft);color:var(--cyan);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:15px}
+.svc p{font-size:14px;color:var(--muted);margin:0;line-height:1.6;flex:1}
+.svc .go{font-size:13.5px;font-weight:700;color:var(--cyan)}
+.seg{border-left:3px solid var(--blue);padding:16px 20px;background:#fff;border-radius:0 14px 14px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.seg b{display:block;margin-bottom:5px}
+.seg p{font-size:13.5px;color:var(--muted);margin:0 0 8px;line-height:1.55}
+.seg .of{font-size:13px;font-weight:600;color:var(--cyan)}
+.law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
+.law b{display:block;margin-bottom:6px;font-size:14px}
+.warn{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#8B3A1E;line-height:1.65;margin:24px 0}
+.warn b{display:block;margin-bottom:6px;font-size:14px}
+.post{display:flex;flex-direction:column;gap:9px;transition:.2s}
+.post:hover{transform:translateY(-3px)}
+.post .rub{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)}
+.post h3{font-size:16.5px;line-height:1.35}
+.post p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.6}
+.post .cta-link{font-size:13px;font-weight:700;color:var(--orange)}
+.frm{display:grid;gap:13px}
+.frm label{font-size:12.5px;font-weight:600}
+.frm input,.frm select,.frm textarea{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:12px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.frm input:focus,.frm select:focus,.frm textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:620px){.f2{grid-template-columns:1fr}}
+.mag{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:var(--r);padding:30px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.mag b{font-size:19px;display:block;margin-bottom:6px}
+.mag p{color:#AFBAC9;font-size:14px;margin:0;max-width:520px}
+.mag .sp{flex:1}
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2}footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+.proof{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.proof .n{font-family:var(--mono);color:var(--cyan);font-weight:600;font-size:12.5px;padding-top:2px;white-space:nowrap}
+.steps li{margin-bottom:10px;line-height:1.6;font-size:14.5px}
+.lift{box-shadow:var(--sh)}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}
+.pain-item{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px}
+.pain-item h4{font-size:14px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.pain-item p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+.compare-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:14px}
+.compare-table th{background:var(--graphite);color:#fff;font-weight:600;padding:12px 16px;text-align:left}
+.compare-table td{padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink)}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table td.bad{color:#C0392B}
+.compare-table td.good{color:#1A7A6E;font-weight:600}
+.calc-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;margin-top:24px;box-shadow:var(--sh)}
+.calc-box h3{font-size:18px;font-weight:700;margin:0 0 20px}
+.form-row{margin-bottom:14px}
+.form-row label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;color:var(--ink)}
+.form-row select,.form-row input{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:10px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.form-row select:focus,.form-row input:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.calc-result{background:var(--cyan-soft);border:1px solid #BCE4E1;border-radius:11px;padding:18px;margin-top:16px;display:none}
+.calc-result.show{display:block}
+.calc-result h4{font-size:15px;font-weight:700;color:#1A7A6E;margin:0 0 6px}
+.calc-result p{font-size:13.5px;color:#2D7A72;margin:0}
+.related{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.related a{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan);transition:.15s}
+.related a:hover{border-color:var(--cyan)}
+
+/* Бургер-меню для мобильных */
+.burger{display:none;align-items:center;gap:8px;cursor:pointer;padding:6px 10px;background:#fff;border:1.5px solid var(--line);border-radius:10px;transition:.15s;z-index:200}
+.burger:hover{border-color:var(--cyan)}
+.burger-icon{display:flex;flex-direction:column;gap:5px}
+.burger-icon span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger-label{font-size:12.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+.burger.open .burger-icon span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open .burger-icon span:nth-child(2){opacity:0}
+.burger.open .burger-icon span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:680px){.burger{padding:4px;background:none;border:none;gap:0}.burger-label{display:none}}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:210;flex-direction:column}
+.mob-menu-links{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:70px 20px 16px}
+.mob-menu-cta{flex-shrink:0;display:flex;justify-content:center;padding:14px 24px 20px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+.mob-menu a:hover{color:var(--cyan)}
+@media(max-width:2000px){
+  .nav-links{display:none!important}
+  .burger{display:flex}
+  .nav{gap:12px}
+}
+/* Хлебные крошки */
+.crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:.15s}.crumbs a:hover{color:var(--cyan)}
+.crumbs span{color:var(--muted)}
+.crumbs b{color:var(--ink);font-weight:600}
+/* Таблицы на мобильных */
+@media(max-width:640px){
+  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .article-body table{display:block;overflow-x:auto}
+}
+/* Плавающая кнопка на мобильных */
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+.float-btn.max-btn{bottom:74px;background:#fff;box-shadow:0 8px 24px rgba(107,63,231,.25);color:var(--ink)}
+@media(max-width:768px){.float-btn{display:flex}}
+/* Состояния кнопок */
+.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.btn.pri:active{transform:translateY(0);filter:brightness(.95)}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+/* Единый подвал */
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2;transition:.15s}
+footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){footer .cols{grid-template-columns:1fr}}
+
+.header-icons{display:flex;align-items:center;gap:8px;margin-right:4px}
+.header-icons a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s}
+.header-icons a.tg-icon{background:#2FA8A0}
+.header-icons a.max-icon{background:transparent;padding:0}
+.header-icons a:hover{filter:brightness(1.1);transform:translateY(-1px)}
+@media(max-width:2000px){.header-icons{display:none}}
+.lang-switch{display:flex;align-items:center;gap:4px;margin-right:8px}
+.lang-switch a{font-size:12.5px;font-weight:700;padding:4px 8px;border-radius:6px;color:var(--muted);transition:.15s;text-decoration:none}
+.lang-switch a.active{background:var(--graphite);color:#fff}
+.mob-lang-switch{display:flex;align-items:center;gap:10px;margin-top:10px}
+.mob-lang-switch a{font-size:15px;font-weight:700;padding:8px 20px;border-radius:10px;color:var(--muted);background:var(--paper);border:1.5px solid var(--line)}
+.mob-lang-switch a.active{background:var(--graphite);color:#fff;border-color:var(--graphite)}
+@media(max-width:680px){.lang-switch{display:none}}
+.lang-switch a:hover:not(.active){color:var(--ink)}
+
+.article-body h2{font-size:22px;font-weight:800;margin:36px 0 14px;color:var(--ink)}
+.article-body h3{font-size:18px;font-weight:700;margin:28px 0 10px;color:var(--ink)}
+.article-body h4{font-size:16px;font-weight:700;margin:24px 0 8px;color:var(--ink)}
+.article-body p{font-size:15px;color:#3a4455;line-height:1.75;margin:0 0 16px}
+.article-body ul,.article-body ol{margin:0 0 16px 20px}
+.article-body li{font-size:15px;color:#3a4455;line-height:1.7;margin-bottom:6px}
+.article-body strong,.article-body b{color:var(--ink)}
+.article-body .law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:16px 20px;font-size:14px;color:#2D4F7E;line-height:1.65;margin:20px 0}
+.article-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-body th{background:var(--graphite);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+.article-body td{padding:10px 14px;border-bottom:1px solid var(--line);color:#3a4455}
+.article-body blockquote{border-left:3px solid var(--cyan);padding:8px 0 8px 18px;margin:20px 0;font-style:italic;color:var(--ink);font-weight:600}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.article-cta{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:16px;padding:28px 32px;margin:40px 0}
+.article-cta b{font-size:18px;display:block;margin-bottom:8px}
+.article-cta p{color:#AFBAC9;font-size:14px;margin:0 0 18px}
+.logo img{display:block;width:200px;height:48px;object-fit:contain}
+@media(max-width:768px){.logo img{width:170px;height:auto}}
+</style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DZXMBECL0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9DZXMBECL0");</script>
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Как локализовать сепаратор клеток крови по ПП 719: требования к электронике и расчёт 65 баллов","description":"Локализация сепаратора клеток крови по ПП 719: обязательный 100%-й монтаж плат в РФ и порог 65 баллов из 75 возможных.","url":"https://med-local.ru/blog/lokalizaciya-separatorov-krovi-pp719-elektronika","datePublished":"2026-09-11","dateModified":"2026-09-11","author":{"@type":"Person","name":"А.-Т. Танделов","url":"https://med-local.ru/about"},"publisher":{"@type":"Organization","name":"Инженерный центр локализации медицинских изделий","url":"https://med-local.ru","logo":{"@type":"ImageObject","url":"https://med-local.ru/logo.svg"}},"image":"https://med-local.ru/og-image.png","inLanguage":"ru","mainEntityOfPage":{"@type":"WebPage","@id":"https://med-local.ru/blog/lokalizaciya-separatorov-krovi-pp719-elektronika"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"К какой позиции ПП №719 относится сепаратор клеток крови (система афереза)?","acceptedAnswer":{"@type":"Answer","text":"Система афереза (сепаратор клеток крови) относится к ОКПД2 26.60.13.190 и подпадает под позицию раздела VII ПП №719 «из 26.60.13.190 — Аппаратура электротерапевтическая». Это подтверждается регистрационными документами Росздравнадзора: в РУ на «Систему афереза AmiCORE» указан именно код ОКПД2 26.60.13.190, а в КТРУ есть специальная позиция 26.60.13.190-00000046 «Система афереза». Код 32.50.13.190 относится к другой группе изделий и не должен автоматически применяться к сепаратору."}},{"@type":"Question","name":"Даёт ли 100%-й монтаж электронных компонентов на платы в РФ баллы сам по себе?","acceptedAnswer":{"@type":"Answer","text":"Нет. Это обязательное условие соответствия позиции ПП №719, а не отдельный балльный критерий. За сам факт переноса SMT/THT-монтажа в Россию производитель не получает баллы автоматически — 25 баллов начисляются отдельно за «платы в сборе» как составную часть, и связь между выполнением обязательного условия и получением этих баллов нужно доказывать отдельно."}},{"@type":"Question","name":"Можно ли набрать 65 баллов без баллов за платы в сборе?","acceptedAnswer":{"@type":"Answer","text":"Нет. Максимум по остальным критериям — корпус (15) + кабели (10) + ISO 13485 (5) + НИОКР (до 20) — составляет 50 баллов, что меньше требуемых 65. Без 25 баллов за платы в сборе порог недостижим даже при максимальных значениях всех остальных критериев."}},{"@type":"Question","name":"Обязательна ли собственная производственная база, или можно использовать контрактную?","acceptedAnswer":{"@type":"Answer","text":"ПП №719 для этой позиции допускает собственную или контрактную научно-производственную базу в России. Но сам факт договора с российским подрядчиком не гарантирует выполнение требований — нужно заранее определить, какая операция передаётся, на какой площадке она выполняется, что поступает на входе и выходе, и как это подтверждается документами."}},{"@type":"Question","name":"Нужно ли менять регистрационное досье при локализации электроники сепаратора?","acceptedAnswer":{"@type":"Answer","text":"Это нужно оценивать отдельно от расчёта баллов по ПП №719. Если локализация меняет плату, компоненты, PCB layout, ПО, конструкцию корпуса или иные элементы, влияющие на характеристики изделия, необходимо отдельно оценить влияние изменений на регистрационное досье. Достаточное количество баллов по ПП №719 само по себе не отменяет регуляторную оценку изменений."}},{"@type":"Question","name":"Сколько баллов можно набрать максимум и сколько нужно для прохождения порога?","acceptedAnswer":{"@type":"Answer","text":"Максимум по позиции «из 26.60.13.190» — 75 баллов (платы в сборе 25, корпус 15, кабели 10, ISO 13485 5, НИОКР до 20). В 2026–2027 годах требуется набрать не менее 65 баллов."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://med-local.ru/"},{"@type":"ListItem","position":2,"name":"База знаний","item":"https://med-local.ru/blog"},{"@type":"ListItem","position":3,"name":"Как локализовать сепаратор клеток крови по ПП","item":"https://med-local.ru/blog/lokalizaciya-separatorov-krovi-pp719-elektronika"}]}
+</script>
+</head>
+<body>
+<div class="mob-menu" id="mob-menu" onclick="if(event.target===event.currentTarget)toggleMenu()"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:max(18px,env(safe-area-inset-top));right:max(18px,env(safe-area-inset-right));background:none;border:none;cursor:pointer;padding:10px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="pointer-events:none"><path d="M5 5l14 14M19 5L5 19"/></svg></button><div class="mob-menu-links" onclick="if(event.target===event.currentTarget)toggleMenu()"><a href="/">Главная</a><a href="/about">О центре</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">База знаний</a><a href="/pricing">Стоимость</a><a href="/cases">Кейсы</a><a href="/glossary">Глоссарий</a><a href="/contacts">Контакты</a><div class="mob-lang-switch"><a href="#" class="active" onclick="toggleMenu()">RU</a><a href="/en">EN</a></div>
+  </div><div class="mob-menu-cta" onclick="if(event.target===event.currentTarget)toggleMenu()"><a href="/#lead" class="btn pri" style="margin-top:16px" onclick="toggleMenu()">Оценить проект</a></div></div>
+<header><div class="wrap nav">
+  <a class="logo" href="/" aria-label="Инженерный центр — на главную">
+  <img
+    src="/logo-full.svg"
+    alt="Инженерный центр — локализация медицинских изделий"
+    width="200"
+    height="48"
+    style="display:block;"
+  >
+</a>
+  <span class="sp"></span>
+  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk on" href="/blog">База знаний</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a><a class="lnk" href="/cases">Кейсы</a><a class="lnk" href="/glossary">Глоссарий</a><a class="lnk" href="/contacts">Контакты</a></div>
+  <div class="header-icons">
+    <a class="tg-icon" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer" title="Написать в Telegram" aria-label="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg></a>
+    <a class="max-icon" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer" title="Написать в MAX" aria-label="MAX"><img src="/images/max-icon.png" alt="MAX" width="26" height="26" style="border-radius:7px;display:block"></a>
+  </div>
+  <div class="lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
+  <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span class="burger-icon"><span></span><span></span><span></span></span><span class="burger-label">Меню</span></button>
+</div></header>
+
+<div class="wrap"><nav class="crumbs"><a href="/">Главная</a><span>›</span><a href="/blog">База знаний</a><span>›</span><b>Как локализовать сепаратор клеток крови по ПП...</b></nav></div>
+<section style="background:#fff;border-bottom:1px solid var(--line)">
+  <div class="wrap" style="padding:48px 22px 36px;max-width:820px">
+    <a href="/blog" style="font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:20px">← Все статьи</a>
+    <span class="tag" style="display:inline-flex;margin-bottom:14px">Служба крови · ПП 719 · Электроника</span>
+    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">Как локализовать сепаратор клеток крови по ПП 719: требования к электронике и расчёт 65 баллов</h1>
+    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ · совместно с инженером по локализации электроники</span>
+      <span>·</span>
+      <time datetime="2026-09-11">Опубликовано: 11 сентября 2026</time>
+    </div>
+  </div>
+</section>
+<main>
+<section class="sec">
+  <div class="wrap" style="max-width:820px">
+    <div class="article-body">
+
+<p>Для локализации сепаратора клеток крови по ПП РФ №719 недостаточно перенести в Россию финальную сборку аппарата. Для применимой позиции установлены обязательные технологические операции, включая 100%-й монтаж электронных компонентов на печатные платы в РФ, а одновременно действует балльная система.</p>
+<p>Для продукции по позиции <strong>«из 26.60.13.190 — Аппаратура электротерапевтическая»</strong> в 2026–2027 годах необходимо набрать не менее <strong>65 баллов</strong>. При этом максимум по балльным критериям составляет 75 баллов.</p>
+<p>Практически это означает, что производителю нужно заранее проектировать не только сборочную площадку, но и всю модель локализации электроники, корпуса, кабелей, СМК и НИОКР.</p>
+
+<h2>К какой позиции ПП 719 относится сепаратор клеток крови</h2>
+<p>Система афереза, или сепаратор клеток крови, относится к оборудованию по ОКПД2 <strong>26.60.13.190</strong>.</p>
+<p>В разделе VII ПП №719 для этой группы предусмотрена позиция:</p>
+<p><strong>«из 26.60.13.190 — Аппаратура электротерапевтическая».</strong></p>
+<p>Именно её требования нужно анализировать при подготовке проекта локализации сепаратора.</p>
+<p>Это важно, потому что в отраслевых материалах рядом встречается код <strong>32.50.13.190</strong>, но в ПП №719 он относится к другой группе изделий, в том числе аппаратам и одноразовым системам для переливания крови. Нельзя автоматически переносить требования этой позиции на систему афереза.</p>
+<p>Соответствие подтверждается не только КТРУ, но и регистрационными документами Росздравнадзора: в официальном регистрационном удостоверении на «Систему афереза AmiCORE» прямо указан код ОКПД2 26.60.13.190, а в КТРУ существует специальная позиция 26.60.13.190-00000046 «Система афереза».</p>
+
+<h2>Что ПП 719 требует обязательно</h2>
+<p>Первое, что нужно разделить при работе с ПП №719, — <strong>обязательные условия</strong> и <strong>балльные критерии</strong>.</p>
+<p>Для позиции <span class="mono">из 26.60.13.190</span> к обязательным требованиям относятся, в частности:</p>
+<ul>
+<li>права на техническую документацию для производства продукции;</li>
+<li>наличие сервисного центра;</li>
+<li>подразделение НИОКР предприятия-изготовителя в России;</li>
+<li>документальное подтверждение внедрения изделия в производство и регистрационное удостоверение;</li>
+<li>права на товарный знак — при его наличии;</li>
+<li>права на программное обеспечение, выполняющее основное функциональное назначение изделия, — если такое ПО входит в продукцию;</li>
+<li>собственная или контрактная научно-производственная база в РФ;</li>
+<li>разработка продукции в России;</li>
+<li>сборка;</li>
+<li>проверка функциональности;</li>
+<li>загрузка и конфигурирование русскоязычного ПО;</li>
+<li>упаковка;</li>
+<li><strong>монтаж электронных компонентов на печатные платы в РФ в объёме 100%.</strong></li>
+</ul>
+<p>Последний пункт особенно важен для производителей сепараторов: российская сборка аппарата сама по себе не заменяет российский монтаж электроники.</p>
+
+<h2>100%-й монтаж плат — обязательное условие, а не баллы</h2>
+<p>Это одна из главных ловушек при чтении ПП №719.</p>
+<p>Формулировка «монтаж электронных компонентов на печатные платы в Российской Федерации в объёме, составляющем 100 процентов» не сопровождается отдельным количеством баллов.</p>
+<p>То есть за сам факт переноса SMT/THT-монтажа в Россию производитель не получает, например, 10, 20 или 25 баллов.</p>
+<p>Он получает другое: <strong>выполняет обязательное условие соответствия позиции ПП №719</strong>.</p>
+<p>Поэтому схема «импортная готовая PCBA → установка платы в российский корпус → финальная сборка в РФ» проблемна.</p>
+<p>Электронные компоненты на такой плате уже были смонтированы за пределами России. Следовательно, российская установка готовой PCBA в аппарат не равна монтажу компонентов на печатную плату в РФ.</p>
+
+<h2>Какие баллы можно набрать</h2>
+<p>Для рассматриваемой позиции шкала достаточно компактная.</p>
+<table class="compare-table">
+<tr><th>Элемент локализации</th><th>Баллы</th></tr>
+<tr><td>Платы в сборе</td><td>25</td></tr>
+<tr><td>Корпус основного блока в сборе</td><td>15</td></tr>
+<tr><td>Кабели</td><td>10</td></tr>
+<tr><td>СМК по ГОСТ ISO 13485-2017</td><td>5</td></tr>
+<tr><td>НИОКР в РФ</td><td>до 20</td></tr>
+<tr><td><strong>Максимум</strong></td><td><strong>75</strong></td></tr>
+</table>
+<p>Таким образом, производитель работает в достаточно узком коридоре: <strong>максимум — 75 баллов, проходной уровень — 65</strong>.</p>
+<p>Ошибиться в одном из ключевых элементов локализации здесь намного опаснее, чем в позициях ПП №719, где доступный максимум сильно превышает обязательный порог.</p>
+
+<h2>Почему платы в сборе критичны</h2>
+<p>Наиболее весомый элемент шкалы — <strong>платы в сборе: 25 баллов</strong>.</p>
+<p>Посмотрим, что произойдёт, если производитель эти баллы не подтверждает: корпус — 15; кабели — 10; ISO 13485 — 5; НИОКР — максимум 20.</p>
+<p>Итого: <strong>15 + 10 + 5 + 20 = 50 баллов</strong>. При требуемых 65.</p>
+<p>То есть даже максимальный объём баллов НИОКР, российский корпус, российские кабели и сертифицированная СМК <strong>не позволяют пройти порог без баллов за платы в сборе</strong>.</p>
+<p>Отсюда следует важный практический вывод: для сепаратора клеток крови вопрос происхождения и способа производства электронных плат — не второстепенная деталь локализации, а один из центральных элементов всей стратегии ПП №719.</p>
+
+<h2>Но российский монтаж и 25 баллов за платы — не одно и то же</h2>
+<p>Здесь важно не смешивать два разных требования.</p>
+<p>Первое: <strong>100% электронных компонентов должны монтироваться на печатные платы в России</strong>. Это обязательное условие.</p>
+<p>Второе: <strong>за платы в сборе можно получить 25 баллов</strong>. Это уже балльный критерий.</p>
+<p>Поэтому нельзя автоматически считать: российский SMT-монтаж = 25 баллов.</p>
+<p>Текст ПП №719 связывает баллы с изготовлением в России или использованием изготовленных в России составных частей — в данном случае «плат в сборе».</p>
+<p>Если производитель закупает иностранную голую PCB и монтирует на неё компоненты в России, обязательное условие по месту монтажа выполняется.</p>
+<p>Но вопрос, будет ли полученная PCBA признана для целей ПП №719 российской «платой в сборе» и даст ли она 25 баллов, лучше закрывать <strong>до подачи заявки</strong> в рамках проработки доказательной базы.</p>
+<p>Сам текст постановления не даёт основания обещать эти 25 баллов автоматически только по факту российского SMT.</p>
+
+<h2>Почему НИОКР фактически тоже нужен</h2>
+<p>Даже если производитель подтверждает все основные материальные элементы: <strong>25 платы + 15 корпус + 10 кабели + 5 ISO 13485 = 55 баллов</strong>.</p>
+<p>До проходного уровня остаётся: <strong>65 − 55 = 10 баллов</strong>.</p>
+<p>Следовательно, при полной локализации перечисленных элементов всё равно требуется минимум <strong>10 баллов НИОКР</strong>. Максимально за НИОКР можно получить 20 баллов.</p>
+<p>ПП №719 привязывает расчёт к объёму затрат на научно-исследовательские и опытно-конструкторские работы, понесённых российскими юридическими лицами в РФ, относительно выручки предприятия — формула сформулирована как 1 балл за каждые 0,17% соответствующих затрат относительно годового объёма выручки, но не более 20 баллов.</p>
+<p>Поэтому НИОКР здесь — не просто красивый дополнительный аргумент о технологичности производителя. Без него арифметика может не сойтись.</p>
+
+<h2>Сценарий 1. Импортная готовая PCBA и сборка сепаратора в России</h2>
+<p>Представим самую простую модель локализации: электронные платы приходят полностью собранными из-за рубежа; в России производится корпус; выполняется монтаж модулей в аппарат; загружается ПО; проводится настройка и функциональный контроль; изделие упаковывается.</p>
+<p>На первый взгляд это может выглядеть как российская сборка.</p>
+<p>Но с позиции ПП №719 остаётся критическая проблема: <strong>электронные компоненты были смонтированы на платы не в РФ</strong>. То есть обязательное условие 100%-го российского монтажа не выполняется.</p>
+<p>Здесь нет смысла сначала считать баллы. Сначала нужно устранить несоответствие обязательному требованию.</p>
+
+<h2>Сценарий 2. Импортная PCB, монтаж компонентов в России</h2>
+<p>Вторая схема гораздо интереснее: голая PCB закупается за рубежом; электронные компоненты закупаются отдельно; SMT/THT-монтаж выполняется в России; дальнейшая сборка аппарата также происходит в РФ.</p>
+<p>В этом случае требование по 100%-му российскому монтажу компонентов принципиально может быть выполнено.</p>
+<p>Но остаётся главный вопрос: <strong>получит ли изготовитель 25 баллов за «платы в сборе»?</strong></p>
+<p>Если нет, максимально возможный расчёт: <strong>15 корпус + 10 кабели + 5 ISO 13485 + 20 НИОКР = 50</strong>. Порог 65 недостижим.</p>
+<p>Если же такая PCBA подтверждается как изготовленная в России составная часть и получает 25 баллов: <strong>25 + 15 + 10 + 5 + 20 = 75</strong>.</p>
+<p>Разница между этими двумя квалификациями — <strong>25 баллов</strong>, то есть фактически возможность или невозможность попасть в реестр по рассматриваемой схеме.</p>
+<p>Поэтому такой проект нельзя строить по принципу «сначала запустим российский SMT, а потом разберёмся с баллами». Квалификацию платы нужно прорабатывать заранее.</p>
+
+<h2>Сценарий 3. Российская плата в сборе</h2>
+<p>Наиболее устойчивый с точки зрения расчёта сценарий — заранее сформировать цепочку, в которой можно подтвердить 25 баллов за платы в сборе.</p>
+<p>Тогда максимальная модель: <strong>25 платы + 15 корпус + 10 кабели + 5 ISO 13485 + 20 НИОКР = 75 баллов</strong>. Порог: 65 баллов. Запас составляет 10 баллов.</p>
+<p>Но даже здесь пространство для манёвра ограничено. Например:</p>
+<ul>
+<li>платы 25 + корпус 15 + кабели 10 + ISO 5 + НИОКР 10 = <strong>65</strong>;</li>
+<li>без ISO 13485 при максимальном НИОКР = <strong>70</strong>;</li>
+<li>без российских кабелей, но с максимальным НИОКР = <strong>65</strong>;</li>
+<li>без российского корпуса = <strong>60</strong>;</li>
+<li>без баллов за платы = <strong>50</strong>.</li>
+</ul>
+<p>Последние две комбинации уже не проходят.</p>
+
+<h2>ISO 13485 — не просто общий фон</h2>
+<p>Для производителей медицинских изделий ISO 13485 часто воспринимается отдельно от локализационной повестки — как элемент системы менеджмента качества и обращения медицинских изделий.</p>
+<p>Но в этой позиции ПП №719 наличие у заявителя СМК, сертифицированной по <strong>ГОСТ ISO 13485-2017</strong>, даёт <strong>5 баллов</strong>.</p>
+<p>При максимуме 75 и проходном уровне 65 эти пять баллов нельзя считать незначительными.</p>
+<p>Например, комбинация: <strong>25 платы + 15 корпус + 10 кабели + 10 НИОКР = 60</strong>. С сертификатом ISO 13485: <strong>65</strong>.</p>
+<p>То есть в конкретной конфигурации именно СМК может закрыть разницу между непроходной и проходной моделью.</p>
+
+<h2>Контрактная площадка допустима</h2>
+<p>Ещё один практический вопрос — нужно ли производителю сепаратора самостоятельно создавать всю производственную инфраструктуру.</p>
+<p>Для рассматриваемой позиции ПП №719 предусматривает наличие <strong>собственной или контрактной научно-производственной базы</strong>, расположенной в России.</p>
+<p>Это открывает возможность строить локализацию с использованием российского контрактного производства. Например, часть операций по электронике потенциально может быть вынесена на специализированную площадку.</p>
+<p>Однако сам факт договора с российским контрактником ещё не гарантирует выполнение требований ПП №719.</p>
+<p>До подачи заявки нужно определить: какая операция выполняется подрядчиком; на какой площадке она выполняется; какие компоненты поступают на вход; какой полуфабрикат или узел получается на выходе; как прослеживается связь этой продукции с конкретной моделью сепаратора; какими документами подтверждается российское выполнение операции.</p>
+<p>И отдельно — какие баллы такая схема реально позволяет подтвердить.</p>
+
+<h2>Сборка в России нужна, но баллов не приносит</h2>
+<p>Финальная сборка сепаратора в РФ обязательна для этой позиции. Но сама по себе она не даёт баллов.</p>
+<p>То же относится к ряду других операций: разработка → сборка → проверка функциональности → загрузка и конфигурирование русскоязычного ПО → упаковка.</p>
+<p>Все эти процессы необходимо выполнять в России, но они не заменяют балльную часть.</p>
+<p>Это принципиально отличает ПП №719 от упрощённой логики «чем больше операций перенесли в РФ, тем больше баллов».</p>
+<p>Для сепаратора есть операции, которые являются <strong>входным условием</strong>, и есть отдельный перечень элементов, за которые начисляются баллы.</p>
+
+<h2>Что проверить до запуска проекта локализации</h2>
+<p>До переноса производства имеет смысл собрать локализационную матрицу.</p>
+<table class="compare-table">
+<tr><th>Элемент</th><th>Что установить заранее</th></tr>
+<tr><td>Плата</td><td>Где изготовлена PCB и где формируется PCBA</td></tr>
+<tr><td>SMT/THT</td><td>Как подтвердить 100% монтажа компонентов в РФ</td></tr>
+<tr><td>25 баллов за платы</td><td>Можно ли подтвердить российское происхождение платы в сборе</td></tr>
+<tr><td>Корпус</td><td>Какие детали и операции обеспечивают 15 баллов</td></tr>
+<tr><td>Кабели</td><td>Какие кабельные изделия будут российскими</td></tr>
+<tr><td>ISO 13485</td><td>Есть ли действующий сертификат СМК нужного заявителя</td></tr>
+<tr><td>НИОКР</td><td>Какой объём расходов можно подтвердить для расчёта баллов</td></tr>
+<tr><td>РУ</td><td>Соответствует ли локализуемая конфигурация зарегистрированному изделию</td></tr>
+<tr><td>ПО</td><td>У кого находятся необходимые права</td></tr>
+<tr><td>Производственная база</td><td>Собственная или контрактная схема</td></tr>
+<tr><td>Документы</td><td>Чем будет подтверждаться каждая операция и составная часть</td></tr>
+</table>
+<p>Именно такую матрицу лучше составлять <strong>до закупки оборудования и переноса BOM</strong>, а не после запуска производства.</p>
+
+<h2>Нужно ли менять регистрационное досье при локализации электроники</h2>
+<p>Локализация по ПП №719 и регистрация медицинского изделия — разные регуляторные контуры.</p>
+<p>Если при локализации производитель заменяет электронную плату, компоненты, поставщика критического узла, PCB layout, программное обеспечение, конструкцию корпуса или иные элементы, влияющие на характеристики изделия, нужно отдельно оценивать влияние изменений на регистрационное досье медицинского изделия.</p>
+<p>Наличие достаточного количества баллов по ПП №719 само по себе не означает, что любую замену компонентов можно внести без регуляторной оценки.</p>
+<p>Поэтому проект локализации лучше вести одновременно по двум трекам: <strong>ПП №719 / РРПП</strong> и <strong>регистрационный статус медицинского изделия</strong>.</p>
+
+<h2>Что с ПП 1875</h2>
+<p>Для закупочной стратегии нужно отдельно смотреть ПП РФ №1875.</p>
+<p>Сам ОКПД2 <strong>26.60.13.190</strong> присутствует в национальном режиме не как безусловная категория для всех изделий этого кода. Для применения конкретных мер важен также вид медицинского изделия.</p>
+<p>В частности, имеющиеся материалы по позиции 320 приложения №2 связывают её с конкретными видами изделий внутри 26.60.13.190, например с дефибрилляторами. Нельзя автоматически распространить соответствующее ограничение на систему афереза только из-за совпадения ОКПД2.</p>
+<p>Поэтому для сепаратора с НКМИ 262900 закупочный режим следует проверять именно по связке: <strong>ОКПД2 + НКМИ + конкретная позиция приложения ПП №1875</strong>.</p>
+
+<h2>Главная ошибка при локализации сепаратора</h2>
+<p>Самая рискованная модель выглядит так: перенесём финальную сборку в Россию, закажем российский корпус, а электронику оставим готовой импортной — затем доберём нужные баллы другими операциями.</p>
+<p>Для позиции <span class="mono">из 26.60.13.190</span> такая логика не работает.</p>
+<p>Во-первых, готовая импортная PCBA создаёт проблему с обязательным 100%-м монтажом компонентов на платы в РФ.</p>
+<p>Во-вторых, без 25 баллов за платы максимум остальных балльных критериев составляет всего <strong>50 баллов</strong>. При требуемых <strong>65</strong>.</p>
+<p>Поэтому локализация электроники здесь — не косметический элемент проекта, а часть критического пути к реестру.</p>
+
+<h2>Оптимальная последовательность проекта</h2>
+<p>Практически работу стоит начинать не с закупки SMT-линии и не с переноса финальной сборки.</p>
+<p>Сначала нужно:</p>
+<ol>
+<li>подтвердить применимость позиции <span class="mono">из 26.60.13.190</span> к конкретной модели;</li>
+<li>разложить BOM по балльным и обязательным требованиям ПП №719;</li>
+<li>определить схему PCB/PCBA и заранее проверить возможность получения 25 баллов;</li>
+<li>посчитать доступные баллы за корпус, кабели, ISO 13485 и НИОКР;</li>
+<li>проверить, получается ли минимум 65 без спорных предположений;</li>
+<li>сопоставить будущие изменения конструкции с регистрационным досье;</li>
+<li>определить собственные и контрактные операции;</li>
+<li>подготовить доказательную базу под каждое заявляемое условие.</li>
+</ol>
+<p>Только после этого имеет смысл фиксировать производственную цепочку.</p>
+
+<h2>Вывод</h2>
+<p>Для сепаратора клеток крови локализация по ПП №719 — это не просто российская сборка.</p>
+<p>Для позиции <span class="mono">из 26.60.13.190</span> одновременно действуют <strong>обязательные условия</strong>, включая 100%-й монтаж электронных компонентов на платы в РФ, и <strong>балльные критерии</strong>, среди которых ключевыми являются: 25 баллов — платы в сборе; 15 — корпус; 10 — кабели; 5 — ISO 13485; до 20 — НИОКР.</p>
+<p>Максимум — <strong>75 баллов</strong>, а в 2026–2027 годах нужно набрать минимум <strong>65</strong>.</p>
+<p>Из этой арифметики следует главный практический вывод: <strong>без 25 баллов за платы в сборе проходной уровень недостижим даже при максимальных остальных баллах. А даже при получении всех 55 баллов за платы, корпус, кабели и ISO 13485 требуется ещё как минимум 10 баллов НИОКР.</strong></p>
+<p>Поэтому проект локализации сепаратора нужно начинать не с вопроса «что можно собрать в России», а с вопроса <strong>«какая конфигурация производства доказуемо даст минимум 65 баллов и одновременно выполнит все обязательные условия ПП №719»</strong>.</p>
+
+<h2>FAQ</h2>
+<div class="faq-item"><h4>К какой позиции ПП №719 относится сепаратор клеток крови (система афереза)?</h4><p>Система афереза (сепаратор клеток крови) относится к ОКПД2 26.60.13.190 и подпадает под позицию раздела VII ПП №719 «из 26.60.13.190 — Аппаратура электротерапевтическая». Это подтверждается регистрационными документами Росздравнадзора: в РУ на «Систему афереза AmiCORE» указан именно код ОКПД2 26.60.13.190, а в КТРУ есть специальная позиция 26.60.13.190-00000046 «Система афереза». Код 32.50.13.190 относится к другой группе изделий и не должен автоматически применяться к сепаратору.</p></div>
+<div class="faq-item"><h4>Даёт ли 100%-й монтаж электронных компонентов на платы в РФ баллы сам по себе?</h4><p>Нет. Это обязательное условие соответствия позиции ПП №719, а не отдельный балльный критерий. За сам факт переноса SMT/THT-монтажа в Россию производитель не получает баллы автоматически — 25 баллов начисляются отдельно за «платы в сборе» как составную часть, и связь между выполнением обязательного условия и получением этих баллов нужно доказывать отдельно.</p></div>
+<div class="faq-item"><h4>Можно ли набрать 65 баллов без баллов за платы в сборе?</h4><p>Нет. Максимум по остальным критериям — корпус (15) + кабели (10) + ISO 13485 (5) + НИОКР (до 20) — составляет 50 баллов, что меньше требуемых 65. Без 25 баллов за платы в сборе порог недостижим даже при максимальных значениях всех остальных критериев.</p></div>
+<div class="faq-item"><h4>Обязательна ли собственная производственная база, или можно использовать контрактную?</h4><p>ПП №719 для этой позиции допускает собственную или контрактную научно-производственную базу в России. Но сам факт договора с российским подрядчиком не гарантирует выполнение требований — нужно заранее определить, какая операция передаётся, на какой площадке она выполняется, что поступает на входе и выходе, и как это подтверждается документами.</p></div>
+<div class="faq-item"><h4>Нужно ли менять регистрационное досье при локализации электроники сепаратора?</h4><p>Это нужно оценивать отдельно от расчёта баллов по ПП №719. Если локализация меняет плату, компоненты, PCB layout, ПО, конструкцию корпуса или иные элементы, влияющие на характеристики изделия, необходимо отдельно оценить влияние изменений на регистрационное досье. Достаточное количество баллов по ПП №719 само по себе не отменяет регуляторную оценку изменений.</p></div>
+<div class="faq-item"><h4>Сколько баллов можно набрать максимум и сколько нужно для прохождения порога?</h4><p>Максимум по позиции «из 26.60.13.190» — 75 баллов (платы в сборе 25, корпус 15, кабели 10, ISO 13485 5, НИОКР до 20). В 2026–2027 годах требуется набрать не менее 65 баллов.</p></div>
+
+<div class="article-cta">
+  <b>Планируете локализацию сепаратора клеток крови или другого оборудования Службы крови?</b>
+  <p>ГМТ может провести аудит локализации линейки оборудования для Службы крови: определить применимую позицию ПП №719, разложить изделие по обязательным требованиям и баллам, проверить BOM и производственную цепочку, рассчитать достижимый балл и сформировать дорожную карту до включения продукции в РРПП.</p>
+  <a class="btn pri" href="mailto:info@med-local.ru?subject=Локализация сепаратора клеток крови по ПП 719">Проверить локализацию сепаратора</a>
+</div>
+
+    </div>
+  </div>
+</section>
+<section style="background:#fff;border-top:1px solid var(--line);padding:20px 0"><div class="wrap" style="max-width:820px"><a href="/localization" style="font-size:14px;font-weight:700;color:var(--cyan)">Подробнее об этой услуге: Локализация медицинских изделий →</a></div></section><section style="background:var(--paper);border-top:1px solid var(--line);padding:32px 0">
+  <div class="wrap" style="max-width:820px">
+    <h3 style="font-size:16px;font-weight:700;margin:0 0 16px;color:var(--ink)">Читайте также</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><a href="/blog/gemokonteynery-pp719" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Локализация гемоконтейнеров по ПП 719/1875</a><a href="/blog/transfuziologiya-nacrezhim" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Трансфузиология под нацрежимом ПП 1875</a><a href="/blog/zamena-plastikata-gemokontejnery-rrpp-risk" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Замена пластиката в гемоконтейнерах и риск РРПП</a><a href="/blog/sinhronizaciya-standartov-frakcioner-krovi-gisp-iso13485" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Синхронизация ГИСП и ISO 13485 для сепараторов крови</a><a href="/blog/ballnaya-lokalizaciya-slozhnoj-elektroniki-kt-uzi" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Балльная локализация сложной электроники (КТ/УЗИ)</a></div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div><b>Инженерный центр локализации медицинских изделий</b>
+      <p style="font-size:13px;line-height:1.65;margin:0 0 14px;color:#97A1B2">Локализация производства медицинских изделий в России. От&nbsp;анализа ниши до регистрационного удостоверения.</p>
+      <a href="tel:+79853169104">+7 985 316-91-04 (Россия)</a>
+      <a href="tel:+79888777295">+7 988 877-72-95 (Россия)</a>
+      <a href="tel:+79888777295">MAX: +7 988 877-72-95</a>
+      <a href="tel:+77021394489">+7 702 139-44-89 (Казахстан)</a>
+      <a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a>
+      <a href="https://t.me/tandelovtat" style="color:#2FA8A0" target="_blank" rel="noopener noreferrer">Telegram: @tandelovtat</a>
+    </div>
+    <div><b>Услуги</b>
+      <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a>
+      <a href="/development">Разработка</a><a href="/production">Производство</a>
+      <a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a>
+    </div>
+    <div><b>Компания</b>
+      <a href="/cases">Кейсы</a><a href="/pricing">Стоимость</a><a href="/blog">База знаний</a>
+      <a href="/contacts">Контакты</a><a href="/glossary">Глоссарий</a><a href="/privacy">Политика ПДн</a>
+    </div>
+    <div><b>Контакты</b>
+      <a href="mailto:info@med-local.ru">info@med-local.ru</a>
+      <a href="mailto:sales@med-local.ru">sales@med-local.ru</a>
+      <a href="mailto:marketing@med-local.ru">marketing@med-local.ru</a>
+      <a href="mailto:ceo@med-local.ru">ceo@med-local.ru</a>
+    </div>
+  </div>
+  <div class="fine">
+    <span>© 2026 ООО «Глобальные Медицинские Технологии» · 125047, г. Москва, 1-й Тверской-Ямской пер., д. 16, помещ. 1/п</span>
+    <span style="display:flex;gap:14px;flex-wrap:wrap"><a href="/privacy">Политика конфиденциальности</a><a href="/oferta">Публичная оферта</a><a href="/terms">Пользовательское соглашение</a></span>
+  </div>
+</div></footer>
+<a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg>
+  Написать в Telegram
+</a>
+<a class="float-btn max-btn" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer">
+  <img src="/images/max-icon.png" alt="MAX" width="22" height="22" style="border-radius:6px">
+  Написать в MAX
+</a>
+<script>
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';var cb=document.getElementById('cookie-consent-banner');if(cb)cb.style.display=document.getElementById('mob-menu').classList.contains('open')?'none':'';}
+</script>
+<script src="/cookie-consent.js" defer></script>
+</body>
+</html>
