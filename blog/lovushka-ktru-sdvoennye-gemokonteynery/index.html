@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Ловушка КТРУ для сдвоенных гемоконтейнеров: номенклатура Минздрава и коды ОКПД2 в заявке | Мед-Локал</title>
+<meta name="description" content="Как сопоставить НКМИ, ОКПД2 и КТРУ для сдвоенных гемоконтейнеров и проверить применение ПП №1875 и подтверждение российского происхождения.">
+<link rel="canonical" href="https://med-local.ru/blog/lovushka-ktru-sdvoennye-gemokonteynery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ловушка КТРУ для сдвоенных гемоконтейнеров: номенклатура Минздрава и коды ОКПД2 в заявке">
+<meta property="og:description" content="КТРУ, ОКПД2 и НКМИ для сдвоенных гемоконтейнеров: как сопоставить коды в заявке и проверить применение ПП №1875.">
+<meta property="og:url" content="https://med-local.ru/blog/lovushka-ktru-sdvoennye-gemokonteynery">
+<meta property="og:image" content="https://med-local.ru/og-image.png">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C232E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@700;800&family=JetBrains+Mono:wght@600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{
+ --graphite:#1C232E;--graphite-2:#27303E;--ink:#1C232E;--muted:#4A5568;
+ --blue:#3D6FB4;--cyan:#2FA8A0;--cyan-soft:#E4F4F3;--blue-soft:#E9F0FA;
+ --orange:#FF6B3D;--orange-soft:#FFE9DC;
+ --paper:#F6F7F9;--card:#FFFFFF;--line:#E5E8ED;
+ --body:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+ --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{max-width:100vw}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:12px;font-weight:600;font-size:13.5px;border:none;transition:.18s;cursor:pointer}
+.btn.pri{background:var(--orange);color:#fff;box-shadow:0 10px 24px -10px rgba(255,107,61,.6)}
+.btn.pri:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--cyan)}
+.tag::before{content:"";width:22px;height:2px;background:var(--cyan)}
+h1,h2,h3{line-height:1.15;margin:0}
+.h-xl{font-size:clamp(30px,4.6vw,52px);font-weight:800;letter-spacing:-1.2px}
+.sec{padding:74px 0}
+header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:22px;height:66px}
+.nav .sp{flex:1}
+.nav a.lnk{font-size:12.5px;font-weight:500;color:var(--muted);transition:.15s;white-space:nowrap}
+.nav a.lnk:hover,.nav a.lnk.on{color:var(--ink)}
+@media(max-width:2000px){.nav a.lnk{display:none}}
+.law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
+.law b{display:block;margin-bottom:6px;font-size:14px}
+.warn{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#8B3A1E;line-height:1.65;margin:24px 0}
+.warn b{display:block;margin-bottom:6px;font-size:14px}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2}footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+.article-body h2{font-size:22px;font-weight:800;margin:36px 0 14px;color:var(--ink)}
+.article-body h3{font-size:18px;font-weight:700;margin:28px 0 10px;color:var(--ink)}
+.article-body p{font-size:15px;color:#3a4455;line-height:1.75;margin:0 0 16px}
+.article-body ul,.article-body ol{margin:0 0 16px 20px}
+.article-body li{font-size:15px;color:#3a4455;line-height:1.7;margin-bottom:6px}
+.article-body b{color:var(--ink)}
+.article-body .law{margin:24px 0}
+.article-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-body th{background:var(--graphite);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+.article-body td{padding:10px 14px;border-bottom:1px solid var(--line);color:#3a4455}
+.article-cta{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:16px;padding:28px 32px;margin:40px 0}
+.article-cta b{font-size:18px;display:block;margin-bottom:8px;color:#fff}
+.article-cta p{color:#AFBAC9;font-size:14px;margin:0 0 18px}
+.step-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 24px;margin:12px 0;border-left:3px solid var(--cyan)}
+.step-box h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.step-box p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.burger{display:none;align-items:center;gap:8px;cursor:pointer;padding:6px 10px;background:#fff;border:1.5px solid var(--line);border-radius:10px;transition:.15s;z-index:200}
+.burger:hover{border-color:var(--cyan)}
+.burger-icon{display:flex;flex-direction:column;gap:5px}
+.burger-icon span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger-label{font-size:12.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+@media(max-width:680px){.burger{padding:4px;background:none;border:none;gap:0}.burger-label{display:none}}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:210;flex-direction:column}
+.mob-menu-links{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:70px 20px 16px}
+.mob-menu-cta{flex-shrink:0;display:flex;justify-content:center;padding:14px 24px 20px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+@media(max-width:2000px){.nav-links{display:none!important}.burger{display:flex}.nav{gap:12px}}
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+.float-btn.max-btn{bottom:74px;background:#fff;box-shadow:0 8px 24px rgba(107,63,231,.25);color:var(--ink)}
+@media(max-width:768px){.float-btn{display:flex}}
+.header-icons{display:flex;align-items:center;gap:8px;margin-right:4px}
+.header-icons a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s}
+.header-icons a.tg-icon{background:#2FA8A0}
+.header-icons a.max-icon{background:transparent;padding:0}
+.header-icons a:hover{filter:brightness(1.1);transform:translateY(-1px)}
+@media(max-width:2000px){.header-icons{display:none}}
+.lang-switch{display:flex;align-items:center;gap:4px;margin-right:8px}
+.lang-switch a{font-size:12.5px;font-weight:700;padding:4px 8px;border-radius:6px;color:var(--muted);transition:.15s;text-decoration:none}
+.lang-switch a.active{background:var(--graphite);color:#fff}
+.mob-lang-switch{display:flex;align-items:center;gap:10px;margin-top:10px}
+.mob-lang-switch a{font-size:15px;font-weight:700;padding:8px 20px;border-radius:10px;color:var(--muted);background:var(--paper);border:1.5px solid var(--line)}
+.mob-lang-switch a.active{background:var(--graphite);color:#fff;border-color:var(--graphite)}
+@media(max-width:680px){.lang-switch{display:none}}
+.lang-switch a:hover:not(.active){color:var(--ink)}
+.logo{display:inline-flex;align-items:center;text-decoration:none;flex-shrink:0}
+.logo img{display:block;width:200px;height:48px;object-fit:contain}
+@media(max-width:768px){.logo img{width:170px;height:auto}}
+</style>
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DZXMBECL0"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-9DZXMBECL0");
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Ловушка КТРУ для сдвоенных гемоконтейнеров: номенклатура Минздрава и коды ОКПД2 в заявке",
+  "description": "Как сопоставить НКМИ, ОКПД2 и КТРУ для сдвоенных гемоконтейнеров и проверить применение ПП №1875 и подтверждение российского происхождения.",
+  "image": "https://med-local.ru/og-image.png",
+  "author": {
+    "@type": "Person",
+    "name": "А.-Т. Танделов",
+    "jobTitle": "CEO ГМТ, аудитор ISO 13485/14971, член АУСОМИ"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ООО «Глобальные Медицинские Технологии»",
+    "logo": {"@type": "ImageObject", "url": "https://med-local.ru/og-image.png"}
+  },
+  "datePublished": "2026-09-18T09:00:00+03:00",
+  "dateModified": "2026-09-18T09:00:00+03:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://med-local.ru/blog/lovushka-ktru-sdvoennye-gemokonteynery"},
+  "inLanguage": "ru-RU"
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://med-local.ru/"},{"@type":"ListItem","position":2,"name":"База знаний","item":"https://med-local.ru/blog"},{"@type":"ListItem","position":3,"name":"Сдвоенные гемоконтейнеры: КТРУ и ОКПД2","item":"https://med-local.ru/blog/lovushka-ktru-sdvoennye-gemokonteynery"}]}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"acceptedAnswer":{"text":"Для двухкамерного контейнера для крови с раствором консерванта используется код НКМИ 144270.","@type":"Answer"},"name":"Какой НКМИ у двухкамерного гемоконтейнера с консервантом?","@type":"Question"},{"acceptedAnswer":{"text":"Для рассматриваемой группы применяется код ОКПД2 32.50.13.190. Это более широкая категория, поэтому одного ОКПД2 недостаточно для идентификации конкретного исполнения.","@type":"Answer"},"name":"Какой ОКПД2 используется для таких гемоконтейнеров?","@type":"Question"},{"acceptedAnswer":{"text":"Агрегированная позиция - 32.50.13.190-00007 «Набор для донорской крови, двухкамерный». Для закупки необходимо также проверить актуальную детализированную позицию с учётом объёма первичного контейнера.","@type":"Answer"},"name":"Какой КТРУ соответствует двухкамерному набору для донорской крови?","@type":"Question"},{"acceptedAnswer":{"text":"Самостоятельно менять код вида изделия нельзя. Необходимо проверить регистрационное удостоверение и приложение к нему, определить конкретное зарегистрированное исполнение и выяснить причину расхождения.","@type":"Answer"},"name":"Что делать, если в РУ указан другой код НКМИ?","@type":"Question"},{"acceptedAnswer":{"text":"Нет. Для медицинского изделия необходимо проверять соответствующую позицию перечня целиком, включая НКМИ, если код вида изделия указан как условие её применения.","@type":"Answer"},"name":"Достаточно ли ОКПД2 для проверки ПП №1875?","@type":"Question"},{"acceptedAnswer":{"text":"Нет. Регистрационное удостоверение подтверждает регистрацию медицинского изделия, но само по себе не подтверждает российское происхождение продукции.","@type":"Answer"},"name":"Доказывает ли российское РУ российское происхождение?","@type":"Question"},{"acceptedAnswer":{"text":"Нет. ISO 13485 относится к системе менеджмента качества производителя и сам по себе не определяет НКМИ, ОКПД2, КТРУ или происхождение товара.","@type":"Answer"},"name":"Влияет ли ISO 13485 на выбор КТРУ или ОКПД2?","@type":"Question"},{"acceptedAnswer":{"text":"Сравнивать назначение и существенные характеристики конкретного зарегистрированного исполнения. Дословное совпадение наименований не является единственным критерием сопоставления.","@type":"Answer"},"name":"Что делать, если название в КТРУ и РУ отличается?","@type":"Question"}]}</script></head>
+<body>
+<div class="mob-menu" id="mob-menu" onclick="if(event.target===event.currentTarget)toggleMenu()"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:max(18px,env(safe-area-inset-top));right:max(18px,env(safe-area-inset-right));background:none;border:none;cursor:pointer;padding:10px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="pointer-events:none"><path d="M5 5l14 14M19 5L5 19"/></svg></button><div class="mob-menu-links" onclick="if(event.target===event.currentTarget)toggleMenu()"><a href="/">Главная</a><a href="/about">О центре</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">База знаний</a><a href="/pricing">Стоимость</a><a href="/cases">Кейсы</a><a href="/glossary">Глоссарий</a><a href="/contacts">Контакты</a><div class="mob-lang-switch"><a href="#" class="active" onclick="toggleMenu()">RU</a><a href="/en">EN</a></div>
+  </div><div class="mob-menu-cta" onclick="if(event.target===event.currentTarget)toggleMenu()"><a href="/#lead" class="btn pri" style="margin-top:16px" onclick="toggleMenu()">Оценить проект</a></div></div>
+<header><div class="wrap nav">
+  <a class="logo" href="/" aria-label="Инженерный центр — на главную">
+  <img
+    src="/logo-full.svg"
+    alt="Инженерный центр — локализация медицинских изделий"
+    width="200"
+    height="48"
+    style="display:block;"
+  >
+</a>
+  <span class="sp"></span>
+  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk on" href="/blog">База знаний</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a><a class="lnk" href="/cases">Кейсы</a><a class="lnk" href="/glossary">Глоссарий</a><a class="lnk" href="/contacts">Контакты</a></div>
+  <div class="header-icons">
+    <a class="tg-icon" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer" title="Написать в Telegram" aria-label="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg></a>
+    <a class="max-icon" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer" title="Написать в MAX" aria-label="MAX"><img src="/images/max-icon.png" alt="MAX" width="26" height="26" style="border-radius:7px;display:block"></a>
+  </div>
+  <div class="lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
+  <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span class="burger-icon"><span></span><span></span><span></span></span><span class="burger-label">Меню</span></button>
+</div></header>
+
+<main>
+<section style="background:#fff;border-bottom:1px solid var(--line)">
+  <div class="wrap" style="padding:48px 22px 36px;max-width:820px">
+    <a href="/blog" style="font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:20px">← Все статьи</a>
+    <span class="tag" style="display:inline-flex;margin-bottom:14px">Служба крови · КТРУ · ПП 1875</span>
+    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">Ловушка КТРУ для сдвоенных гемоконтейнеров: номенклатура Минздрава и коды ОКПД2 в заявке</h1>
+    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap">
+      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ</span>
+      <span>18 сентября 2026</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap" style="max-width:820px">
+    <div class="article-body"><p>Сдвоенный гемоконтейнер кажется простым изделием с очевидной классификацией. На практике один и тот же товар одновременно описывается кодом вида медицинского изделия по номенклатурной классификации Минздрава, кодом ОКПД2, позицией КТРУ и данными регистрационного удостоверения. Для российской продукции к этой цепочке добавляется подтверждение происхождения и реестровая запись.</p><div class="law"><b>Главная ловушка</b> НКМИ, ОКПД2 и КТРУ - разные классификаторы. Код НКМИ нельзя автоматически преобразовать в ОКПД2, а совпадения ОКПД2 недостаточно, чтобы без дальнейшей проверки определить нужную позицию КТРУ или применение национального режима.</div><h2>Суть в четырёх пунктах</h2><ul><li>Для двухкамерного контейнера для крови с раствором консерванта используется код НКМИ <b>144270</b>.</li><li>Для таких изделий применяется ОКПД2 <b>32.50.13.190</b>.</li><li>В КТРУ предусмотрена позиция <b>32.50.13.190-00007 «Набор для донорской крови, двухкамерный»</b> и детализированные позиции по объёму первичного контейнера.</li><li>Выбирать позицию КТРУ только по коду вида изделия из регистрационного удостоверения нельзя: необходимо сопоставлять конкретное исполнение и его характеристики.</li></ul><h2>1. Откуда возникает путаница</h2><p>В закупочной документации рядом могут оказаться несколько кодов, каждый из которых отвечает на свой вопрос.</p><ul><li><b>НКМИ</b> идентифицирует вид медицинского изделия.</li><li><b>ОКПД2</b> классифицирует продукцию по виду экономической деятельности.</li><li><b>КТРУ</b> задаёт каталогизированное описание закупаемого товара и его характеристики.</li><li><b>Регистрационное удостоверение</b> подтверждает государственную регистрацию конкретного медицинского изделия и его исполнений.</li><li><b>Реестр российской промышленной продукции</b> используется для подтверждения российского происхождения в предусмотренных законодательством случаях.</li></ul><h2>2. Как Минздрав классифицирует сдвоенный гемоконтейнер</h2><p>Для двухкамерного контейнера для крови с раствором консерванта ключевым является код НКМИ <b>144270</b>. Количество камер здесь имеет значение: в номенклатурной классификации отдельно выделяются одно-, двух-, трёх- и четырёхкамерные варианты.</p><p>При этом работать только с кодом НКМИ недостаточно. Одно регистрационное удостоверение может охватывать линейку исполнений, поэтому при проверке конкретного товара необходимо читать не только основную запись РУ, но и приложение с перечнем зарегистрированных вариантов и комплектаций.</p><div class="law"><b>Практический вывод</b> Сначала идентифицируйте конкретное исполнение гемоконтейнера по регистрационным документам и только после этого сопоставляйте его с НКМИ, ОКПД2 и КТРУ.</div><h2>3. Почему ОКПД2 32.50.13.190 недостаточно</h2><p>Код <b>32.50.13.190</b> охватывает более широкую категорию медицинских инструментов и оборудования. Сам по себе он не отвечает на вопрос, какой именно гемоконтейнер закупается и какая позиция КТРУ соответствует его исполнению.</p><p>Поэтому логика «нашли ОКПД2 - определили КТРУ» создаёт риск ошибки. После определения ОКПД2 необходимо продолжить проверку: найти применимую позицию КТРУ и сопоставить её описание и характеристики с фактически поставляемым изделием.</p><h2>4. КТРУ для двухкамерного набора</h2><p>Для двухкамерных наборов используется агрегированная позиция КТРУ <b>32.50.13.190-00007 «Набор для донорской крови, двухкамерный»</b>. В каталоге также предусмотрены детализированные позиции, различающиеся в том числе по объёму первичного контейнера.</p><p>При выборе позиции необходимо учитывать фактический объём основного контейнера. В детализации встречаются диапазоны <b>100-150, 151-250, 251-350, 351-450, 451-550 и 551-600 мл</b>. Поэтому для конкретного исполнения следует проверять не только агрегированную запись, но и актуальную детализированную позицию.</p><p>Среди характеристик КТРУ для таких наборов могут иметь значение объём первичного и дополнительного контейнеров, материал, обеспечивающий требуемые свойства при хранении компонентов крови, а также наличие предусмотренных конструкцией дополнительных элементов.</p><h2>5. Что делать, если название в РУ и КТРУ не совпадает</h2><p>Название изделия в регистрационном удостоверении не обязано дословно повторять наименование позиции КТРУ. Поэтому буквальное сравнение двух строк - ненадёжный способ идентификации.</p><p>Сопоставлять нужно назначение и существенные характеристики конкретного исполнения: количество контейнеров, объём основного и дополнительного контейнеров, наличие раствора консерванта или антикоагулянта, материал и назначение системы, а также дополнительные компоненты комплекта.</p><div class="law"><b>Важно</b> Если название в РУ отличается от формулировки КТРУ, это само по себе не означает несоответствие. Проверяется конкретное зарегистрированное исполнение и его характеристики.</div><h2>6. Где появляется ПП №1875</h2><p>При проверке национального режима нельзя останавливаться на совпадении ОКПД2. Для медицинских изделий необходимо проверять соответствующую строку перечня ПП №1875 целиком, включая код вида медицинского изделия, если он указан как условие применения позиции.</p><p>Для рассматриваемого двухкамерного гемоконтейнера с раствором консерванта связка выглядит так: <b>ОКПД2 32.50.13.190 + НКМИ 144270</b>. Именно поэтому два изделия с близким ОКПД2 могут требовать разной проверки по национальному режиму.</p><div class="law"><b>Закупочная ловушка</b> Нельзя определять применение ПП №1875 к гемоконтейнеру только по совпадению ОКПД2. Проверяйте всю применимую позицию перечня и код НКМИ конкретного изделия.</div><h2>7. ПП №719 и ПП №1875 - это разные проверки</h2><p>ПП №719 и ПП №1875 решают разные задачи. <b>ПП №719</b> устанавливает требования, связанные с подтверждением производства и российского происхождения промышленной продукции. <b>ПП №1875</b> регулирует применение национального режима при закупках.</p><p>Поэтому наличие российского регистрационного удостоверения само по себе не доказывает российское происхождение товара. Регистрационный статус медицинского изделия и подтверждение происхождения - разные юридические и документальные контуры.</p><p>Для производителя важно отдельно проверить применимые требования ПП №719 и наличие необходимых сведений в реестре российской промышленной продукции, а затем отдельно определить последствия ПП №1875 для закупки конкретного исполнения.</p><h2>8. Как проверить сдвоенный гемоконтейнер перед подачей заявки</h2><p>Рабочую проверку удобно проводить не от одного кода, а по всей цепочке идентификации изделия.</p><ol><li><b>Определите конкретное исполнение.</b> Зафиксируйте количество контейнеров, объёмы, состав растворов и комплектацию.</li><li><b>Проверьте регистрационное удостоверение.</b> Убедитесь, что поставляемое исполнение действительно входит в зарегистрированную линейку.</li><li><b>Установите НКМИ.</b> Для двухкамерного контейнера с раствором консерванта проверьте применимость кода 144270.</li><li><b>Определите ОКПД2.</b> Для рассматриваемой группы проверьте код 32.50.13.190.</li><li><b>Найдите актуальную позицию КТРУ.</b> Не ограничивайтесь агрегированной позицией 32.50.13.190-00007: проверьте детализированную запись для нужного объёма.</li><li><b>Сопоставьте характеристики.</b> Сравните КТРУ с фактической конфигурацией и регистрационными документами.</li><li><b>Проверьте ПП №1875.</b> Анализируйте применимую строку перечня целиком, а не только ОКПД2.</li><li><b>Проверьте происхождение.</b> Для российского товара отдельно подтвердите выполнение применимых требований и наличие необходимых реестровых сведений.</li></ol><div class="law"><b>Рабочая цепочка</b> Исполнение → РУ → НКМИ → ОКПД2 → КТРУ → ПП №719 → реестр российской промышленной продукции → ПП №1875.</div><h2>9. Пять типичных ошибок</h2><ol><li><b>Копировать коды из предыдущей закупки.</b> Даже похожая продукция может отличаться исполнением, НКМИ и детализированной позицией КТРУ.</li><li><b>Считать НКМИ и ОКПД2 взаимозаменяемыми.</b> Это разные классификаторы, между которыми нет автоматического преобразования.</li><li><b>Выбирать КТРУ только по названию.</b> Необходимо сопоставлять назначение и существенные характеристики конкретного исполнения.</li><li><b>Проверять ПП №1875 только по ОКПД2.</b> Для медицинских изделий может требоваться проверка кода НКМИ в соответствующей строке перечня.</li><li><b>Считать российское РУ доказательством российского происхождения.</b> Регистрация медицинского изделия и подтверждение происхождения продукции - разные процедуры.</li></ol><h2>10. Что проверять производителю линейки гемоконтейнеров</h2><p>Если предприятие выпускает несколько типов контейнеров, проверять каждый артикул изолированно неудобно. Практичнее сформировать единую матрицу линейки.</p><p>Для каждого исполнения в ней фиксируют: <b>модель → конфигурацию → РУ → НКМИ → ОКПД2 → КТРУ → требования ПП №719 → реестровую запись → применение ПП №1875</b>.</p><p>Такая матрица позволяет заранее увидеть расхождения между регистрационной, производственной и закупочной классификацией и не обнаруживать их уже после публикации извещения или отклонения заявки.</p><h2>FAQ: КТРУ, ОКПД2 и НКМИ для сдвоенных гемоконтейнеров</h2><h3>Какой НКМИ у двухкамерного гемоконтейнера с консервантом?</h3><p>Для двухкамерного контейнера для крови с раствором консерванта используется код НКМИ <b>144270</b>.</p><h3>Какой ОКПД2 используется для таких гемоконтейнеров?</h3><p>Для рассматриваемой группы применяется код ОКПД2 <b>32.50.13.190</b>. Это более широкая категория, поэтому одного ОКПД2 недостаточно для идентификации конкретного исполнения.</p><h3>Какой КТРУ соответствует двухкамерному набору для донорской крови?</h3><p>Агрегированная позиция - <b>32.50.13.190-00007 «Набор для донорской крови, двухкамерный»</b>. Для закупки необходимо также проверить актуальную детализированную позицию, в том числе с учётом объёма первичного контейнера.</p><h3>Что делать, если в РУ указан другой код НКМИ?</h3><p>Самостоятельно менять код вида изделия нельзя. Сначала необходимо проверить регистрационное удостоверение и приложение к нему, определить конкретное зарегистрированное исполнение и выяснить причину расхождения.</p><h3>Достаточно ли ОКПД2 для проверки ПП №1875?</h3><p>Нет. Для медицинского изделия необходимо проверять соответствующую позицию перечня целиком, включая НКМИ, если код вида изделия указан как условие её применения.</p><h3>Доказывает ли российское РУ российское происхождение?</h3><p>Нет. Регистрационное удостоверение подтверждает регистрацию медицинского изделия, но само по себе не подтверждает российское происхождение продукции.</p><h3>Влияет ли ISO 13485 на выбор КТРУ или ОКПД2?</h3><p>Нет. ISO 13485 относится к системе менеджмента качества производителя и сам по себе не определяет НКМИ, ОКПД2, КТРУ или происхождение товара.</p><h3>Что делать, если название в КТРУ и РУ отличается?</h3><p>Сравнивать назначение и существенные характеристики конкретного зарегистрированного исполнения. Дословное совпадение наименований не является единственным критерием сопоставления.</p><h2>Главное</h2><p>Для сдвоенного гемоконтейнера с раствором консерванта проверка не заканчивается одним кодом. Базовая связка - <b>НКМИ 144270, ОКПД2 32.50.13.190 и КТРУ 32.50.13.190-00007</b> с последующей проверкой детализированной позиции. Далее отдельно анализируются требования к происхождению и реестровой записи, а при закупке - применение ПП №1875.</p><p>Чем раньше производитель или поставщик соберёт эту цепочку для каждого исполнения линейки, тем меньше риск расхождений между регистрационными документами, каталогом КТРУ, подтверждением происхождения и закупочной заявкой.</p><div class="article-cta"><b>Производите гемоконтейнеры или другую продукцию для Службы крови?</b><p>ГМТ проведёт аудит всей линейки: сопоставим РУ, НКМИ, ОКПД2 и КТРУ, проверим производственный маршрут по ПП №719 и определим, какие исполнения можно выводить в реестр российской промышленной продукции.</p><p>Результат - карта линейки от конкретного исполнения изделия до реестровой записи и применения национального режима в закупках.</p><a class="btn pri" href="mailto:info@med-local.ru">Заказать аудит локализации</a></div>
+      </div>
+  </div>
+</section>
+<section style="background:#fff;border-top:1px solid var(--line);padding:20px 0"><div class="wrap" style="max-width:820px"><a href="/localization" style="font-size:14px;font-weight:700;color:var(--cyan)">Подробнее об этой услуге: Локализация медицинских изделий →</a></div></section><section style="background:var(--paper);border-top:1px solid var(--line);padding:32px 0">
+  <div class="wrap" style="max-width:820px">
+    <h3 style="font-size:16px;font-weight:700;margin:0 0 16px;color:var(--ink)">Читайте также</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><a href="/blog/audit-tpp-centrifugi-refrizheratory-krov" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Аудит ТПП: центрифуги и рефрижераторы для крови</a><a href="/blog/lovushka-ktru-aferez-trombocitov" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Ловушка КТРУ для наборов афереза тромбоцитов</a><a href="/blog/sinhronizaciya-standartov-frakcioner-krovi-gisp-iso13485" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Синхронизация ГИСП и ISO 13485 для сепараторов крови</a></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><b>Инженерный центр локализации медицинских изделий</b>
+      <p style="font-size:13px;line-height:1.65;margin:0 0 14px;color:#97A1B2">Локализация производства медицинских изделий в России. От&nbsp;анализа ниши до регистрационного удостоверения.</p>
+      <a href="tel:+79853169104">+7 985 316-91-04 (Россия)</a>
+      <a href="tel:+79888777295">+7 988 877-72-95 (Россия)</a>
+      <a href="tel:+79888777295">MAX: +7 988 877-72-95</a>
+      <a href="tel:+77021394489">+7 702 139-44-89 (Казахстан)</a>
+      <a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a>
+      <a href="https://t.me/tandelovtat" style="color:#2FA8A0" target="_blank" rel="noopener noreferrer">Telegram: @tandelovtat</a>
+    </div>
+    <div><b>Услуги</b>
+      <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a>
+      <a href="/development">Разработка</a><a href="/production">Производство</a>
+      <a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a>
+    </div>
+    <div><b>Компания</b>
+      <a href="/cases">Кейсы</a><a href="/pricing">Стоимость</a><a href="/blog">База знаний</a>
+      <a href="/contacts">Контакты</a><a href="/glossary">Глоссарий</a><a href="/privacy">Политика ПДн</a>
+    </div>
+    <div><b>Контакты</b>
+      <a href="mailto:info@med-local.ru">info@med-local.ru</a>
+      <a href="mailto:sales@med-local.ru">sales@med-local.ru</a>
+      <a href="mailto:marketing@med-local.ru">marketing@med-local.ru</a>
+      <a href="mailto:ceo@med-local.ru">ceo@med-local.ru</a>
+    </div>
+  </div>
+  <div class="fine">
+    <span>© 2026 ООО «Глобальные Медицинские Технологии» · 125047, г. Москва, 1-й Тверской-Ямской пер., д. 16, помещ. 1/п</span>
+    <span style="display:flex;gap:14px;flex-wrap:wrap"><a href="/privacy">Политика конфиденциальности</a><a href="/oferta">Публичная оферта</a><a href="/terms">Пользовательское соглашение</a></span>
+  </div>
+</div></footer>
+<a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg>
+  Написать в Telegram
+</a>
+<a class="float-btn max-btn" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer">
+  <img src="/images/max-icon.png" alt="MAX" width="22" height="22" style="border-radius:6px">
+  Написать в MAX
+</a>
+<script>
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';var cb=document.getElementById('cookie-consent-banner');if(cb)cb.style.display=document.getElementById('mob-menu').classList.contains('open')?'none':'';}
+</script>
+<script src="/cookie-consent.js" defer></script>
+</body>
+</html>
