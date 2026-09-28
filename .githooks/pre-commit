@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Проверяет изменённые .html на внедрённые скрипты (см. scripts/check-injections.sh)
+files=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.html$')
+[ -z "$files" ] && exit 0
+# shellcheck disable=SC2086
+scripts/check-injections.sh $files
