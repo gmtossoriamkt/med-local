@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Подорожание импорта и ПП 719: когда под угрозой локализация</title>
+<meta name="description" content="Подорожание импортных компонентов не всегда угрожает статусу по ПП 719. Разбираем адвалорную долю, таможенную стоимость, баллы, РРПП и смену поставщика.">
+<link rel="canonical" href="https://med-local.ru/blog/importnye-komponenty-podorozhanie-pp719">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Импортные компоненты в медтехнике: когда их подорожание угрожает локализации по ПП № 719">
+<meta property="og:description" content="Подорожание импортных компонентов не всегда угрожает статусу по ПП 719. Разбираем адвалорную долю, таможенную стоимость, баллы, РРПП и смену поставщика.">
+<meta property="og:url" content="https://med-local.ru/blog/importnye-komponenty-podorozhanie-pp719">
+<meta property="og:image" content="https://med-local.ru/og-image.png">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C232E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@700;800&family=JetBrains+Mono:wght@600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{
+ --graphite:#1C232E;--graphite-2:#27303E;--ink:#1C232E;--muted:#4A5568;
+ --blue:#3D6FB4;--cyan:#2FA8A0;--cyan-soft:#E4F4F3;--blue-soft:#E9F0FA;
+ --orange:#FF6B3D;--orange-soft:#FFE9DC;
+ --paper:#F6F7F9;--card:#FFFFFF;--line:#E5E8ED;
+ --body:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+ --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{max-width:100vw}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.mono{font-family:var(--mono)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:600;font-size:14.5px;border:none;transition:.18s;cursor:pointer}
+.btn.pri{background:var(--orange);color:#fff;box-shadow:0 10px 24px -10px rgba(255,107,61,.6)}
+.btn.pri:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn.gh{background:transparent;border:1.5px solid #fff;color:#fff}
+.btn.gh:hover{background:rgba(255,255,255,.1)}
+.btn.dark{background:var(--graphite);color:#fff}
+.btn.line-btn{background:#fff;border:1.5px solid var(--line);color:var(--ink)}
+.btn.line-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--cyan)}
+.tag::before{content:"";width:22px;height:2px;background:var(--cyan)}
+h1,h2,h3{line-height:1.15;margin:0}
+.h-xl{font-size:clamp(30px,4.6vw,52px);font-weight:800;letter-spacing:-1.2px}
+.h-l{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.8px}
+.h-m{font-size:19px;font-weight:700}
+.lead{font-size:17px;color:var(--muted);line-height:1.65}
+.sec{padding:74px 0}
+.sec.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:960px){.g3,.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+@media(max-width:620px){.g3,.g4,.g2{grid-template-columns:1fr}}
+@media(max-width:880px){.route{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:560px){.route{grid-template-columns:1fr!important}.route .st{padding:16px 0 0!important;border-bottom:1px solid var(--line);padding-bottom:16px!important;margin-bottom:8px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.kv{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.kv span{color:var(--muted)}.kv b{text-align:right}
+header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:22px;height:66px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:16.5px;letter-spacing:-.3px}
+.logo small{display:block;font-size:10px;font-weight:600;color:var(--muted);letter-spacing:1.6px;text-transform:uppercase}
+.nav a.lnk{font-size:14px;font-weight:500;color:var(--muted);transition:.15s;white-space:nowrap}
+.nav a.lnk:hover,.nav a.lnk.on{color:var(--ink)}
+.nav .sp{flex:1}
+@media(max-width:2000px){.nav a.lnk{display:none}}
+.hero{position:relative;background:linear-gradient(140deg,var(--graphite) 0%,#202b3c 60%,#1d3a45 100%);color:#fff;overflow:hidden}
+.hero .pcb{position:absolute;inset:0;opacity:.16;pointer-events:none}
+.hero .in{position:relative;padding:92px 0 86px}
+.hero .lead{color:#B9C2D0;max-width:640px}
+.hero .stats{display:flex;gap:38px;margin-top:42px;flex-wrap:wrap}
+.hero .stats b{font-size:26px;font-weight:800;display:block;letter-spacing:-.5px}
+.hero .stats span{font-size:12.5px;color:#8E99AB}
+.crumbs{font-size:12.5px;color:var(--muted);margin:18px 0 0}
+.crumbs b{color:var(--ink)}
+.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:8px}
+.route .st{position:relative;padding:20px 18px 0}
+.route .st::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+.route .st h3{font-size:15.5px;margin:8px 0 6px}
+.route .st p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+@media(max-width:880px){.route{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.route{grid-template-columns:1fr}}
+.svc{display:flex;flex-direction:column;gap:10px;position:relative;transition:.2s}
+.svc:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.svc .ic{width:44px;height:44px;border-radius:12px;background:var(--cyan-soft);color:var(--cyan);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:15px}
+.svc p{font-size:14px;color:var(--muted);margin:0;line-height:1.6;flex:1}
+.svc .go{font-size:13.5px;font-weight:700;color:var(--cyan)}
+.seg{border-left:3px solid var(--blue);padding:16px 20px;background:#fff;border-radius:0 14px 14px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.seg b{display:block;margin-bottom:5px}
+.seg p{font-size:13.5px;color:var(--muted);margin:0 0 8px;line-height:1.55}
+.seg .of{font-size:13px;font-weight:600;color:var(--cyan)}
+.law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
+.law b{display:block;margin-bottom:6px;font-size:14px}
+.warn{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#8B3A1E;line-height:1.65;margin:24px 0}
+.warn b{display:block;margin-bottom:6px;font-size:14px}
+.post{display:flex;flex-direction:column;gap:9px;transition:.2s}
+.post:hover{transform:translateY(-3px)}
+.post .rub{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)}
+.post h3{font-size:16.5px;line-height:1.35}
+.post p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.6}
+.post .cta-link{font-size:13px;font-weight:700;color:var(--orange)}
+.frm{display:grid;gap:13px}
+.frm label{font-size:12.5px;font-weight:600}
+.frm input,.frm select,.frm textarea{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:12px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.frm input:focus,.frm select:focus,.frm textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:620px){.f2{grid-template-columns:1fr}}
+.mag{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:var(--r);padding:30px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.mag b{font-size:19px;display:block;margin-bottom:6px}
+.mag p{color:#AFBAC9;font-size:14px;margin:0;max-width:520px}
+.mag .sp{flex:1}
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2}footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+.proof{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.proof .n{font-family:var(--mono);color:var(--cyan);font-weight:600;font-size:12.5px;padding-top:2px;white-space:nowrap}
+.steps li{margin-bottom:10px;line-height:1.6;font-size:14.5px}
+.lift{box-shadow:var(--sh)}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}
+.pain-item{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px}
+.pain-item h4{font-size:14px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.pain-item p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+.compare-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:14px}
+.compare-table th{background:var(--graphite);color:#fff;font-weight:600;padding:12px 16px;text-align:left}
+.compare-table td{padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink)}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table td.bad{color:#C0392B}
+.compare-table td.good{color:#1A7A6E;font-weight:600}
+.calc-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;margin-top:24px;box-shadow:var(--sh)}
+.calc-box h3{font-size:18px;font-weight:700;margin:0 0 20px}
+.form-row{margin-bottom:14px}
+.form-row label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;color:var(--ink)}
+.form-row select,.form-row input{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:10px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.form-row select:focus,.form-row input:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.calc-result{background:var(--cyan-soft);border:1px solid #BCE4E1;border-radius:11px;padding:18px;margin-top:16px;display:none}
+.calc-result.show{display:block}
+.calc-result h4{font-size:15px;font-weight:700;color:#1A7A6E;margin:0 0 6px}
+.calc-result p{font-size:13.5px;color:#2D7A72;margin:0}
+.related{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.related a{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan);transition:.15s}
+.related a:hover{border-color:var(--cyan)}
+
+/* Бургер-меню для мобильных */
+.burger{display:none;align-items:center;gap:8px;cursor:pointer;padding:6px 10px;background:#fff;border:1.5px solid var(--line);border-radius:10px;transition:.15s;z-index:200}
+.burger:hover{border-color:var(--cyan)}
+.burger-icon{display:flex;flex-direction:column;gap:5px}
+.burger-icon span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger-label{font-size:12.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+.burger.open .burger-icon span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open .burger-icon span:nth-child(2){opacity:0}
+.burger.open .burger-icon span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:680px){.burger{padding:4px;background:none;border:none;gap:0}.burger-label{display:none}}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:210;flex-direction:column}
+.mob-menu-links{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:70px 20px 16px}
+.mob-menu-cta{flex-shrink:0;display:flex;justify-content:center;padding:14px 24px 20px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+.mob-menu a:hover{color:var(--cyan)}
+@media(max-width:2000px){
+  .nav-links{display:none!important}
+  .burger{display:flex}
+  .nav{gap:12px}
+}
+/* Хлебные крошки */
+.crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:.15s}.crumbs a:hover{color:var(--cyan)}
+.crumbs span{color:var(--muted)}
+.crumbs b{color:var(--ink);font-weight:600}
+/* Таблицы на мобильных */
+@media(max-width:640px){
+  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .article-body table{display:block;overflow-x:auto}
+}
+/* Плавающая кнопка на мобильных */
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+.float-btn.max-btn{bottom:74px;background:#fff;box-shadow:0 8px 24px rgba(107,63,231,.25);color:var(--ink)}
+@media(max-width:768px){.float-btn{display:flex}}
+/* Состояния кнопок */
+.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.btn.pri:active{transform:translateY(0);filter:brightness(.95)}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+/* Единый подвал */
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2;transition:.15s}
+footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){footer .cols{grid-template-columns:1fr}}
+
+.header-icons{display:flex;align-items:center;gap:8px;margin-right:4px}
+.header-icons a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s}
+.header-icons a.tg-icon{background:#2FA8A0}
+.header-icons a.max-icon{background:transparent;padding:0}
+.header-icons a:hover{filter:brightness(1.1);transform:translateY(-1px)}
+@media(max-width:2000px){.header-icons{display:none}}
+.lang-switch{display:flex;align-items:center;gap:4px;margin-right:8px}
+.lang-switch a{font-size:12.5px;font-weight:700;padding:4px 8px;border-radius:6px;color:var(--muted);transition:.15s;text-decoration:none}
+.lang-switch a.active{background:var(--graphite);color:#fff}
+.mob-lang-switch{display:flex;align-items:center;gap:10px;margin-top:10px}
+.mob-lang-switch a{font-size:15px;font-weight:700;padding:8px 20px;border-radius:10px;color:var(--muted);background:var(--paper);border:1.5px solid var(--line)}
+.mob-lang-switch a.active{background:var(--graphite);color:#fff;border-color:var(--graphite)}
+@media(max-width:680px){.lang-switch{display:none}}
+.lang-switch a:hover:not(.active){color:var(--ink)}
+
+.article-body h2{font-size:22px;font-weight:800;margin:36px 0 14px;color:var(--ink)}
+.article-body h3{font-size:18px;font-weight:700;margin:28px 0 10px;color:var(--ink)}
+.article-body h4{font-size:16px;font-weight:700;margin:24px 0 8px;color:var(--ink)}
+.article-body p{font-size:15px;color:#3a4455;line-height:1.75;margin:0 0 16px}
+.article-body ul,.article-body ol{margin:0 0 16px 20px}
+.article-body li{font-size:15px;color:#3a4455;line-height:1.7;margin-bottom:6px}
+.article-body strong,.article-body b{color:var(--ink)}
+.article-body .law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:16px 20px;font-size:14px;color:#2D4F7E;line-height:1.65;margin:20px 0}
+.article-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-body th{background:var(--graphite);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+.article-body td{padding:10px 14px;border-bottom:1px solid var(--line);color:#3a4455}
+.article-body blockquote{border-left:3px solid var(--cyan);padding:8px 0 8px 18px;margin:20px 0;font-style:italic;color:var(--ink);font-weight:600}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.article-cta{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:16px;padding:28px 32px;margin:40px 0}
+.article-cta b{font-size:18px;display:block;margin-bottom:8px;color:#fff}
+.article-cta p{color:#AFBAC9;font-size:14px;margin:0 0 18px}
+.logo img{display:block;width:200px;height:48px;object-fit:contain}
+@media(max-width:768px){.logo img{width:170px;height:auto}}
+</style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DZXMBECL0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9DZXMBECL0");</script>
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Импортные компоненты в медтехнике: когда их подорожание угрожает локализации по ПП № 719","description":"Подорожание импортных компонентов не всегда угрожает статусу по ПП 719. Разбираем адвалорную долю, таможенную стоимость, баллы, РРПП и смену поставщика.","url":"https://med-local.ru/blog/importnye-komponenty-podorozhanie-pp719","datePublished":"2026-09-30","dateModified":"2026-09-30","author":{"@type":"Person","name":"А.-Т. Танделов","url":"https://med-local.ru/about"},"publisher":{"@type":"Organization","name":"Инженерный центр локализации медицинских изделий","url":"https://med-local.ru","logo":{"@type":"ImageObject","url":"https://med-local.ru/logo.svg"}},"image":"https://med-local.ru/og-image.png","inLanguage":"ru","mainEntityOfPage":{"@type":"WebPage","@id":"https://med-local.ru/blog/importnye-komponenty-podorozhanie-pp719"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Угрожает ли подорожание импортных компонентов статусу изделия по ПП № 719?","acceptedAnswer":{"@type":"Answer","text":"Зависит от модели, по которой подтверждается происхождение. Если для позиции действует адвалорная доля, рост учитываемой стоимости иностранных товаров может вывести расчёт за порог. Если позиция построена на баллах, рост цены импортного компонента сам по себе баллы не уменьшает."}},{"@type":"Question","name":"Входит ли международный фрахт в расчёт адвалорной доли?","acceptedAnswer":{"@type":"Answer","text":"Для прямого импорта стоимость иностранных товаров определяется через таможенную стоимость, в которую могут входить расходы на доставку до места ввоза. Доставка по России после таможенного оформления, ввозной НДС, пошлины и сборы в неё не входят."}},{"@type":"Question","name":"Исключат ли изделие из реестра, если после подорожания доля превысила 50%?","acceptedAnswer":{"@type":"Answer","text":"Автоматически — нет. Обязанности пересчитывать долю после каждого изменения цены нет. Риск проявляется, когда соответствие нужно подтверждать заново, — например, при новом акте экспертизы ТПП или при проверке."}},{"@type":"Question","name":"Становится ли компонент российским, если купить его у российского дистрибьютора?","acceptedAnswer":{"@type":"Answer","text":"Нет. Значение имеет происхождение товара, а не национальность продавца. Отдельно: комплектующие, произведённые в странах ЕАЭС, для целей ПП № 719 признаются российскими — при документальном подтверждении производства."}},{"@type":"Question","name":"Можно ли снизить адвалорную долю, повысив цену изделия?","acceptedAnswer":{"@type":"Answer","text":"Математически да, но цена франко-завод формируется из затрат и прибыли и должна быть обоснована калькуляцией, которую может проверить ТПП. Произвольное повышение цены проблему не решает."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://med-local.ru/"},{"@type":"ListItem","position":2,"name":"База знаний","item":"https://med-local.ru/blog"},{"@type":"ListItem","position":3,"name":"Импортные компоненты в медтехнике: когда их","item":"https://med-local.ru/blog/importnye-komponenty-podorozhanie-pp719"}]}
+</script>
+</head>
+<body>
+<div class="mob-menu" id="mob-menu" onclick="if(event.target===event.currentTarget)toggleMenu()"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:max(18px,env(safe-area-inset-top));right:max(18px,env(safe-area-inset-right));background:none;border:none;cursor:pointer;padding:10px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="pointer-events:none"><path d="M5 5l14 14M19 5L5 19"/></svg></button><div class="mob-menu-links" onclick="if(event.target===event.currentTarget)toggleMenu()"><a href="/">Главная</a><a href="/about">О центре</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">База знаний</a><a href="/pricing">Стоимость</a><a href="/cases">Кейсы</a><a href="/glossary">Глоссарий</a><a href="/contacts">Контакты</a><div class="mob-lang-switch"><a href="#" class="active" onclick="toggleMenu()">RU</a><a href="/en">EN</a></div>
+  </div><div class="mob-menu-cta" onclick="if(event.target===event.currentTarget)toggleMenu()"><a href="/#lead" class="btn pri" style="margin-top:16px" onclick="toggleMenu()">Оценить проект</a></div></div>
+<header><div class="wrap nav">
+  <a class="logo" href="/" aria-label="Инженерный центр — на главную">
+  <img
+    src="/logo-full.svg"
+    alt="Инженерный центр — локализация медицинских изделий"
+    width="200"
+    height="48"
+    style="display:block;"
+  >
+</a>
+  <span class="sp"></span>
+  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk on" href="/blog">База знаний</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a><a class="lnk" href="/cases">Кейсы</a><a class="lnk" href="/glossary">Глоссарий</a><a class="lnk" href="/contacts">Контакты</a></div>
+  <div class="header-icons">
+    <a class="tg-icon" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer" title="Написать в Telegram" aria-label="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg></a>
+    <a class="max-icon" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer" title="Написать в MAX" aria-label="MAX"><img src="/images/max-icon.png" alt="MAX" width="26" height="26" style="border-radius:7px;display:block"></a>
+  </div>
+  <div class="lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
+  <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span class="burger-icon"><span></span><span></span><span></span></span><span class="burger-label">Меню</span></button>
+</div></header>
+
+<div class="wrap"><nav class="crumbs"><a href="/">Главная</a><span>›</span><a href="/blog">База знаний</a><span>›</span><b>Импортные компоненты в медтехнике: когда их...</b></nav></div>
+<section style="background:#fff;border-bottom:1px solid var(--line)">
+  <div class="wrap" style="padding:48px 22px 36px;max-width:820px">
+    <a href="/blog" style="font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:20px">← Все статьи</a>
+    <span class="tag" style="display:inline-flex;margin-bottom:14px">ПП 719 · Адвалорная доля · Баллы</span>
+    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">Импортные компоненты в медтехнике: когда их подорожание угрожает локализации по ПП № 719</h1>
+    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ</span>
+      <span>·</span>
+      <time datetime="2026-09-30">Опубликовано: 30 сентября 2026</time>
+    </div>
+  </div>
+</section>
+<main>
+<section class="sec">
+  <div class="wrap" style="max-width:820px">
+    <div class="article-body">
+<p>Рост стоимости импортных компонентов не всегда означает проблему с локализацией медицинского изделия по ПП № 719.</p>
+<p>Для одного изделия увеличение цены импортного материала или международного фрахта действительно может вывести расчёт за допустимый порог. Для другого — стоимость импортной электроники вообще не участвует в критерии локализации: значение имеет выполнение технологических операций и количество набранных баллов.</p>
+<p>Поэтому цепочка:</p>
+<p><strong>импорт подорожал → выросла адвалорная доля → изделие потеряло российский статус</strong></p>
+<p>работает не для всего MedTech.</p>
+<p>Первый вопрос производителя должен быть другим:</p>
+<p><strong>по какой модели ПП № 719 подтверждается российское происхождение именно нашего изделия — по стоимостному критерию или по баллам?</strong></p>
+<p>От ответа зависит весь дальнейший расчёт.</p>
+<h2>Адвалорная доля действует не для всех медицинских изделий</h2>
+<p>Одна из главных ошибок при планировании локализации — воспринимать ПП № 719 как единую формулу для всей медицинской техники.</p>
+<p>Это не так.</p>
+<p>Для части медицинских изделий раздел VII ПП № 719 сохраняет стоимостный критерий: доля иностранных товаров в цене конечной продукции не должна превышать установленный предел.</p>
+<p>Такой подход, в частности, сохраняется для отдельных расходных медицинских изделий, включая определённые позиции <a href="/blog/gemokonteynery-litie" style="color:var(--cyan);font-weight:600">контейнеров для крови</a>.</p>
+<p>Для других групп действует балльная система.</p>
+<p>Например, для ряда <a href="/blog/ballnaya-lokalizaciya-slozhnoj-elektroniki-kt-uzi" style="color:var(--cyan);font-weight:600">сложных электронных медицинских изделий</a> российское происхождение зависит от выполнения обязательных операций и набора необходимого количества баллов за конкретные элементы локализации: платы, корпус, кабели, датчики, НИОКР, систему менеджмента качества и другие предусмотренные конкретной позицией критерии.</p>
+<p>Поэтому сам факт того, что импортная микросхема подорожала в два раза, ещё не означает, что изделие потеряет баллы.</p>
+<p>Если конкретная позиция ПП № 719 построена на балльной модели, нужно проверять прежде всего <strong>происхождение компонентов, выполняемые в России операции и количество подтверждаемых баллов</strong>, а не процент иностранной стоимости.</p>
+<p>И наоборот: для изделия со стоимостным критерием цена импортной составляющей может стать критической.</p>
+<h2>Как считается адвалорная доля</h2>
+<p>Для позиций ПП № 719, где применяется соответствующий стоимостный критерий, расчёт связан с порядком определения процентной доли стоимости иностранных товаров.</p>
+<p>Упрощённо формула выглядит так:</p>
+<p><strong>Адвалорная доля = стоимость иностранных товаров / цена конечной продукции на условиях франко-завод × 100%.</strong></p>
+<p>Для прямого импорта стоимость иностранных товаров определяется через их таможенную стоимость.</p>
+<p>А это важное уточнение.</p>
+<p>В таможенную стоимость входит не только цена самого иностранного товара. В неё могут входить расходы по доставке до места ввоза на таможенную территорию.</p>
+<p>Поэтому увеличение международного фрахта способно увеличить числитель формулы даже тогда, когда сам иностранный производитель не поднял заводскую цену компонента.</p>
+<p>При этом в расчёт таможенной стоимости не следует автоматически включать все расходы, которые выросли у российского производителя.</p>
+<p>Например, внутренняя доставка после таможенного оформления — другой вид расходов.</p>
+<p>Ввозной НДС, таможенные пошлины и сборы также не следует просто прибавлять к стоимости иностранных компонентов для расчёта адвалорной доли.</p>
+<p>Именно поэтому фраза <strong>«логистика подорожала на 30% — значит, адвалорная доля выросла на 30%»</strong> некорректна.</p>
+<p>Сначала нужно определить, какая именно часть логистических расходов входит в используемую для расчёта стоимость.</p>
+<h2>Кейс: было 48%, стало 52%</h2>
+<p>Рассмотрим упрощённый пример для медицинского изделия, для которого установлен предельный уровень иностранной составляющей 50%.</p>
+<p>Исходные данные:</p>
+<table class="compare-table">
+<tr><th>Показатель</th><th>До изменения логистики</th><th>После изменения</th></tr>
+<tr><td>Цена конечной продукции франко-завод</td><td>1 000 000 ₽</td><td>1 000 000 ₽</td></tr>
+<tr><td>Учитываемая стоимость иностранных товаров</td><td>480 000 ₽</td><td>520 000 ₽</td></tr>
+<tr><td>Адвалорная доля</td><td>48%</td><td>52%</td></tr>
+<tr><td>Требование</td><td>≤ 50%</td><td>≤ 50%</td></tr>
+<tr><td>Результат нового расчёта</td><td>соответствует</td><td>не соответствует</td></tr>
+</table>
+<p>В исходной модели:</p>
+<p><strong>480 000 / 1 000 000 × 100% = 48%.</strong></p>
+<p>Требование выполняется.</p>
+<p>Предположим, стоимость международной поставки выросла и в результате таможенная стоимость иностранных товаров достигла 520 000 ₽.</p>
+<p>Получаем:</p>
+<p><strong>520 000 / 1 000 000 × 100% = 52%.</strong></p>
+<p>При новом расчёте установленный предел уже превышен.</p>
+<p>Разница всего в 40 000 ₽ привела к переходу через нормативный порог.</p>
+<p>Для производителя, который строит локализацию с запасом в один-два процентных пункта, это реальный риск.</p>
+<h2>Но действующая запись РРПП не исчезает в день подорожания</h2>
+<p>Здесь возникает следующая ловушка.</p>
+<p>Если вчера доля составляла 48%, а сегодня импортная поставка стала дороже и новый расчёт дал бы 52%, это <strong>не означает автоматическое аннулирование реестровой записи в тот же день</strong>.</p>
+<p>Действующие правила не устанавливают обязанность производителя пересчитывать адвалорную долю после каждого изменения закупочной цены.</p>
+<p><a href="/blog/gisp-otchet" style="color:var(--cyan);font-weight:600">Ежегодная отчётность в ГИСП</a> также не является ежегодным повторным подтверждением адвалорной доли. Производитель представляет сведения о произведённой и отгруженной продукции.</p>
+<p>Поэтому неправильно представлять ситуацию так:</p>
+<p><strong>контейнер с сырьём подорожал → изделие автоматически исключили из РРПП.</strong></p>
+<p>Риск проявляется прежде всего тогда, когда соответствие потребуется подтверждать заново: например, <a href="/blog/proverka-tpp" style="color:var(--cyan);font-weight:600">при новом акте экспертизы ТПП или при проверке</a>, если будут исследоваться актуальные сведения.</p>
+<p>Для производителя это означает, что контролировать показатель всё равно нужно заранее.</p>
+<p>Не потому, что его необходимо официально пересчитывать после каждого инвойса, а потому, что проблема может обнаружиться в самый неудобный момент — когда понадобится новое подтверждение соответствия.</p>
+<h2>Рост внутренней логистики — другая ситуация</h2>
+<p>Теперь изменим кейс.</p>
+<p>Иностранный компонент стоит столько же, международный участок поставки не изменился, но доставка после ввоза в Россию подорожала на 100 000 ₽.</p>
+<p>Экономика изделия ухудшилась.</p>
+<p>Себестоимость выросла.</p>
+<p>Маржинальность производителя снизилась.</p>
+<p>Но из этого ещё не следует, что на те же 100 000 ₽ выросла стоимость иностранных товаров для расчёта адвалорной доли.</p>
+<p>Это важное различие между:</p>
+<p><strong>«изделие стало дороже производить»</strong></p>
+<p>и</p>
+<p><strong>«в расчёте по ПП № 719 выросла иностранная составляющая».</strong></p>
+<p>Эти события могут происходить одновременно, но юридически это не одно и то же.</p>
+<h2>Что происходит при падении рубля</h2>
+<p>Валютный курс создаёт похожий риск.</p>
+<p>Если иностранный компонент приобретается за валюту, изменение курса способно увеличить его рублёвую стоимость и повлиять на расчёт.</p>
+<p>При этом в ПП № 719 предусмотрен специальный механизм для существенного ослабления рубля: при определённых условиях ТПП по согласованию с Минпромторгом имеет право использовать специальный подход к курсу при определении адвалорной доли.</p>
+<p>Ключевые слова здесь — <strong>«имеет право»</strong>.</p>
+<p>Это не автоматическая гарантия для производителя.</p>
+<p>Поэтому финансовую модель локализации опасно строить на предположении:</p>
+<p><strong>«если рубль сильно упадёт, курс для ПП № 719 нам обязательно зафиксируют».</strong></p>
+<p>Такой сценарий лучше рассматривать как отдельную регуляторную возможность, применимость которой нужно проверять в конкретной процедуре подтверждения.</p>
+<h2>Можно ли просто повысить цену российского изделия</h2>
+<p>Из формулы возникает логичный вопрос.</p>
+<p>Если стоимость импорта выросла, а знаменателем является цена конечной продукции, нельзя ли просто увеличить цену изделия и снова получить показатель ниже 50%?</p>
+<p>Математически — да.</p>
+<p>Допустим:</p>
+<ul>
+<li>стоимость иностранных товаров — 520 000 ₽;</li>
+<li>цена конечной продукции — 1 100 000 ₽.</li>
+</ul>
+<p>Тогда:</p>
+<p><strong>520 000 / 1 100 000 × 100% = 47,3%.</strong></p>
+<p>Формально показатель снова ниже 50%.</p>
+<p>Но отсюда нельзя делать вывод, что проблему локализации можно решить произвольным повышением цены.</p>
+<p>Цена конечной продукции на условиях франко-завод для такого расчёта — не любое число, которое производитель решил указать в заявлении.</p>
+<p>Она формируется на основании затрат и других предусмотренных составляющих, включая прибыль предприятия, и должна иметь документальное обоснование.</p>
+<p>При экспертизе ТПП может проверяться калькуляция и подтверждающие документы.</p>
+<p>Поэтому стратегия:</p>
+<p><strong>«не проходим 50% — просто увеличим EXW на 20%»</strong></p>
+<p>не является полноценным решением.</p>
+<p>Сначала необходимо проверить, каким образом новая величина сформирована и чем она подтверждается.</p>
+<h2>Что если импортный компонент покупается у российского дистрибьютора</h2>
+<p>Не все производители сами импортируют каждую микросхему, полимер или датчик.</p>
+<p>Часто компонент покупается уже в России у импортёра или дистрибьютора.</p>
+<p>В таком случае у производителя может не быть собственной таможенной декларации на этот товар.</p>
+<p>Это не превращает иностранный компонент в российский.</p>
+<p>При расчёте необходимо документально подтвердить стоимость приобретения и происхождение товара по применимой методике.</p>
+<p>Поэтому закупка через российского посредника сама по себе не решает проблему иностранной составляющей.</p>
+<p>Юридически важна не национальность продавца в счёте, а происхождение используемого товара и предусмотренный для него порядок расчёта.</p>
+<p>Если же компонент действительно произведён в России, это подтверждается <a href="/blog/verifikaciya-subpostavshchikov-st1-gisp" style="color:var(--cyan);font-weight:600">документами о происхождении</a> — сертификатом СТ-1, актом экспертизы или записью в реестре российской промышленной продукции.</p>
+<h2>Китай вместо Европы: станет ли компонент российским для ПП № 719</h2>
+<p>Нет.</p>
+<p>Замена европейского компонента китайским может решить логистическую проблему, сократить срок поставки или снизить цену.</p>
+<p>Но китайское происхождение не превращает компонент в российский.</p>
+<p>Другое дело — компоненты, произведённые в странах ЕАЭС. <a href="/blog/advalornaya-dolya" style="color:var(--cyan);font-weight:600">Сноска к приложению ПП № 719</a> признаёт комплектующие, произведённые на территории государств — членов ЕАЭС, российскими для целей его применения — но только при документальном подтверждении именно производства, а не факта покупки у продавца из этой страны. Поэтому замена европейского компонента на компонент белорусского или казахстанского производства может реально снизить иностранную долю, а замена на китайский — нет.</p>
+<p>Для стоимостной модели изменится прежде всего стоимость соответствующего иностранного товара.</p>
+<p>Для балльной модели нужно смотреть конкретный критерий: если баллы начисляются за российский компонент или выполнение операции в России, переход с европейского компонента на китайский сам по себе дополнительных баллов не создаёт.</p>
+<p>То есть:</p>
+<p><strong>Европа → Китай</strong></p>
+<p>может быть хорошим решением для цепочки поставок, но не обязательно является локализацией.</p>
+<h2>Нужно ли менять запись РРПП при смене поставщика</h2>
+<p>Ещё одна распространённая ошибка — считать, что <a href="/blog/smena-postavshchika-reestrovaya-zapis" style="color:var(--cyan);font-weight:600">любая смена иностранного поставщика</a> автоматически требует новой записи в РРПП.</p>
+<p>Прямого универсального правила <strong>«сменился поставщик — переоформить РРПП»</strong> нет.</p>
+<p>Нужно смотреть, что именно изменилось.</p>
+<p>Если поменялся только продавец или дистрибьютор, а производитель компонента, характеристики, код и происхождение остались прежними, ситуация одна.</p>
+<p>Если вместо европейского компонента используется изделие другого китайского производителя — другая.</p>
+<p>Если одновременно меняются технические характеристики, состав изделия или сведения, на которых строилась доказательная база ТПП, риск выше.</p>
+<p>Поэтому вопрос лучше ставить не так:</p>
+<p><strong>«Мы сменили поставщика — нужно ли новое РРПП?»</strong></p>
+<p>а так:</p>
+<p><strong>«Какие сведения и доказательства, использованные для подтверждения российского происхождения, изменились вместе с поставщиком?»</strong></p>
+<p>И уже после этого определять необходимость обновления документов.</p>
+<h2>Для балльных медизделий проблема выглядит иначе</h2>
+<p>Теперь рассмотрим сложную медицинскую электронику, для которой ПП № 719 устанавливает балльную модель.</p>
+<p>Допустим, в изделии используется импортный датчик стоимостью 20 000 ₽.</p>
+<p>После перестройки логистики он стоит 35 000 ₽.</p>
+<p>Сам по себе рост цены с 20 до 35 тыс. ₽ не означает автоматическую потерю баллов.</p>
+<p>Нужно смотреть, за что именно начисляются баллы по конкретной позиции ПП № 719.</p>
+<p>Это могут быть российские платы, корпус, кабели, датчики, программное обеспечение, НИОКР или другие элементы и операции.</p>
+<p>Если критерий сформулирован через происхождение или выполнение операции, стоимость импортного компонента сама по себе его не заменяет.</p>
+<p>Поэтому производитель рентгеновской системы, аппарата электротерапии и производитель гемоконтейнера могут столкнуться с одним и тем же ростом стоимости импорта — но последствия для ПП № 719 будут разными.</p>
+<p>Универсальной модели для всего MedTech нет.</p>
+<p>Отдельно учитывайте переходный период: для ряда реестровых записей без указания баллов <a href="/blog/pp1875-perehodnyi-period-30-noyabrya-2026" style="color:var(--cyan);font-weight:600">переходный порядок действует до 30 ноября 2026 года</a>. Если позиция вашего изделия уже переведена на баллы, устойчивость нужно проверять по новой балльной модели, а не по прежней доле.</p>
+<h2>Санкции, экспортный контроль и уход поставщика — не одно и то же</h2>
+<p>В разговорах о цепочках поставок эти причины часто объединяют одним словом — «санкции».</p>
+<p>Для регуляторного анализа лучше их разделять.</p>
+<p>Есть формальные экспортные ограничения на определённые товары и технологии.</p>
+<p>Есть экспортный контроль, при котором поставка может требовать лицензии и проверки конечного пользователя.</p>
+<p>Для отдельных товаров возможны исключения, связанные с медицинским применением.</p>
+<p>А есть совершенно другая ситуация: иностранный производитель сам прекращает работу с российским рынком, хотя прямого юридического запрета на поставку конкретного компонента нет.</p>
+<p>Для российского производителя результат может выглядеть одинаково — привычного компонента больше нет.</p>
+<p>Но причины и варианты решения разные.</p>
+<p>Поэтому в проекте локализации лучше фиксировать не абстрактное <strong>«поставщик ушёл из-за санкций»</strong>, а конкретно:</p>
+<ul>
+<li>какой компонент недоступен;</li>
+<li>кто его производит;</li>
+<li>есть ли юридическое ограничение на поставку;</li>
+<li>возможно ли получение разрешения;</li>
+<li>или поставщик просто отказался от работы с рынком;</li>
+<li>какой альтернативный компонент предлагается использовать.</li>
+</ul>
+<p>Только после этого можно оценивать последствия для производства и локализации.</p>
+<h2>Замена компонента затрагивает не только ПП № 719</h2>
+<p>Предположим, производитель решил проблему поставок: вместо европейского датчика найден китайский.</p>
+<p>Для закупщика задача решена.</p>
+<p>Для проекта медицинского изделия — ещё нет.</p>
+<p><a href="/blog/ru-i-gisp-parallelnye-processy" style="color:var(--cyan);font-weight:600">ПП № 719 и регистрация медицинского изделия — два разных регуляторных контура</a>.</p>
+<p>Сначала нужно оценить, изменились ли условия подтверждения российского происхождения и доказательная база для РРПП.</p>
+<p>Отдельно нужно оценить регистрационное досье.</p>
+<p>ПП № 1684 не содержит универсального правила, по которому любую замену электронного компонента или поставщика можно провести в уведомительном порядке.</p>
+<p>Если изменение способно повлиять на качество, эффективность или безопасность медицинского изделия, может потребоваться экспертиза.</p>
+<p>Особенно внимательно нужно оценивать замену:</p>
+<ul>
+<li>материалов, контактирующих с пациентом;</li>
+<li>критических электронных компонентов;</li>
+<li>датчиков;</li>
+<li>узлов, влияющих на точность измерений;</li>
+<li>программно-аппаратных компонентов;</li>
+<li>элементов, влияющих на электробезопасность или ЭМС.</li>
+</ul>
+<p>В зависимости от изменения может возникнуть вопрос и о необходимости дополнительных испытаний.</p>
+<p>Поэтому решение <strong>«нашли китайский аналог — ставим со следующей партии»</strong> для медицинского изделия требует change control и регуляторной оценки.</p>
+<h2>Российский аналог может решить одну проблему и создать другую</h2>
+<p>Наиболее очевидный способ уменьшить зависимость от импортной стоимости — заменить иностранный компонент российским.</p>
+<p>Для стоимостной модели это потенциально уменьшает иностранную составляющую.</p>
+<p>Для балльной модели российский компонент в отдельных позициях может помочь получить предусмотренные ПП № 719 баллы.</p>
+<p>Но здесь появляется второй контур.</p>
+<p>Новый материал или компонент должен быть технически пригоден для конкретного медицинского изделия.</p>
+<p>Если замена влияет на характеристики, безопасность или эффективность, одного российского происхождения недостаточно.</p>
+<p>Может потребоваться:</p>
+<ul>
+<li>техническая оценка;</li>
+<li>верификация или валидация изменения;</li>
+<li>испытания;</li>
+<li><a href="/blog/zamena-plastikata-gemokontejnery-rrpp-risk" style="color:var(--cyan);font-weight:600">оценка биосовместимости</a>;</li>
+<li>оценка ЭМС и электробезопасности;</li>
+<li>изменение технической документации;</li>
+<li>изменение регистрационного досье.</li>
+</ul>
+<p>Поэтому правильная задача звучит не <strong>«найти российский компонент»</strong>, а:</p>
+<p><strong>«найти российский компонент, который одновременно закрывает ПП № 719 и может быть законно внедрён в зарегистрированное медицинское изделие».</strong></p>
+<h2>Почему локализацию нужно считать с запасом</h2>
+<p>Кейс 48% → 52% показывает ещё одну проблему.</p>
+<p>Проект, который проходит нормативный порог с минимальным запасом, уязвим.</p>
+<p>На него могут повлиять:</p>
+<ul>
+<li>изменение цены иностранного производителя;</li>
+<li>международный фрахт;</li>
+<li>валютный курс;</li>
+<li>смена маршрута поставки;</li>
+<li>замена иностранного компонента;</li>
+<li>изменение структуры производства.</li>
+</ul>
+<p>Поэтому при проектировании локализации полезно проводить стресс-тест.</p>
+<p>Например:</p>
+<p><strong>Базовый сценарий:</strong> иностранная составляющая 43%.</p>
+<p><strong>Сценарий 1:</strong> импорт дорожает на 10%.</p>
+<p><strong>Сценарий 2:</strong> на 20%.</p>
+<p><strong>Сценарий 3:</strong> растёт международный фрахт.</p>
+<p><strong>Сценарий 4:</strong> меняется валютный курс.</p>
+<p><strong>Сценарий 5:</strong> основной поставщик недоступен, используется резервный.</p>
+<p>Задача такого расчёта — не предсказать точный курс валюты через три года.</p>
+<p>Нужно понять, насколько модель локализации устойчива к изменениям цепочки поставок.</p>
+<p>Если любое небольшое изменение выводит показатель выше допустимого уровня, формально проходная схема может оказаться плохой промышленной моделью.</p>
+<h2>Что проверить производителю при подорожании импорта</h2>
+<p>Если импортное сырьё или комплектующие резко выросли в цене, не стоит сразу переделывать производственную цепочку.</p>
+<p>Сначала нужно пройти несколько проверок.</p>
+<h3>1. Определить конкретную позицию ПП № 719</h3>
+<p>Не только ОКПД2 в целом, а применимую к конкретному изделию позицию и её действующие требования.</p>
+<h3>2. Определить модель локализации</h3>
+<p>Это стоимостный критерий, баллы или сочетание обязательных условий и балльных критериев?</p>
+<p>Без этого обсуждать влияние цены импорта бессмысленно.</p>
+<h3>3. Если действует адвалорная доля — пересчитать сценарий</h3>
+<p>Нужно определить, какая часть роста затрат действительно попадает в учитываемую стоимость иностранных товаров.</p>
+<p>Цена компонента, международная доставка, внутренняя российская логистика и налоги — не одно и то же.</p>
+<h3>4. Проверить запас до порога</h3>
+<p>48% при максимуме 50% — это формальное соответствие, но небольшой запас устойчивости.</p>
+<h3>5. Проверить действующую запись РРПП</h3>
+<p>Когда она заканчивается?</p>
+<p>На каком основании получена?</p>
+<p>Какие сведения использовались в акте экспертизы?</p>
+<p>Когда потребуется новое подтверждение?</p>
+<h3>6. Оценить альтернативных поставщиков</h3>
+<p>При этом отдельно проверить происхождение и стоимость нового компонента.</p>
+<p>Китайский компонент остаётся иностранным, даже если логистика стала удобнее.</p>
+<h3>7. Если меняется компонент — проверить регистрационное досье</h3>
+<p>Локализация и регистрация должны анализироваться параллельно.</p>
+<h3>8. Только после этого менять BOM и производственный маршрут</h3>
+<p>Иначе можно решить проблему ПП № 719 и одновременно создать проблему с регистрационным статусом изделия.</p>
+<h2>Матрица риска</h2>
+<p>Упрощённо последствия можно представить так:</p>
+<table class="compare-table">
+<tr><th>Что произошло</th><th>Адвалорная доля</th><th>Балльная модель</th><th>РРПП</th><th>Регистрационное досье</th></tr>
+<tr><td>Подорожал иностранный компонент</td><td>может вырасти</td><td>сама цена баллы не уменьшает</td><td>проверить перед новым подтверждением</td><td>обычно не меняется только из-за цены</td></tr>
+<tr><td>Подорожал международный фрахт</td><td>может повлиять через таможенную стоимость</td><td>сама цена баллы не уменьшает</td><td>стресс-тест</td><td>обычно не влияет</td></tr>
+<tr><td>Подорожала доставка внутри РФ</td><td>напрямую не увеличивает таможенную стоимость импорта</td><td>не влияет на баллы сама по себе</td><td>обычно нет</td><td>обычно нет</td></tr>
+<tr><td>Европа заменена Китаем</td><td>пересчитать стоимость</td><td>иностранный компонент остаётся иностранным</td><td>проверить доказательную базу</td><td>зависит от изменения компонента</td></tr>
+<tr><td>Импортный компонент заменён компонентом производства ЕАЭС</td><td>может снизить иностранную долю при подтверждении производства</td><td>зависит от формулировки позиции</td><td>обновить доказательную базу</td><td>проверить влияние изменения</td></tr>
+<tr><td>Импортный компонент заменён российским</td><td>может снизить иностранную долю</td><td>может дать баллы, если это предусмотрено позицией</td><td>может потребоваться обновление</td><td>проверить влияние изменения</td></tr>
+<tr><td>Изменён материал, контактирующий с пациентом</td><td>зависит от происхождения и стоимости</td><td>зависит от позиции</td><td>проверить</td><td>требуется отдельная регуляторная оценка</td></tr>
+</table>
+<p>Эта таблица — не замена анализу конкретного изделия.</p>
+<p>Её задача — показать, почему одинаковая проблема с поставщиком приводит к разным последствиям.</p>
+<h2>Что происходит в госзакупках</h2>
+<p>Подтверждение российского происхождения по <a href="/blog/pp719-vs-pp1875" style="color:var(--cyan);font-weight:600">ПП № 719 и применение национального режима по ПП № 1875</a> связаны, но это не одна процедура.</p>
+<p>Запись в РРПП используется для подтверждения российского происхождения в предусмотренных случаях.</p>
+<p>Если производитель в будущем не сможет подтвердить соответствие требованиям ПП № 719, это может изменить его положение в закупках, где происхождение товара имеет значение.</p>
+<p>Но это не означает автоматический запрет продажи медицинского изделия в России.</p>
+<p>Регистрационное удостоверение отвечает за возможность обращения медицинского изделия.</p>
+<p>ПП № 719 — за критерии российского промышленного производства.</p>
+<p>ПП № 1875 — за применение национального режима в закупках.</p>
+<p>Поэтому корректная цепочка выглядит так:</p>
+<p><strong>РУ → возможность обращения медицинского изделия</strong></p>
+<p><strong>ПП № 719 / РРПП → подтверждение российского происхождения</strong></p>
+<p><strong>ПП № 1875 → закупочные последствия подтверждённого происхождения</strong></p>
+<p>Смешивать эти три статуса нельзя.</p>
+<h2>Главный вывод</h2>
+<p>Рост стоимости импортных компонентов действительно может создать риск для локализации медицинского изделия — но не для любого изделия и не при любом росте затрат.</p>
+<p>Если конкретная позиция ПП № 719 использует адвалорную долю, изменение учитываемой стоимости иностранных товаров способно вывести расчёт за допустимый порог.</p>
+<p>Причём значение может иметь не только заводская цена компонента, но и международная часть логистики, если она входит в таможенную стоимость.</p>
+<p>Но для изделий на балльной системе логика другая: подорожание иностранного компонента само по себе не уменьшает количество баллов.</p>
+<p>И ещё важнее: действующая запись РРПП не аннулируется автоматически в день, когда поставщик повысил цену.</p>
+<p>Поэтому задача производителя — не реагировать на каждый скачок стоимости как на уже состоявшуюся потерю российского статуса, а заранее проверить устойчивость модели локализации.</p>
+<p>Практический порядок такой:</p>
+<p><strong>позиция ПП № 719 → модель подтверждения → актуальная структура импорта → стресс-тест → запас до порога/баллов → РРПП → регистрационные последствия возможной замены компонента.</strong></p>
+<p>Именно этот расчёт стоит делать до смены поставщика, переноса BOM или инвестиций в российский аналог.</p>
+
+<h2>Частые вопросы</h2>
+<div class="faq-item"><h4>Угрожает ли подорожание импортных компонентов статусу изделия по ПП № 719?</h4><p>Зависит от модели, по которой подтверждается происхождение. Если для позиции действует адвалорная доля, рост учитываемой стоимости иностранных товаров может вывести расчёт за порог. Если позиция построена на баллах, рост цены импортного компонента сам по себе баллы не уменьшает.</p></div>
+<div class="faq-item"><h4>Входит ли международный фрахт в расчёт адвалорной доли?</h4><p>Для прямого импорта стоимость иностранных товаров определяется через таможенную стоимость, в которую могут входить расходы на доставку до места ввоза. Доставка по России после таможенного оформления, ввозной НДС, пошлины и сборы в неё не входят.</p></div>
+<div class="faq-item"><h4>Исключат ли изделие из реестра, если после подорожания доля превысила 50%?</h4><p>Автоматически — нет. Обязанности пересчитывать долю после каждого изменения цены нет. Риск проявляется, когда соответствие нужно подтверждать заново, — например, при новом акте экспертизы ТПП или при проверке.</p></div>
+<div class="faq-item"><h4>Становится ли компонент российским, если купить его у российского дистрибьютора?</h4><p>Нет. Значение имеет происхождение товара, а не национальность продавца. Отдельно: комплектующие, произведённые в странах ЕАЭС, для целей ПП № 719 признаются российскими — при документальном подтверждении производства.</p></div>
+<div class="faq-item"><h4>Можно ли снизить адвалорную долю, повысив цену изделия?</h4><p>Математически да, но цена франко-завод формируется из затрат и прибыли и должна быть обоснована калькуляцией, которую может проверить ТПП. Произвольное повышение цены проблему не решает.</p></div>
+
+<div class="article-cta">
+  <b>Нужна дорожная карта локализации медицинского изделия?</b>
+  <p>Если стоимость импортных компонентов выросла, поставщик прекратил поставки или существующая схема локализации проходит требования ПП № 719 с минимальным запасом, сначала имеет смысл пересчитать всю модель.</p>
+  <p>В рамках <a href="/localization" style="color:#fff;text-decoration:underline">дорожной карты локализации</a> можно определить:</p>
+  <ul style="margin:0 0 16px 20px;color:#AFBAC9"><li style="margin-bottom:4px">применимую позицию ПП № 719;</li><li style="margin-bottom:4px">обязательные операции и балльные критерии;</li><li style="margin-bottom:4px">применимость адвалорной доли;</li><li style="margin-bottom:4px">критичные импортные материалы и комплектующие;</li><li style="margin-bottom:4px">запас локализации при изменении цены и курса;</li><li style="margin-bottom:4px">варианты замены иностранных компонентов;</li><li style="margin-bottom:4px">влияние изменений на РРПП;</li><li style="margin-bottom:4px">влияние замены компонентов на регистрационное досье;</li><li style="margin-bottom:4px">последовательность перехода на новую производственную модель.</li></ul>
+  <p>Результат — не просто расчёт текущего соответствия, а производственная схема, которая учитывает одновременно ПП № 719, регистрацию медицинского изделия и будущую работу в закупках.</p>
+  <a class="btn pri" href="mailto:info@med-local.ru?subject=Устойчивость локализации к росту цен импорта">Обсудить дорожную карту</a>
+</div>
+
+
+    </div>
+  </div>
+</section>
+<section style="background:#fff;border-top:1px solid var(--line);padding:20px 0"><div class="wrap" style="max-width:820px"><a href="/localization" style="font-size:14px;font-weight:700;color:var(--cyan)">Подробнее об этой услуге: Локализация медицинских изделий →</a></div></section><section style="background:var(--paper);border-top:1px solid var(--line);padding:32px 0">
+  <div class="wrap" style="max-width:820px">
+    <h3 style="font-size:16px;font-weight:700;margin:0 0 16px;color:var(--ink)">Читайте также</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><a href="/blog/advalornaya-dolya" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Как считать адвалорную долю по ПП 719</a><a href="/blog/smena-postavshchika-reestrovaya-zapis" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Смена поставщика и реестровая запись</a><a href="/blog/verifikaciya-subpostavshchikov-st1-gisp" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Верификация субпоставщиков через СТ-1 и ГИСП</a><a href="/blog/ballnaya-sistema-medtekhnika" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Анатомия балльной системы для сложной медтехники</a><a href="/blog/pp1875-perehodnyi-period-30-noyabrya-2026" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">ПП 1875: что успеть до 30 ноября 2026 года</a><a href="/localization" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Локализация медицинских изделий</a></div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div><b>Инженерный центр локализации медицинских изделий</b>
+      <p style="font-size:13px;line-height:1.65;margin:0 0 14px;color:#97A1B2">Локализация производства медицинских изделий в России. От&nbsp;анализа ниши до регистрационного удостоверения.</p>
+      <a href="tel:+79853169104">+7 985 316-91-04 (Россия)</a>
+      <a href="tel:+79888777295">+7 988 877-72-95 (Россия)</a>
+      <a href="tel:+79888777295">MAX: +7 988 877-72-95</a>
+      <a href="tel:+77021394489">+7 702 139-44-89 (Казахстан)</a>
+      <a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a>
+      <a href="https://t.me/tandelovtat" style="color:#2FA8A0" target="_blank" rel="noopener noreferrer">Telegram: @tandelovtat</a>
+    </div>
+    <div><b>Услуги</b>
+      <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a>
+      <a href="/development">Разработка</a><a href="/production">Производство</a>
+      <a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a>
+    </div>
+    <div><b>Компания</b>
+      <a href="/cases">Кейсы</a><a href="/pricing">Стоимость</a><a href="/blog">База знаний</a>
+      <a href="/contacts">Контакты</a><a href="/glossary">Глоссарий</a><a href="/privacy">Политика ПДн</a>
+    </div>
+    <div><b>Контакты</b>
+      <a href="mailto:info@med-local.ru">info@med-local.ru</a>
+      <a href="mailto:sales@med-local.ru">sales@med-local.ru</a>
+      <a href="mailto:marketing@med-local.ru">marketing@med-local.ru</a>
+      <a href="mailto:ceo@med-local.ru">ceo@med-local.ru</a>
+    </div>
+  </div>
+  <div class="fine">
+    <span>© 2026 ООО «Глобальные Медицинские Технологии» · 125047, г. Москва, 1-й Тверской-Ямской пер., д. 16, помещ. 1/п</span>
+    <span style="display:flex;gap:14px;flex-wrap:wrap"><a href="/privacy">Политика конфиденциальности</a><a href="/oferta">Публичная оферта</a><a href="/terms">Пользовательское соглашение</a></span>
+  </div>
+</div></footer>
+<a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg>
+  Написать в Telegram
+</a>
+<a class="float-btn max-btn" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer">
+  <img src="/images/max-icon.png" alt="MAX" width="22" height="22" style="border-radius:6px">
+  Написать в MAX
+</a>
+<script>
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';var cb=document.getElementById('cookie-consent-banner');if(cb)cb.style.display=document.getElementById('mob-menu').classList.contains('open')?'none':'';}
+</script>
+<script src="/cookie-consent.js" defer></script>
+</body>
+</html>
