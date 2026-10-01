@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>КТРУ и ОКПД2 в закупках медизделий: что разъяснил Минфин</title>
+<meta name="description" content="Письмо Минфина 2026: ОКПД2 из КТРУ не основание для отклонения заявки. Когда КТРУ нельзя дополнять, что с НКМИ и почему РРПП нужны баллы.">
+<link rel="canonical" href="https://med-local.ru/blog/ktru-okpd2-zakupki-medizdeliy-minfin-2026">
+<meta property="og:type" content="article">
+<meta property="og:title" content="КТРУ и ОКПД2 в закупках медизделий: что Минфин действительно разъяснил в 2026 году">
+<meta property="og:description" content="Письмо Минфина 2026: ОКПД2 из КТРУ не основание для отклонения заявки. Когда КТРУ нельзя дополнять, что с НКМИ и почему РРПП нужны баллы.">
+<meta property="og:url" content="https://med-local.ru/blog/ktru-okpd2-zakupki-medizdeliy-minfin-2026">
+<meta property="og:image" content="https://med-local.ru/og-image.png">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C232E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@700;800&family=JetBrains+Mono:wght@600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{
+ --graphite:#1C232E;--graphite-2:#27303E;--ink:#1C232E;--muted:#4A5568;
+ --blue:#3D6FB4;--cyan:#2FA8A0;--cyan-soft:#E4F4F3;--blue-soft:#E9F0FA;
+ --orange:#FF6B3D;--orange-soft:#FFE9DC;
+ --paper:#F6F7F9;--card:#FFFFFF;--line:#E5E8ED;
+ --body:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+ --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{max-width:100vw}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.mono{font-family:var(--mono)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:600;font-size:14.5px;border:none;transition:.18s;cursor:pointer}
+.btn.pri{background:var(--orange);color:#fff;box-shadow:0 10px 24px -10px rgba(255,107,61,.6)}
+.btn.pri:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn.gh{background:transparent;border:1.5px solid #fff;color:#fff}
+.btn.gh:hover{background:rgba(255,255,255,.1)}
+.btn.dark{background:var(--graphite);color:#fff}
+.btn.line-btn{background:#fff;border:1.5px solid var(--line);color:var(--ink)}
+.btn.line-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--cyan)}
+.tag::before{content:"";width:22px;height:2px;background:var(--cyan)}
+h1,h2,h3{line-height:1.15;margin:0}
+.h-xl{font-size:clamp(30px,4.6vw,52px);font-weight:800;letter-spacing:-1.2px}
+.h-l{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.8px}
+.h-m{font-size:19px;font-weight:700}
+.lead{font-size:17px;color:var(--muted);line-height:1.65}
+.sec{padding:74px 0}
+.sec.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:960px){.g3,.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+@media(max-width:620px){.g3,.g4,.g2{grid-template-columns:1fr}}
+@media(max-width:880px){.route{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:560px){.route{grid-template-columns:1fr!important}.route .st{padding:16px 0 0!important;border-bottom:1px solid var(--line);padding-bottom:16px!important;margin-bottom:8px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.kv{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.kv span{color:var(--muted)}.kv b{text-align:right}
+header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:22px;height:66px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:16.5px;letter-spacing:-.3px}
+.logo small{display:block;font-size:10px;font-weight:600;color:var(--muted);letter-spacing:1.6px;text-transform:uppercase}
+.nav a.lnk{font-size:14px;font-weight:500;color:var(--muted);transition:.15s;white-space:nowrap}
+.nav a.lnk:hover,.nav a.lnk.on{color:var(--ink)}
+.nav .sp{flex:1}
+@media(max-width:2000px){.nav a.lnk{display:none}}
+.hero{position:relative;background:linear-gradient(140deg,var(--graphite) 0%,#202b3c 60%,#1d3a45 100%);color:#fff;overflow:hidden}
+.hero .pcb{position:absolute;inset:0;opacity:.16;pointer-events:none}
+.hero .in{position:relative;padding:92px 0 86px}
+.hero .lead{color:#B9C2D0;max-width:640px}
+.hero .stats{display:flex;gap:38px;margin-top:42px;flex-wrap:wrap}
+.hero .stats b{font-size:26px;font-weight:800;display:block;letter-spacing:-.5px}
+.hero .stats span{font-size:12.5px;color:#8E99AB}
+.crumbs{font-size:12.5px;color:var(--muted);margin:18px 0 0}
+.crumbs b{color:var(--ink)}
+.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:8px}
+.route .st{position:relative;padding:20px 18px 0}
+.route .st::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+.route .st h3{font-size:15.5px;margin:8px 0 6px}
+.route .st p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+@media(max-width:880px){.route{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.route{grid-template-columns:1fr}}
+.svc{display:flex;flex-direction:column;gap:10px;position:relative;transition:.2s}
+.svc:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.svc .ic{width:44px;height:44px;border-radius:12px;background:var(--cyan-soft);color:var(--cyan);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:15px}
+.svc p{font-size:14px;color:var(--muted);margin:0;line-height:1.6;flex:1}
+.svc .go{font-size:13.5px;font-weight:700;color:var(--cyan)}
+.seg{border-left:3px solid var(--blue);padding:16px 20px;background:#fff;border-radius:0 14px 14px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.seg b{display:block;margin-bottom:5px}
+.seg p{font-size:13.5px;color:var(--muted);margin:0 0 8px;line-height:1.55}
+.seg .of{font-size:13px;font-weight:600;color:var(--cyan)}
+.law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
+.law b{display:block;margin-bottom:6px;font-size:14px}
+.warn{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#8B3A1E;line-height:1.65;margin:24px 0}
+.warn b{display:block;margin-bottom:6px;font-size:14px}
+.post{display:flex;flex-direction:column;gap:9px;transition:.2s}
+.post:hover{transform:translateY(-3px)}
+.post .rub{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)}
+.post h3{font-size:16.5px;line-height:1.35}
+.post p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.6}
+.post .cta-link{font-size:13px;font-weight:700;color:var(--orange)}
+.frm{display:grid;gap:13px}
+.frm label{font-size:12.5px;font-weight:600}
+.frm input,.frm select,.frm textarea{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:12px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.frm input:focus,.frm select:focus,.frm textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:620px){.f2{grid-template-columns:1fr}}
+.mag{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:var(--r);padding:30px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.mag b{font-size:19px;display:block;margin-bottom:6px}
+.mag p{color:#AFBAC9;font-size:14px;margin:0;max-width:520px}
+.mag .sp{flex:1}
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2}footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+.proof{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.proof .n{font-family:var(--mono);color:var(--cyan);font-weight:600;font-size:12.5px;padding-top:2px;white-space:nowrap}
+.steps li{margin-bottom:10px;line-height:1.6;font-size:14.5px}
+.lift{box-shadow:var(--sh)}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}
+.pain-item{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px}
+.pain-item h4{font-size:14px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.pain-item p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+.compare-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:14px}
+.compare-table th{background:var(--graphite);color:#fff;font-weight:600;padding:12px 16px;text-align:left}
+.compare-table td{padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink)}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table td.bad{color:#C0392B}
+.compare-table td.good{color:#1A7A6E;font-weight:600}
+.calc-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;margin-top:24px;box-shadow:var(--sh)}
+.calc-box h3{font-size:18px;font-weight:700;margin:0 0 20px}
+.form-row{margin-bottom:14px}
+.form-row label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;color:var(--ink)}
+.form-row select,.form-row input{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:10px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.form-row select:focus,.form-row input:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.calc-result{background:var(--cyan-soft);border:1px solid #BCE4E1;border-radius:11px;padding:18px;margin-top:16px;display:none}
+.calc-result.show{display:block}
+.calc-result h4{font-size:15px;font-weight:700;color:#1A7A6E;margin:0 0 6px}
+.calc-result p{font-size:13.5px;color:#2D7A72;margin:0}
+.related{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.related a{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan);transition:.15s}
+.related a:hover{border-color:var(--cyan)}
+
+/* Бургер-меню для мобильных */
+.burger{display:none;align-items:center;gap:8px;cursor:pointer;padding:6px 10px;background:#fff;border:1.5px solid var(--line);border-radius:10px;transition:.15s;z-index:200}
+.burger:hover{border-color:var(--cyan)}
+.burger-icon{display:flex;flex-direction:column;gap:5px}
+.burger-icon span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger-label{font-size:12.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+.burger.open .burger-icon span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open .burger-icon span:nth-child(2){opacity:0}
+.burger.open .burger-icon span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:680px){.burger{padding:4px;background:none;border:none;gap:0}.burger-label{display:none}}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:210;flex-direction:column}
+.mob-menu-links{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:70px 20px 16px}
+.mob-menu-cta{flex-shrink:0;display:flex;justify-content:center;padding:14px 24px 20px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+.mob-menu a:hover{color:var(--cyan)}
+@media(max-width:2000px){
+  .nav-links{display:none!important}
+  .burger{display:flex}
+  .nav{gap:12px}
+}
+/* Хлебные крошки */
+.crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:.15s}.crumbs a:hover{color:var(--cyan)}
+.crumbs span{color:var(--muted)}
+.crumbs b{color:var(--ink);font-weight:600}
+/* Таблицы на мобильных */
+@media(max-width:640px){
+  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .article-body table{display:block;overflow-x:auto}
+}
+/* Плавающая кнопка на мобильных */
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+.float-btn.max-btn{bottom:74px;background:#fff;box-shadow:0 8px 24px rgba(107,63,231,.25);color:var(--ink)}
+@media(max-width:768px){.float-btn{display:flex}}
+/* Состояния кнопок */
+.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.btn.pri:active{transform:translateY(0);filter:brightness(.95)}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+/* Единый подвал */
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2;transition:.15s}
+footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){footer .cols{grid-template-columns:1fr}}
+
+.header-icons{display:flex;align-items:center;gap:8px;margin-right:4px}
+.header-icons a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s}
+.header-icons a.tg-icon{background:#2FA8A0}
+.header-icons a.max-icon{background:transparent;padding:0}
+.header-icons a:hover{filter:brightness(1.1);transform:translateY(-1px)}
+@media(max-width:2000px){.header-icons{display:none}}
+.lang-switch{display:flex;align-items:center;gap:4px;margin-right:8px}
+.lang-switch a{font-size:12.5px;font-weight:700;padding:4px 8px;border-radius:6px;color:var(--muted);transition:.15s;text-decoration:none}
+.lang-switch a.active{background:var(--graphite);color:#fff}
+.mob-lang-switch{display:flex;align-items:center;gap:10px;margin-top:10px}
+.mob-lang-switch a{font-size:15px;font-weight:700;padding:8px 20px;border-radius:10px;color:var(--muted);background:var(--paper);border:1.5px solid var(--line)}
+.mob-lang-switch a.active{background:var(--graphite);color:#fff;border-color:var(--graphite)}
+@media(max-width:680px){.lang-switch{display:none}}
+.lang-switch a:hover:not(.active){color:var(--ink)}
+
+.article-body h2{font-size:22px;font-weight:800;margin:36px 0 14px;color:var(--ink)}
+.article-body h3{font-size:18px;font-weight:700;margin:28px 0 10px;color:var(--ink)}
+.article-body h4{font-size:16px;font-weight:700;margin:24px 0 8px;color:var(--ink)}
+.article-body p{font-size:15px;color:#3a4455;line-height:1.75;margin:0 0 16px}
+.article-body ul,.article-body ol{margin:0 0 16px 20px}
+.article-body li{font-size:15px;color:#3a4455;line-height:1.7;margin-bottom:6px}
+.article-body strong,.article-body b{color:var(--ink)}
+.article-body .law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:16px 20px;font-size:14px;color:#2D4F7E;line-height:1.65;margin:20px 0}
+.article-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-body th{background:var(--graphite);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+.article-body td{padding:10px 14px;border-bottom:1px solid var(--line);color:#3a4455}
+.article-body blockquote{border-left:3px solid var(--cyan);padding:8px 0 8px 18px;margin:20px 0;font-style:italic;color:var(--ink);font-weight:600}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.article-cta{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:16px;padding:28px 32px;margin:40px 0}
+.article-cta b{font-size:18px;display:block;margin-bottom:8px;color:#fff}
+.article-cta p{color:#AFBAC9;font-size:14px;margin:0 0 18px}
+.logo img{display:block;width:200px;height:48px;object-fit:contain}
+@media(max-width:768px){.logo img{width:170px;height:auto}}
+</style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DZXMBECL0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9DZXMBECL0");</script>
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"КТРУ и ОКПД2 в закупках медизделий: что Минфин действительно разъяснил в 2026 году","description":"Письмо Минфина 2026: ОКПД2 из КТРУ не основание для отклонения заявки. Когда КТРУ нельзя дополнять, что с НКМИ и почему РРПП нужны баллы.","url":"https://med-local.ru/blog/ktru-okpd2-zakupki-medizdeliy-minfin-2026","datePublished":"2026-10-01","dateModified":"2026-10-01","author":{"@type":"Person","name":"А.-Т. Танделов","url":"https://med-local.ru/about"},"publisher":{"@type":"Organization","name":"Инженерный центр локализации медицинских изделий","url":"https://med-local.ru","logo":{"@type":"ImageObject","url":"https://med-local.ru/logo.svg"}},"image":"https://med-local.ru/og-image.png","inLanguage":"ru","mainEntityOfPage":{"@type":"WebPage","@id":"https://med-local.ru/blog/ktru-okpd2-zakupki-medizdeliy-minfin-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Обязан ли заказчик использовать КТРУ при закупке медицинского изделия?","acceptedAnswer":{"@type":"Answer","text":"Да, если в каталоге есть позиция, соответствующая закупаемому товару. Нужно отличать ситуацию, когда позиции действительно нет или она не соответствует потребности, от ситуации, когда заказчику просто недостаточно предусмотренных ею характеристик."}},{"@type":"Question","name":"Можно ли добавить характеристики, которых нет в КТРУ?","acceptedAnswer":{"@type":"Answer","text":"По общему правилу — да, с обоснованием, если позиция содержит описание. Но при закупке с запретом или ограничением допуска иностранных товаров по ПП № 1875 подпункт «а» пункта 5 Правил использования КТРУ это запрещает; суды применяют этот запрет и к медицинскому оборудованию."}},{"@type":"Question","name":"Можно ли отклонить медицинское изделие из-за другого ОКПД2?","acceptedAnswer":{"@type":"Answer","text":"Нет. По позиции Минфина (письма от 11.06.2020 № 24-06-05/51015 и от 04.05.2026 № 24-06-09/37004) различие ОКПД2 в извещении и заявке не является основанием для отклонения заявки или отказа от заключения контракта. Оценивается соответствие товара описанию объекта закупки."}},{"@type":"Question","name":"Можно ли отклонить товар из-за другого кода НКМИ?","acceptedAnswer":{"@type":"Answer","text":"Само различие кода НКМИ не основание для отклонения, если характеристики предложенного оборудования соответствуют требованиям заказчика (совместное письмо Минздрава и ФАС от 14.10.2024). Но код вида может определять применимость национального режима, если он указан в позиции перечня ПП № 1875."}},{"@type":"Question","name":"Можно ли требовать совместимость с оборудованием, которое уже есть у заказчика?","acceptedAnswer":{"@type":"Answer","text":"Да. Суды и Минфин считают требование совместимости с имеющимися у заказчика оборудованием и программным обеспечением не дополнительной характеристикой товара, а условием эксплуатации — даже при закупке с ограничением по ПП № 1875. Но совместимость должна отражать реальную потребность."}},{"@type":"Question","name":"Гарантирует ли запись в РРПП допуск российского медицинского изделия?","acceptedAnswer":{"@type":"Answer","text":"Нет. Запись подтверждает происхождение продукции, но не заменяет проверку соответствия техническому заданию. Для позиций с балльной моделью ПП № 719 запись к тому же должна содержать совокупное количество баллов не ниже порога."}},{"@type":"Question","name":"Подтверждает ли регистрационное удостоверение российское происхождение?","acceptedAnswer":{"@type":"Answer","text":"Нет. РУ подтверждает государственную регистрацию и возможность обращения медицинского изделия. Российское происхождение для закупок подтверждается отдельно — реестровой записью."}},{"@type":"Question","name":"Что делать производителю, если ТЗ исключает его локализованное изделие?","acceptedAnswer":{"@type":"Answer","text":"Установить причину: обязательная ли это характеристика КТРУ, дополнительное требование заказчика, условие совместимости или иной параметр. Затем проверить, вправе ли заказчик был его добавить при действующей мере ПП № 1875, есть ли обоснование и правильно ли применён национальный режим. При признаках нарушения условия закупки можно обжаловать в ФАС до окончания срока подачи заявок."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://med-local.ru/"},{"@type":"ListItem","position":2,"name":"База знаний","item":"https://med-local.ru/blog"},{"@type":"ListItem","position":3,"name":"КТРУ и ОКПД2 в закупках медизделий: что Минфин","item":"https://med-local.ru/blog/ktru-okpd2-zakupki-medizdeliy-minfin-2026"}]}
+</script>
+</head>
+<body>
+<div class="mob-menu" id="mob-menu" onclick="if(event.target===event.currentTarget)toggleMenu()"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:max(18px,env(safe-area-inset-top));right:max(18px,env(safe-area-inset-right));background:none;border:none;cursor:pointer;padding:10px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="pointer-events:none"><path d="M5 5l14 14M19 5L5 19"/></svg></button><div class="mob-menu-links" onclick="if(event.target===event.currentTarget)toggleMenu()"><a href="/">Главная</a><a href="/about">О центре</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">База знаний</a><a href="/pricing">Стоимость</a><a href="/cases">Кейсы</a><a href="/glossary">Глоссарий</a><a href="/contacts">Контакты</a><div class="mob-lang-switch"><a href="#" class="active" onclick="toggleMenu()">RU</a><a href="/en">EN</a></div>
+  </div><div class="mob-menu-cta" onclick="if(event.target===event.currentTarget)toggleMenu()"><a href="/#lead" class="btn pri" style="margin-top:16px" onclick="toggleMenu()">Оценить проект</a></div></div>
+<header><div class="wrap nav">
+  <a class="logo" href="/" aria-label="Инженерный центр — на главную">
+  <img
+    src="/logo-full.svg"
+    alt="Инженерный центр — локализация медицинских изделий"
+    width="200"
+    height="48"
+    style="display:block;"
+  >
+</a>
+  <span class="sp"></span>
+  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk on" href="/blog">База знаний</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a><a class="lnk" href="/cases">Кейсы</a><a class="lnk" href="/glossary">Глоссарий</a><a class="lnk" href="/contacts">Контакты</a></div>
+  <div class="header-icons">
+    <a class="tg-icon" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer" title="Написать в Telegram" aria-label="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg></a>
+    <a class="max-icon" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer" title="Написать в MAX" aria-label="MAX"><img src="/images/max-icon.png" alt="MAX" width="26" height="26" style="border-radius:7px;display:block"></a>
+  </div>
+  <div class="lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
+  <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span class="burger-icon"><span></span><span></span><span></span></span><span class="burger-label">Меню</span></button>
+</div></header>
+
+<div class="wrap"><nav class="crumbs"><a href="/">Главная</a><span>›</span><a href="/blog">База знаний</a><span>›</span><b>КТРУ и ОКПД2 в закупках медизделий: что Минфин...</b></nav></div>
+<section style="background:#fff;border-bottom:1px solid var(--line)">
+  <div class="wrap" style="padding:48px 22px 36px;max-width:820px">
+    <a href="/blog" style="font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:20px">← Все статьи</a>
+    <span class="tag" style="display:inline-flex;margin-bottom:14px">ПП 1875 · КТРУ · Госзакупки</span>
+    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">КТРУ и ОКПД2 в закупках медизделий: что Минфин действительно разъяснил в 2026 году</h1>
+    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ</span>
+      <span>·</span>
+      <time datetime="2026-10-01">Опубликовано: 1 октября 2026</time>
+    </div>
+  </div>
+</section>
+<main>
+<section class="sec">
+  <div class="wrap" style="max-width:820px">
+    <div class="article-body">
+<div class="law"><b>Суть в четырёх предложениях.</b>Письмом от 04.05.2026 № 24-06-09/37004 Минфин подтвердил свою давнюю позицию: код ОКПД2 из справочной информации КТРУ не является описанием объекта закупки, а различие ОКПД2 в извещении и в заявке само по себе не основание для отклонения заявки или отказа от заключения контракта. Это не разрешение игнорировать КТРУ: подходящую позицию каталога заказчик обязан применять, а при действующем ограничении или запрете по ПП № 1875 суды прямо запрещают дополнять её своими характеристиками — в том числе для медицинского оборудования. Для локализованного производителя в письме есть второй важный вывод: если на продукцию распространяются балльные требования ПП № 719, реестровая запись должна содержать совокупное количество баллов, соответствующее установленному порогу. Российское происхождение и соответствие техническому заданию — две независимые проверки, и ни одна не заменяет другую.</div>
+
+<h2>Что именно разъяснил Минфин в мае 2026 года</h2>
+<p>Письмо Минфина России от 04.05.2026 № 24-06-09/37004 посвящено применению национального режима по ПП № 1875 и использованию КТРУ. Оно не только о медицинских изделиях, но для MedTech из него следуют три вывода.</p>
+<p><strong>Первый.</strong> Код ОКПД2, содержащийся в справочной информации позиции КТРУ, не образует описание объекта закупки в смысле статьи 33 Закона № 44-ФЗ и не входит в перечень обязательной информации, которую заказчик применяет при формировании извещения.</p>
+<p><strong>Второй.</strong> Различие кода ОКПД2, указанного заказчиком в извещении, и кода, указанного участником для предлагаемого товара, законом не предусмотрено как основание ни для отклонения заявки, ни для отказа в заключении контракта. При этом заявка должна содержать сведения о конкретном товаре, а его характеристики — соответствовать описанию объекта закупки.</p>
+<p><strong>Третий.</strong> Минфин отдельно рассмотрел подтверждение происхождения: когда в отношении продукции действуют балльные требования ПП № 719, реестровая запись из реестра российской промышленной продукции должна содержать сведения о совокупном количестве баллов за операции, выполненные в России, и эти значения должны соответствовать установленным порогам.</p>
+<p>Важно: первые два вывода — не новость. Тот же подход Минфин излагал ещё в письме от 11.06.2020 № 24-06-05/51015. В 2026 году его подтвердили применительно к новому национальному режиму; по имеющимся данным, аналогичную позицию затем высказал Минпромторг, а ФАС её поддержала.</p>
+<p>Условно:</p>
+<p><strong>КТРУ говорит, что закупаем и с какими обязательными характеристиками. ОКПД2 классифицирует товар. Это не одно и то же.</strong></p>
+<h2>Другой ОКПД2 — ещё не другой товар</h2>
+<p>Заказчик установил технические характеристики. Производитель предлагает зарегистрированное медицинское изделие, которое им соответствует, но в документах участника указан другой близкий код ОКПД2.</p>
+<p>Отклонить заявку только поэтому нельзя: комиссия оценивает соответствие товара описанию объекта закупки, а не совпадение классификационного кода.</p>
+<p><strong>В закупке приобретают товар с установленными характеристиками, а не код ОКПД2.</strong></p>
+<p>Но фраза «ОКПД2 вообще не важен» — такая же ошибка. Классификация по-прежнему определяет, какие правила применяются к закупке, в том числе какая мера национального режима действует.</p>
+<h2>Что в позиции КТРУ обязательно, а что — справочно</h2>
+<p>Если в каталоге есть позиция, соответствующая потребности заказчика, её нельзя проигнорировать. Правила использования КТРУ (ПП РФ от 08.02.2017 № 145) требуют применять обязательную информацию позиции:</p>
+<div style="overflow-x:auto"><table class="compare-table">
+<tr><th>Элемент позиции КТРУ</th><th>Роль</th></tr>
+<tr><td>Наименование</td><td>применяется обязательно</td></tr>
+<tr><td>Единица измерения</td><td>применяется при наличии</td></tr>
+<tr><td>Описание и характеристики</td><td>применяются при наличии</td></tr>
+<tr><td>ОКПД2</td><td>справочная информация</td></tr>
+<tr><td>Вид МИ (НКМИ)</td><td>справочная информация</td></tr>
+</table></div>
+<p>Из того, что ОКПД2 справочный, <strong>не следует</strong>, что справочна вся позиция. Если в ней установлены обязательные характеристики, заказчик не может заменить их собственным техническим заданием.</p>
+<p>Если позиция существует, но описания в ней нет, заказчик использует её обязательные элементы — наименование и единицу измерения — а характеристики формирует сам по статье 33 Закона № 44-ФЗ.</p>
+<p>Если подходящей позиции нет вообще, объект закупки описывается по статье 33 с самостоятельным определением применимого ОКПД2.</p>
+<p>Поэтому правильный вопрос — не «нашли ли мы что-то похожее в КТРУ?», а <strong>«есть ли позиция, которая действительно соответствует закупаемому товару, и содержит ли она обязательное описание?»</strong> Как на этом этапе ошибаются заказчики, мы подробно разбирали в статье <a href="/blog/lovushka-ktru" style="color:var(--cyan);font-weight:600">«Ловушка классификаторов в госзакупках»</a>.</p>
+<h2>Дополнительные характеристики: общее правило и главное исключение</h2>
+<p><strong>Общее правило.</strong> Пункт 5 Правил использования КТРУ позволяет заказчику указать дополнительные потребительские свойства, в том числе функциональные, технические, качественные и эксплуатационные характеристики, которых нет в позиции каталога. Если позиция содержит описание, такие характеристики нужно обосновать. Формулировок «необходимо заказчику» или «исходя из потребности медицинской организации» недостаточно: нужно объяснить, зачем параметр нужен для эксплуатации или клинической задачи.</p>
+<p><strong>Исключение.</strong> Подпункт «а» пункта 5 Правил прямо запрещает дополнять позицию КТРУ, когда при закупке применяются запрет или ограничение допуска иностранных товаров по ПП № 1875 для соответствующих позиций.</p>
+<p>И здесь для MedTech важна свежая судебная практика. Арбитражный суд Республики Хакасия (решение от 10.12.2025 по делу № А74-7791/2025) поддержал УФАС в споре о закупке систем непрерывного мониторинга глюкозы по позиции КТРУ 26.60.12.129-00000253. Код ОКПД2 26.60.12.129 указан в позиции 312 приложения № 2 к ПП № 1875. Заказчик установил преимущество вместо положенного ограничения и добавил характеристику «способ передачи данных». Суд указал:</p>
+<ul>
+<li>если код товара есть в перечне ПП № 1875, заказчик обязан применить именно ту меру, которая там указана;</li>
+<li>при действующем ограничении дополнять позицию КТРУ своими характеристиками нельзя — это нарушение подпункта «а» пункта 5 Правил;</li>
+<li>если позиция перечня содержит только код ОКПД2, ограничение распространяется на все медизделия с этим кодом независимо от кода вида; если в позиции указаны коды видов медизделий — нужно совпадение и по ОКПД2, и по коду вида.</li>
+</ul>
+<p>Вывод для производителя: <strong>для медицинского оборудования, закупаемого с ограничением по ПП № 1875, «дописать» к КТРУ параметр, под который проходит только одна модель, заказчик, как правило, не вправе.</strong> Это один из самых сильных аргументов при обжаловании избыточного ТЗ. Но применимость запрета всё равно проверяется по конкретной позиции перечня и конкретной мере.</p>
+<h2>Совместимость с существующей системой — не дополнительная характеристика</h2>
+<p>Есть и обратная сторона. В 2026 году заказчик закупал электрокардиографы по позиции КТРУ 26.60.12.111-00000025 с ограничением по ПП № 1875 и потребовал полной совместимости с уже используемой кардиологической информационной системой MUSE. Участник посчитал это нарушением подпункта «а» пункта 5 Правил КТРУ.</p>
+<p>УФАС признало жалобу необоснованной, суд поддержал заказчика (решение АС города Санкт-Петербурга и Ленинградской области от 25.06.2026 по делу № А56-43614/2026). Суд опирался на разъяснения Минфина: требование аппаратной и программной совместимости с имеющимся у заказчика оборудованием само по себе не относится к функциональным, техническим или качественным характеристикам товара в понимании правил КТРУ. Учтён и принцип приоритета интересов пациента по Закону № 323-ФЗ.</p>
+<p>Для медицинских организаций это важно: больнице нужен не просто аппарат, а аппарат, который работает внутри её инфраструктуры. Но принцип тот же — совместимость должна быть реальной эксплуатационной потребностью, а не способом оставить одного поставщика.</p>
+<h2>Код НКМИ: та же логика при проверке заявки</h2>
+<p>Для медицинских изделий есть ещё один классификатор — номенклатурная классификация медицинских изделий по видам.</p>
+<p>Совместное письмо Минздрава России и ФАС России от 14.10.2024 № 25-3/и/2-20326, № ТН/92615/24 разъясняет: код НКМИ не является характеристикой медицинского изделия, поэтому различие кода в заявке и в позиции КТРУ само по себе не основание для отклонения, <strong>если характеристики предложенного оборудования соответствуют требованиям заказчика</strong>.</p>
+<p><strong>Другой ОКПД2 ≠ автоматическое отклонение. Другой НКМИ ≠ автоматическое отклонение. Несоответствие обязательным характеристикам ТЗ — уже другой вопрос.</strong></p>
+<p>Но для национального режима код вида может быть решающим. Как показало дело № А74-7791/2025, если в позиции приложения к ПП № 1875 указаны коды видов медицинских изделий, мера применяется только при совпадении и ОКПД2, и кода вида. Один и тот же код играет разные роли на разных этапах:</p>
+<ul>
+<li><strong>при проверке заявки</strong> несовпадение кода само по себе не означает несоответствия товара;</li>
+<li><strong>при определении национального режима</strong> классификация определяет, применяется ли конкретная позиция ПП № 1875.</li>
+</ul>
+<p>Смешивать эти две проверки нельзя. Как это выглядит на конкретной номенклатуре, мы разбирали на примерах <a href="/blog/lovushka-ktru-aferez-trombocitov" style="color:var(--cyan);font-weight:600">наборов для афереза</a> и <a href="/blog/lovushka-ktru-sdvoennye-gemokonteynery" style="color:var(--cyan);font-weight:600">сдвоенных гемоконтейнеров</a>.</p>
+<h2>Главная ловушка: код не отклоняет заявку, но ошибка в классификации ломает закупку</h2>
+<p>Допустим, заказчик выбрал неверную классификацию и решил, что ПП № 1875 к товару не применяется. Закупка вышла без ограничения. Потом приходит российский производитель с локализованным изделием.</p>
+<p>Исправить это логикой «у российского товара правильный ОКПД2 — отклоним остальных» нельзя. Ошибка возникла раньше — при формировании закупки, и исправляется она обжалованием извещения, а не на этапе рассмотрения заявок.</p>
+<p>Именно поэтому ОКПД2 одновременно:</p>
+<ul>
+<li>не является самостоятельным основанием для отклонения заявки;</li>
+<li>остаётся ключевым ориентиром при подготовке закупки и выборе меры национального режима.</li>
+</ul>
+<p>Дело о мониторах глюкозы показывает связь наглядно: нарушения по КТРУ и по национальному режиму часто возникают одновременно. О том, как ограничение работает для медизделий, — в статье <a href="/blog/pp1875-vtoroy-lishniy" style="color:var(--cyan);font-weight:600">«Ограничение по ПП 1875 („второй лишний“)»</a>.</p>
+<h2>Где здесь ПП № 719 и РРПП</h2>
+<p>Изделие зарегистрировано, подходит под позицию КТРУ, соответствует ТЗ и производится в России. Достаточно ли этого, чтобы участвовать как российский товар? Не обязательно.</p>
+<div style="overflow-x:auto"><table class="compare-table">
+<tr><th>Инструмент</th><th>Что подтверждает</th></tr>
+<tr><td>Регистрационное удостоверение</td><td>возможность обращения медицинского изделия</td></tr>
+<tr><td>КТРУ</td><td>правила описания объекта закупки</td></tr>
+<tr><td>ОКПД2</td><td>классификацию продукции</td></tr>
+<tr><td>НКМИ</td><td>вид медицинского изделия</td></tr>
+<tr><td>ПП № 1875</td><td>меру национального режима в закупке</td></tr>
+<tr><td>ПП № 719 / РРПП</td><td>российское происхождение продукции</td></tr>
+</table></div>
+<p>Отсюда правило для локализованного MedTech: <strong>РУ, КТРУ, ОКПД2 и НКМИ не подтверждают российское происхождение.</strong> Его подтверждает <a href="/blog/eis-podtverzhdenie-proiskhozhdeniya" style="color:var(--cyan);font-weight:600">реестровая запись</a>, а для продукции с балльной моделью ПП № 719 — запись с указанием совокупного количества баллов не ниже порога. Это и подчеркнул Минфин в письме 2026 года.</p>
+<p>Для медицинских изделий без указания баллов в реестровой записи сейчас действует переходный порядок — до 30 ноября 2026 года. После этой даты запись без баллов может перестать подтверждать происхождение для позиций, переведённых на балльную модель. Подробнее — в статье <a href="/blog/pp1875-perehodnyi-period-30-noyabrya-2026" style="color:var(--cyan);font-weight:600">«Переходный период ПП № 1875 и медизделия»</a>.</p>
+<h2>Российский статус не гарантирует допуск</h2>
+<p>Обратная ошибка: предприятие прошло локализацию и получило запись в РРПП, но изделие не соответствует одной из обязательных характеристик ТЗ. Требовать допуска на основании российского происхождения нельзя.</p>
+<p><strong>РРПП подтверждает происхождение продукции, а не соответствие конкретному ТЗ.</strong></p>
+<ul>
+<li>российское происхождение даёт статус в национальном режиме;</li>
+<li>соответствие КТРУ и ТЗ определяет, отвечает ли товар требованиям закупки.</li>
+</ul>
+<p>Это параллельные проверки. Локализованное изделие может быть отклонено, если объективно не соответствует ТЗ. И наоборот: иностранное изделие может полностью соответствовать ТЗ, но к нему применяются последствия национального режима.</p>
+<h2>Почему это важно именно российскому производителю</h2>
+<p>Предприятие инвестировало в локализацию, российские компоненты, технологические операции, баллы и запись в РРПП. Затем выходит закупка, где:</p>
+<ul>
+<li>ТЗ сформировано так, что российское изделие не проходит по одному дополнительному параметру;</li>
+<li>или заказчик не применил подходящую позицию КТРУ;</li>
+<li>или неправильно определил меру национального режима.</li>
+</ul>
+<p>В результате инвестиции в локализацию сами по себе не обеспечивают доступ к закупке. Поэтому закупочную стратегию нельзя начинать с вопроса «есть ли у нас РРПП?». Проверять нужно цепочку целиком:</p>
+<p><strong>КТРУ → техническое задание → ОКПД2 → НКМИ → позиция ПП № 1875 → подтверждение российского происхождения.</strong></p>
+<h2>Три похожих сценария — три разных последствия</h2>
+<p>Российский производитель предлагает зарегистрированный аппарат с подтверждённым российским происхождением.</p>
+<ol>
+<li><strong>Аппарат соответствует ТЗ, но в документах производителя другой близкий ОКПД2.</strong> Само различие кода не основание для отклонения.</li>
+<li><strong>Аппарат с правильным ОКПД2 не соответствует обязательной характеристике ТЗ.</strong> РРПП не спасает: товар не соответствует описанию объекта закупки.</li>
+<li><strong>Аппарат соответствует ТЗ, но заказчик неверно определил меру ПП № 1875.</strong> Это вопрос корректности самой закупки, и решается он обжалованием извещения.</li>
+</ol>
+<h2>Что проверить производителю до подачи заявки</h2>
+<ol>
+<li><strong>Есть ли соответствующая позиция КТРУ.</strong> Не по совпадению нескольких цифр ОКПД2, а по фактическому соответствию закупаемому изделию.</li>
+<li><strong>Какие характеристики КТРУ обязательны.</strong> Сопоставить со своей моделью. Если товар не соответствует обязательному параметру, российское происхождение проблему не решит.</li>
+<li><strong>Что заказчик добавил сверх КТРУ.</strong> Проверить, допускалось ли это вообще: при ограничении или запрете по ПП № 1875 дополнительные характеристики, как правило, запрещены. Если допускалось — есть ли обоснование.</li>
+<li><strong>ОКПД2 и НКМИ.</strong> Различие кодов не означает отклонения, но определяет применимость национального режима.</li>
+<li><strong>Позиция ПП № 1875 и мера.</strong> Для медизделий недостаточно широкого ОКПД2 — нужно учитывать, указаны ли в позиции коды видов.</li>
+<li><strong>Реестровая запись.</strong> Подходит ли она для этой закупки, указаны ли баллы, если позиция переведена на балльную модель.</li>
+<li><strong>Соответствие ТЗ.</strong> Даже идеальная запись в РРПП не заменяет соответствия техническим характеристикам.</li>
+</ol>
+<h2>Если ТЗ фактически исключает российское изделие</h2>
+<p>Сам факт, что российское изделие не проходит ТЗ, ещё не нарушение: у заказчика может быть объективная клиническая или эксплуатационная потребность. Вопрос — можно ли её обосновать и вправе ли заказчик вообще было её добавлять.</p>
+<p>Основание проверить закупку возникает, если дополнительный параметр:</p>
+<ul>
+<li>отсутствует в позиции КТРУ, а закупка идёт с ограничением или запретом по ПП № 1875;</li>
+<li>не объяснён реальной клинической задачей;</li>
+<li>не связан с совместимостью или условиями эксплуатации;</li>
+<li>фактически оставляет одного производителя.</li>
+</ul>
+<p>Для производителя здесь два разных аргумента: <strong>закупочный</strong> — корректно ли сформировано описание объекта закупки, и <strong>локализационный</strong> — правильно ли применён национальный режим к российскому товару. Запись в РРПП важна для второго, но сама по себе не доказывает нарушение в первом.</p>
+<h2>Главный вывод</h2>
+<p>Разъяснения Минфина 2026 года не дают заказчику права свободно отходить от КТРУ. Их смысл уже: <strong>ОКПД2 из справочной информации КТРУ — не характеристика товара, и его несовпадение само по себе не основание для отклонения заявки.</strong> Для НКМИ действует такой же подход.</p>
+<p>Одновременно:</p>
+<ul>
+<li>подходящую позицию КТРУ нельзя игнорировать;</li>
+<li>обязательные характеристики КТРУ нужно соблюдать;</li>
+<li>при ограничении или запрете по ПП № 1875 дополнять позицию КТРУ, как правило, нельзя — в том числе для медицинского оборудования;</li>
+<li>совместимость с имеющейся системой заказчика — не дополнительная характеристика;</li>
+<li>российское происхождение подтверждается отдельно, а для балльных позиций — записью с баллами не ниже порога;</li>
+<li>запись в РРПП не доказывает соответствие ТЗ.</li>
+</ul>
+<p>Правильная схема для производителя:</p>
+<p><strong>РУ → идентификация изделия → КТРУ и ТЗ → ОКПД2/НКМИ → ПП № 1875 → ПП № 719/РРПП → условия конкретной закупки.</strong></p>
+<p>Ошибка на любом уровне способна лишить локализованный товар закупочного преимущества, даже если предыдущие этапы оформлены правильно.</p>
+
+<h2>Частые вопросы</h2>
+<div class="faq-item"><h4>Обязан ли заказчик использовать КТРУ при закупке медицинского изделия?</h4><p>Да, если в каталоге есть позиция, соответствующая закупаемому товару. Нужно отличать ситуацию, когда позиции действительно нет или она не соответствует потребности, от ситуации, когда заказчику просто недостаточно предусмотренных ею характеристик.</p></div>
+<div class="faq-item"><h4>Можно ли добавить характеристики, которых нет в КТРУ?</h4><p>По общему правилу — да, с обоснованием, если позиция содержит описание. Но при закупке с запретом или ограничением допуска иностранных товаров по ПП № 1875 подпункт «а» пункта 5 Правил использования КТРУ это запрещает; суды применяют этот запрет и к медицинскому оборудованию.</p></div>
+<div class="faq-item"><h4>Можно ли отклонить медицинское изделие из-за другого ОКПД2?</h4><p>Нет. По позиции Минфина (письма от 11.06.2020 № 24-06-05/51015 и от 04.05.2026 № 24-06-09/37004) различие ОКПД2 в извещении и заявке не является основанием для отклонения заявки или отказа от заключения контракта. Оценивается соответствие товара описанию объекта закупки.</p></div>
+<div class="faq-item"><h4>Можно ли отклонить товар из-за другого кода НКМИ?</h4><p>Само различие кода НКМИ не основание для отклонения, если характеристики предложенного оборудования соответствуют требованиям заказчика (совместное письмо Минздрава и ФАС от 14.10.2024). Но код вида может определять применимость национального режима, если он указан в позиции перечня ПП № 1875.</p></div>
+<div class="faq-item"><h4>Можно ли требовать совместимость с оборудованием, которое уже есть у заказчика?</h4><p>Да. Суды и Минфин считают требование совместимости с имеющимися у заказчика оборудованием и программным обеспечением не дополнительной характеристикой товара, а условием эксплуатации — даже при закупке с ограничением по ПП № 1875. Но совместимость должна отражать реальную потребность.</p></div>
+<div class="faq-item"><h4>Гарантирует ли запись в РРПП допуск российского медицинского изделия?</h4><p>Нет. Запись подтверждает происхождение продукции, но не заменяет проверку соответствия техническому заданию. Для позиций с балльной моделью ПП № 719 запись к тому же должна содержать совокупное количество баллов не ниже порога.</p></div>
+<div class="faq-item"><h4>Подтверждает ли регистрационное удостоверение российское происхождение?</h4><p>Нет. РУ подтверждает государственную регистрацию и возможность обращения медицинского изделия. Российское происхождение для закупок подтверждается отдельно — реестровой записью.</p></div>
+<div class="faq-item"><h4>Что делать производителю, если ТЗ исключает его локализованное изделие?</h4><p>Установить причину: обязательная ли это характеристика КТРУ, дополнительное требование заказчика, условие совместимости или иной параметр. Затем проверить, вправе ли заказчик был его добавить при действующей мере ПП № 1875, есть ли обоснование и правильно ли применён национальный режим. При признаках нарушения условия закупки можно обжаловать в ФАС до окончания срока подачи заявок.</p></div>
+
+<div class="article-cta">
+  <b>Нужна дорожная карта локализации медицинского изделия?</b>
+  <p>Локализация не заканчивается в момент получения записи в РРПП. Производителю, который работает с государственными заказчиками, важно заранее связать требования ПП № 719 с реальной закупочной классификацией изделия.</p>
+  <p>В рамках <a href="/localization" style="color:#fff;text-decoration:underline">дорожной карты локализации</a> ГМТ проверяет применимую позицию ПП № 719, ОКПД2 и НКМИ изделия, позиции ПП № 1875, подтверждение происхождения и баллы в реестровой записи, типовые КТРУ, по которым закупается продукция, характеристики российских и иностранных аналогов и риски, при которых локализованный товар не проходит типовые закупочные требования. Анализ закупок по вашей номенклатуре — в рамках услуги <a href="/analytics" style="color:#fff;text-decoration:underline">«Аналитика»</a>.</p>
+  <p>Результат — понимание того, <strong>как локализованное медицинское изделие будет фактически участвовать в закупках после получения РРПП</strong>.</p>
+  <a class="btn pri" href="mailto:info@med-local.ru?subject=КТРУ и нацрежим для медизделия">Проверить закупочный профиль изделия</a>
+</div>
+
+
+    </div>
+  </div>
+</section>
+<section style="background:#fff;border-top:1px solid var(--line);padding:20px 0"><div class="wrap" style="max-width:820px"><a href="/localization" style="font-size:14px;font-weight:700;color:var(--cyan)">Подробнее об этой услуге: Локализация медицинских изделий →</a> · <a href="/registration" style="font-size:14px;font-weight:700;color:var(--cyan);margin-left:16px">Регистрация медицинских изделий →</a></div></section><section style="background:var(--paper);border-top:1px solid var(--line);padding:32px 0">
+  <div class="wrap" style="max-width:820px">
+    <h3 style="font-size:16px;font-weight:700;margin:0 0 16px;color:var(--ink)">Читайте также</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><a href="/blog/lovushka-ktru" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Ловушка классификаторов в госзакупках</a><a href="/blog/lovushka-ktru-aferez-trombocitov" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Ловушка КТРУ для наборов афереза тромбоцитов</a><a href="/blog/pp1875-vtoroy-lishniy" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Ограничение по ПП 1875 («второй лишний»)</a><a href="/blog/eis-podtverzhdenie-proiskhozhdeniya" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Подтверждение происхождения товара в ЕИС</a><a href="/blog/pp1875-perehodnyi-period-30-noyabrya-2026" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">ПП 1875: что успеть до 30 ноября 2026 года</a><a href="/localization" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Локализация медицинских изделий</a></div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div><b>Инженерный центр локализации медицинских изделий</b>
+      <p style="font-size:13px;line-height:1.65;margin:0 0 14px;color:#97A1B2">Локализация производства медицинских изделий в России. От&nbsp;анализа ниши до регистрационного удостоверения.</p>
+      <a href="tel:+79853169104">+7 985 316-91-04 (Россия)</a>
+      <a href="tel:+79888777295">+7 988 877-72-95 (Россия)</a>
+      <a href="tel:+79888777295">MAX: +7 988 877-72-95</a>
+      <a href="tel:+77021394489">+7 702 139-44-89 (Казахстан)</a>
+      <a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a>
+      <a href="https://t.me/tandelovtat" style="color:#2FA8A0" target="_blank" rel="noopener noreferrer">Telegram: @tandelovtat</a>
+    </div>
+    <div><b>Услуги</b>
+      <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a>
+      <a href="/development">Разработка</a><a href="/production">Производство</a>
+      <a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a>
+    </div>
+    <div><b>Компания</b>
+      <a href="/cases">Кейсы</a><a href="/pricing">Стоимость</a><a href="/blog">База знаний</a>
+      <a href="/contacts">Контакты</a><a href="/glossary">Глоссарий</a><a href="/privacy">Политика ПДн</a>
+    </div>
+    <div><b>Контакты</b>
+      <a href="mailto:info@med-local.ru">info@med-local.ru</a>
+      <a href="mailto:sales@med-local.ru">sales@med-local.ru</a>
+      <a href="mailto:marketing@med-local.ru">marketing@med-local.ru</a>
+      <a href="mailto:ceo@med-local.ru">ceo@med-local.ru</a>
+    </div>
+  </div>
+  <div class="fine">
+    <span>© 2026 ООО «Глобальные Медицинские Технологии» · 125047, г. Москва, 1-й Тверской-Ямской пер., д. 16, помещ. 1/п</span>
+    <span style="display:flex;gap:14px;flex-wrap:wrap"><a href="/privacy">Политика конфиденциальности</a><a href="/oferta">Публичная оферта</a><a href="/terms">Пользовательское соглашение</a></span>
+  </div>
+</div></footer>
+<a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg>
+  Написать в Telegram
+</a>
+<a class="float-btn max-btn" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer">
+  <img src="/images/max-icon.png" alt="MAX" width="22" height="22" style="border-radius:6px">
+  Написать в MAX
+</a>
+<script>
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';var cb=document.getElementById('cookie-consent-banner');if(cb)cb.style.display=document.getElementById('mob-menu').classList.contains('open')?'none':'';}
+</script>
+<script src="/cookie-consent.js" defer></script>
+</body>
+</html>
