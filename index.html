@@ -78,6 +78,11 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdro
 .hero .stats{display:flex;gap:38px;margin-top:42px;flex-wrap:wrap}
 .hero .stats b{font-size:26px;font-weight:800;display:block;letter-spacing:-.5px}
 .hero .stats span{font-size:12.5px;color:#8E99AB}
+.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:36px;align-items:center}
+.hero-media img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:var(--r);box-shadow:var(--sh);display:block}
+.hero-grid h1{font-size:clamp(28px,3vw,42px)}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:28px}.hero-grid h1{font-size:clamp(28px,7vw,40px)}}
+.hero-text .stats-row{gap:18px 30px!important;margin-top:30px!important}
 .crumbs{font-size:12.5px;color:var(--muted);margin:18px 0 0}
 .crumbs b{color:var(--ink)}
 .route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:8px}
@@ -328,7 +333,9 @@ gtag("config", "G-9DZXMBECL0");
   </g>
   <g fill="#2FA8A0"><circle cx="300" cy="120" r="5"/><circle cx="640" cy="140" r="5"/><circle cx="740" cy="290" r="5"/></g>
 </svg>
-  <div class="wrap" style="position:relative;padding:92px 22px 86px">
+  <div class="wrap" style="position:relative;padding:68px 22px 64px">
+    <div class="hero-grid">
+    <div class="hero-text">
     <span class="tag" style="color:#5BC9C1">Инженерный центр · Москва</span>
     <h1 class="h-xl" style="margin:18px 0 20px;max-width:880px">От импортного аналога или идеи — до российского медицинского изделия, готового к производству и регистрации</h1>
     <p class="lead" style="color:#B9C2D0;max-width:640px">Локализация производства медицинских изделий в России: анализ рынка и изделия, законный реверс-инжиниринг, разработка электроники и корпусов, производственный маршрут, техническая документация и регистрация в Росздравнадзоре — одним связанным проектом.</p>
@@ -336,13 +343,18 @@ gtag("config", "G-9DZXMBECL0");
       <a class="btn pri" href="#lead">Получить оценку локализации</a>
       <a class="btn gh" href="/localization">Маршрут локализации</a>
     </div>
-    <div style="display:flex;gap:38px;margin-top:42px;flex-wrap:wrap">
+    <div class="stats-row" style="display:flex;gap:38px;margin-top:42px;flex-wrap:wrap">
       <div><b style="font-size:20px;font-weight:800;display:block;letter-spacing:-.5px">МИ + ИВД</b><span style="font-size:12.5px;color:#8E99AB">изделия, приборы, расходники</span></div>
       <div><b style="font-size:20px;font-weight:800;display:block;letter-spacing:-.5px">ПП 719 · СТ-1</b><span style="font-size:12.5px;color:#8E99AB">статус российской продукции</span></div>
       <div><b style="font-size:20px;font-weight:800;display:block;letter-spacing:-.5px">РЗН · ЕАЭС</b><span style="font-size:12.5px;color:#8E99AB">регистрационный маршрут</span></div>
       <div><b style="font-size:20px;font-weight:800;display:block;letter-spacing:-.5px">ISO 13485</b><span style="font-size:12.5px;color:#8E99AB">проектирование под СМК</span></div>
     </div>
     <a href="#services" style="display:inline-flex;align-items:center;gap:6px;margin-top:32px;font-size:13px;font-weight:600;color:#5BC9C1;text-decoration:none">Смотреть, что мы делаем ↓</a>
+    </div>
+    <div class="hero-media">
+      <img src="/images/hero/hero-lab.jpg" srcset="/images/hero/hero-lab-800.jpg 800w, /images/hero/hero-lab-1200.jpg 1200w, /images/hero/hero-lab.jpg 1600w" sizes="(max-width: 900px) 100vw, 45vw" width="1600" height="900" alt="Инженерная лаборатория: испытательный стенд и плата медицинского изделия на осциллографе" loading="eager" fetchpriority="high" decoding="async">
+    </div>
+    </div>
   </div>
 </section>
 
