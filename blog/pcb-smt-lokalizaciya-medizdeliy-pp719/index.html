@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Китайская PCB и российский SMT: баллы по ПП 719</title>
+<meta name="description" content="Сколько баллов даёт российский SMT при импортной печатной плате по ПП № 719. PCB, PCBA, компоненты, прошивка и EMS-подрядчик на примерах УЗИ и ИВЛ.">
+<link rel="canonical" href="https://med-local.ru/blog/pcb-smt-lokalizaciya-medizdeliy-pp719">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Китайская PCB + российский SMT: сколько баллов это реально даёт по ПП №719">
+<meta property="og:description" content="Сколько баллов даёт российский SMT при импортной печатной плате по ПП № 719. PCB, PCBA, компоненты, прошивка и EMS-подрядчик на примерах УЗИ и ИВЛ.">
+<meta property="og:url" content="https://med-local.ru/blog/pcb-smt-lokalizaciya-medizdeliy-pp719">
+<meta property="og:image" content="https://med-local.ru/og-image.png">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C232E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@700;800&family=JetBrains+Mono:wght@600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{
+ --graphite:#1C232E;--graphite-2:#27303E;--ink:#1C232E;--muted:#4A5568;
+ --blue:#3D6FB4;--cyan:#2FA8A0;--cyan-soft:#E4F4F3;--blue-soft:#E9F0FA;
+ --orange:#FF6B3D;--orange-soft:#FFE9DC;
+ --paper:#F6F7F9;--card:#FFFFFF;--line:#E5E8ED;
+ --body:'Onest',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+ --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{max-width:100vw}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.mono{font-family:var(--mono)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:600;font-size:14.5px;border:none;transition:.18s;cursor:pointer}
+.btn.pri{background:var(--orange);color:#fff;box-shadow:0 10px 24px -10px rgba(255,107,61,.6)}
+.btn.pri:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn.gh{background:transparent;border:1.5px solid #fff;color:#fff}
+.btn.gh:hover{background:rgba(255,255,255,.1)}
+.btn.dark{background:var(--graphite);color:#fff}
+.btn.line-btn{background:#fff;border:1.5px solid var(--line);color:var(--ink)}
+.btn.line-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--cyan)}
+.tag::before{content:"";width:22px;height:2px;background:var(--cyan)}
+h1,h2,h3{line-height:1.15;margin:0}
+.h-xl{font-size:clamp(30px,4.6vw,52px);font-weight:800;letter-spacing:-1.2px}
+.h-l{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.8px}
+.h-m{font-size:19px;font-weight:700}
+.lead{font-size:17px;color:var(--muted);line-height:1.65}
+.sec{padding:74px 0}
+.sec.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:960px){.g3,.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+@media(max-width:620px){.g3,.g4,.g2{grid-template-columns:1fr}}
+@media(max-width:880px){.route{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:560px){.route{grid-template-columns:1fr!important}.route .st{padding:16px 0 0!important;border-bottom:1px solid var(--line);padding-bottom:16px!important;margin-bottom:8px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.kv{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.kv span{color:var(--muted)}.kv b{text-align:right}
+header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:22px;height:66px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:16.5px;letter-spacing:-.3px}
+.logo small{display:block;font-size:10px;font-weight:600;color:var(--muted);letter-spacing:1.6px;text-transform:uppercase}
+.nav a.lnk{font-size:14px;font-weight:500;color:var(--muted);transition:.15s;white-space:nowrap}
+.nav a.lnk:hover,.nav a.lnk.on{color:var(--ink)}
+.nav .sp{flex:1}
+@media(max-width:2000px){.nav a.lnk{display:none}}
+.hero{position:relative;background:linear-gradient(140deg,var(--graphite) 0%,#202b3c 60%,#1d3a45 100%);color:#fff;overflow:hidden}
+.hero .pcb{position:absolute;inset:0;opacity:.16;pointer-events:none}
+.hero .in{position:relative;padding:92px 0 86px}
+.hero .lead{color:#B9C2D0;max-width:640px}
+.hero .stats{display:flex;gap:38px;margin-top:42px;flex-wrap:wrap}
+.hero .stats b{font-size:26px;font-weight:800;display:block;letter-spacing:-.5px}
+.hero .stats span{font-size:12.5px;color:#8E99AB}
+.crumbs{font-size:12.5px;color:var(--muted);margin:18px 0 0}
+.crumbs b{color:var(--ink)}
+.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:8px}
+.route .st{position:relative;padding:20px 18px 0}
+.route .st::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+.route .st h3{font-size:15.5px;margin:8px 0 6px}
+.route .st p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+@media(max-width:880px){.route{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.route{grid-template-columns:1fr}}
+.svc{display:flex;flex-direction:column;gap:10px;position:relative;transition:.2s}
+.svc:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.svc .ic{width:44px;height:44px;border-radius:12px;background:var(--cyan-soft);color:var(--cyan);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:15px}
+.svc p{font-size:14px;color:var(--muted);margin:0;line-height:1.6;flex:1}
+.svc .go{font-size:13.5px;font-weight:700;color:var(--cyan)}
+.seg{border-left:3px solid var(--blue);padding:16px 20px;background:#fff;border-radius:0 14px 14px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.seg b{display:block;margin-bottom:5px}
+.seg p{font-size:13.5px;color:var(--muted);margin:0 0 8px;line-height:1.55}
+.seg .of{font-size:13px;font-weight:600;color:var(--cyan)}
+.law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
+.law b{display:block;margin-bottom:6px;font-size:14px}
+.warn{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#8B3A1E;line-height:1.65;margin:24px 0}
+.warn b{display:block;margin-bottom:6px;font-size:14px}
+.post{display:flex;flex-direction:column;gap:9px;transition:.2s}
+.post:hover{transform:translateY(-3px)}
+.post .rub{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)}
+.post h3{font-size:16.5px;line-height:1.35}
+.post p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.6}
+.post .cta-link{font-size:13px;font-weight:700;color:var(--orange)}
+.frm{display:grid;gap:13px}
+.frm label{font-size:12.5px;font-weight:600}
+.frm input,.frm select,.frm textarea{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:12px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.frm input:focus,.frm select:focus,.frm textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:620px){.f2{grid-template-columns:1fr}}
+.mag{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:var(--r);padding:30px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.mag b{font-size:19px;display:block;margin-bottom:6px}
+.mag p{color:#AFBAC9;font-size:14px;margin:0;max-width:520px}
+.mag .sp{flex:1}
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2}footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+.proof{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.proof .n{font-family:var(--mono);color:var(--cyan);font-weight:600;font-size:12.5px;padding-top:2px;white-space:nowrap}
+.steps li{margin-bottom:10px;line-height:1.6;font-size:14.5px}
+.lift{box-shadow:var(--sh)}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}
+.pain-item{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px}
+.pain-item h4{font-size:14px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.pain-item p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+.compare-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:14px}
+.compare-table th{background:var(--graphite);color:#fff;font-weight:600;padding:12px 16px;text-align:left}
+.compare-table td{padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink)}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table td.bad{color:#C0392B}
+.compare-table td.good{color:#1A7A6E;font-weight:600}
+.calc-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;margin-top:24px;box-shadow:var(--sh)}
+.calc-box h3{font-size:18px;font-weight:700;margin:0 0 20px}
+.form-row{margin-bottom:14px}
+.form-row label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;color:var(--ink)}
+.form-row select,.form-row input{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:10px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none;transition:.15s}
+.form-row select:focus,.form-row input:focus{border-color:var(--cyan);box-shadow:0 0 0 4px var(--cyan-soft)}
+.calc-result{background:var(--cyan-soft);border:1px solid #BCE4E1;border-radius:11px;padding:18px;margin-top:16px;display:none}
+.calc-result.show{display:block}
+.calc-result h4{font-size:15px;font-weight:700;color:#1A7A6E;margin:0 0 6px}
+.calc-result p{font-size:13.5px;color:#2D7A72;margin:0}
+.related{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.related a{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--cyan);transition:.15s}
+.related a:hover{border-color:var(--cyan)}
+
+/* Бургер-меню для мобильных */
+.burger{display:none;align-items:center;gap:8px;cursor:pointer;padding:6px 10px;background:#fff;border:1.5px solid var(--line);border-radius:10px;transition:.15s;z-index:200}
+.burger:hover{border-color:var(--cyan)}
+.burger-icon{display:flex;flex-direction:column;gap:5px}
+.burger-icon span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger-label{font-size:12.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+.burger.open .burger-icon span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open .burger-icon span:nth-child(2){opacity:0}
+.burger.open .burger-icon span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:680px){.burger{padding:4px;background:none;border:none;gap:0}.burger-label{display:none}}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:210;flex-direction:column}
+.mob-menu-links{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:70px 20px 16px}
+.mob-menu-cta{flex-shrink:0;display:flex;justify-content:center;padding:14px 24px 20px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+.mob-menu a:hover{color:var(--cyan)}
+@media(max-width:2000px){
+  .nav-links{display:none!important}
+  .burger{display:flex}
+  .nav{gap:12px}
+}
+/* Хлебные крошки */
+.crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.crumbs a{color:var(--muted);transition:.15s}.crumbs a:hover{color:var(--cyan)}
+.crumbs span{color:var(--muted)}
+.crumbs b{color:var(--ink);font-weight:600}
+/* Таблицы на мобильных */
+@media(max-width:640px){
+  .compare-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .article-body table{display:block;overflow-x:auto}
+}
+/* Плавающая кнопка на мобильных */
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+.float-btn.max-btn{bottom:74px;background:#fff;box-shadow:0 8px 24px rgba(107,63,231,.25);color:var(--ink)}
+@media(max-width:768px){.float-btn{display:flex}}
+/* Состояния кнопок */
+.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.btn.pri:active{transform:translateY(0);filter:brightness(.95)}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+/* Единый подвал */
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2;transition:.15s}
+footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){footer .cols{grid-template-columns:1fr}}
+
+.header-icons{display:flex;align-items:center;gap:8px;margin-right:4px}
+.header-icons a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s}
+.header-icons a.tg-icon{background:#2FA8A0}
+.header-icons a.max-icon{background:transparent;padding:0}
+.header-icons a:hover{filter:brightness(1.1);transform:translateY(-1px)}
+@media(max-width:2000px){.header-icons{display:none}}
+.lang-switch{display:flex;align-items:center;gap:4px;margin-right:8px}
+.lang-switch a{font-size:12.5px;font-weight:700;padding:4px 8px;border-radius:6px;color:var(--muted);transition:.15s;text-decoration:none}
+.lang-switch a.active{background:var(--graphite);color:#fff}
+.mob-lang-switch{display:flex;align-items:center;gap:10px;margin-top:10px}
+.mob-lang-switch a{font-size:15px;font-weight:700;padding:8px 20px;border-radius:10px;color:var(--muted);background:var(--paper);border:1.5px solid var(--line)}
+.mob-lang-switch a.active{background:var(--graphite);color:#fff;border-color:var(--graphite)}
+@media(max-width:680px){.lang-switch{display:none}}
+.lang-switch a:hover:not(.active){color:var(--ink)}
+
+.article-body h2{font-size:22px;font-weight:800;margin:36px 0 14px;color:var(--ink)}
+.article-body h3{font-size:18px;font-weight:700;margin:28px 0 10px;color:var(--ink)}
+.article-body h4{font-size:16px;font-weight:700;margin:24px 0 8px;color:var(--ink)}
+.article-body p{font-size:15px;color:#3a4455;line-height:1.75;margin:0 0 16px}
+.article-body ul,.article-body ol{margin:0 0 16px 20px}
+.article-body li{font-size:15px;color:#3a4455;line-height:1.7;margin-bottom:6px}
+.article-body strong,.article-body b{color:var(--ink)}
+.article-body .law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:16px 20px;font-size:14px;color:#2D4F7E;line-height:1.65;margin:20px 0}
+.article-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-body th{background:var(--graphite);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+.article-body td{padding:10px 14px;border-bottom:1px solid var(--line);color:#3a4455}
+.article-body blockquote{border-left:3px solid var(--cyan);padding:8px 0 8px 18px;margin:20px 0;font-style:italic;color:var(--ink);font-weight:600}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.article-cta{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:16px;padding:28px 32px;margin:40px 0}
+.article-cta b{font-size:18px;display:block;margin-bottom:8px;color:#fff}
+.article-cta p{color:#AFBAC9;font-size:14px;margin:0 0 18px}
+.logo img{display:block;width:200px;height:48px;object-fit:contain}
+@media(max-width:768px){.logo img{width:170px;height:auto}}
+@media(max-width:374px){header .wrap.nav{padding-left:14px;padding-right:14px;gap:8px}header .logo img{width:150px}header .nav .btn.pri{padding:8px 10px;font-size:12.5px;line-height:1.2}}
+</style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DZXMBECL0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9DZXMBECL0");</script>
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Китайская PCB + российский SMT: сколько баллов это реально даёт по ПП №719","description":"Сколько баллов даёт российский SMT при импортной печатной плате по ПП № 719. PCB, PCBA, компоненты, прошивка и EMS-подрядчик на примерах УЗИ и ИВЛ.","url":"https://med-local.ru/blog/pcb-smt-lokalizaciya-medizdeliy-pp719","datePublished":"2026-10-05","dateModified":"2026-10-05","author":{"@type":"Person","name":"А.-Т. Танделов","url":"https://med-local.ru/about"},"publisher":{"@type":"Organization","name":"Инженерный центр локализации медицинских изделий","url":"https://med-local.ru","logo":{"@type":"ImageObject","url":"https://med-local.ru/logo.svg"}},"image":"https://med-local.ru/og-image.png","inLanguage":"ru","mainEntityOfPage":{"@type":"WebPage","@id":"https://med-local.ru/blog/pcb-smt-lokalizaciya-medizdeliy-pp719"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Сколько баллов даёт российская печатная плата по ПП №719?","acceptedAnswer":{"@type":"Answer","text":"Универсального значения нет. Количество баллов определяется конкретной позицией конечного изделия в ПП №719. Например, для УЗИ отдельные печатные платы могут давать 5–10 баллов, но эти значения нельзя переносить на другое медицинское оборудование."}},{"@type":"Question","name":"Китайская PCB с российским SMT считается российской?","acceptedAnswer":{"@type":"Answer","text":"Не автоматически. Российский монтаж не меняет место изготовления bare PCB. При этом сам SMT может быть отдельным балльным критерием или обязательным условием — в зависимости от конечного медицинского изделия."}},{"@type":"Question","name":"Сколько баллов даёт SMT-монтаж в России для УЗИ?","acceptedAnswer":{"@type":"Answer","text":"Для позиции УЗИ монтаж всех электронных компонентов на печатную плату с количеством менее 20 компонентов оценивается в 8 баллов за электронный модуль, а с количеством более 20 — в 11 баллов за модуль. Нужно проверять выполнение полной формулировки критерия для конкретной производственной схемы."}},{"@type":"Question","name":"Нужно ли использовать только российские электронные компоненты?","acceptedAnswer":{"@type":"Answer","text":"Единого требования для всех медицинских изделий нет. Для УЗИ баллы за активные программируемые и пассивные компоненты находятся в блоке составных частей электронных модулей, изготовленных в РФ. Поэтому включать баллы за импортные MCU, FPGA, резисторы или конденсаторы только на основании российского SMT не следует."}},{"@type":"Question","name":"Даёт ли прошивка платы баллы?","acceptedAnswer":{"@type":"Answer","text":"Для позиции УЗИ установка встроенного программного обеспечения при изготовлении программируемого электронного модуля даёт 5 баллов за модуль. Это баллы за технологическую операцию установки ПО, а не автоматическое признание firmware российским."}},{"@type":"Question","name":"Обязательно ли иметь собственную SMT-линию?","acceptedAnswer":{"@type":"Answer","text":"ПП №719 допускает собственную или контрактную научно-производственную базу. Поэтому в проекте может использоваться российский EMS-подрядчик. Но фактическое выполнение заявляемых операций на территории РФ и связь изготовленных PCBA с конечным изделием должны подтверждаться документально."}},{"@type":"Question","name":"Нужен ли стерильный цех для производства PCB медицинского изделия?","acceptedAnswer":{"@type":"Answer","text":"Универсального требования производить PCB или выполнять SMT для медицинского оборудования в стерильных условиях ПП №719 не устанавливает. Требования к производственной среде определяются конкретным изделием, технологическим процессом, системой менеджмента качества и применимыми стандартами."}},{"@type":"Question","name":"Даёт ли запись поставщика платы в реестре радиоэлектронной продукции баллы медицинскому изделию?","acceptedAnswer":{"@type":"Answer","text":"Сама по себе — нет. Баллы конечного медицинского изделия определяются его позицией в ПП №719. Реестровый статус поставщика нельзя автоматически переводить в баллы конечного изделия."}},{"@type":"Question","name":"Что означает требование 100% российского монтажа для ИВЛ?","acceptedAnswer":{"@type":"Answer","text":"ПП №719 требует монтажа электронных компонентов на печатные платы в России в объёме 100%. Это обязательное условие, а не источник баллов. При этом текст нормы не определяет универсально, как квалифицировать готовые SOM/COM, Wi-Fi-модули, SSD и другие электронные узлы, поэтому для сложного BOM этот вопрос нужно прорабатывать до фиксации локализационной модели."}},{"@type":"Question","name":"Что нужно прислать для расчёта баллов PCB/PCBA?","acceptedAnswer":{"@type":"Answer","text":"Минимально — ОКПД2 конечного изделия, BOM, перечень электронных модулей, происхождение bare PCB и компонентов, схема SMT/THT, сведения о firmware и текущая производственная цепочка. После этого можно сопоставить каждую составную часть и операцию с критериями ПП №719."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://med-local.ru/"},{"@type":"ListItem","position":2,"name":"База знаний","item":"https://med-local.ru/blog"},{"@type":"ListItem","position":3,"name":"Китайская PCB + российский SMT: сколько баллов","item":"https://med-local.ru/blog/pcb-smt-lokalizaciya-medizdeliy-pp719"}]}
+</script>
+</head>
+<body>
+<div class="mob-menu" id="mob-menu" onclick="if(event.target===event.currentTarget)toggleMenu()"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:max(18px,env(safe-area-inset-top));right:max(18px,env(safe-area-inset-right));background:none;border:none;cursor:pointer;padding:10px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="pointer-events:none"><path d="M5 5l14 14M19 5L5 19"/></svg></button><div class="mob-menu-links" onclick="if(event.target===event.currentTarget)toggleMenu()"><a href="/">Главная</a><a href="/about">О центре</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">База знаний</a><a href="/pricing">Стоимость</a><a href="/cases">Кейсы</a><a href="/glossary">Глоссарий</a><a href="/contacts">Контакты</a><div class="mob-lang-switch"><a href="#" class="active" onclick="toggleMenu()">RU</a><a href="/en">EN</a></div>
+  </div><div class="mob-menu-cta" onclick="if(event.target===event.currentTarget)toggleMenu()"><a href="/#lead" class="btn pri" style="margin-top:16px" onclick="toggleMenu()">Оценить проект</a></div></div>
+<header><div class="wrap nav">
+  <a class="logo" href="/" aria-label="Инженерный центр — на главную">
+  <img
+    src="/logo-full.svg"
+    alt="Инженерный центр — локализация медицинских изделий"
+    width="200"
+    height="48"
+    style="display:block;"
+  >
+</a>
+  <span class="sp"></span>
+  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk on" href="/blog">База знаний</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a><a class="lnk" href="/cases">Кейсы</a><a class="lnk" href="/glossary">Глоссарий</a><a class="lnk" href="/contacts">Контакты</a></div>
+  <div class="header-icons">
+    <a class="tg-icon" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer" title="Написать в Telegram" aria-label="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg></a>
+    <a class="max-icon" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer" title="Написать в MAX" aria-label="MAX"><img src="/images/max-icon.png" alt="MAX" width="26" height="26" style="border-radius:7px;display:block"></a>
+  </div>
+  <div class="lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
+  <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span class="burger-icon"><span></span><span></span><span></span></span><span class="burger-label">Меню</span></button>
+</div></header>
+
+<div class="wrap"><nav class="crumbs"><a href="/">Главная</a><span>›</span><a href="/blog">База знаний</a><span>›</span><b>Китайская PCB + российский SMT: сколько баллов...</b></nav></div>
+<section style="background:#fff;border-bottom:1px solid var(--line)">
+  <div class="wrap" style="padding:48px 22px 36px;max-width:820px">
+    <a href="/blog" style="font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:20px">← Все статьи</a>
+    <span class="tag" style="display:inline-flex;margin-bottom:14px">ПП 719 · Баллы · Электроника</span>
+    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">Китайская PCB + российский SMT: сколько баллов это реально даёт по ПП №719</h1>
+    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ</span>
+      <span>·</span>
+      <time datetime="2026-10-05">Опубликовано: 5 октября 2026</time>
+    </div>
+  </div>
+</section>
+<main>
+<section class="sec">
+  <div class="wrap" style="max-width:820px">
+    <div class="article-body">
+<div class="law"><b>Суть в четырёх предложениях.</b>В разделе VII ПП №719 нет единого правила «российская печатная плата = X баллов»: для одного медицинского изделия отдельно учитываются происхождение конкретных плат и операция монтажа, для другого — «платы в сборе», а для некоторых позиций 100%-й монтаж электронных компонентов в России вообще не даёт баллов, а является обязательным условием. Китайская несмонтированная плата (bare PCB) после российского SMT-монтажа не становится российской платой, но сама операция монтажа может дать самостоятельные баллы — для УЗИ это 8 или 11 баллов за электронный модуль. Для ИВЛ российский монтаж всех компонентов — обязательное условие, а 25 баллов за «платы в сборе» — отдельный критерий, который нельзя автоматически приравнивать к факту российского SMT. Поэтому перенос монтажа на российского EMS-подрядчика нужно оценивать не по стоимости операции, а по изменению баллов всей производственной схемы конкретного изделия.</div>
+
+<p>Производитель медицинского оборудования закупает печатные платы в Китае, но переносит SMT-монтаж в Россию.</p>
+<p>Можно ли считать такую электронику российской и получить баллы по ПП №719?</p>
+<p>Универсального ответа нет.</p>
+<p>В разделе VII ПП №719 нет единого правила «российская PCB = X баллов». Для одного медицинского изделия отдельно учитывается происхождение конкретных печатных плат, для другого — «платы в сборе», а для некоторых позиций российский монтаж электронных компонентов является обязательным условием независимо от количества набранных баллов.</p>
+<p>Поэтому локализацию электроники нельзя считать одной строкой в BOM.</p>
+<p>Нужно разделять как минимум:</p>
+<p><strong>bare PCB → электронные компоненты → SMT/THT → PCBA → firmware → конечное медицинское изделие.</strong></p>
+<p>Разберём на двух примерах: ультразвуковой диагностической системе и аппарате ИВЛ. Как в этих изделиях считаются датчики и другие компоненты, мы разбирали в статье <a href="/blog/datchiki-elektronika-lokalizaciya-medizdeliy-pp719" style="color:var(--cyan);font-weight:600">«Датчики и электроника в локализации медизделий»</a>; здесь — только печатные платы, монтаж и цепочка поставки электроники.</p>
+<h2>PCB и PCBA — не одно и то же</h2>
+<p>Сначала важно разделить термины.</p>
+<p><strong>Bare PCB</strong> — несмонтированная печатная плата: основание с проводящим рисунком, отверстиями, контактными площадками и другими элементами, но без установленных электронных компонентов.</p>
+<p><strong>PCBA</strong> — смонтированная печатная плата: PCB, на которую уже установлены электронные компоненты.</p>
+<p>Это различие есть и в ОКПД2:</p>
+<div style="overflow-x:auto"><table class="compare-table">
+<tr><th>Объект</th><th>ОКПД2</th></tr>
+<tr><td>Платы печатные (несмонтированные)</td><td>26.11.40.130</td></tr>
+<tr><td>Платы печатные смонтированные</td><td>26.12.10.000</td></tr>
+</table></div>
+<p>Для локализации различие между PCB и PCBA принципиально.</p>
+<p>Если китайская bare PCB приехала в Россию и здесь на неё установили компоненты, место производства исходной платы не изменилось. Российский SMT сам по себе не превращает китайскую PCB в российскую bare PCB.</p>
+<p>Но российский монтаж может иметь самостоятельное значение по ПП №719.</p>
+<h2>Почему нельзя спросить просто «сколько баллов даёт российский SMT»</h2>
+<p>ПП №719 устанавливает требования не для абстрактной медицинской электроники, а для конкретных позиций продукции.</p>
+<p>Поэтому одна и та же производственная цепочка:</p>
+<p><strong>Китай → bare PCB → Россия → SMT → PCBA → конечная сборка</strong></p>
+<p>для двух медицинских изделий может иметь разные последствия.</p>
+<p>У одного изделия российский монтаж даст отдельные баллы.</p>
+<p>У другого 100%-й монтаж в России будет обязательным условием, без которого арифметику баллов вообще нет смысла считать.</p>
+<p>У третьего в критериях может не быть такого требования.</p>
+<p>Поэтому первый вопрос при проектировании локализации:</p>
+<p><strong>не «где мы будем паять платы?», а «какая позиция ПП №719 применяется к конечному медицинскому изделию?»</strong></p>
+<h2>Пример 1. УЗИ: плата и монтаж считаются отдельно</h2>
+<p>Хорошо это видно на ультразвуковых системах по позиции ОКПД2 26.60.12.132.</p>
+<p>ПП №719 отдельно предусматривает баллы за ряд составных частей электронных модулей, изготовленных в России.</p>
+<p>В перечне есть, например, печатные платы:</p>
+<ul>
+<li>модуля компенсации ослабления эхо-сигнала;</li>
+<li>модуля подключения периферийных устройств USB;</li>
+<li>модуля подключения постоянно-волнового датчика;</li>
+<li>модуля панели управления;</li>
+<li>интерфейсного модуля;</li>
+<li>основной части блока питания;</li>
+<li>кросс-модуля;</li>
+<li>модуля подсоединения и переключения датчиков;</li>
+<li>модуля постоянно-волнового доплера;</li>
+<li>встроенного источника бесперебойного питания;</li>
+<li>бимформера;</li>
+<li>компьютерного модуля.</li>
+</ul>
+<p>В зависимости от конкретной платы предусмотрено <strong>от 5 до 10 баллов</strong>. Если несколько модулей выполнены на одной печатной плате, баллы за них суммируются.</p>
+<p>Но рядом существуют отдельные критерии за технологические операции.</p>
+<p>Например:</p>
+<ul>
+<li>монтаж всех электронных компонентов на печатную плату с количеством менее 20 компонентов — <strong>8 баллов за электронный модуль</strong>;</li>
+<li>монтаж всех электронных компонентов на печатную плату с количеством более 20 компонентов — <strong>11 баллов за электронный модуль</strong>;</li>
+<li>монтаж разъёмов методом запрессовки — <strong>10 баллов за электронный модуль</strong>;</li>
+<li>установка встроенного ПО при изготовлении программируемого электронного модуля — <strong>5 баллов за модуль</strong>.</li>
+</ul>
+<p>Именно здесь появляется важное различие.</p>
+<p><strong>Российская печатная плата и российский монтаж этой платы — разные основания для баллов.</strong></p>
+<h2>Кейс: китайская PCB, российский SMT</h2>
+<p>Предположим, производитель УЗИ строит следующую цепочку:</p>
+<ul>
+<li>bare PCB изготовлена в Китае;</li>
+<li>электронные компоненты закупаются отдельно;</li>
+<li>SMT выполняется в России;</li>
+<li>AOI и функциональный контроль — в России;</li>
+<li>firmware устанавливается в России;</li>
+<li>электронный модуль собирается в РФ.</li>
+</ul>
+<p>Что происходит с баллами?</p>
+<p>За российское происхождение самой печатной платы баллы автоматически заявить нельзя: bare PCB изготовлена за пределами России.</p>
+<p>Но операция монтажа выполняется в РФ.</p>
+<p>Если на плате более 20 электронных компонентов и монтируются все компоненты, российский монтаж может дать <strong>11 баллов за электронный модуль</strong>.</p>
+<p>Если компонентов менее 20 — <strong>8 баллов</strong>.</p>
+<p>При установке встроенного ПО при изготовлении программируемого электронного модуля предусмотрены ещё <strong>5 баллов за модуль</strong>.</p>
+<p>Получается важный для локализации вывод:</p>
+<p><strong>китайская PCB + российский SMT ≠ российская PCB.</strong></p>
+<p>Но:</p>
+<p><strong>китайская PCB + российский SMT может давать баллы именно за российскую технологическую операцию монтажа.</strong></p>
+<p>Это разные критерии, и смешивать их нельзя.</p>
+<h2>А если сама PCB российская?</h2>
+<p>Теперь меняем только один элемент.</p>
+<p>Bare PCB производится в России, а монтаж компонентов также выполняется на российской площадке.</p>
+<p>Тогда потенциально появляются два независимых основания:</p>
+<ol>
+<li>баллы за конкретную печатную плату как составную часть, изготовленную в РФ;</li>
+<li>баллы за выполнение монтажа электронных компонентов.</li>
+</ol>
+<p>То есть локализация платы может складываться из нескольких уровней.</p>
+<p>Условно:</p>
+<p><strong>российская PCB + российский SMT + установка firmware в РФ.</strong></p>
+<p>Но количество баллов нельзя определить одной универсальной формулой.</p>
+<p>Нужно смотреть, какая именно плата используется, какому электронному модулю она соответствует и какие критерии предусмотрены для него в конкретной позиции ПП №719.</p>
+<h2>Импортные компоненты — отдельный вопрос</h2>
+<p>Ещё одна распространённая ошибка:</p>
+<blockquote>«Если MCU, FPGA, ADC, память, резисторы и конденсаторы смонтированы в России, значит за них тоже можно получить баллы».</blockquote>
+<p>Для УЗИ ПП №719 действительно предусматривает:</p>
+<ul>
+<li><strong>10 баллов</strong> за активные программируемые электронные компоненты при производстве электронных модулей (за каждый модуль);</li>
+<li><strong>5 баллов</strong> за пассивные электронные компоненты (за каждый модуль).</li>
+</ul>
+<p>Но эти строки находятся внутри общего блока об использовании составных частей электронных модулей, <strong>изготовленных на территории Российской Федерации</strong>.</p>
+<p>По структуре нормы требование российского изготовления распространяется и на соответствующие компоненты.</p>
+<p>Поэтому модель:</p>
+<p><strong>импортный FPGA + российский SMT = 10 баллов</strong></p>
+<p>нельзя закладывать в локализационный расчёт как подтверждённую.</p>
+<p>Для конкретного BOM этот вопрос лучше закрыть до подачи документов в ТПП.</p>
+<h2>Прошивка платы — ещё один отдельный критерий</h2>
+<p>Для УЗИ установка встроенного программного обеспечения при изготовлении программируемого электронного модуля оценивается отдельно — <strong>5 баллов за модуль</strong>.</p>
+<p>Это операционный критерий.</p>
+<p>Он не означает, что firmware автоматически становится российским ПО.</p>
+<p>И его не следует смешивать с отдельными критериями за программное обеспечение, зарегистрированное в едином реестре российских программ, — например, 25 баллов за системное ПО с русскоязычным интерфейсом.</p>
+<p>Таким образом, в одном электронном модуле могут одновременно возникать разные вопросы:</p>
+<p><strong>где изготовлена PCB → откуда компоненты → где выполнен SMT → где установлено firmware → какое ПО зарегистрировано в реестре.</strong></p>
+<h2>Трассировка PCB сама по себе баллов не даёт</h2>
+<p>В исходных моделях локализации иногда встречается ещё один сценарий:</p>
+<ul>
+<li>электрическая схема разработана в России;</li>
+<li>PCB layout и трассировка выполнены российскими инженерами;</li>
+<li>Gerber-файлы подготовлены в РФ;</li>
+<li>производство bare PCB и PCBA полностью выполняется в Китае.</li>
+</ul>
+<p>Можно ли считать плату локализованной за счёт российской разработки?</p>
+<p>Не автоматически.</p>
+<p>В медицинском разделе ПП №719 нет универсального критерия:</p>
+<p><strong>«разработка топологии PCB в России = X баллов».</strong></p>
+<p>Разработка может иметь значение для НИОКР и для подтверждения общей российской разработки изделия там, где соответствующие критерии предусмотрены.</p>
+<p>Но российские Gerber-файлы сами по себе не превращают китайскую PCB или готовую китайскую PCBA в российскую составную часть.</p>
+<p>Это принципиально разные основания локализации.</p>
+<h2>И стерильное производство здесь ни при чём</h2>
+<p>Для PCB медицинского оборудования нет универсального требования:</p>
+<p><strong>«монтаж должен выполняться в стерильном производстве».</strong></p>
+<p>ПП №719 такого условия для начисления баллов за платы или SMT не устанавливает.</p>
+<p>Для электронного производства могут быть критичны ESD-защита, температурно-влажностный режим, контроль технологического процесса, прослеживаемость партий, требования СМК и другие условия.</p>
+<p>Но это нельзя автоматически называть стерильным производством. Стерильность имеет значение там, где она требуется назначением конкретного медицинского изделия и его производственным процессом.</p>
+<h2>Пример 2. ИВЛ: российский SMT уже не просто дополнительные баллы</h2>
+<p>У аппаратов ИВЛ логика другая.</p>
+<p>Для позиции аппаратов искусственной вентиляции лёгких (ОКПД2 32.50.21.121–123, коды вида медицинского изделия 232870 и 232890) ПП №719 содержит обязательное условие:</p>
+<p><strong>монтаж электронных компонентов на печатные платы в Российской Федерации в объёме 100%.</strong></p>
+<p>Это не дополнительные 8, 11 или 25 баллов.</p>
+<p>Это условие соответствия позиции.</p>
+<p>То есть производитель не может рассуждать так:</p>
+<blockquote>«Готовые PCBA привезём из Китая, зато наберём проходной балл корпусом, ПО и другими операциями».</blockquote>
+<p>Если электронные компоненты уже смонтированы на платы за пределами России, возникает проблема с выполнением обязательного требования по российскому монтажу.</p>
+<p>А обязательное условие нельзя компенсировать дополнительными баллами. Такая же конструкция действует и для ряда других позиций — мы разбирали её на примере <a href="/blog/lokalizaciya-separatorov-krovi-pp719-elektronika" style="color:var(--cyan);font-weight:600">систем афереза</a>.</p>
+<h2>ИВЛ: 100% российского монтажа и 25 баллов за платы — тоже разные требования</h2>
+<p>Для ИВЛ одновременно предусмотрены <strong>25 баллов за «платы в сборе»</strong>. Они начисляются, если при производстве использована хотя бы одна плата в сборе, изготовленная в России.</p>
+<p>И здесь снова нельзя поставить знак равенства:</p>
+<p><strong>100% SMT в России = 25 баллов.</strong></p>
+<p>Первое — обязательное условие.</p>
+<p>Второе — балльный критерий за составную часть.</p>
+<p>Формулировка «плата в сборе» по техническому смыслу скорее соответствует PCBA — плате с установленными компонентами, — а не bare PCB.</p>
+<p>Но ПП №719 не содержит отдельного формального определения этого термина.</p>
+<p>Поэтому схема:</p>
+<p><strong>российская bare PCB + российский SMT = гарантированные 25 баллов</strong></p>
+<p>слишком категорична, а вопрос, можно ли считать изготовленной в России PCBA на китайской bare PCB, тем более требует проработки.</p>
+<p>Корректнее говорить:</p>
+<p><strong>25 баллов потенциально доступны, если полученная PCBA подтверждается как изготовленная в России «плата в сборе».</strong></p>
+<p>Квалификацию конкретной платы и технологического маршрута лучше определить до того, как производитель зафиксирует BOM и вложится в перенос производства.</p>
+<h2>Что означает «100% монтажа» для готовых электронных модулей</h2>
+<p>На практике здесь возникает сложный вопрос.</p>
+<p>В современном медицинском оборудовании могут использоваться готовые:</p>
+<ul>
+<li>SOM/COM;</li>
+<li>Wi-Fi- и Bluetooth-модули;</li>
+<li>SSD;</li>
+<li>дисплейные модули;</li>
+<li>блоки питания;</li>
+<li>вычислительные модули.</li>
+</ul>
+<p>ПП №719 устанавливает требование 100%-го монтажа электронных компонентов на печатные платы в России, но текст нормы не определяет универсально:</p>
+<ul>
+<li>от какой базы считать эти 100%;</li>
+<li>считается ли готовый SOM электронным компонентом или отдельным составным изделием;</li>
+<li>можно ли использовать готовый импортный дисплейный модуль;</li>
+<li>как квалифицировать покупной блок питания с собственной PCBA.</li>
+</ul>
+<p>Поэтому здесь опасно строить локализацию по бытовой логике.</p>
+<p>Для сложного BOM квалификацию таких узлов нужно закрывать до фиксации производственной модели и, если необходимо, уточнять в рамках подготовки доказательной базы для ТПП и Минпромторга.</p>
+<h2>Российский EMS вместо собственной SMT-линии</h2>
+<p>Нужно ли производителю медицинского изделия покупать собственную SMT-линию?</p>
+<p>Не обязательно.</p>
+<p>ПП №719 предусматривает возможность собственной <strong>или контрактной</strong> научно-производственной базы.</p>
+<p>При этом критерии монтажа описывают технологическую операцию и не устанавливают отдельного требования, чтобы SMT-оборудование обязательно принадлежало заявителю.</p>
+<p>Поэтому практическая схема может выглядеть так:</p>
+<p><strong>производитель медизделия → российский EMS-подрядчик → SMT/PCBA → производитель → финальная сборка изделия.</strong></p>
+<p>Но сам договор с российским EMS ещё не подтверждает локализацию.</p>
+<p>Нужно доказать фактическое выполнение операции в России:</p>
+<ul>
+<li>где находится площадка;</li>
+<li>какое оборудование используется;</li>
+<li>какая PCB поступает на монтаж;</li>
+<li>какие компоненты устанавливаются;</li>
+<li>какой PCBA получается на выходе;</li>
+<li>для какого конечного изделия она предназначена;</li>
+<li>как прослеживается партия;</li>
+<li>какими производственными и первичными документами подтверждается операция.</li>
+</ul>
+<p>То есть контрактный SMT возможен, но локализационную модель нужно проектировать вместе с доказательной базой. Как проверять субпоставщиков — в статье <a href="/blog/verifikaciya-subpostavshchikov-st1-gisp" style="color:var(--cyan);font-weight:600">«Верификация субпоставщиков через СТ-1 и ГИСП»</a>.</p>
+<h2>Что проверить у поставщика PCB/PCBA до заключения договора</h2>
+<p>Фраза поставщика «у нас российские платы» для ПП №719 недостаточна.</p>
+<p>До включения поставщика в проект локализации нужно получить ответы минимум на пять вопросов.</p>
+<div style="overflow-x:auto"><table class="compare-table">
+<tr><th>Вопрос</th><th>Почему это важно</th></tr>
+<tr><td>Где изготовлена bare PCB?</td><td>Определяет возможность заявлять российское происхождение самой печатной платы</td></tr>
+<tr><td>Где выполняется SMT/THT?</td><td>Может давать отдельные баллы или быть обязательным условием</td></tr>
+<tr><td>Что именно поставляется: PCB или PCBA?</td><td>ПП №719 может по-разному квалифицировать эти объекты</td></tr>
+<tr><td>Какие компоненты используются?</td><td>Для отдельных критериев имеет значение происхождение составных частей</td></tr>
+<tr><td>Какой критерий конечного изделия эта цепочка закрывает?</td><td>Универсальных «баллов за российскую PCB» нет</td></tr>
+</table></div>
+<p>После этого уже нужно смотреть документы.</p>
+<p>УПД от российского поставщика сам по себе не доказывает, что плата изготовлена в России.</p>
+<p>Так же как российский юридический адрес EMS-подрядчика сам по себе не доказывает выполнение SMT на российской площадке.</p>
+<h2>Где здесь реестр радиоэлектронной продукции</h2>
+<p>Ещё одна возможная ошибка — искать ответ в реестре радиоэлектронной продукции.</p>
+<p>Наличие PCB или другого электронного изделия поставщика в соответствующем реестре само по себе <strong>не начисляет баллы конечному медицинскому изделию</strong>.</p>
+<p>Для медицинского изделия расчёт определяется его конкретной позицией раздела VII ПП №719.</p>
+<p>Поэтому логика:</p>
+<blockquote>«Поставщик находится в реестре РЭП → его плата автоматически даёт нам баллы»</blockquote>
+<p>не работает.</p>
+<p>Нужно установить, какой именно критерий ПП №719 закрывает эта составная часть и какие условия установлены для конечного медицинского изделия.</p>
+<h2>Шесть производственных схем — шесть разных результатов</h2>
+<p>Сведём основные сценарии.</p>
+<div style="overflow-x:auto"><table class="compare-table">
+<tr><th>Производственная схема</th><th>Что можно сказать до экспертизы</th></tr>
+<tr><td>Китайская PCB + китайская PCBA + сборка в РФ</td><td>Российского SMT нет; для изделий со 100%-м требованием такая схема проблемна</td></tr>
+<tr><td>Китайская PCB + российский SMT</td><td>PCB не становится российской, но операция монтажа может учитываться отдельно</td></tr>
+<tr><td>Российская PCB + российский SMT</td><td>Можно рассматривать отдельно происхождение платы и операцию монтажа</td></tr>
+<tr><td>Российский PCB layout + производство PCB/PCBA в Китае</td><td>Российская разработка сама по себе не делает плату российской</td></tr>
+<tr><td>Российский SMT + установка firmware</td><td>Могут возникать отдельные операционные критерии, если они предусмотрены конкретной позицией</td></tr>
+<tr><td>Готовая импортная PCBA</td><td>Нельзя считать российской только из-за установки в российский корпус</td></tr>
+</table></div>
+<p>Главное слово здесь — <strong>«конкретная позиция»</strong>.</p>
+<p>Одна и та же схема производства не даёт одинакового результата для всех медицинских изделий.</p>
+<h2>Что будет, если после получения записи в РРПП поменять плату</h2>
+<p>Электроника редко остаётся неизменной на весь жизненный цикл изделия.</p>
+<p>Производитель может:</p>
+<ul>
+<li>поменять поставщика PCB;</li>
+<li>перенести SMT на другую площадку;</li>
+<li>заменить компонент из-за окончания его выпуска (EOL);</li>
+<li>переработать layout;</li>
+<li>перейти с импортной платы на российскую;</li>
+<li>наоборот, заменить российскую составную часть импортной.</li>
+</ul>
+<p>Нельзя заранее установить универсальное правило «если тип компонента тот же, баллы сохраняются».</p>
+<p>Если изменение производственной модели затрагивает состав операций или комплектующих, влияющих на соответствие ПП №719, нужно оценивать его влияние на показатели локализации и сведения реестровой записи. Подробнее — в статье <a href="/blog/smena-postavshchika-reestrovaya-zapis" style="color:var(--cyan);font-weight:600">«Смена поставщика и реестровая запись»</a>.</p>
+<p>С 2026 года для продукции, уже имеющей запись в РРПП, в соответствующих случаях используется <a href="/blog/prodlenie-reestrovoy-zapisi-pp719" style="color:var(--cyan);font-weight:600">акт о проведении оценки ТПП</a>.</p>
+<p>Поэтому BOM для локализованного изделия — это не только инженерный документ. Он связан с доказательной базой, на которой подтверждалось соответствие ПП №719.</p>
+<h2>И отдельно — регистрационное досье медицинского изделия</h2>
+<p>ПП №719 отвечает на вопрос о российском происхождении продукции.</p>
+<p>Регистрация медицинского изделия — на другой.</p>
+<p>Предположим, ради локализации производитель:</p>
+<ul>
+<li>меняет PCB;</li>
+<li>заменяет MCU;</li>
+<li>делает redesign платы;</li>
+<li>меняет источник питания;</li>
+<li>переносит часть функций между аппаратной частью и firmware.</li>
+</ul>
+<p>Даже если новая схема улучшает баллы по ПП №719, отдельно нужно оценить её влияние на зарегистрированную конфигурацию изделия.</p>
+<p>Изменение может затронуть технические характеристики, безопасность, ЭМС, программное обеспечение, результаты испытаний или другие сведения регистрационного досье.</p>
+<p>Поэтому инженерный проект локализации электроники нужно вести одновременно по двум трекам:</p>
+<p><strong><a href="/blog/ru-i-gisp-parallelnye-processy" style="color:var(--cyan);font-weight:600">ПП №719 / РРПП → регистрационное досье медицинского изделия</a>.</strong></p>
+<p>Иначе можно получить хорошую балльную модель, но создать проблему с зарегистрированной конфигурацией.</p>
+<h2>Как считать локализацию PCB правильно</h2>
+<p>Практически мы начинаем не с вопроса:</p>
+<blockquote>«Сколько баллов даст российская плата?»</blockquote>
+<p>А с последовательности:</p>
+<p><strong>1. Определить конечное медицинское изделие и его ОКПД2.</strong></p>
+<p><strong>2. Найти применимую позицию раздела VII ПП №719.</strong></p>
+<p><strong>3. Разделить обязательные требования и балльные критерии.</strong></p>
+<p><strong>4. Разложить электронику изделия:</strong></p>
+<p><strong>bare PCB → компоненты → SMT/THT → PCBA → firmware → установка модуля.</strong></p>
+<p><strong>5. Для каждого элемента определить:</strong></p>
+<ul>
+<li>где выполняется операция;</li>
+<li>где изготовлена составная часть;</li>
+<li>кто её производит;</li>
+<li>каким документом это подтверждается;</li>
+<li>сколько баллов предусмотрено именно для этой позиции.</li>
+</ul>
+<p><strong>6. Только после этого считать итоговый балл.</strong></p>
+<p>Такой порядок позволяет увидеть проблему до переноса производства. Общий алгоритм расчёта дефицита баллов — в статье <a href="/blog/ballnaya-sistema-medtekhnika" style="color:var(--cyan);font-weight:600">«Как набрать баллы по ПП 719 для сложной медтехники»</a>.</p>
+<h2>Пример: что изменит перенос только SMT</h2>
+<p>Предположим, у производителя УЗИ сегодня вся электроника приходит из Китая в виде готовых PCBA.</p>
+<p>Производитель рассматривает два варианта.</p>
+<p><strong>Вариант А:</strong> оставить китайскую bare PCB, но перенести монтаж в Россию.</p>
+<p>Появляется возможность заявлять соответствующие операционные баллы за российский монтаж. Но сама китайская PCB российской не становится.</p>
+<p><strong>Вариант Б:</strong> локализовать и изготовление bare PCB, и SMT.</p>
+<p>Тогда дополнительно появляется возможность анализировать баллы за конкретные российские печатные платы, перечисленные в позиции УЗИ.</p>
+<p>Именно поэтому перед переговорами с EMS-подрядчиком нужно считать не стоимость операции SMT отдельно, а <strong>изменение локализационных баллов всей новой производственной схемы</strong>.</p>
+<p>Иногда перенос одной операции действительно закрывает дефицит.</p>
+<p>Иногда после переноса SMT всё равно не хватает баллов, потому что проблема находится в происхождении PCB, компонентов, ПО или других составных частей.</p>
+<h2>Главная ошибка производителя электроники</h2>
+<p>Самая опасная формулировка в коммерческом предложении:</p>
+<blockquote>«Российская плата для медицинского оборудования».</blockquote>
+<p>Для ПП №719 этого недостаточно.</p>
+<p>Нужно понимать, что именно российское:</p>
+<ul>
+<li>разработка схемы;</li>
+<li>PCB layout;</li>
+<li>bare PCB;</li>
+<li>электронные компоненты;</li>
+<li>SMT;</li>
+<li>THT;</li>
+<li>PCBA;</li>
+<li>firmware;</li>
+<li>функциональный контроль.</li>
+</ul>
+<p>И главное — <strong>какое из этих действий вообще учитывается для конкретного конечного медицинского изделия</strong>.</p>
+<p>Российский SMT не делает китайскую PCB российской.</p>
+<p>Российская разработка не делает китайскую PCBA российской.</p>
+<p>Российский поставщик не означает автоматически российское происхождение поставленного узла.</p>
+<p>А российская bare PCB сама по себе ещё не отвечает на вопрос о происхождении «платы в сборе».</p>
+<h2>Что подготовить для предварительной оценки баллов</h2>
+<p>Для первичной оценки локализации электроники обычно нужны:</p>
+<ul>
+<li>наименование и назначение медицинского изделия;</li>
+<li>ОКПД2;</li>
+<li>регистрационные документы;</li>
+<li>BOM;</li>
+<li>перечень электронных модулей;</li>
+<li>информация о происхождении PCB;</li>
+<li>перечень активных и пассивных компонентов;</li>
+<li>схема производства PCBA;</li>
+<li>данные о SMT/THT-площадке;</li>
+<li>информация о firmware и ПО;</li>
+<li>действующая и планируемая производственная цепочка;</li>
+<li>сведения о российских и иностранных подрядчиках.</li>
+</ul>
+<p>После этого можно построить матрицу:</p>
+<p><strong>текущая операция → требование ПП №719 → текущие баллы → целевая операция → новые баллы → документы для подтверждения.</strong></p>
+<p>Это намного надёжнее, чем сначала переносить производство, а затем пытаться доказать, что выполненные операции соответствуют нужным критериям.</p>
+<h2>Вывод</h2>
+<p>Универсальных баллов за «медицинскую PCB» в ПП №719 нет.</p>
+<p>На примере УЗИ видно, что постановление может отдельно учитывать:</p>
+<ul>
+<li>российское происхождение конкретной печатной платы;</li>
+<li>монтаж электронных компонентов;</li>
+<li>запрессовку разъёмов;</li>
+<li>установку встроенного ПО;</li>
+<li>происхождение отдельных электронных компонентов.</li>
+</ul>
+<p>Поэтому <strong>китайская bare PCB с российским SMT не становится российской PCB</strong>, но российская операция монтажа может дать самостоятельные баллы, если такой критерий предусмотрен для конечного изделия.</p>
+<p>Для ИВЛ конструкция ещё жёстче: 100%-й монтаж электронных компонентов на печатные платы в РФ является обязательным условием, которое нельзя заменить дополнительными баллами. А 25 баллов за «платы в сборе» — отдельный критерий, который нельзя автоматически приравнивать к факту российского SMT.</p>
+<p>Отсюда практическое правило:</p>
+<p><strong>локализацию электроники нельзя покупать по ярлыку «российская плата».</strong></p>
+<p>Сначала нужно определить конкретную позицию конечного медицинского изделия по ПП №719, а затем разложить производственную цепочку:</p>
+<p><strong>PCB → компоненты → SMT/THT → PCBA → firmware → конечное изделие.</strong></p>
+<p>И только после этого считать баллы.</p>
+
+<h2>Частые вопросы</h2>
+<div class="faq-item"><h4>Сколько баллов даёт российская печатная плата по ПП №719?</h4><p>Универсального значения нет. Количество баллов определяется конкретной позицией конечного изделия в ПП №719. Например, для УЗИ отдельные печатные платы могут давать 5–10 баллов, но эти значения нельзя переносить на другое медицинское оборудование.</p></div>
+<div class="faq-item"><h4>Китайская PCB с российским SMT считается российской?</h4><p>Не автоматически. Российский монтаж не меняет место изготовления bare PCB. При этом сам SMT может быть отдельным балльным критерием или обязательным условием — в зависимости от конечного медицинского изделия.</p></div>
+<div class="faq-item"><h4>Сколько баллов даёт SMT-монтаж в России для УЗИ?</h4><p>Для позиции УЗИ монтаж всех электронных компонентов на печатную плату с количеством менее 20 компонентов оценивается в 8 баллов за электронный модуль, а с количеством более 20 — в 11 баллов за модуль. Нужно проверять выполнение полной формулировки критерия для конкретной производственной схемы.</p></div>
+<div class="faq-item"><h4>Нужно ли использовать только российские электронные компоненты?</h4><p>Единого требования для всех медицинских изделий нет. Для УЗИ баллы за активные программируемые и пассивные компоненты находятся в блоке составных частей электронных модулей, изготовленных в РФ. Поэтому включать баллы за импортные MCU, FPGA, резисторы или конденсаторы только на основании российского SMT не следует.</p></div>
+<div class="faq-item"><h4>Даёт ли прошивка платы баллы?</h4><p>Для позиции УЗИ установка встроенного программного обеспечения при изготовлении программируемого электронного модуля даёт 5 баллов за модуль. Это баллы за технологическую операцию установки ПО, а не автоматическое признание firmware российским.</p></div>
+<div class="faq-item"><h4>Обязательно ли иметь собственную SMT-линию?</h4><p>ПП №719 допускает собственную или контрактную научно-производственную базу. Поэтому в проекте может использоваться российский EMS-подрядчик. Но фактическое выполнение заявляемых операций на территории РФ и связь изготовленных PCBA с конечным изделием должны подтверждаться документально.</p></div>
+<div class="faq-item"><h4>Нужен ли стерильный цех для производства PCB медицинского изделия?</h4><p>Универсального требования производить PCB или выполнять SMT для медицинского оборудования в стерильных условиях ПП №719 не устанавливает. Требования к производственной среде определяются конкретным изделием, технологическим процессом, системой менеджмента качества и применимыми стандартами.</p></div>
+<div class="faq-item"><h4>Даёт ли запись поставщика платы в реестре радиоэлектронной продукции баллы медицинскому изделию?</h4><p>Сама по себе — нет. Баллы конечного медицинского изделия определяются его позицией в ПП №719. Реестровый статус поставщика нельзя автоматически переводить в баллы конечного изделия.</p></div>
+<div class="faq-item"><h4>Что означает требование 100% российского монтажа для ИВЛ?</h4><p>ПП №719 требует монтажа электронных компонентов на печатные платы в России в объёме 100%. Это обязательное условие, а не источник баллов. При этом текст нормы не определяет универсально, как квалифицировать готовые SOM/COM, Wi-Fi-модули, SSD и другие электронные узлы, поэтому для сложного BOM этот вопрос нужно прорабатывать до фиксации локализационной модели.</p></div>
+<div class="faq-item"><h4>Что нужно прислать для расчёта баллов PCB/PCBA?</h4><p>Минимально — ОКПД2 конечного изделия, BOM, перечень электронных модулей, происхождение bare PCB и компонентов, схема SMT/THT, сведения о firmware и текущая производственная цепочка. После этого можно сопоставить каждую составную часть и операцию с критериями ПП №719.</p></div>
+
+<div class="article-cta">
+  <b>Нужна оценка баллов по вашей спецификации компонентов?</b>
+  <p>ГМТ проводит предварительный анализ BOM и производственной цепочки под ПП №719: определяет, какие платы и операции уже соответствуют требованиям, какие баллы потенциально доступны при текущей схеме, что изменится при переносе SMT/PCBA в Россию и какие элементы нужно локализовать для достижения проходного порога.</p>
+  <p>Результат — не общий ответ «плата российская или нет», а матрица по конкретному изделию:</p>
+  <p><strong>компонент / операция → требование ПП №719 → баллы → дефицит → вариант локализации → подтверждающие документы.</strong></p>
+  <p>Подробнее — на странице <a href="/localization" style="color:#fff;text-decoration:underline">«Локализация медицинских изделий»</a>.</p>
+  <a class="btn pri" href="mailto:info@med-local.ru?subject=Баллы ПП 719 для PCB и SMT">Оценить баллы по BOM</a>
+</div>
+
+
+    </div>
+  </div>
+</section>
+<section style="background:#fff;border-top:1px solid var(--line);padding:20px 0"><div class="wrap" style="max-width:820px"><a href="/localization" style="font-size:14px;font-weight:700;color:var(--cyan)">Подробнее об этой услуге: Локализация медицинских изделий →</a></div></section><section style="background:var(--paper);border-top:1px solid var(--line);padding:32px 0">
+  <div class="wrap" style="max-width:820px">
+    <h3 style="font-size:16px;font-weight:700;margin:0 0 16px;color:var(--ink)">Читайте также</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><a href="/blog/datchiki-elektronika-lokalizaciya-medizdeliy-pp719" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Датчики и электроника в локализации медизделий по ПП 719</a><a href="/blog/ballnaya-lokalizaciya-slozhnoj-elektroniki-kt-uzi" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Балльная локализация электроники: баллы КТ и УЗИ</a><a href="/blog/lokalizaciya-separatorov-krovi-pp719-elektronika" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Локализация системы афереза по ПП 719: 65 баллов</a><a href="/blog/verifikaciya-subpostavshchikov-st1-gisp" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Верификация субпоставщиков через СТ-1 и ГИСП</a><a href="/blog/smena-postavshchika-reestrovaya-zapis" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Смена поставщика и реестровая запись</a><a href="/localization" style="display:block;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--cyan);text-decoration:none;transition:.15s">Локализация медицинских изделий</a></div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div><b>Инженерный центр локализации медицинских изделий</b>
+      <p style="font-size:13px;line-height:1.65;margin:0 0 14px;color:#97A1B2">Локализация производства медицинских изделий в России. От&nbsp;анализа ниши до регистрационного удостоверения.</p>
+      <a href="tel:+79853169104">+7 985 316-91-04 (Россия)</a>
+      <a href="tel:+79888777295">+7 988 877-72-95 (Россия)</a>
+      <a href="tel:+79888777295">MAX: +7 988 877-72-95</a>
+      <a href="tel:+77021394489">+7 702 139-44-89 (Казахстан)</a>
+      <a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a>
+      <a href="https://t.me/tandelovtat" style="color:#2FA8A0" target="_blank" rel="noopener noreferrer">Telegram: @tandelovtat</a>
+    </div>
+    <div><b>Услуги</b>
+      <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a>
+      <a href="/development">Разработка</a><a href="/production">Производство</a>
+      <a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a>
+    </div>
+    <div><b>Компания</b>
+      <a href="/cases">Кейсы</a><a href="/pricing">Стоимость</a><a href="/blog">База знаний</a>
+      <a href="/contacts">Контакты</a><a href="/glossary">Глоссарий</a><a href="/privacy">Политика ПДн</a>
+    </div>
+    <div><b>Контакты</b>
+      <a href="mailto:info@med-local.ru">info@med-local.ru</a>
+      <a href="mailto:sales@med-local.ru">sales@med-local.ru</a>
+      <a href="mailto:marketing@med-local.ru">marketing@med-local.ru</a>
+      <a href="mailto:ceo@med-local.ru">ceo@med-local.ru</a>
+    </div>
+  </div>
+  <div class="fine">
+    <span>© 2026 ООО «Глобальные Медицинские Технологии» · 125047, г. Москва, 1-й Тверской-Ямской пер., д. 16, помещ. 1/п</span>
+    <span style="display:flex;gap:14px;flex-wrap:wrap"><a href="/privacy">Политика конфиденциальности</a><a href="/oferta">Публичная оферта</a><a href="/terms">Пользовательское соглашение</a></span>
+  </div>
+</div></footer>
+<a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg>
+  Написать в Telegram
+</a>
+<a class="float-btn max-btn" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer">
+  <img src="/images/max-icon.png" alt="MAX" width="22" height="22" style="border-radius:6px">
+  Написать в MAX
+</a>
+<script>
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';var cb=document.getElementById('cookie-consent-banner');if(cb)cb.style.display=document.getElementById('mob-menu').classList.contains('open')?'none':'';}
+</script>
+<script src="/cookie-consent.js" defer></script>
+</body>
+</html>
