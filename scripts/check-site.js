@@ -25,7 +25,7 @@ const ROOT = path.resolve(__dirname, '..');
 process.chdir(ROOT);
 const ORIGIN = 'https://med-local.ru';
 const RUBRICS = ['pp719', 'krov', 'bally', 'gisp', 'goszakupki'];
-const SKIP = new Set(['.git', 'node_modules', '.claude']);
+const SKIP = new Set(['.git', 'node_modules', '.claude', 'drafts']); // drafts/ — черновики вне публикации (см. .vercelignore)
 
 // Статьи blog/<slug>/, которые НАМЕРЕННО не должны быть ни в sitemap.xml, ни среди карточек /blog (каждая — с причиной).
 // Сюда нельзя добавлять статью только затем, чтобы заглушить ошибку: у неё должна быть причина не быть в блоге.
@@ -98,6 +98,13 @@ function unwrappedTables(h) {
   }
   return n;
 }
+
+// Статьи, снятые с публикации: 301-редирект на другую статью, черновик лежит в drafts/ и ждёт проверки.
+// Для каждой проверяется: редирект со статусом 301 в vercel.json ведёт на существующую страницу, статьи нет в blog/,
+// её нет в sitemap.xml и на неё нет внутренних ссылок. Причину указывать обязательно.
+const REDIRECTED_ARTICLES = {
+  'multipleksny-proryv': { to: '/blog/pcr-panely-pp1875-vtoroy-lishniy', reason: '301 на pcr-panely-pp1875-vtoroy-lishniy, черновик в drafts/ ждёт проверки по ПП 719' },
+};
 
 // ---------- 1, 2, 3, 6: по страницам ----------
 let ldCount = 0, faqPages = 0, tableCount = 0;
@@ -205,6 +212,33 @@ if (fs.existsSync('blog/index.html')) {
   });
   for (const s of blogDirs) if (!slugs.has(s)) err('blog/index.html', 'у статьи blog/' + s + ' нет карточки');
 } else err('blog/index.html', 'файл не найден');
+
+// ---------- снятые с публикации статьи ----------
+{
+  let rules = [];
+  try { rules = JSON.parse(fs.readFileSync('vercel.json', 'utf8')).redirects || []; } catch (e) { err('vercel.json', 'не удалось прочитать: ' + e.message); }
+  for (const [slug, info] of Object.entries(REDIRECTED_ARTICLES)) {
+    const from = '/blog/' + slug;
+    const r = rules.find(x => x.source === from);
+    if (!r) err('vercel.json', 'нет редиректа для снятой статьи ' + from + ' (' + info.reason + ')');
+    else {
+      if (r.statusCode !== 301) err('vercel.json', 'редирект ' + from + ' должен быть со statusCode 301, сейчас ' + (r.statusCode || (r.permanent ? 'permanent' : 'не задан')));
+      if (r.destination !== info.to) err('vercel.json', 'редирект ' + from + ' ведёт на ' + r.destination + ', ожидалось ' + info.to);
+    }
+    if (!pageExists(info.to)) err('scripts/check-site.js', 'цель редиректа не существует: ' + info.to);
+    if (fs.existsSync(path.join('blog', slug))) err('blog/' + slug, 'снятая с публикации статья всё ещё лежит в blog/ — должна быть в drafts/');
+    if (smRaw && smRaw.includes('<loc>' + ORIGIN + from + '</loc>')) err('sitemap.xml', 'снятая статья ' + slug + ' осталась в sitemap');
+    for (const f of files) if (new RegExp('href="' + from + '["#?/]').test(read(f))) err(f, 'ссылка на снятую статью ' + from + ' — замените на ' + info.to);
+  }
+}
+
+// черновики не должны отдаваться на сайте: .vercelignore + редирект /drafts/* (Git-деплои Vercel могут не учитывать .vercelignore)
+if (fs.existsSync('drafts')) {
+  let rules = [];
+  try { rules = JSON.parse(fs.readFileSync('vercel.json', 'utf8')).redirects || []; } catch (e) { /* ошибка уже выведена выше */ }
+  if (!rules.some(x => x.source === '/drafts/:path*')) err('vercel.json', 'есть папка drafts/, но нет редиректа /drafts/:path* — черновики могут оказаться на сайте');
+  if (!fs.existsSync('.vercelignore') || !/^drafts\/?$/m.test(fs.readFileSync('.vercelignore', 'utf8'))) err('.vercelignore', 'нет строки drafts/');
+}
 
 // ---------- итог ----------
 console.log('check-site: страниц ' + files.length + ', JSON-LD ' + ldCount + ', таблиц ' + tableCount + ', страниц с FAQPage ' + faqPages + ', карточек ' + cardCount + ', URL в sitemap ' + smCount);

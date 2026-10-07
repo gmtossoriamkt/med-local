@@ -110,12 +110,13 @@ idx.text = idx.text.slice(0, gridStart) + lines.join('\n');
 
 // --- sitemap.xml ---
 const sm = read('sitemap.xml');
-if (sm.text.includes('<loc>https://med-local.ru/blog/' + slug + '</loc>')) fail('запись ' + slug + ' уже есть в sitemap.xml');
+// запись в sitemap уже может быть (статья попала в sitemap раньше, чем получила карточку) — тогда sitemap не трогаем, добавляется только карточка
+const inSitemap = sm.text.includes('<loc>https://med-local.ru/blog/' + slug + '</loc>');
 const entries = [...sm.text.matchAll(/ {2}<url><loc>https:\/\/med-local\.ru\/blog\/[^<]+<\/loc>.*?<\/url>/g)];
 if (!entries.length) fail('в sitemap.xml не найдены записи блога, не за что зацепиться');
 const last = entries[entries.length - 1][0];
 const entry = '  <url><loc>https://med-local.ru/blog/' + slug + '</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>' + dateIso + '</lastmod></url>';
-sm.text = sm.text.replace(last, () => last + '\n' + entry);
+if (!inSitemap) sm.text = sm.text.replace(last, () => last + '\n' + entry);
 
 if (args['dry-run']) {
   console.log('add-blog-card: dry-run, файлы не изменены');
@@ -124,6 +125,6 @@ if (args['dry-run']) {
   process.exit(0);
 }
 write('blog/index.html', idx);
-write('sitemap.xml', sm);
-console.log('add-blog-card: добавлено ' + slug + ' (рубрики: ' + tags.join(' ') + ', дата: ' + dateRu + ')');
+if (!inSitemap) write('sitemap.xml', sm);
+console.log('add-blog-card: добавлено ' + slug + ' (рубрики: ' + tags.join(' ') + ', дата: ' + dateRu + ')' + (inSitemap ? '; запись в sitemap.xml уже была — не менял' : ''));
 console.log('Напомните себе: обратные ссылки в «Читайте также», проверка diff, push только по команде.');

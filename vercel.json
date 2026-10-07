@@ -1,4 +1,16 @@
 {
   "trailingSlash": false,
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/blog/multipleksny-proryv",
+      "destination": "/blog/pcr-panely-pp1875-vtoroy-lishniy",
+      "statusCode": 301
+    },
+    {
+      "source": "/drafts/:path*",
+      "destination": "/blog",
+      "statusCode": 302
+    }
+  ]
 }
