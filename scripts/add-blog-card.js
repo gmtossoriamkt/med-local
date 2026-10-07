@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Добавляет карточку статьи первой в blog/index.html и запись в sitemap.xml.
+// Добавляет карточку статьи в blog/index.html на её место по дате (новые первыми; свежая статья — первой) и запись в sitemap.xml.
 // Правила рубрик и формат карточки — в CLAUDE.md («Как добавлять карточку статьи в блог»).
 //
 // Пример:
@@ -90,7 +90,23 @@ const card =
   '<p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.6;flex:1">' + esc(args.desc.trim()) + '</p>' +
   '<span style="font-size:12px;color:var(--muted)">' + dateRu + '</span>' +
   '<span style="font-size:13px;font-weight:700;color:var(--orange)">Читать →</span></a>\n';
-idx.text = idx.text.replace(GRID, () => GRID + card);
+// карточка встаёт на своё место по дате (новые первыми): перед первой карточкой с более ранней датой,
+// при равных датах — после существующих; если более ранних нет — в конец сетки (после последней карточки)
+const dateKey = t => { const m = t.match(/^(\d+) (\S+) (\d{4})$/); const i = m ? MONTHS.indexOf(m[2]) : -1; return i < 0 ? null : +m[3] * 10000 + (i + 1) * 100 + +m[1]; };
+const newKey = dateKey(dateRu);
+const gridStart = idx.text.indexOf(GRID) + GRID.length;
+const lines = idx.text.slice(gridStart).split('\n');
+let at = -1, lastCard = -1;
+for (let i = 0; i < lines.length; i++) {
+  if (!lines[i].includes('<a class="card"')) { if (lastCard >= 0 && lines[i].trim()) break; continue; } // пустые строки между карточками пропускаем
+  lastCard = i;
+  const m = lines[i].match(/<span style="font-size:12px;color:var\(--muted\)">([^<]*)<\/span><span style="font-size:13px/);
+  const k = m ? dateKey(m[1]) : null;
+  if (at < 0 && k !== null && k < newKey) at = i;
+}
+if (at < 0) at = lastCard + 1;
+lines.splice(at, 0, card.replace(/\n$/, ''));
+idx.text = idx.text.slice(0, gridStart) + lines.join('\n');
 
 // --- sitemap.xml ---
 const sm = read('sitemap.xml');
