@@ -13,6 +13,7 @@
 //   5. blog/index.html: у каждой карточки есть статья, у каждой статьи — карточка, нет дублей карточек,
 //      у карточки data-tags (1–3 рубрики из pp719 krov bally gisp goszakupki, без повторов),
 //      карточки идут от новых к старым (по дате в карточке).
+//   7. Служебные файлы (.md, .bak, .sh, скрипты сборки .js, папки с точкой) вне .vercelignore — ОШИБКА: их отдаёт сайт.
 //   6. FAQPage в JSON-LD совпадает с видимым FAQ (форматы — см. visibleFaq): число вопросов, текст вопросов и ответов.
 //      Видимый текст — первоисточник. Отсутствие видимого FAQ при наличии FAQPage — тоже ошибка.
 //
@@ -20,6 +21,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const ROOT = path.resolve(__dirname, '..');
 process.chdir(ROOT);
@@ -238,6 +240,35 @@ if (fs.existsSync('drafts')) {
   try { rules = JSON.parse(fs.readFileSync('vercel.json', 'utf8')).redirects || []; } catch (e) { /* ошибка уже выведена выше */ }
   if (!rules.some(x => x.source === '/drafts/:path*')) err('vercel.json', 'есть папка drafts/, но нет редиректа /drafts/:path* — черновики могут оказаться на сайте');
   if (!fs.existsSync('.vercelignore') || !/^drafts\/?$/m.test(fs.readFileSync('.vercelignore', 'utf8'))) err('.vercelignore', 'нет строки drafts/');
+}
+
+// ---------- служебные файлы в публикуемых папках ----------
+// Всё, что лежит в репозитории и не перечислено в .vercelignore, отдаётся сайтом. Поэтому .md, .bak/.orig/.tmp, .sh/.ps1,
+// .js-скрипты сборки (то есть .js, которые не подключены ни одной страницей через <script src>), файлы с «draft/черновик/backup»
+// в имени и всё внутри папок, начинающихся с точки (.githooks и т. п.), должны быть либо удалены, либо исключены из публикации через .vercelignore.
+{
+  const ignore = (fs.existsSync('.vercelignore') ? fs.readFileSync('.vercelignore', 'utf8') : '').split(/\r?\n/).map(s => s.trim()).filter(s => s && !s.startsWith('#'));
+  const ignored = f => ignore.some(p => {
+    const q = p.replace(/^\//, '');
+    if (q.endsWith('/')) return f.startsWith(q);
+    if (q.includes('*')) return new RegExp('^' + q.split('*').map(x => x.replace(/[.+^${}()|[\]\\]/g, '\\$&')).join('[^/]*') + '$').test(f);
+    return f === q || f.startsWith(q + '/');
+  });
+  let tracked;
+  try { tracked = execSync('git ls-files', { encoding: 'utf8' }).split('\n').filter(Boolean); }
+  catch (e) { tracked = []; const walk = d => { for (const e2 of fs.readdirSync(d, { withFileTypes: true })) { if (['.git', 'node_modules', '.claude'].includes(e2.name)) continue; const p = path.join(d, e2.name).replace(/\\/g, '/'); e2.isDirectory() ? walk(p) : tracked.push(p); } }; walk('.'); }
+  const usedJs = new Set();
+  for (const f of files) for (const m of read(f).matchAll(/<script\b[^>]*\bsrc="([^"]+)"/g)) if (m[1].startsWith('/')) usedJs.add(m[1].slice(1).split('?')[0]);
+  for (const f of tracked) {
+    if (ignored(f) || f.startsWith('.well-known/')) continue;
+    const base = path.basename(f);
+    let why = null;
+    if (/\.(md|bak|orig|tmp|swp|log|sh|ps1|py)$/i.test(f) || /~$/.test(f)) why = 'служебный/черновой файл';
+    else if (/\.js$/i.test(f) && !usedJs.has(f)) why = 'скрипт, не подключённый ни одной страницей (скрипты сборки не должны отдаваться сайтом)';
+    else if (/(draft|черновик|backup)/i.test(base)) why = 'похоже на черновик/бэкап';
+    else if (f.split('/').slice(0, -1).some(d => d.startsWith('.'))) why = 'файл внутри служебной папки с точкой';
+    if (why) err(f, 'публикуемый файл: ' + why + ' — удалите или добавьте в .vercelignore');
+  }
 }
 
 // ---------- итог ----------
