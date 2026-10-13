@@ -12,5 +12,13 @@
       "destination": "/blog",
       "statusCode": 302
     }
+  ],
+  "headers": [
+    {
+      "source": "/blog/_cards/:file*",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, follow" }
+      ]
+    }
   ]
 }
