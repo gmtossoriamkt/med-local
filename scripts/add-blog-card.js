@@ -1,6 +1,10 @@
 #!/usr/bin/env node
-// Добавляет карточку статьи в blog/index.html на её место по дате (новые первыми; свежая статья — первой) и запись в sitemap.xml.
+// Добавляет карточку статьи в блог на её место по дате (новые первыми; свежая статья — первой) и запись в sitemap.xml.
 // Правила рубрик и формат карточки — в CLAUDE.md («Как добавлять карточку статьи в блог»).
+//
+// Карточки хранятся так (см. scripts/blog-cards.js): первые 18 — в blog/index.html, остальные — порциями в blog/_cards/N.html
+// (подгружаются кнопкой «Показать ещё»). Скрипт сам перераспределяет карточки между index.html и порциями,
+// обновляет счётчики и блок «Все статьи списком», так что вес HTML страницы /blog не растёт с каждой статьёй.
 //
 // Пример:
 //   node scripts/add-blog-card.js --slug firmware-medizdeliya-pp719-reestr-po \
@@ -19,6 +23,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const lib = require('./blog-cards');
 
 const ROOT = path.resolve(__dirname, '..');
 const RUBRICS = ['pp719', 'krov', 'bally', 'gisp', 'goszakupki'];
@@ -77,36 +82,25 @@ function write(file, doc) {
   fs.writeFileSync(path.join(ROOT, file), doc.crlf ? doc.text.replace(/\n/g, '\r\n') : doc.text);
 }
 
-// --- blog/index.html ---
-const idx = read('blog/index.html');
-if (idx.text.includes('href="/blog/' + slug + '"')) fail('карточка со slug ' + slug + ' уже есть в blog/index.html');
-const GRID = '<div class="grid g3" id="blog-grid">\n';
-if (idx.text.split(GRID).length !== 2) fail('в blog/index.html не найден (или найден не один) контейнер #blog-grid');
+// --- карточки блога: blog/index.html + порции blog/_cards/N.html ---
+let all;
+try { all = lib.readAllCards(); } catch (e) { fail(e.message); }
+if (all.some(c => lib.slugOf(c) === slug)) fail('карточка со slug ' + slug + ' уже есть в блоге');
 
 const card =
-  '    <a class="card" href="/blog/' + slug + '" data-tags="' + tags.join(' ') + '" style="display:flex;flex-direction:column;gap:9px;transition:.2s;text-decoration:none">' +
+  '<a class="card" href="/blog/' + slug + '" data-tags="' + tags.join(' ') + '" style="display:flex;flex-direction:column;gap:9px;transition:.2s;text-decoration:none">' +
   '<span style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)">' + esc(args.label.trim()) + '</span>' +
   '<h3 style="font-size:16.5px;line-height:1.35">' + esc(args.title.trim()) + '</h3>' +
   '<p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.6;flex:1">' + esc(args.desc.trim()) + '</p>' +
   '<span style="font-size:12px;color:var(--muted)">' + dateRu + '</span>' +
-  '<span style="font-size:13px;font-weight:700;color:var(--orange)">Читать →</span></a>\n';
+  '<span style="font-size:13px;font-weight:700;color:var(--orange)">Читать →</span></a>';
 // карточка встаёт на своё место по дате (новые первыми): перед первой карточкой с более ранней датой,
-// при равных датах — после существующих; если более ранних нет — в конец сетки (после последней карточки)
+// при равных датах — после существующих; если более ранних нет — в самый конец списка
 const dateKey = t => { const m = t.match(/^(\d+) (\S+) (\d{4})$/); const i = m ? MONTHS.indexOf(m[2]) : -1; return i < 0 ? null : +m[3] * 10000 + (i + 1) * 100 + +m[1]; };
 const newKey = dateKey(dateRu);
-const gridStart = idx.text.indexOf(GRID) + GRID.length;
-const lines = idx.text.slice(gridStart).split('\n');
-let at = -1, lastCard = -1;
-for (let i = 0; i < lines.length; i++) {
-  if (!lines[i].includes('<a class="card"')) { if (lastCard >= 0 && lines[i].trim()) break; continue; } // пустые строки между карточками пропускаем
-  lastCard = i;
-  const m = lines[i].match(/<span style="font-size:12px;color:var\(--muted\)">([^<]*)<\/span><span style="font-size:13px/);
-  const k = m ? dateKey(m[1]) : null;
-  if (at < 0 && k !== null && k < newKey) at = i;
-}
-if (at < 0) at = lastCard + 1;
-lines.splice(at, 0, card.replace(/\n$/, ''));
-idx.text = idx.text.slice(0, gridStart) + lines.join('\n');
+let at = all.findIndex(c => { const k = dateKey(lib.dateTextOf(c) || ''); return k !== null && k < newKey; });
+if (at < 0) at = all.length;
+all.splice(at, 0, card);
 
 // --- sitemap.xml ---
 const sm = read('sitemap.xml');
@@ -119,12 +113,12 @@ const entry = '  <url><loc>https://med-local.ru/blog/' + slug + '</loc><changefr
 if (!inSitemap) sm.text = sm.text.replace(last, () => last + '\n' + entry);
 
 if (args['dry-run']) {
-  console.log('add-blog-card: dry-run, файлы не изменены');
-  console.log(card.trim());
+  console.log('add-blog-card: dry-run, файлы не изменены (позиция в списке: ' + (at + 1) + ' из ' + all.length + ')');
+  console.log(card);
   console.log(entry.trim());
   process.exit(0);
 }
-write('blog/index.html', idx);
+const r = lib.writeAllCards(all);
 if (!inSitemap) write('sitemap.xml', sm);
-console.log('add-blog-card: добавлено ' + slug + ' (рубрики: ' + tags.join(' ') + ', дата: ' + dateRu + ')' + (inSitemap ? '; запись в sitemap.xml уже была — не менял' : ''));
+console.log('add-blog-card: добавлено ' + slug + ' (рубрики: ' + tags.join(' ') + ', дата: ' + dateRu + ', позиция ' + (at + 1) + ' из ' + r.total + '; в index.html ' + r.first + ', порций ' + r.chunks + ')' + (inSitemap ? '; запись в sitemap.xml уже была — не менял' : ''));
 console.log('Напомните себе: обратные ссылки в «Читайте также», проверка diff, push только по команде.');

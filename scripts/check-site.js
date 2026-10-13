@@ -21,6 +21,8 @@
 
 const fs = require('fs');
 const path = require('path');
+const zlib = require('zlib');
+const blogCards = require('./blog-cards');
 const { execSync } = require('child_process');
 
 const ROOT = path.resolve(__dirname, '..');
@@ -186,7 +188,9 @@ else {
 let cardCount = 0;
 if (fs.existsSync('blog/index.html')) {
   const idx = read('blog/index.html');
-  const cards = idx.split('<a class="card"').slice(1).map(x => '<a class="card"' + x.split('</a>')[0] + '</a>').map(c => ({
+  let rawCards = [];
+  try { rawCards = blogCards.readAllCards(); } catch (e) { err('blog/index.html', e.message); }
+  const cards = rawCards.map(c => ({
     url: (c.match(/href="(\/blog\/[^"]+)"/) || [])[1],
     tags: (c.match(/data-tags="([^"]*)"/) || [])[1],
     date: [...c.matchAll(/<span style="font-size:12px;color:var\(--muted\)">([^<]*)<\/span>/g)].map(m => m[1]).pop(),
@@ -213,6 +217,30 @@ if (fs.existsSync('blog/index.html')) {
     else if (i > 0) { const p = dateOf(cards[i - 1].date); if (p !== null && d > p) err('blog/index.html', 'нарушен порядок «от новых к старым»: ' + s + ' новее предыдущей карточки'); }
   });
   for (const s of blogDirs) if (!slugs.has(s)) err('blog/index.html', 'у статьи blog/' + s + ' нет карточки');
+
+  // --- устройство списка: первые FIRST карточек в index.html, остальные порциями в blog/_cards/N.html ---
+  const inIndex = idx.split('\n').filter(l => l.includes('<a class="card"')).length;
+  const files_ = blogCards.chunkFiles();
+  const total = (idx.match(/id="blog-grid"[^>]*data-total="(\d+)"/) || [])[1];
+  const nChunks = (idx.match(/id="blog-grid"[^>]*data-chunks="(\d+)"/) || [])[1];
+  if (inIndex !== Math.min(blogCards.FIRST, cards.length)) err('blog/index.html', 'в index.html ' + inIndex + ' карточек, должно быть ' + Math.min(blogCards.FIRST, cards.length) + ' (остальные — в blog/_cards/; выполните перераспределение: node -e "const l=require(\'./scripts/blog-cards\');l.writeAllCards(l.readAllCards())")');
+  if (+total !== cards.length) err('blog/index.html', 'data-total=' + total + ', а карточек ' + cards.length);
+  if (+nChunks !== files_.length) err('blog/index.html', 'data-chunks=' + nChunks + ', а файлов порций ' + files_.length);
+  files_.forEach((f, i) => {
+    const n = read(f).split('\n').filter(l => l.includes('<a class="card"')).length;
+    if (n > blogCards.CHUNK) err(f, 'в порции ' + n + ' карточек, максимум ' + blogCards.CHUNK);
+    if (i < files_.length - 1 && n !== blogCards.CHUNK) err(f, 'неполная порция не в конце (' + n + ' карточек)');
+  });
+  // для пользователей без JS: <noscript> со ссылками на каждый файл порции (они же — путь для роботов к остальным статьям)
+  const noscriptBlock = (idx.match(/<!-- blog-archive:start -->([\s\S]*?)<!-- blog-archive:end -->/) || ['', ''])[1];
+  const linked = [...noscriptBlock.matchAll(/href="\/blog\/_cards\/(\d+)\.html"/g)].map(m => +m[1]);
+  if (JSON.stringify(linked) !== JSON.stringify(files_.map((f, i) => i + 1))) err("blog/index.html", "в <noscript> нет ссылок на все файлы порций (" + linked.join(",") + " против 1.." + files_.length + ")");
+  // вес ответа: Vercel отдаёт HTML brotli качества 3 — именно такой размер уходит по сети; у некоторых пользователей большие ответы обрываются на ~14–20 КБ
+  const wire = f => { const b = Buffer.from(read(f)); return zlib.brotliCompressSync(b, { params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 3, [zlib.constants.BROTLI_PARAM_SIZE_HINT]: b.length } }).length; };
+  const LIMIT_INDEX = 14 * 1024, LIMIT_CHUNK = 12 * 1024;
+  const wi = wire('blog/index.html');
+  if (wi > LIMIT_INDEX) err('blog/index.html', 'вес HTML по сети ≈ ' + (wi / 1024).toFixed(1) + ' КБ (brotli q3), предел ' + (LIMIT_INDEX / 1024) + ' КБ — уменьшите число карточек в первой порции или вес шапки/стилей');
+  for (const f of files_) { const wc = wire(f); if (wc > LIMIT_CHUNK) err(f, 'вес порции по сети ≈ ' + (wc / 1024).toFixed(1) + ' КБ, предел ' + (LIMIT_CHUNK / 1024) + ' КБ — уменьшите CHUNK в scripts/blog-cards.js'); }
 } else err('blog/index.html', 'файл не найден');
 
 // ---------- снятые с публикации статьи ----------
