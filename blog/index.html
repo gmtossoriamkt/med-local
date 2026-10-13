@@ -341,7 +341,7 @@ gtag("config", "G-9DZXMBECL0");
     <a class="card" href="/blog/pp1875-medtech-oez-spik-2" data-tags="goszakupki pp719" style="display:flex;flex-direction:column;gap:9px;transition:.2s;text-decoration:none"><span style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)">ПП 1875 · ПП 719 · ОЭЗ · СПИК 2.0</span><h3 style="font-size:16.5px;line-height:1.35">ПП 1875 для зарубежного MedTech: локализация через ОЭЗ и СПИК 2.0</h3><p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.6;flex:1">Как зарубежному производителю медтехники выстроить локализацию под ПП 719 и ПП 1875: роль ОЭЗ, СПИК 2.0, регистрации и подтверждения российского происхождения.</p><span style="font-size:12px;color:var(--muted)">24 сентября 2026</span><span style="font-size:13px;font-weight:700;color:var(--orange)">Читать →</span></a>
   </div>
   <!-- blog-archive:start -->
-  <noscript><p class="more-status">Остальные статьи (48): <a href="/blog/_cards/1.html">часть 2</a> · <a href="/blog/_cards/2.html">часть 3</a></p></noscript>
+  <noscript><p class="more-status">Остальные статьи (48): <a href="/blog/_cards/1">часть 2</a> · <a href="/blog/_cards/2">часть 3</a></p></noscript>
   <!-- blog-archive:end -->
   <script>
 (function(){
@@ -362,7 +362,7 @@ gtag("config", "G-9DZXMBECL0");
   function loadNext(){
     var n = loaded + 1, ctl = window.AbortController ? new AbortController() : null;
     var timer = setTimeout(function(){ if (ctl) ctl.abort(); }, 20000);
-    return fetch("/blog/_cards/" + n + ".html", ctl ? { signal: ctl.signal } : undefined).then(function(r){
+    return fetch("/blog/_cards/" + n, ctl ? { signal: ctl.signal } : undefined).then(function(r){
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.text();
     }).then(function(html){
