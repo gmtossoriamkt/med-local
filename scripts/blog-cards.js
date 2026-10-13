@@ -70,7 +70,7 @@ function readAllCards() {
 function archiveBlock(older, nChunks) {
   if (!older.length) return '';
   const links = [];
-  for (let i = 1; i <= nChunks; i++) links.push('<a href="/' + CARDS_DIR + '/' + i + '.html">часть ' + (i + 1) + '</a>');
+  for (let i = 1; i <= nChunks; i++) links.push('<a href="/' + CARDS_DIR + '/' + i + '">часть ' + (i + 1) + '</a>');
   return '<noscript><p class="more-status">Остальные статьи (' + older.length + '): ' + links.join(' · ') + '</p></noscript>';
 }
 
