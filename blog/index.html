@@ -359,17 +359,25 @@ gtag("config", "G-9DZXMBECL0");
   }
   function say(t){ if (status) status.textContent = t || ""; }
 
-  function loadNext(){
-    var n = loaded + 1, ctl = window.AbortController ? new AbortController() : null;
-    var timer = setTimeout(function(){ if (ctl) ctl.abort(); }, 20000);
-    return fetch("/blog/_cards/" + n, ctl ? { signal: ctl.signal } : undefined).then(function(r){
+  function fetchChunk(n, attempt){
+    var ctl = window.AbortController ? new AbortController() : null;
+    var timer = setTimeout(function(){ if (ctl) ctl.abort(); }, 8000);
+    var url = "/blog/_cards/" + n + (attempt ? "?r=" + attempt : "");
+    return fetch(url, ctl ? { signal: ctl.signal } : undefined).then(function(r){
+      clearTimeout(timer);
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.text();
-    }).then(function(html){
-      clearTimeout(timer);
+    }, function(e){ clearTimeout(timer); throw e; }).catch(function(e){
+      if (attempt >= 2) throw e;
+      return fetchChunk(n, attempt + 1);   // до двух повторов (всего 3 попытки по 8 с)
+    });
+  }
+  function loadNext(){
+    var n = loaded + 1;
+    return fetchChunk(n, 0).then(function(html){
       var tpl = document.createElement("template"); tpl.innerHTML = html;
       grid.appendChild(tpl.content); loaded = n; applyAll();
-    }, function(e){ clearTimeout(timer); throw e; });
+    });
   }
   function loadAll(){
     if (busy) return busy;
