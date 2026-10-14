@@ -15,7 +15,7 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const FIRST = 12;   // карточек в первом HTML-ответе (каждая добавляет ~0,16 КБ к весу по сети)
-const CHUNK = 24;   // карточек в одной подгружаемой порции
+const CHUNK = 26;   // карточек в одной подгружаемой порции
 const INDEX = 'blog/index.html';
 const CARDS_DIR = 'blog/_cards';
 const ARCH_START = '<!-- blog-archive:start -->';
