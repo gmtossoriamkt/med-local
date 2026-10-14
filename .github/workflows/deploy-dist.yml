@@ -1,0 +1,107 @@
+name: deploy-dist
+
+# На каждый пуш в main (и, пока идёт переезд, в infra/timeweb-migration):
+#   1) check-site.js; 2) build-dist.js; 3) публикация собранного сайта в ветки
+#      timeweb-dist   — только содержимое dist (приложение Timeweb «Статический сайт», директория /)
+#      timeweb-docker — Dockerfile + Caddyfile + site/ (приложение Timeweb типа Dockerfile, вариант с полным конфигом)
+#   4) ожидание, пока сайт на Timeweb не отдаст version.txt с этим коммитом (явный статус «выложено» / ошибка).
+# Адреса для шага 4 — переменные репозитория (Settings → Secrets and variables → Actions → Variables):
+#   DEPLOY_CHECK_URL (static-приложение), DEPLOY_CHECK_URL_DOCKER (Docker-приложение). Пустые — шаг пропускается.
+
+on:
+  push:
+    branches: [main, infra/timeweb-migration]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-dist
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Ветка переезда не должна затирать более свежий main
+        if: github.ref != 'refs/heads/main'
+        run: |
+          git fetch origin main
+          if ! git merge-base --is-ancestor origin/main HEAD; then
+            echo "::error::В main есть коммиты, которых нет в ${GITHUB_REF_NAME}. Слейте main в ветку и запушьте снова."
+            exit 1
+          fi
+
+      - name: check-site
+        run: node scripts/check-site.js
+
+      - name: build-dist
+        run: |
+          node scripts/build-dist.js
+          printf '%s' "${GITHUB_SHA}" > dist/version.txt
+          test -f dist/404.html && test -f dist/index.html
+          for p in scripts drafts CLAUDE.md README.md vercel.json deploy .github; do
+            if [ -e "dist/$p" ]; then echo "::error::В dist попало служебное: $p"; exit 1; fi
+          done
+          echo "dist: $(find dist -type f | wc -l) файлов, $(du -sh dist | cut -f1)"
+
+      - name: Публикация в timeweb-dist (только содержимое dist)
+        run: |
+          rm -rf pub-static && mkdir pub-static && cp -a dist/. pub-static/
+          cd pub-static
+          git init -q -b timeweb-dist
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A
+          git commit -q -m "dist из ${GITHUB_SHA}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:refs/heads/timeweb-dist
+          echo "timeweb-dist обновлена: $(git rev-parse --short HEAD) ← ${GITHUB_SHA}"
+
+      - name: Публикация в timeweb-docker (Dockerfile + Caddyfile + site/)
+        run: |
+          rm -rf pub-docker && mkdir -p pub-docker/site
+          cp -a dist/. pub-docker/site/
+          cp deploy/Caddyfile pub-docker/Caddyfile
+          cp deploy/docker/Dockerfile pub-docker/Dockerfile
+          cd pub-docker
+          git init -q -b timeweb-docker
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A
+          git commit -q -m "dist из ${GITHUB_SHA}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:refs/heads/timeweb-docker
+          echo "timeweb-docker обновлена: $(git rev-parse --short HEAD) ← ${GITHUB_SHA}"
+
+      - name: Ожидание выкладки на Timeweb (static)
+        env:
+          URL: ${{ vars.DEPLOY_CHECK_URL }}
+        run: |
+          if [ -z "$URL" ]; then echo "DEPLOY_CHECK_URL не задан — пропуск"; exit 0; fi
+          for i in $(seq 1 40); do
+            v=$(curl -fsS -m 20 "$URL/version.txt" 2>/dev/null || true)
+            if [ "$v" = "$GITHUB_SHA" ]; then echo "Выложено: $URL → ${v:0:7}"; exit 0; fi
+            echo "ждём ($i/40): сейчас на сайте '${v:0:7}'"; sleep 15
+          done
+          echo "::error::За 10 минут $URL не отдал version.txt с коммитом ${GITHUB_SHA:0:7}. Смотрите лог деплоя в панели Timeweb."
+          exit 1
+
+      - name: Ожидание выкладки на Timeweb (Docker)
+        env:
+          URL: ${{ vars.DEPLOY_CHECK_URL_DOCKER }}
+        run: |
+          if [ -z "$URL" ]; then echo "DEPLOY_CHECK_URL_DOCKER не задан — пропуск"; exit 0; fi
+          for i in $(seq 1 40); do
+            v=$(curl -fsS -m 20 "$URL/version.txt" 2>/dev/null || true)
+            if [ "$v" = "$GITHUB_SHA" ]; then echo "Выложено: $URL → ${v:0:7}"; exit 0; fi
+            echo "ждём ($i/40): сейчас на сайте '${v:0:7}'"; sleep 15
+          done
+          echo "::error::За 10 минут $URL не отдал version.txt с коммитом ${GITHUB_SHA:0:7}. Смотрите лог деплоя в панели Timeweb."
+          exit 1

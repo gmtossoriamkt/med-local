@@ -1,9 +1,7 @@
 name: checks
 
-# Только проверки. Выкладку делает автодеплой Timeweb App Platform (команда сборки: node scripts/build-dist.js, папка: dist).
+# Только проверки для PR. Сборку и публикацию в timeweb-dist / timeweb-docker делает deploy-dist.yml.
 on:
-  push:
-    branches: [main]
   pull_request:
 
 jobs:
