@@ -1,0 +1,24 @@
+name: checks
+
+# Только проверки. Выкладку делает автодеплой Timeweb App Platform (команда сборки: node scripts/build-dist.js, папка: dist).
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: check-site
+        run: node scripts/check-site.js
+      - name: build-dist
+        run: node scripts/build-dist.js
+      - name: Проверка dist
+        run: |
+          test -f dist/404.html && test -f dist/index.html
+          ! test -e dist/scripts && ! test -e dist/CLAUDE.md && ! test -e dist/drafts

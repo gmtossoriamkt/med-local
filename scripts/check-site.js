@@ -29,7 +29,7 @@ const ROOT = path.resolve(__dirname, '..');
 process.chdir(ROOT);
 const ORIGIN = 'https://med-local.ru';
 const RUBRICS = ['pp719', 'krov', 'bally', 'gisp', 'goszakupki'];
-const SKIP = new Set(['.git', 'node_modules', '.claude', 'drafts']); // drafts/ — черновики вне публикации (см. .vercelignore)
+const SKIP = new Set(['.git', 'node_modules', '.claude', 'drafts', 'dist']); // drafts/ — черновики вне публикации (см. .vercelignore)
 
 // Статьи blog/<slug>/, которые НАМЕРЕННО не должны быть ни в sitemap.xml, ни среди карточек /blog (каждая — с причиной).
 // Сюда нельзя добавлять статью только затем, чтобы заглушить ошибку: у неё должна быть причина не быть в блоге.

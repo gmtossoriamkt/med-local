@@ -3,3 +3,6 @@ CLAUDE.md
 README.md
 scripts/
 .githooks/
+dist/
+deploy/
+.github/
