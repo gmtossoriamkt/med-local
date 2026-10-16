@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Локализация контейнеров для крови по ПП 719</title>
+<meta name="description" content="Для гемоконтейнеров и систем переливания крови (позиция «из 32.50.13.190» раздела VII ПП 719) баллы за операции не установлены, но действует требование по доле иностранных товаров — не более 50% цены товара. Разбираем формулировку требования и что делать производителю.">
+<link rel="canonical" href="https://med-local.ru/blog/gemokonteynery-litie">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Локализация контейнеров для крови по ПП 719: почему нет баллов за литьё, но действует адвалорная доля 50%">
+<meta property="og:description" content="Раздел VII ПП 719 не содержит баллов для гемоконтейнеров, но устанавливает долю иностранных товаров не более 50% цены товара. Разбираем практические шаги для производителя.">
+<meta property="og:url" content="https://med-local.ru/blog/gemokonteynery-litie">
+<meta property="og:image" content="https://med-local.ru/og-image.png">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C232E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@700;800&display=swap" media="print" onload="this.onload=null;this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@700;800&display=swap"></noscript>
+<style>
+:root{
+ --graphite:#1C232E;--graphite-2:#27303E;--ink:#1C232E;--muted:#4A5568;
+ --blue:#3D6FB4;--cyan:#2FA8A0;--cyan-soft:#E4F4F3;--blue-soft:#E9F0FA;
+ --orange:#FF6B3D;--orange-soft:#FFE9DC;
+ --paper:#F6F7F9;--card:#FFFFFF;--line:#E5E8ED;
+ --body:'Onest',system-ui,sans-serif;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+ --r:16px;--sh:0 12px 32px -16px rgba(28,35,46,.18);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{max-width:100vw}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:12px;font-weight:600;font-size:13.5px;border:none;transition:.18s;cursor:pointer}
+.btn.pri{background:var(--orange);color:#fff;box-shadow:0 10px 24px -10px rgba(255,107,61,.6)}
+.btn.pri:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--cyan)}
+.tag::before{content:"";width:22px;height:2px;background:var(--cyan)}
+h1,h2,h3{line-height:1.15;margin:0}
+.h-xl{font-size:clamp(30px,4.6vw,52px);font-weight:800;letter-spacing:-1.2px}
+.sec{padding:74px 0}
+header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:22px;height:66px}
+.nav .sp{flex:1}
+.nav a.lnk{font-size:12.5px;font-weight:500;color:var(--muted);transition:.15s;white-space:nowrap}
+.nav a.lnk:hover,.nav a.lnk.on{color:var(--ink)}
+@media(max-width:2000px){.nav a.lnk{display:none}}
+.law{background:var(--blue-soft);border:1px solid #CCDCF2;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#2D4F7E;line-height:1.65}
+.law b{display:block;margin-bottom:6px;font-size:14px}
+.warn{background:var(--orange-soft);border:1px solid #FBCFBD;border-radius:var(--r);padding:20px 24px;font-size:13.5px;color:#8B3A1E;line-height:1.65;margin:24px 0}
+.warn b{display:block;margin-bottom:6px;font-size:14px}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.faq-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+footer{background:var(--graphite);color:#97A1B2;padding:50px 0 30px;font-size:13.5px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:26px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;padding:4px 0;color:#97A1B2}footer a:hover{color:#fff}
+footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr 1fr}}
+.article-body h2{font-size:22px;font-weight:800;margin:36px 0 14px;color:var(--ink)}
+.article-body h3{font-size:18px;font-weight:700;margin:28px 0 10px;color:var(--ink)}
+.article-body p{font-size:15px;color:#3a4455;line-height:1.75;margin:0 0 16px}
+.article-body ul,.article-body ol{margin:0 0 16px 20px}
+.article-body li{font-size:15px;color:#3a4455;line-height:1.7;margin-bottom:6px}
+.article-body b{color:var(--ink)}
+.article-body .law{margin:24px 0}
+.article-cta{background:linear-gradient(120deg,var(--graphite),#22384a);color:#fff;border-radius:16px;padding:28px 32px;margin:40px 0}
+.article-cta b{font-size:18px;display:block;margin-bottom:8px;color:#fff}
+.article-cta p{color:#AFBAC9;font-size:14px;margin:0 0 18px}
+.step-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 24px;margin:12px 0;border-left:3px solid var(--cyan)}
+.step-box h4{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.step-box p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.burger{display:none;align-items:center;gap:8px;cursor:pointer;padding:6px 10px;background:#fff;border:1.5px solid var(--line);border-radius:10px;transition:.15s;z-index:200}
+.burger:hover{border-color:var(--cyan)}
+.burger-icon{display:flex;flex-direction:column;gap:5px}
+.burger-icon span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger-label{font-size:12.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+@media(max-width:680px){.burger{padding:4px;background:none;border:none;gap:0}.burger-label{display:none}}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(246,247,249,.98);z-index:210;flex-direction:column}
+.mob-menu-links{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:70px 20px 16px}
+.mob-menu-cta{flex-shrink:0;display:flex;justify-content:center;padding:14px 24px 20px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:22px;font-weight:700;color:var(--ink)}
+@media(max-width:2000px){.nav-links{display:none!important}.burger{display:flex}.nav{gap:12px}}
+.float-btn{display:none;position:fixed;bottom:20px;right:20px;z-index:90;background:var(--cyan);color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;box-shadow:0 8px 24px rgba(47,168,160,.4);text-decoration:none;align-items:center;gap:8px}
+.float-btn.max-btn{bottom:74px;background:#fff;box-shadow:0 8px 24px rgba(107,63,231,.25);color:var(--ink)}
+@media(max-width:768px){.float-btn{display:flex}}
+.header-icons{display:flex;align-items:center;gap:8px;margin-right:4px}
+.header-icons a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s}
+.header-icons a.tg-icon{background:#2FA8A0}
+.header-icons a.max-icon{background:transparent;padding:0}
+.header-icons a:hover{filter:brightness(1.1);transform:translateY(-1px)}
+@media(max-width:2000px){.header-icons{display:none}}
+.lang-switch{display:flex;align-items:center;gap:4px;margin-right:8px}
+.lang-switch a{font-size:12.5px;font-weight:700;padding:4px 8px;border-radius:6px;color:var(--muted);transition:.15s;text-decoration:none}
+.lang-switch a.active{background:var(--graphite);color:#fff}
+.mob-lang-switch{display:flex;align-items:center;gap:10px;margin-top:10px}
+.mob-lang-switch a{font-size:15px;font-weight:700;padding:8px 20px;border-radius:10px;color:var(--muted);background:var(--paper);border:1.5px solid var(--line)}
+.mob-lang-switch a.active{background:var(--graphite);color:#fff;border-color:var(--graphite)}
+@media(max-width:680px){.lang-switch{display:none}}
+.lang-switch a:hover:not(.active){color:var(--ink)}
+.logo{display:inline-flex;align-items:center;text-decoration:none;flex-shrink:0}
+.logo img{display:block;width:200px;height:48px;object-fit:contain}
+@media(max-width:768px){.logo img{width:170px;height:auto}}
+@media(max-width:374px){header .wrap.nav{padding-left:14px;padding-right:14px;gap:8px}header .logo img{width:150px}header .nav .btn.pri{padding:8px 10px;font-size:12.5px;line-height:1.2}}
+</style>
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DZXMBECL0"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-9DZXMBECL0");
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Локализация контейнеров для крови по ПП 719: почему нет баллов за литьё, но действует адвалорная доля 50%",
+  "description": "Для гемоконтейнеров и систем переливания крови (позиция «из 32.50.13.190» раздела VII ПП 719) баллы за операции не установлены, но действует требование по доле иностранных товаров — не более 50% цены товара. Разбираем формулировку требования и что делать производителю.",
+  "image": "https://med-local.ru/og-image.png",
+  "author": {
+    "@type": "Person",
+    "name": "А.-Т. Танделов",
+    "jobTitle": "CEO ГМТ, аудитор ISO 13485/14971, член АУСОМИ"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Инженерный центр",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://med-local.ru/og-image.png"
+    }
+  },
+  "datePublished": "2026-08-10T09:00:00+03:00",
+  "dateModified": "2026-08-26T12:00:00+03:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://med-local.ru/blog/gemokonteynery-litie"
+  },
+  "inLanguage": "ru-RU"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Значит ли отсутствие баллов, что гемоконтейнеры вообще нельзя включить в реестр по ПП 719?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. Для позиции «из 32.50.13.190» установлено требование по доле иностранных товаров — не более 50% цены товара. Отсутствие балльного критерия не отменяет этого требования, оно применяется самостоятельно."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Применяется ли к гемоконтейнерам требование по адвалорной доле, если баллов нет?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Графа требований приложения для этой позиции (общая для группы соседних строк) устанавливает: доля иностранных товаров, использованных при производстве, не должна превышать 50% цены товара. Расчёт нужно вести с учётом сноски к приложению, определяющей порядок определения этой стоимости."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Могут ли баллы появиться позже, как это произошло с другими позициями раздела VII?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да, это происходит регулярно — за 2023-2026 годы в раздел VII добавлялись детализированные балльные критерии для новых категорий. Не исключено, что подобная детализация появится и для этой позиции в одном из будущих обновлений постановления."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как узнать точный код ОКПД2 для конкретной модели гемоконтейнера?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Код присваивается на основании регистрационного удостоверения и технической документации при подаче заявления в Минпромторг — самостоятельно точный код на уровне восьмого знака классификатора лучше не декларировать без подтверждения, а уточнять в заявлении и сверять с консультацией ТПП."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://med-local.ru/"},{"@type":"ListItem","position":2,"name":"База знаний","item":"https://med-local.ru/blog"},{"@type":"ListItem","position":3,"name":"Локализация контейнеров для крови по ПП 719: почему нет","item":"https://med-local.ru/blog/gemokonteynery-litie"}]}
+</script>
+</head>
+<body>
+<div class="mob-menu" id="mob-menu" onclick="if(event.target===event.currentTarget)toggleMenu()"><button class="mob-close" onclick="toggleMenu()" aria-label="Закрыть меню" style="position:absolute;top:max(18px,env(safe-area-inset-top));right:max(18px,env(safe-area-inset-right));background:none;border:none;cursor:pointer;padding:10px;color:var(--ink)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="pointer-events:none"><path d="M5 5l14 14M19 5L5 19"/></svg></button><div class="mob-menu-links" onclick="if(event.target===event.currentTarget)toggleMenu()"><a href="/">Главная</a><a href="/about">О центре</a><a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a><a href="/development">Разработка</a><a href="/production">Производство</a><a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a><a href="/blog">База знаний</a><a href="/pricing">Стоимость</a><a href="/cases">Кейсы</a><a href="/glossary">Глоссарий</a><a href="/contacts">Контакты</a><div class="mob-lang-switch"><a href="#" class="active" onclick="toggleMenu()">RU</a><a href="/en">EN</a></div>
+  </div><div class="mob-menu-cta" onclick="if(event.target===event.currentTarget)toggleMenu()"><a href="/#lead" class="btn pri" style="margin-top:16px" onclick="toggleMenu()">Оценить проект</a></div></div>
+<header><div class="wrap nav">
+  <a class="logo" href="/" aria-label="Инженерный центр — на главную">
+  <img
+    src="/logo-full.svg"
+    alt="Инженерный центр — локализация медицинских изделий"
+    width="200"
+    height="48"
+    style="display:block;"
+  >
+</a>
+  <span class="sp"></span>
+  <div class="nav-links" style="display:flex;align-items:center;gap:10px"><a class="lnk" href="/localization">Локализация</a><a class="lnk" href="/reverse">Реверс-инжиниринг</a><a class="lnk" href="/development">Разработка</a><a class="lnk" href="/production">Производство</a><a class="lnk" href="/registration">Регистрация</a><a class="lnk" href="/analytics">Аналитика</a><a class="lnk on" href="/blog">База знаний</a><a class="lnk" href="/pricing">Стоимость</a><a class="lnk" href="/about">О центре</a><a class="lnk" href="/cases">Кейсы</a><a class="lnk" href="/glossary">Глоссарий</a><a class="lnk" href="/contacts">Контакты</a></div>
+  <div class="header-icons">
+    <a class="tg-icon" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer" title="Написать в Telegram" aria-label="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg></a>
+    <a class="max-icon" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer" title="Написать в MAX" aria-label="MAX"><img src="/images/max-icon.png" alt="MAX" width="26" height="26" style="border-radius:7px;display:block"></a>
+  </div>
+  <div class="lang-switch"><a href="#" class="active">RU</a><a href="/en">EN</a></div>
+  <a class="btn pri" href="/#lead">Оценить проект</a>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span class="burger-icon"><span></span><span></span><span></span></span><span class="burger-label">Меню</span></button>
+</div></header>
+
+<main>
+<section style="background:#fff;border-bottom:1px solid var(--line)">
+  <div class="wrap" style="padding:48px 22px 36px;max-width:820px">
+    <a href="/blog" style="font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:20px">← Все статьи</a>
+    <span class="tag" style="display:inline-flex;margin-bottom:14px">Служба крови · ПП 719 · Локализация</span>
+    <h1 class="h-xl" style="margin:0 0 16px;max-width:760px">Локализация контейнеров для крови по ПП 719: почему нет баллов за литьё, но действует адвалорная доля 50%</h1>
+    <div style="font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap">
+      <span>А.-Т. Танделов, CEO ГМТ · Аудитор ISO 13485/14971 · Член АУСОМИ</span>
+      <span>10 августа 2026</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap" style="max-width:820px">
+    <div class="article-body">
+
+      <p>Производитель, ищущий баллы за литьё полимерных мешков для крови, чтобы посчитать локализацию по ПП 719, столкнётся с неожиданностью: в действующем тексте раздела VII постановления товарная позиция «из 32.50.13.190» — к ней относятся, среди прочего, аппараты и одноразовые системы для переливания крови, то есть категория, включающая гемоконтейнеры, — присутствует в перечне, но детализированной таблицы операций и баллов для неё нет. Это не означает, однако, что требований к локализации для этой позиции нет вообще: постановление прямо устанавливает для неё количественный критерий по доле иностранных товаров.</p>
+
+      <div class="law"><b>Суть в четырёх предложениях</b>Товарная позиция «из 32.50.13.190» раздела VII ПП 719 включает, среди прочего, аппараты и одноразовые системы для переливания крови — категорию, к которой относятся гемоконтейнеры. В действующей редакции постановления (проверено по редакции от 19.08.2026) для этой позиции не установлены баллы по операциям, но третья графа приложения — графа требований к продукции — содержит для неё (совместно с рядом соседних позиций, у которых общая ячейка требований) условие: доля иностранных товаров, использованных при производстве, не должна превышать 50% цены товара. Это означает, что производителю нельзя применять к гемоконтейнерам чужую балльную формулу («баллы за литьё + баллы за сварку») — такой формулы для этой позиции в тексте нет, — но при этом расчёт локализации нужно вести именно от требования по доле, а не от предположения, что критериев нет вообще. Прежде чем закладывать в документацию конкретную формулировку требования, стоит свериться с примечанием к приложению, определяющим порядок расчёта стоимости иностранных товаров, — оно уточняет базу расчёта.</div>
+
+      <h2>1. Нормативная база</h2>
+      <p><b>ПП РФ № 719 от 17.07.2015</b>, раздел VII, товарная позиция «из 32.50.13.190» — «Аппараты и одноразовые системы для переливания крови». В третьей графе приложения (требования к продукции) для группы позиций, включающей эту строку, действует условие: «соблюдение процентной доли стоимости использованных при производстве (изготовлении) иностранных товаров — не более 50 процентов цены товара». — <a href="http://publication.pravo.gov.ru/Document/View/0001201507210008/" target="_blank" rel="noopener noreferrer">pravo.gov.ru</a>, <a href="https://www.consultant.ru/document/cons_doc_LAW_183175/" target="_blank" rel="noopener noreferrer">consultant.ru</a>.</p>
+      <p>Формулировка требования привязана к сноске, определяющей порядок расчёта стоимости иностранных товаров. База расчёта — цена товара на условиях франко-завод: это определённый термин методологии ПП 719 (стоимость, подлежащая уплате производителю на предприятии последней обработки товара, без учёта возмещаемых внутренних налогов), а не произвольное обозначение. Дословный текст сноски для конкретной позиции стоит свериться перед подачей, но сама база расчёта — франко-завод — стандартна для адвалорных требований раздела VII.</p>
+      <p><b>ПП РФ № 1875 от 23.12.2024</b> (действующая редакция с учётом изменений постановлением №969 от 03.08.2026) — национальный режим в закупках, применение которого к гемоконтейнерам зависит от наличия действующей реестровой записи. — <a href="http://publication.pravo.gov.ru/document/0001202412250018" target="_blank" rel="noopener noreferrer">pravo.gov.ru</a>.</p>
+      <p>Код ОКПД2: <b>32.50.13</b> (медицинские расходные материалы), уточняющая позиция — <b>из 32.50.13.190</b>. Реестр КТРУ — <a href="https://zakupki.gov.ru/epz/ktru/start/startPage.html" target="_blank" rel="noopener noreferrer">zakupki.gov.ru</a>.</p>
+      <p><b>Нормативная база проверена по состоянию на 26.08.2026</b> (редакция ПП 719 от 19.08.2026).</p>
+
+      <h2>2. Что реально написано в тексте раздела VII</h2>
+      <p>Строка «из 32.50.13.190» относится к аппаратам и одноразовым системам для переливания крови. В таблице раздела VII графа с баллами по операциям для этой позиции не заполнена — детализированной методики (баллы за литьё, сварку, наполнение) для неё нет.</p>
+      <p>При этом графа требований к продукции (третья графа приложения) для этой позиции — как и для ряда соседних строк, объединённых с ней общей ячейкой требований, — содержит количественное условие: доля иностранных товаров, использованных при производстве, не должна превышать 50% цены товара. Поскольку требование указано в общей ячейке для группы позиций, при подготовке документации стоит явно зафиксировать в тексте заявления, что ваша конкретная позиция входит в эту группу — это снимает вопрос при экспертизе.</p>
+
+      <div class="warn"><b>⚠ Что это означает на практике</b>Если в каких-то публикациях (включая материалы консультационных компаний) вы видите конкретные баллы «за литьё», «за сварку ПВХ» или «за наполнение антикоагулянтом» применительно к этой позиции — такие цифры не опираются на действующий текст постановления: балльной методики для неё не существует. Но это не значит, что требований к локализации нет вообще — есть подтверждённое требование по доле иностранных товаров не более 50%, и расчёт нужно вести именно от него, с учётом сноски о порядке определения стоимости.</div>
+
+      <h2>3. Как действовать производителю на практике</h2>
+
+      <div class="step-box"><h4>Шаг 1. Подтвердите точный код ОКПД2 и позицию для вашего изделия</h4><p>Самостоятельно декларировать код на уровне восьмого знака классификатора рискованно — от точности зависит, под какую строку раздела VII реально попадает ваш товар и распространяется ли на неё общая ячейка требований с долей 50%. Уточняйте код в связке с регистрационным удостоверением Росздравнадзора и консультацией ТПП.</p></div>
+
+      <div class="step-box"><h4>Шаг 2. Рассчитайте долю иностранных товаров по действующей формуле</h4><p>Разделите стоимость иностранных материалов и комплектующих (ПВХ-гранулят, антикоагулянт, если импортный, игольные компоненты и т.д.) на цену товара, определённую в соответствии с примечанием к приложению — результат не должен превышать 50%. Исходные данные должны быть подтверждены спецификациями, документами о происхождении и стоимости материалов, а также калькуляцией цены товара — простого деления «сумма закупок / продажная цена» недостаточно.</p></div>
+
+      <div class="step-box"><h4>Шаг 3. Задокументируйте производственные операции параллельно с расчётом доли</h4><p>Даже если балльная методика для этой позиции сейчас не установлена, фиксируйте фактически выполняемые операции (литьё, сварку, наполнение, контроль качества) документально — технологические карты, спецификации, акты. Если в будущем для этой позиции появится детализированная балльная система (как это уже произошло для ряда других позиций раздела VII), эта документация понадобится немедленно.</p></div>
+
+      <div class="step-box"><h4>Шаг 4. Следите за обновлениями раздела VII</h4><p>За 2023–2026 годы в раздел VII неоднократно вносились изменения, в том числе постановлением №351 от 31.03.2026 (добавление новых позиций) и другими актами. Периодическая проверка актуальной редакции постановления перед каждой подачей — часть разумной стратегии, а не разовое действие.</p></div>
+
+      <h2>4. Типичный сценарий (обобщённо, без привязки к конкретному проекту)</h2>
+      <p>Производитель полимерных контейнеров для крови готовится подать заявление в реестр российской промышленной продукции. При подготовке расчёта команда обнаруживает в сети противоречащие друг другу наборы баллов за одни и те же операции — при проверке первоисточника выясняется, что балльной методики для этой позиции в тексте раздела VII нет вообще. Вместо баллов производитель рассчитывает долю иностранных товаров по формуле из примечания к приложению, подтверждает исходные данные спецификациями и калькуляцией цены, получает результат 38% — и параллельно продолжает вести технологические карты по факту выполняемых операций на случай появления балльной методики в будущем.</p>
+      <p class="lead-note" style="font-size:13px;color:var(--muted);font-style:italic;margin-bottom:24px">Это собирательный сценарий, иллюстрирующий логику процесса, а не описание конкретного реального проекта.</p>
+
+      <h2>FAQ</h2>
+      <div class="faq-item"><h4>Значит ли отсутствие баллов, что гемоконтейнеры вообще нельзя включить в реестр по ПП 719?</h4><p>Нет. Для позиции «из 32.50.13.190» установлено требование по доле иностранных товаров — не более 50% цены товара. Отсутствие балльного критерия не отменяет этого требования, оно применяется самостоятельно.</p></div>
+      <div class="faq-item"><h4>Применяется ли к гемоконтейнерам требование по адвалорной доле, если баллов нет?</h4><p>Да. Графа требований приложения для этой позиции (общая для группы соседних строк) устанавливает: доля иностранных товаров, использованных при производстве, не должна превышать 50% цены товара. Расчёт нужно вести с учётом сноски к приложению, определяющей порядок определения этой стоимости.</p></div>
+      <div class="faq-item"><h4>Могут ли баллы появиться позже, как это произошло с другими позициями раздела VII?</h4><p>Да, это происходит регулярно — за 2023-2026 годы в раздел VII добавлялись детализированные балльные критерии для новых категорий. Не исключено, что подобная детализация появится и для этой позиции в одном из будущих обновлений постановления.</p></div>
+      <div class="faq-item"><h4>Как узнать точный код ОКПД2 для конкретной модели гемоконтейнера?</h4><p>Код присваивается на основании регистрационного удостоверения и технической документации при подаче заявления в Минпромторг — самостоятельно точный код на уровне восьмого знака классификатора лучше не декларировать без подтверждения, а уточнять в заявлении и сверять с консультацией ТПП.</p></div>
+
+      <div class="article-cta">
+        <b>Готовите заявление на включение гемоконтейнеров в реестр?</b>
+        <p>ГМТ поможет рассчитать долю иностранных товаров по действующей норме, задокументировать производственные операции на будущее и подготовить заявление с учётом требований конкретной позиции раздела VII.</p>
+        <a class="btn pri" href="mailto:info@med-local.ru?subject=Локализация гемоконтейнеров по ПП 719">Обсудить проект</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section style="background:#fff;border-top:1px solid var(--line);padding:20px 0"><div class="wrap" style="max-width:820px"><a href="/localization" style="font-size:14px;font-weight:700;color:var(--cyan)">Подробнее об этой услуге: Локализация медицинских изделий →</a></div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><b>Инженерный центр локализации медицинских изделий</b>
+      <p style="font-size:13px;line-height:1.65;margin:0 0 14px;color:#97A1B2">Локализация производства медицинских изделий в России. От&nbsp;анализа ниши до регистрационного удостоверения.</p>
+      <a href="tel:+79853169104">+7 985 316-91-04 (Россия)</a>
+      <a href="tel:+79888777295">+7 988 877-72-95 (Россия)</a>
+      <a href="tel:+79888777295">MAX: +7 988 877-72-95</a>
+      <a href="tel:+77021394489">+7 702 139-44-89 (Казахстан)</a>
+      <a href="mailto:info@med-local.ru" style="color:#2FA8A0">info@med-local.ru</a>
+      <a href="https://t.me/tandelovtat" style="color:#2FA8A0" target="_blank" rel="noopener noreferrer">Telegram: @tandelovtat</a>
+    </div>
+    <div><b>Услуги</b>
+      <a href="/localization">Локализация</a><a href="/reverse">Реверс-инжиниринг</a>
+      <a href="/development">Разработка</a><a href="/production">Производство</a>
+      <a href="/registration">Регистрация</a><a href="/analytics">Аналитика</a>
+    </div>
+    <div><b>Компания</b>
+      <a href="/cases">Кейсы</a><a href="/pricing">Стоимость</a><a href="/blog">База знаний</a>
+      <a href="/contacts">Контакты</a><a href="/glossary">Глоссарий</a><a href="/privacy">Политика ПДн</a>
+    </div>
+    <div><b>Контакты</b>
+      <a href="mailto:info@med-local.ru">info@med-local.ru</a>
+      <a href="mailto:sales@med-local.ru">sales@med-local.ru</a>
+      <a href="mailto:marketing@med-local.ru">marketing@med-local.ru</a>
+      <a href="mailto:ceo@med-local.ru">ceo@med-local.ru</a>
+    </div>
+  </div>
+  <div class="fine">
+    <span>© 2026 ООО «Глобальные Медицинские Технологии» · 125047, г. Москва, 1-й Тверской-Ямской пер., д. 16, помещ. 1/п</span>
+    <span style="display:flex;gap:14px;flex-wrap:wrap"><a href="/privacy">Политика конфиденциальности</a><a href="/oferta">Публичная оферта</a><a href="/terms">Пользовательское соглашение</a></span>
+  </div>
+</div></footer>
+<a class="float-btn" href="https://t.me/tandelovtat" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.153.678-.553.843-1.12.524l-3.1-2.284-1.495 1.438c-.165.165-.304.304-.623.304l.223-3.164 5.75-5.192c.25-.223-.054-.346-.387-.123L7.03 14.207l-3.058-.955c-.665-.207-.678-.665.138-.983l11.94-4.604c.554-.2 1.038.123.858.878z"/></svg>
+  Написать в Telegram
+</a>
+<a class="float-btn max-btn" href="https://max.ru/u/f9LHodD0cOLDvyS7TfGCuqMQTcuMpF-2LxGuF5nNyXHgZFoFnYUC0KjLnaQ" target="_blank" rel="noopener noreferrer">
+  <img src="/images/max-icon.png" alt="MAX" width="22" height="22" style="border-radius:6px">
+  Написать в MAX
+</a>
+<script>
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';var cb=document.getElementById('cookie-consent-banner');if(cb)cb.style.display=document.getElementById('mob-menu').classList.contains('open')?'none':'';}
+</script>
+<script src="/cookie-consent.js" defer></script>
+</body>
+</html>
