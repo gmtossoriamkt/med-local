@@ -388,19 +388,6 @@ function calcPr(){
 </a>
 <script>
 function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';var cb=document.getElementById('cookie-consent-banner');if(cb)cb.style.display=document.getElementById('mob-menu').classList.contains('open')?'none':'';}
-function submitLead(f){
-  var btn=f.querySelector('button[type=submit]');
-  btn.textContent='Отправляем...';btn.disabled=true;
-  var data=new FormData(f);
-  fetch(f.action,{method:'POST',body:data,headers:{'Accept':'application/json'}})
-    .then(function(r){
-      if(r.ok){f.innerHTML='<div style="text-align:center;padding:32px"><div style="font-size:36px;margin-bottom:12px">✅</div><h3 style="font-size:20px;font-weight:800;margin:0 0 8px">Заявка принята!</h3><p style="color:var(--muted);margin:0">Мы свяжемся с вами в течение одного рабочего дня.</p></div>';}
-      else{btn.textContent='Ошибка — попробуйте снова';btn.disabled=false;}
-    })
-    .catch(function(){btn.textContent='Ошибка сети';btn.disabled=false;});
-  return false;
-}
-function sendLead(f){return submitLead(f);}
 </script>
 <script src="/cookie-consent.js" defer></script>
 </body>
