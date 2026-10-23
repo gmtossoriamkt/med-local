@@ -39,9 +39,9 @@
 	header @cards X-Robots-Tag "noindex, follow"
 
 	# Кэш: статика 30 дней (имена файлов не версионируются, поэтому без immutable); HTML всегда проверяется
-	@static path /images/* /favicon.ico /favicon.svg /icon-192.png /icon-512.png /apple-touch-icon.png /og-image.png /logo.svg /logo-full.svg /video.mp4 /cookie-consent.js
+	@static path /images/* /fonts/* /favicon.ico /favicon.svg /icon-192.png /icon-512.png /apple-touch-icon.png /og-image.png /logo.svg /logo-full.svg /video.mp4
 	header @static Cache-Control "public, max-age=2592000"
-	@dynamic not path /images/* /favicon.ico /favicon.svg /icon-192.png /icon-512.png /apple-touch-icon.png /og-image.png /logo.svg /logo-full.svg /video.mp4 /cookie-consent.js
+	@dynamic not path /images/* /fonts/* /favicon.ico /favicon.svg /icon-192.png /icon-512.png /apple-touch-icon.png /og-image.png /logo.svg /logo-full.svg /video.mp4
 	header @dynamic Cache-Control "public, max-age=0, must-revalidate"
 
 	file_server

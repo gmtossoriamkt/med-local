@@ -7,12 +7,12 @@ set -u
 cd "$(git rev-parse --show-toplevel 2>/dev/null || dirname "$0"/..)" || exit 2
 
 SUSPICIOUS='kaspersky|kis\.v2\.scr|gc\.kis|127\.0\.0\.1|localhost'
-ALLOWED_DOMAINS='fonts\.googleapis\.com|fonts\.gstatic\.com|mc\.yandex\.ru|functions\.yandexcloud\.net|med-local\.ru'
+ALLOWED_DOMAINS='mc\.yandex\.ru|functions\.yandexcloud\.net|med-local\.ru'
 
 if [ "$#" -gt 0 ]; then
   files=("$@")
 else
-  mapfile -t files < <(find . -name '*.html' -not -path './.git/*' -not -path './.claude/*' -not -path './node_modules/*' | sort)
+  mapfile -t files < <(find . -name '*.html' -not -path './.git/*' -not -path './.claude/*' -not -path './node_modules/*' -not -path './drafts/*' | sort)  # черновики не публикуются
 fi
 
 found=0
