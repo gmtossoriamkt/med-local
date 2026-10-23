@@ -566,7 +566,7 @@ ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webv
   <span class="tag">Начнём с разбора изделия</span>
   <h2 class="h-l" style="margin:14px 0 8px">Оставьте заявку</h2>
   <p class="lead" style="margin-bottom:24px">Опишите изделие — вернёмся с разбором: какие узлы критичны, где риски ИС и какой объём независимой разработки потребуется.</p>
-  <form class="frm" style="max-width:560px" action="https://formspree.io/f/mrewovkk" method="POST" onsubmit="return submitLead(this)">
+  <form class="frm" style="max-width:560px" method="post" onsubmit="return submitLead(this)">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:13px">
       <div><label>Имя и компания</label><input name="name" required placeholder="Иван, ООО Медицина"></div>
       <div><label>Телефон</label><input name="phone" required placeholder="+7 ..."></div>
@@ -574,7 +574,7 @@ ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webv
     <div><label>Изделие / задача</label><input name="device" placeholder="Тип изделия или задача"></div>
     <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--muted)">
       <input type="checkbox" id="ag" required style="margin-top:3px;width:auto;accent-color:var(--cyan)">
-      <label for="ag">Даю согласие на обработку персональных данных, включая трансграничную передачу (Formspree), в соответствии с <a href="/privacy" style="color:var(--cyan)">Политикой конфиденциальности</a></label>
+      <label for="ag">Даю согласие на обработку персональных данных в соответствии с <a href="/privacy" style="color:var(--cyan)">Политикой конфиденциальности</a></label>
     </div>
     <button type="submit" class="btn pri" style="width:100%;justify-content:center;padding:15px">Получить оценку локализации</button>
   </form>
@@ -623,20 +623,8 @@ ym(110085907,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webv
 </a>
 <script>
 function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');document.body.style.overflow=document.getElementById('mob-menu').classList.contains('open')?'hidden':'';var cb=document.getElementById('cookie-consent-banner');if(cb)cb.style.display=document.getElementById('mob-menu').classList.contains('open')?'none':'';}
-function submitLead(f){
-  var btn=f.querySelector('button[type=submit]');
-  btn.textContent='Отправляем...';btn.disabled=true;
-  var data=new FormData(f);
-  fetch(f.action,{method:'POST',body:data,headers:{'Accept':'application/json'}})
-    .then(function(r){
-      if(r.ok){f.innerHTML='<div style="text-align:center;padding:32px"><div style="font-size:36px;margin-bottom:12px">✅</div><h3 style="font-size:20px;font-weight:800;margin:0 0 8px">Заявка принята!</h3><p style="color:var(--muted);margin:0">Мы свяжемся с вами в течение одного рабочего дня.</p></div>';}
-      else{btn.textContent='Ошибка — попробуйте снова';btn.disabled=false;}
-    })
-    .catch(function(){btn.textContent='Ошибка сети';btn.disabled=false;});
-  return false;
-}
-function sendLead(f){return submitLead(f);}
 </script>
+<script src="/lead-form.js"></script>
 <script src="/cookie-consent.js" defer></script>
 </body>
 </html>
