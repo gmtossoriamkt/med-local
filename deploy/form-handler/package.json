@@ -1,0 +1,16 @@
+{
+  "name": "med-local-lead-handler",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Приём заявок med-local.ru на российском сервере (замена Formspree)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
