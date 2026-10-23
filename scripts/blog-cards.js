@@ -22,6 +22,9 @@ const ARCH_START = '<!-- blog-archive:start -->';
 const ARCH_END = '<!-- blog-archive:end -->';
 const GRID_OPEN = /<div class="grid g3" id="blog-grid"[^>]*>\n/;
 const IS_CARD = l => l.includes('<a class="card"');
+// первая строка каждой порции: файл открывается и по прямой ссылке (/blog/_cards/N.html), а на статическом хостинге
+// заголовок X-Robots-Tag для этих путей задать нельзя — noindex держим в самом файле; загрузчик в blog/index.html эту строку отбрасывает
+const CHUNK_META = '<meta name="robots" content="noindex, follow">';
 
 function readDoc(rel) {
   const raw = fs.readFileSync(path.join(ROOT, rel), 'utf8');
@@ -70,7 +73,7 @@ function readAllCards() {
 function archiveBlock(older, nChunks) {
   if (!older.length) return '';
   const links = [];
-  for (let i = 1; i <= nChunks; i++) links.push('<a href="/' + CARDS_DIR + '/' + i + '">часть ' + (i + 1) + '</a>');
+  for (let i = 1; i <= nChunks; i++) links.push('<a href="/' + CARDS_DIR + '/' + i + '.html">часть ' + (i + 1) + '</a>');
   return '<noscript><p class="more-status">Остальные статьи (' + older.length + '): ' + links.join(' · ') + '</p></noscript>';
 }
 
@@ -109,7 +112,7 @@ function writeAllCards(cards) {
   const had = chunkFiles();
   chunks.forEach((c, i) => {
     const rel = CARDS_DIR + '/' + (i + 1) + '.html';
-    writeDoc(rel, { crlf: false, text: c.join('\n') + '\n' });
+    writeDoc(rel, { crlf: false, text: CHUNK_META + '\n' + c.join('\n') + '\n' });
   });
   for (let i = chunks.length; i < had.length; i++) fs.unlinkSync(path.join(ROOT, had[i]));
   return { total: cards.length, first: first.length, chunks: chunks.length, older: older.length };

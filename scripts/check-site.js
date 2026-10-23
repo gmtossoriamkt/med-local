@@ -229,11 +229,12 @@ if (fs.existsSync('blog/index.html')) {
   files_.forEach((f, i) => {
     const n = read(f).split('\n').filter(l => l.includes('<a class="card"')).length;
     if (n > blogCards.CHUNK) err(f, 'в порции ' + n + ' карточек, максимум ' + blogCards.CHUNK);
+    if (!read(f).includes('<meta name="robots" content="noindex')) err(f, 'в порции нет <meta name="robots" content="noindex, follow"> (на статическом хостинге X-Robots-Tag задать нельзя)');
     if (i < files_.length - 1 && n !== blogCards.CHUNK) err(f, 'неполная порция не в конце (' + n + ' карточек)');
   });
   // для пользователей без JS: <noscript> со ссылками на каждый файл порции (они же — путь для роботов к остальным статьям)
   const noscriptBlock = (idx.match(/<!-- blog-archive:start -->([\s\S]*?)<!-- blog-archive:end -->/) || ['', ''])[1];
-  const linked = [...noscriptBlock.matchAll(/href="\/blog\/_cards\/(\d+)"/g)].map(m => +m[1]);
+  const linked = [...noscriptBlock.matchAll(/href="\/blog\/_cards\/(\d+)\.html"/g)].map(m => +m[1]);
   if (JSON.stringify(linked) !== JSON.stringify(files_.map((f, i) => i + 1))) err("blog/index.html", "в <noscript> нет ссылок на все файлы порций (" + linked.join(",") + " против 1.." + files_.length + ")");
   // вес ответа: Vercel отдаёт HTML brotli качества 3 — именно такой размер уходит по сети; у некоторых пользователей большие ответы обрываются на ~14–20 КБ
   const wire = f => { const b = Buffer.from(read(f)); return zlib.brotliCompressSync(b, { params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 3, [zlib.constants.BROTLI_PARAM_SIZE_HINT]: b.length } }).length; };

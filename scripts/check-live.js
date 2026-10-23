@@ -128,9 +128,16 @@ async function pool(items, n, fn) {
   if (parseInt(vh.headers['content-length'] || '0', 10) !== want) bad('video.mp4 размер ' + vh.headers['content-length'] + ', ожидалось ' + want);
 
   // 7. заголовки
-  const cards = await req('/blog/_cards/1');
-  if (cards.status !== 200) bad('/blog/_cards/1 → ' + cards.status);
-  else if (!/noindex/.test(cards.headers['x-robots-tag'] || '')) bad('/blog/_cards/1 без X-Robots-Tag noindex');
+  // порции блога: загрузчик берёт /blog/_cards/N.html (на статике — 200 сразу, на Vercel/Caddy — через 308 на адрес без .html)
+  let cards = await req('/blog/_cards/1.html', { body: true });
+  let cardsPath = '/blog/_cards/1.html';
+  if ([301, 308].includes(cards.status) && cards.headers.location) {
+    cardsPath = cards.headers.location.replace(/^https?:\/\/[^/]+/, '');
+    cards = await req(cardsPath, { body: true });
+  }
+  if (cards.status !== 200) bad(cardsPath + ' → ' + cards.status + ' («Показать ещё» в блоге не подгрузится)');
+  else if (!/<a class="card"/.test(cards.body)) bad(cardsPath + ' не содержит карточек (отдан не файл порции)');
+  else if (!/noindex/.test(cards.headers['x-robots-tag'] || '') && !/<meta name="robots" content="noindex/.test(cards.body)) bad(cardsPath + ' без noindex (ни X-Robots-Tag, ни meta в файле)');
   const home = await req('/', { enc: 'br, gzip, zstd' });
   const hc = home.headers['cache-control'] || '';
   if (!/max-age=0/.test(hc) && !/no-cache/.test(hc)) warn('HTML кэшируется: Cache-Control ' + (hc || 'нет'));

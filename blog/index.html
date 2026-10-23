@@ -326,7 +326,7 @@ footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-
     <a class="card" href="/blog/defibrillyator-importnye-chipy-pp719" data-tags="pp719 bally" style="display:flex;flex-direction:column;gap:9px;transition:.2s;text-decoration:none"><span style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)">ПП 719 · Баллы · Электроника</span><h3 style="font-size:16.5px;line-height:1.35">Дефибриллятор на импортных чипах: как набрать 65 баллов по ПП №719</h3><p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.6;flex:1">Как набрать 65 баллов по ПП № 719 для дефибриллятора с импортными микросхемами: 100%-й монтаж плат в РФ, 25 баллов за платы в сборе, запас до порога.</p><span style="font-size:12px;color:var(--muted)">7 октября 2026</span><span style="font-size:13px;font-weight:700;color:var(--orange)">Читать →</span></a>
   </div>
   <!-- blog-archive:start -->
-  <noscript><p class="more-status">Остальные статьи (56): <a href="/blog/_cards/1">часть 2</a> · <a href="/blog/_cards/2">часть 3</a> · <a href="/blog/_cards/3">часть 4</a></p></noscript>
+  <noscript><p class="more-status">Остальные статьи (56): <a href="/blog/_cards/1.html">часть 2</a> · <a href="/blog/_cards/2.html">часть 3</a> · <a href="/blog/_cards/3.html">часть 4</a></p></noscript>
   <!-- blog-archive:end -->
   <script>
 (function(){
@@ -347,7 +347,7 @@ footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-
   function fetchChunk(n, attempt){
     var ctl = window.AbortController ? new AbortController() : null;
     var timer = setTimeout(function(){ if (ctl) ctl.abort(); }, 8000);
-    var url = "/blog/_cards/" + n + (attempt ? "?r=" + attempt : "");
+    var url = "/blog/_cards/" + n + ".html" + (attempt ? "?r=" + attempt : "");
     return fetch(url, ctl ? { signal: ctl.signal } : undefined).then(function(r){
       clearTimeout(timer);
       if (!r.ok) throw new Error("HTTP " + r.status);
@@ -361,6 +361,7 @@ footer .fine{margin-top:34px;padding-top:18px;border-top:1px solid #313B4A;font-
     var n = loaded + 1;
     return fetchChunk(n, 0).then(function(html){
       var tpl = document.createElement("template"); tpl.innerHTML = html;
+      var ms = tpl.content.querySelectorAll("meta"); for (var i = 0; i < ms.length; i++) ms[i].parentNode.removeChild(ms[i]);   // noindex-строка порции в страницу не попадает
       grid.appendChild(tpl.content); loaded = n; applyAll();
     });
   }
