@@ -19,6 +19,12 @@
       "headers": [
         { "key": "X-Robots-Tag", "value": "noindex, follow" }
       ]
+    },
+    {
+      "source": "/fonts/:file*",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000" }
+      ]
     }
   ]
 }
