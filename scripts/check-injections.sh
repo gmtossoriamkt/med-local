@@ -7,7 +7,7 @@ set -u
 cd "$(git rev-parse --show-toplevel 2>/dev/null || dirname "$0"/..)" || exit 2
 
 SUSPICIOUS='kaspersky|kis\.v2\.scr|gc\.kis|127\.0\.0\.1|localhost'
-ALLOWED_DOMAINS='fonts\.googleapis\.com|fonts\.gstatic\.com|www\.googletagmanager\.com|mc\.yandex\.ru|formspree\.io|med-local\.ru'
+ALLOWED_DOMAINS='fonts\.googleapis\.com|fonts\.gstatic\.com|mc\.yandex\.ru|formspree\.io|med-local\.ru'
 
 if [ "$#" -gt 0 ]; then
   files=("$@")
