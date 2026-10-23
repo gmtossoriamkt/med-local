@@ -6,7 +6,7 @@
 
 Скрипт `scripts/check-injections.sh` ищет в `.html` (включая `/en`) код, внедрённый антивирусом или прокси:
 подстроки `kaspersky`, `kis.v2.scr`, `gc.kis`, `127.0.0.1`, `localhost`, а также `<script src>` и `<link href>`
-на домены вне белого списка (`fonts.googleapis.com`, `fonts.gstatic.com`, `www.googletagmanager.com`,
+на домены вне белого списка (`fonts.googleapis.com`, `fonts.gstatic.com`,
 `mc.yandex.ru`, `formspree.io`, `med-local.ru`). При находке печатает `файл:строка` и завершается с кодом 1.
 
 Ручной запуск по всему репозиторию:
