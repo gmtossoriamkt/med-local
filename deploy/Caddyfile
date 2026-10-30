@@ -11,6 +11,9 @@
 	# снятая статья → её замена, 301
 	redir /blog/multipleksny-proryv /blog/pcr-panely-pp1875-vtoroy-lishniy 301
 	redir /blog/multipleksny-proryv/ /blog/pcr-panely-pp1875-vtoroy-lishniy 301
+	# дубль статьи (canonical ведёт на оригинал; файл дубля остаётся в репозитории) → оригинал, 301
+	redir /blog/gemokonteynery /blog/gemokonteynery-pp719/ 301
+	redir /blog/gemokonteynery/ /blog/gemokonteynery-pp719/ 301
 	# drafts/ в dist не попадает; редирект — на случай ручной выкладки
 	@drafts path /drafts /drafts/*
 	redir @drafts /blog 302
