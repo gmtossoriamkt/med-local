@@ -13,7 +13,7 @@
 //   5. blog/index.html: у каждой карточки есть статья, у каждой статьи — карточка, нет дублей карточек,
 //      у карточки data-tags (1–3 рубрики из pp719 krov bally gisp goszakupki, без повторов),
 //      карточки идут от новых к старым (по дате в карточке).
-//   8. Бренд: в <title>, og:/twitter:title и JSON-LD нет прежнего названия «Мед-Локал».
+//   8. Бренд: в <title>, og:/twitter:title и JSON-LD нет прежнего названия «Мед-Локал»; title не заканчивается на « | ГМТ» / « | Мед-Локал».
 //   7. Служебные файлы (.md, .bak, .sh, скрипты сборки .js, папки с точкой) вне .vercelignore — ОШИБКА: их отдаёт сайт.
 //   6. FAQPage в JSON-LD совпадает с видимым FAQ (форматы — см. visibleFaq): число вопросов, текст вопросов и ответов.
 //      Видимый текст — первоисточник. Отсутствие видимого FAQ при наличии FAQPage — тоже ошибка.
@@ -125,6 +125,8 @@ for (const f of files) {
   const headBrand = [...h.matchAll(/<title>([^<]*)<\/title>/g)].map(m => m[1])
     .concat([...h.matchAll(/<meta\s+(?:property|name)="(?:og:title|og:site_name|twitter:title)"\s+content="([^"]*)"/g)].map(m => m[1]))
     .concat([...h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m => m[1]));
+  const titleText = (h.match(/<title>([^<]*)<\/title>/) || [])[1];
+  if (titleText && /\s\|\s(ГМТ|Мед[-\u2011 ]?Локал)\s*$/i.test(titleText)) err(f, 'title заканчивается суффиксом « | ГМТ» / « | Мед-Локал» — в статьях суффикс бренда в title не ставится');
   if (headBrand.some(s => OLD_BRAND.test(s))) err(f, 'в title / og / JSON-LD прежнее название «Мед-Локал» — бренд сайта «Инженерный центр»');
   for (const m of h.matchAll(/<a\s[^>]*?href="(\/[^"]*)"/g)) {
     const u = m[1];
