@@ -1,0 +1,58 @@
+# Конфиг Caddy для med-local.ru на Timeweb App Platform. Повторяет vercel.json и поведение Vercel.
+# Используется: (а) в Docker-варианте приложения (deploy/Dockerfile), (б) как текст для «Настройки веб-сервера» в панели.
+# Корень сайта: /srv (в Docker-варианте туда копируется dist). Если в панели корень другой — поправить только строку root.
+# Порт :80 (TLS и сертификат Let's Encrypt обеспечивает платформа). Для docker-образа на платформе без TLS не нужно ничего менять.
+
+:80 {
+	root * /srv
+	encode zstd gzip
+
+	# --- Редиректы (из vercel.json) ---
+	# снятая статья → её замена, 301
+	redir /blog/multipleksny-proryv /blog/pcr-panely-pp1875-vtoroy-lishniy 301
+	redir /blog/multipleksny-proryv/ /blog/pcr-panely-pp1875-vtoroy-lishniy 301
+	# дубль статьи (canonical ведёт на оригинал; файл дубля остаётся в репозитории) → оригинал, 301
+	redir /blog/gemokonteynery /blog/gemokonteynery-pp719 301
+	redir /blog/gemokonteynery/ /blog/gemokonteynery-pp719 301
+	# drafts/ в dist не попадает; редирект — на случай ручной выкладки
+	@drafts path /drafts /drafts/*
+	redir @drafts /blog 302
+
+	# --- cleanUrls + trailingSlash:false (как на Vercel) ---
+	# /page.html → /page ; /dir/index.html → /dir (кроме файла подтверждения Яндекса и 404.html); /index.html → /
+	redir /index.html / 308
+	@dothtml {
+		path_regexp dothtml ^/(.+?)(/index)?\.html$
+		not path /yandex_*.html /404.html
+	}
+	redir @dothtml /{re.dothtml.1} 308
+	# /dir/ → /dir
+	@slash path_regexp slash ^/(.+)/$
+	redir @slash /{re.slash.1} 308
+
+	# /about → about.html | about/index.html ; / → /index.html. Каталоги без слэша не редиректим (try_files до file_server).
+	try_files {path}.html {path}/index.html {path}
+
+	# --- Заголовки ---
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+	}
+	@cards path /blog/_cards/*
+	header @cards X-Robots-Tag "noindex, follow"
+
+	# Кэш: статика 30 дней (имена файлов не версионируются, поэтому без immutable); HTML всегда проверяется
+	@static path /images/* /fonts/* /favicon.ico /favicon.svg /icon-192.png /icon-512.png /apple-touch-icon.png /og-image.png /logo.svg /logo-full.svg /video.mp4
+	header @static Cache-Control "public, max-age=2592000"
+	@dynamic not path /images/* /fonts/* /favicon.ico /favicon.svg /icon-192.png /icon-512.png /apple-touch-icon.png /og-image.png /logo.svg /logo-full.svg /video.mp4
+	header @dynamic Cache-Control "public, max-age=0, must-revalidate"
+
+	file_server
+
+	# --- Настоящий 404 (не «мягкий»: статус 404, содержимое 404.html) ---
+	handle_errors {
+		@notfound expression {err.status_code} == 404
+		rewrite @notfound /404.html
+		file_server
+	}
+}
