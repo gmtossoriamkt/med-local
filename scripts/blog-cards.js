@@ -36,7 +36,7 @@ function writeDoc(rel, doc) {
   fs.writeFileSync(full, doc.crlf ? doc.text.replace(/\n/g, '\r\n') : doc.text);
 }
 
-const slugOf = card => (card.match(/href="\/blog\/([^"]+)"/) || [])[1];
+const slugOf = card => (card.match(/href="\/blog\/([^"\/]+)\/?"/) || [])[1];
 const titleHtmlOf = card => (card.match(/<h3[^>]*>([\s\S]*?)<\/h3>/) || [])[1] || '';
 const dateTextOf = card => {
   const m = card.match(/<span style="font-size:12px;color:var\(--muted\)">([^<]*)<\/span><span style="font-size:13px/);

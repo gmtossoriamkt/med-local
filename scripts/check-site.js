@@ -15,6 +15,8 @@
 //      карточки идут от новых к старым (по дате в карточке).
 //   8. Бренд: в <title>, og:/twitter:title и JSON-LD нет прежнего названия «Мед-Локал»; title не заканчивается на « | ГМТ» / « | Мед-Локал».
 //   7. Служебные файлы (.md, .bak, .sh, скрипты сборки .js, папки с точкой) вне .vercelignore — ОШИБКА: их отдаёт сайт.
+//   9. Форма адресов — со слэшем: canonical, og:url, адреса сайта в JSON-LD, <loc> в sitemap и внутренние ссылки <a href="/…">
+//      на страницы без «/» на конце — ОШИБКА (файлы с расширением, корень «/» и внешние адреса не проверяются).
 //   6. FAQPage в JSON-LD совпадает с видимым FAQ (форматы — см. visibleFaq): число вопросов, текст вопросов и ответов.
 //      Видимый текст — первоисточник. Отсутствие видимого FAQ при наличии FAQPage — тоже ошибка.
 //
@@ -90,6 +92,16 @@ const pageExists = u => {
   return fs.existsSync(path.join(p, 'index.html'));
 };
 
+// адрес страницы сайта (относительный или абсолютный) без «/» на конце; корень, файлы (.pdf, .xml, .png…) и внешние адреса — не в счёт
+const noSlash = u => {
+  let rest = u;
+  const m = u.match(/^https?:\/\/(?:www\.)?med-local\.ru/);
+  if (m) rest = u.slice(m[0].length); else if (!u.startsWith('/') || u.startsWith('//')) return false;
+  const p = rest.split('#')[0].split('?')[0];
+  if (p === '' || p === '/' || p.endsWith('/')) return false;
+  return !p.split('/').pop().includes('.');
+};
+
 // таблица внутри обёртки с горизонтальной прокруткой: ближайший предшествующий <div> — обёртка, и между ним и <table> ничего нет
 const WRAP = /overflow-x\s*:\s*(?:auto|scroll)|\btable-wrap\b/;
 function unwrappedTables(h) {
@@ -132,7 +144,16 @@ for (const f of files) {
     const u = m[1];
     if (u.startsWith('//')) continue;
     if (!pageExists(u)) err(f, 'битая внутренняя ссылка ' + u);
+    if (noSlash(u)) err(f, 'внутренняя ссылка без «/» на конце: ' + u + ' (адреса страниц — только в форме со слэшем)');
   }
+  // canonical, og:url и все адреса сайта в JSON-LD — со слэшем
+  const cn = (h.match(/<link rel="canonical" href="([^"]*)"/) || [])[1];
+  if (cn !== undefined && noSlash(cn)) err(f, 'canonical без «/» на конце: ' + cn);
+  const og = (h.match(/<meta property="og:url" content="([^"]*)"/) || [])[1];
+  if (og !== undefined && noSlash(og)) err(f, 'og:url без «/» на конце: ' + og);
+  for (const m of h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g))
+    for (const u of m[1].match(/https?:\/\/(?:www\.)?med-local\.ru[^"\s\\<]*/g) || [])
+      if (noSlash(u)) err(f, 'адрес в JSON-LD без «/» на конце: ' + u);
   const tc = (h.match(/<table\b/g) || []).length;
   tableCount += tc;
   if (tc) {
@@ -167,7 +188,7 @@ for (const d of Object.keys(NOT_IN_BLOG)) if (!allBlogDirs.includes(d)) err('scr
 // canonical статьи должен вести на неё же; иначе это дубль и ему место в NOT_IN_BLOG
 for (const d of blogDirs) {
   const c = (read(path.join('blog', d, 'index.html')).match(/<link rel="canonical" href="([^"]*)"/) || [])[1];
-  if (c !== ORIGIN + '/blog/' + d) err('blog/' + d + '/index.html', 'canonical «' + c + '» не совпадает с адресом статьи (дубль? тогда добавьте в NOT_IN_BLOG с причиной)');
+  if (c !== ORIGIN + '/blog/' + d + '/') err('blog/' + d + '/index.html', 'canonical «' + c + '» не совпадает с адресом статьи (дубль? тогда добавьте в NOT_IN_BLOG с причиной)');
 }
 let smCount = 0;
 if (!smRaw) err('sitemap.xml', 'файл не найден');
@@ -181,6 +202,7 @@ else {
     if (loc !== ORIGIN && !loc.startsWith(ORIGIN + '/')) err('sitemap.xml', 'адрес вне ' + ORIGIN + ': ' + loc);
     if (seen.has(loc)) err('sitemap.xml', 'дубль ' + loc);
     seen.add(loc);
+    if (noSlash(loc)) err('sitemap.xml', 'адрес без «/» на конце: ' + loc);
     if (loc.startsWith(ORIGIN) && !pageExists(loc.slice(ORIGIN.length) || '/')) err('sitemap.xml', 'страницы нет в репозитории: ' + loc);
     const lm = (e.match(/<lastmod>([^<]*)<\/lastmod>/) || [])[1];
     if (lm !== undefined) {
@@ -189,8 +211,8 @@ else {
       if (!ok) err('sitemap.xml', 'некорректный lastmod ' + lm + ' у ' + loc);
     }
   }
-  for (const s of blogDirs) if (!seen.has(ORIGIN + '/blog/' + s)) err('sitemap.xml', 'нет записи для статьи blog/' + s);
-  if (!seen.has(ORIGIN + '/blog')) err('sitemap.xml', 'нет записи для /blog');
+  for (const s of blogDirs) if (!seen.has(ORIGIN + '/blog/' + s + '/')) err('sitemap.xml', 'нет записи для статьи blog/' + s);
+  if (!seen.has(ORIGIN + '/blog/')) err('sitemap.xml', 'нет записи для /blog');
 }
 
 // ---------- 5: blog/index.html ----------
@@ -201,6 +223,7 @@ if (fs.existsSync('blog/index.html')) {
   try { rawCards = blogCards.readAllCards(); } catch (e) { err('blog/index.html', e.message); }
   const cards = rawCards.map(c => ({
     url: (c.match(/href="(\/blog\/[^"]+)"/) || [])[1],
+    noSlash: noSlash((c.match(/href="(\/blog\/[^"]+)"/) || [])[1] || ''),
     tags: (c.match(/data-tags="([^"]*)"/) || [])[1],
     date: [...c.matchAll(/<span style="font-size:12px;color:var\(--muted\)">([^<]*)<\/span>/g)].map(m => m[1]).pop(),
   }));
@@ -209,7 +232,8 @@ if (fs.existsSync('blog/index.html')) {
   const slugs = new Set();
   cards.forEach((c, i) => {
     if (!c.url) { err('blog/index.html', 'карточка №' + (i + 1) + ' без ссылки /blog/…'); return; }
-    const s = c.url.replace(/^\/blog\//, '');
+    const s = c.url.replace(/^\/blog\//, '').replace(/\/$/, '');
+    if (c.noSlash) err('blog/index.html', 'ссылка карточки ' + s + ' без «/» на конце');
     if (slugs.has(s)) err('blog/index.html', 'дубль карточки ' + s);
     slugs.add(s);
     if (!fs.existsSync(path.join('blog', s, 'index.html'))) err('blog/index.html', 'карточка без статьи: ' + s);
@@ -267,7 +291,7 @@ if (fs.existsSync('blog/index.html')) {
     }
     if (!pageExists(info.to)) err('scripts/check-site.js', 'цель редиректа не существует: ' + info.to);
     if (fs.existsSync(path.join('blog', slug))) err('blog/' + slug, 'снятая с публикации статья всё ещё лежит в blog/ — должна быть в drafts/');
-    if (smRaw && smRaw.includes('<loc>' + ORIGIN + from + '</loc>')) err('sitemap.xml', 'снятая статья ' + slug + ' осталась в sitemap');
+    if (smRaw && (smRaw.includes('<loc>' + ORIGIN + from + '</loc>') || smRaw.includes('<loc>' + ORIGIN + from + '/</loc>'))) err('sitemap.xml', 'снятая статья ' + slug + ' осталась в sitemap');
     for (const f of files) if (new RegExp('href="' + from + '["#?/]').test(read(f))) err(f, 'ссылка на снятую статью ' + from + ' — замените на ' + info.to);
   }
 }

@@ -10,12 +10,12 @@
   var EN = String(document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
   var T = EN ? {
     label: 'Cookie notice',
-    text: 'We use cookies and Yandex.Metrica (session replay, click map) to analyse and improve the site. Analytics is switched on only if you accept. Details are in the <a href="/privacy#cookies">Privacy Policy</a>.',
+    text: 'We use cookies and Yandex.Metrica (session replay, click map) to analyse and improve the site. Analytics is switched on only if you accept. Details are in the <a href="/privacy/#cookies">Privacy Policy</a>.',
     accept: 'Accept',
     decline: 'Decline'
   } : {
     label: 'Уведомление об использовании cookies',
-    text: 'Мы используем cookie и сервис Яндекс.Метрика (вебвизор, карта кликов) для аналитики и улучшения сайта. Аналитика включается только с вашего согласия. Подробнее — в <a href="/privacy#cookies">Политике конфиденциальности</a>.',
+    text: 'Мы используем cookie и сервис Яндекс.Метрика (вебвизор, карта кликов) для аналитики и улучшения сайта. Аналитика включается только с вашего согласия. Подробнее — в <a href="/privacy/#cookies">Политике конфиденциальности</a>.',
     accept: 'Принять',
     decline: 'Отклонить'
   };

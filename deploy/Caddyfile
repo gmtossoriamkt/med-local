@@ -1,4 +1,4 @@
-# Конфиг Caddy для med-local.ru на Timeweb App Platform. Повторяет vercel.json и поведение Vercel.
+# Конфиг Caddy для med-local.ru на Timeweb App Platform. Редиректы из vercel.json; форма адресов — со слэшем (/page/).
 # Используется: (а) в Docker-варианте приложения (deploy/Dockerfile), (б) как текст для «Настройки веб-сервера» в панели.
 # Корень сайта: /srv (в Docker-варианте туда копируется dist). Если в панели корень другой — поправить только строку root.
 # Порт :80 (TLS и сертификат Let's Encrypt обеспечивает платформа). Для docker-образа на платформе без TLS не нужно ничего менять.
@@ -9,29 +9,27 @@
 
 	# --- Редиректы (из vercel.json) ---
 	# снятая статья → её замена, 301
-	redir /blog/multipleksny-proryv /blog/pcr-panely-pp1875-vtoroy-lishniy 301
-	redir /blog/multipleksny-proryv/ /blog/pcr-panely-pp1875-vtoroy-lishniy 301
+	# Адреса страниц сайта — в форме СО слэшем (/blog/slug/); цели редиректов тоже со слэшем.
+	redir /blog/multipleksny-proryv /blog/pcr-panely-pp1875-vtoroy-lishniy/ 301
+	redir /blog/multipleksny-proryv/ /blog/pcr-panely-pp1875-vtoroy-lishniy/ 301
 	# дубль статьи (canonical ведёт на оригинал; файл дубля остаётся в репозитории) → оригинал, 301
-	redir /blog/gemokonteynery /blog/gemokonteynery-pp719 301
-	redir /blog/gemokonteynery/ /blog/gemokonteynery-pp719 301
+	redir /blog/gemokonteynery /blog/gemokonteynery-pp719/ 301
+	redir /blog/gemokonteynery/ /blog/gemokonteynery-pp719/ 301
 	# drafts/ в dist не попадает; редирект — на случай ручной выкладки
 	@drafts path /drafts /drafts/*
-	redir @drafts /blog 302
+	redir @drafts /blog/ 302
 
-	# --- cleanUrls + trailingSlash:false (как на Vercel) ---
-	# /page.html → /page ; /dir/index.html → /dir (кроме файла подтверждения Яндекса и 404.html); /index.html → /
+	# --- Форма адресов со слэшем (как на статическом хостинге Timeweb) ---
+	# /index.html → / ; /dir/index.html → /dir/ ; /page.html → /page/
+	# Исключения: файл подтверждения Яндекса, 404.html и порции блога /blog/_cards/N.html (их грузит кнопка «Показать ещё»: это файлы, отдаются как есть).
 	redir /index.html / 308
 	@dothtml {
 		path_regexp dothtml ^/(.+?)(/index)?\.html$
-		not path /yandex_*.html /404.html
+		not path /yandex_*.html /404.html /blog/_cards/*
 	}
-	redir @dothtml /{re.dothtml.1} 308
-	# /dir/ → /dir
-	@slash path_regexp slash ^/(.+)/$
-	redir @slash /{re.slash.1} 308
-
-	# /about → about.html | about/index.html ; / → /index.html. Каталоги без слэша не редиректим (try_files до file_server).
-	try_files {path}.html {path}/index.html {path}
+	redir @dothtml /{re.dothtml.1}/ 308
+	# /dir → /dir/ делает сам file_server (каталог с index.html без слэша → 308 на адрес со слэшем); обратного редиректа (/dir/ → /dir) НЕТ.
+	# try_files не нужен: /dir/ отдаёт dir/index.html, /blog/_cards/1.html — файл.
 
 	# --- Заголовки ---
 	header {

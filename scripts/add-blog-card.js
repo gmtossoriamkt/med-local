@@ -88,7 +88,7 @@ try { all = lib.readAllCards(); } catch (e) { fail(e.message); }
 if (all.some(c => lib.slugOf(c) === slug)) fail('карточка со slug ' + slug + ' уже есть в блоге');
 
 const card =
-  '<a class="card" href="/blog/' + slug + '" data-tags="' + tags.join(' ') + '" style="display:flex;flex-direction:column;gap:9px;transition:.2s;text-decoration:none">' +
+  '<a class="card" href="/blog/' + slug + '/" data-tags="' + tags.join(' ') + '" style="display:flex;flex-direction:column;gap:9px;transition:.2s;text-decoration:none">' +
   '<span style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue)">' + esc(args.label.trim()) + '</span>' +
   '<h3 style="font-size:16.5px;line-height:1.35">' + esc(args.title.trim()) + '</h3>' +
   '<p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.6;flex:1">' + esc(args.desc.trim()) + '</p>' +
@@ -105,11 +105,11 @@ all.splice(at, 0, card);
 // --- sitemap.xml ---
 const sm = read('sitemap.xml');
 // запись в sitemap уже может быть (статья попала в sitemap раньше, чем получила карточку) — тогда sitemap не трогаем, добавляется только карточка
-const inSitemap = sm.text.includes('<loc>https://med-local.ru/blog/' + slug + '</loc>');
+const inSitemap = sm.text.includes('<loc>https://med-local.ru/blog/' + slug + '/</loc>');
 const entries = [...sm.text.matchAll(/ {2}<url><loc>https:\/\/med-local\.ru\/blog\/[^<]+<\/loc>.*?<\/url>/g)];
 if (!entries.length) fail('в sitemap.xml не найдены записи блога, не за что зацепиться');
 const last = entries[entries.length - 1][0];
-const entry = '  <url><loc>https://med-local.ru/blog/' + slug + '</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>' + dateIso + '</lastmod></url>';
+const entry = '  <url><loc>https://med-local.ru/blog/' + slug + '/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>' + dateIso + '</lastmod></url>';
 if (!inSitemap) sm.text = sm.text.replace(last, () => last + '\n' + entry);
 
 if (args['dry-run']) {

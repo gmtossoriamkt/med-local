@@ -69,13 +69,15 @@ async function pool(items, n, fn) {
 
   // 2. редиректы
   const redirs = [
-    ['/blog/multipleksny-proryv', 301, '/blog/pcr-panely-pp1875-vtoroy-lishniy'],
-    ['/about/', [301, 308], '/about'],
-    ['/about.html', [301, 308], '/about'],
-    ['/about/index.html', [301, 308], '/about'],
-    ['/blog/', [301, 308], '/blog'],
+    ['/blog/multipleksny-proryv', 301, '/blog/pcr-panely-pp1875-vtoroy-lishniy/'],
+    ['/blog/gemokonteynery', 301, '/blog/gemokonteynery-pp719/'],
+    ['/blog/gemokonteynery/', 301, '/blog/gemokonteynery-pp719/'],
+    ['/about', [301, 308], '/about/'],
+    ['/about.html', [301, 308], '/about/'],
+    ['/about/index.html', [301, 308], '/about/'],
+    ['/blog', [301, 308], '/blog/'],
     ['/index.html', [301, 308], '/'],
-    ['/drafts/multipleksny-proryv/', [301, 302, 307, 308], '/blog'],
+    ['/drafts/multipleksny-proryv/', [301, 302, 307, 308], '/blog/'],
   ];
   for (const [from, code, to] of redirs) {
     const r = await req(from);
@@ -128,7 +130,7 @@ async function pool(items, n, fn) {
   if (parseInt(vh.headers['content-length'] || '0', 10) !== want) bad('video.mp4 размер ' + vh.headers['content-length'] + ', ожидалось ' + want);
 
   // 7. заголовки
-  // порции блога: загрузчик берёт /blog/_cards/N.html (на статике — 200 сразу, на Vercel/Caddy — через 308 на адрес без .html)
+  // порции блога: загрузчик берёт /blog/_cards/N.html (файл, 200 сразу; редирект допускается — следуем за ним)
   let cards = await req('/blog/_cards/1.html', { body: true });
   let cardsPath = '/blog/_cards/1.html';
   if ([301, 308].includes(cards.status) && cards.headers.location) {
