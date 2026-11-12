@@ -17,6 +17,7 @@
 //   7. Служебные файлы (.md, .bak, .sh, скрипты сборки .js, папки с точкой) вне .vercelignore — ОШИБКА: их отдаёт сайт.
 //   9. Форма адресов — со слэшем: canonical, og:url, адреса сайта в JSON-LD, <loc> в sitemap и внутренние ссылки <a href="/…">
 //      на страницы без «/» на конце — ОШИБКА (файлы с расширением, корень «/» и внешние адреса не проверяются).
+//  10. llms.txt: все ссылки на med-local.ru — со слэшем на конце и ведут на существующую страницу.
 //   6. FAQPage в JSON-LD совпадает с видимым FAQ (форматы — см. visibleFaq): число вопросов, текст вопросов и ответов.
 //      Видимый текст — первоисточник. Отсутствие видимого FAQ при наличии FAQPage — тоже ошибка.
 //
@@ -276,6 +277,17 @@ if (fs.existsSync('blog/index.html')) {
   if (wi > LIMIT_INDEX) err('blog/index.html', 'вес HTML по сети ≈ ' + (wi / 1024).toFixed(1) + ' КБ (brotli q3), предел ' + (LIMIT_INDEX / 1024) + ' КБ — уменьшите число карточек в первой порции или вес шапки/стилей');
   for (const f of files_) { const wc = wire(f); if (wc > LIMIT_CHUNK) err(f, 'вес порции по сети ≈ ' + (wc / 1024).toFixed(1) + ' КБ, предел ' + (LIMIT_CHUNK / 1024) + ' КБ — уменьшите CHUNK в scripts/blog-cards.js'); }
 } else err('blog/index.html', 'файл не найден');
+
+// ---------- llms.txt: ссылки на страницы — со слэшем и ведут на существующие страницы ----------
+if (fs.existsSync('llms.txt')) {
+  let n = 0;
+  for (const m of read('llms.txt').matchAll(/https?:\/\/(?:www\.)?med-local\.ru[^\s)\]>"']*/g)) {
+    const u = m[0]; n++;
+    if (noSlash(u)) err('llms.txt', 'ссылка без «/» на конце: ' + u);
+    if (!pageExists(u.replace(/^https?:\/\/(?:www\.)?med-local\.ru/, '') || '/')) err('llms.txt', 'страницы нет в репозитории: ' + u);
+  }
+  if (!n) warn('llms.txt', 'не найдено ни одной ссылки на сайт');
+}
 
 // ---------- снятые с публикации статьи ----------
 {
