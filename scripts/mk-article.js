@@ -97,7 +97,7 @@ sub(/<meta property="og:url" content="[^"]*">/, '<meta property="og:url" content
 
 const article = { '@context': 'https://schema.org', '@type': 'Article', headline: h1, description: C.desc, url: URL,
   datePublished: C.date + 'T00:00:00+03:00', dateModified: C.date + 'T00:00:00+03:00',
-  author: { '@type': 'Person', name: 'А.-Т. Танделов', url: 'https://med-local.ru/about' },
+  author: { '@type': 'Person', name: 'А.-Т. Танделов', url: 'https://med-local.ru/about/' },
   publisher: { '@type': 'Organization', name: 'Инженерный центр', url: 'https://med-local.ru', logo: { '@type': 'ImageObject', url: 'https://med-local.ru/logo.svg' } },
   image: 'https://med-local.ru/og-image.png', inLanguage: 'ru', mainEntityOfPage: { '@type': 'WebPage', '@id': URL } };
 const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(f => ({ '@type': 'Question', name: plain(inline(f.q)), acceptedAnswer: { '@type': 'Answer', text: plain(inline(f.a)) } })) };
