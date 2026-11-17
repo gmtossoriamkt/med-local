@@ -114,6 +114,17 @@
     document.getElementById('cookie-consent-decline').addEventListener('click', function () { choose('denied'); });
   }
 
+  // Цели Метрики: клики по телефону, email и мессенджерам. Срабатывают, только если Метрика загружена (есть согласие).
+  document.addEventListener('click', function (e) {
+    var l = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!l || typeof window.ym !== 'function') return;
+    var h = String(l.getAttribute('href') || '').toLowerCase();
+    var goal = h.indexOf('tel:') === 0 ? 'phone_click'
+      : h.indexOf('mailto:') === 0 ? 'email_click'
+      : /^https?:\/\/(max\.ru|t\.me|wa\.me|api\.whatsapp\.com)\//.test(h) ? 'messenger_click' : '';
+    if (goal) { try { window.ym(METRIKA_ID, 'reachGoal', goal); } catch (err) { /* ignore */ } }
+  });
+
   document.addEventListener('click', function (e) {
     var a = e.target && e.target.closest ? e.target.closest('[data-cookie-settings]') : null;
     if (a) { e.preventDefault(); show(); }

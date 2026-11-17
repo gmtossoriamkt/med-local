@@ -69,6 +69,7 @@
       return r.json().then(function (d) { return { status: r.status, data: d }; }, function () { return { status: r.status, data: {} }; });
     }).then(function (res) {
       if (res.status === 200 && res.data && res.data.ok) {
+        try { if (typeof window.ym === 'function') window.ym(110085907, 'reachGoal', 'lead_submit'); } catch (e) { /* цель не критична */ }
         f.innerHTML = '<div style="text-align:center;padding:32px"><div style="font-size:36px;margin-bottom:12px">✅</div>' +
           '<h3 style="font-size:20px;font-weight:800;margin:0 0 8px">' + T.okTitle + '</h3>' +
           '<p style="color:var(--muted);margin:0">' + T.okText + '</p></div>';
