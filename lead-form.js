@@ -10,6 +10,13 @@
     sending: 'Sending...',
     okTitle: 'Request received!',
     okText: 'We will contact you within one business day.',
+    nextTitle: 'What happens next',
+    next: ['A specialist will review your request and check the applicable requirements.', 'We will contact you by the phone number you left and clarify the details.'],
+    prepTitle: 'To speed up the review, prepare:',
+    prep: ['OKPD2 and device-type (NKMI) codes, if known', 'a component list or a description of the device', 'where and how the device is produced'],
+    readTitle: 'While you wait',
+    links: [['/en/assessment/', 'Localization quick assessment'], ['/en/localization/', 'Localization of medical devices'], ['/en/pricing/', 'Pricing']],
+    urgent: 'Urgent question? Call',
     errGeneric: 'Could not send the request. Please try again or write to info@med-local.ru.',
     errMany: 'Too many requests. Please try again in a few minutes or write to info@med-local.ru.',
     errInvalid: 'Please check your name and phone number.',
@@ -18,6 +25,13 @@
     sending: 'Отправляем...',
     okTitle: 'Заявка принята!',
     okText: 'Мы свяжемся с вами в течение одного рабочего дня.',
+    nextTitle: 'Что будет дальше',
+    next: ['Специалист изучит ваш запрос и проверит применимые требования.', 'Мы свяжемся с вами по указанному телефону и уточним детали.'],
+    prepTitle: 'Чтобы ускорить проверку, подготовьте:',
+    prep: ['коды ОКПД2 и вида МИ по НКМИ, если известны', 'спецификацию компонентов или описание изделия', 'сведения о том, где и как изделие производится'],
+    readTitle: 'Пока ждёте',
+    links: [['/ocenka-lokalizacii/', 'Экспресс-оценка локализации'], ['/blog/advalornaya-dolya/', 'Адвалорная доля по ПП 719'], ['/blog/pp719-checklist/', 'Чек-лист экспертизы ТПП по ПП 719'], ['/blog/pp1875-vtoroy-lishniy/', '«Второй лишний» по ПП 1875']],
+    urgent: 'Срочный вопрос? Позвоните',
     errGeneric: 'Не удалось отправить заявку. Попробуйте ещё раз или напишите на info@med-local.ru.',
     errMany: 'Слишком много запросов. Попробуйте через несколько минут или напишите на info@med-local.ru.',
     errInvalid: 'Проверьте имя и номер телефона.',
@@ -41,6 +55,23 @@
     p.style.cssText = 'color:#b42318;font-size:13px;margin:10px 0 0';
     p.textContent = text;
     btn.parentNode.insertBefore(p, btn.nextSibling);
+  }
+
+  function li(t) { return '<li>' + t + '</li>'; }
+  function thanksHtml() {
+    var here = location.pathname;
+    var links = T.links.filter(function (l) { return here.indexOf(l[0]) !== 0; }).slice(0, 3).map(function (l) {
+      return '<a href="' + l[0] + '" style="color:var(--cyan);font-weight:600">' + l[1] + ' →</a>';
+    }).join('<br>');
+    var ul = 'margin:6px 0 0;padding-left:20px;font-size:14px;line-height:1.7;color:var(--ink)';
+    return '<div data-lead-thanks style="padding:26px 6px;text-align:left">' +
+      '<div style="text-align:center"><div style="font-size:36px;margin-bottom:12px">✅</div>' +
+      '<h3 style="font-size:20px;font-weight:800;margin:0 0 8px">' + T.okTitle + '</h3>' +
+      '<p style="color:var(--muted);margin:0 0 20px">' + T.okText + '</p></div>' +
+      '<div style="font-size:14px;font-weight:700">' + T.nextTitle + '</div><ol style="' + ul + '">' + T.next.map(li).join('') + '</ol>' +
+      '<div style="font-size:14px;font-weight:700;margin-top:16px">' + T.prepTitle + '</div><ul style="' + ul + '">' + T.prep.map(li).join('') + '</ul>' +
+      (links ? '<div style="font-size:14px;font-weight:700;margin-top:16px">' + T.readTitle + '</div><p style="font-size:14px;line-height:1.9;margin:6px 0 0">' + links + '</p>' : '') +
+      '<p style="font-size:14px;margin:18px 0 0;color:var(--muted)">' + T.urgent + ' <a href="tel:+79853169104" style="color:var(--cyan);font-weight:700;white-space:nowrap">+7 985 316-91-04</a></p></div>';
   }
 
   function submitLead(f) {
@@ -70,9 +101,8 @@
     }).then(function (res) {
       if (res.status === 200 && res.data && res.data.ok) {
         try { if (typeof window.ym === 'function') window.ym(110085907, 'reachGoal', 'lead_submit'); } catch (e) { /* цель не критична */ }
-        f.innerHTML = '<div style="text-align:center;padding:32px"><div style="font-size:36px;margin-bottom:12px">✅</div>' +
-          '<h3 style="font-size:20px;font-weight:800;margin:0 0 8px">' + T.okTitle + '</h3>' +
-          '<p style="color:var(--muted);margin:0">' + T.okText + '</p></div>';
+        f.innerHTML = thanksHtml();
+        try { f.setAttribute('data-lead-done', '1'); f.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (e) { /* не критично */ }
       } else if (res.status === 429) {
         showError(f, btn, label, T.errMany);
       } else if (res.status === 422) {
