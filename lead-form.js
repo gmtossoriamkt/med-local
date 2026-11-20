@@ -52,7 +52,7 @@
     var body = new URLSearchParams();
     ['name', 'phone', 'device', 'email', 'website'].forEach(function (k) { body.set(k, field(f, k)); });
     body.set('consent', cb && cb.checked ? 'on' : '');
-    body.set('page', location.pathname);
+    body.set('page', location.pathname + location.search);
     body.set('lang', EN ? 'en' : 'ru');
 
     var old = f.querySelector('[data-lead-error]');
