@@ -6,3 +6,5 @@ scripts/
 dist/
 deploy/
 .github/
+content-plan.csv
+factcheck/
