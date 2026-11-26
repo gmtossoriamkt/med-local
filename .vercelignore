@@ -8,3 +8,4 @@ deploy/
 .github/
 content-plan.csv
 factcheck/
+.claude/
